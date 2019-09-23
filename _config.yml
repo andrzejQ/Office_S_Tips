@@ -37,7 +37,7 @@ github_username:  andrzejQ
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-modernist
+theme: minima
 plugins:
   - jekyll-feed
 
