@@ -1,2 +1,2 @@
 # Office_S_Tips
-Drobne podpowiedzi dotyczące obdługi programów biurowych
+Drobne podpowiedzi dotyczące obsługi programów biurowych
