@@ -5,6 +5,7 @@ date:   2019-09-21 10:21:59 +0100
 categories: DOCX
 ---
 
+Zaawansowane wyszukiwanie i zamiana połączone z możliwością zmiany formatowania w wyszukanych fragmentach dokumentu.
 
 **Zamień** \ [**Więcej <u>></u>>**] \
 * [x] **Użyj sym<u>b</u>oli wieloznacznych**   ![Word-symbole-wieloznaczne.png]({{ site.baseurl }}/assets/img/Word-symbole-wieloznaczne.png "Word-symbole-wieloznaczne.png"){:style="float:right;width:40%;"}
