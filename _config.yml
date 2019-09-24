@@ -26,9 +26,6 @@ minima:
 #show_excerpts: true
 # - jakoś fatalnie działa w github - wyświetla całe artykuły
 
-disqus:
-  shortname: aq-office-s-tips.disqus.com
-
 title: Office_S_Tips
 lang: pl
 email: kubaszek@prz.edu.pl
@@ -36,8 +33,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Drobne podpowiedzi dotyczące obsługi programów biurowych. Może się to komuś przyda...
 
 baseurl: "/Office_S_Tips" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://andrzejq.github.io/Office_S_Tips/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  andrzejQ
+
+disqus:
+  shortname: aq-office-s-tips
 
 # Build settings
 markdown: kramdown
