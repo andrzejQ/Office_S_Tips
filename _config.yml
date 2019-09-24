@@ -26,6 +26,9 @@ minima:
 show_excerpts: true
 # - jakoś fatalnie działa w github - wyświetla całe artykuły
 
+disqus:
+  shortname: aq-office-s-tips.disqus.com
+
 title: Office_S_Tips
 lang: pl
 email: kubaszek@prz.edu.pl
