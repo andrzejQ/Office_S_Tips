@@ -5,7 +5,7 @@ date:   2019-09-23 10:21:59 +0100
 categories: PDF-DOCX
 ---
 
-# PDF  rysunki wektorowe i inne fragmenty kopiowane jako obrazy do Worda.
+# PDF - rysunki wektorowe i inne fragmenty kopiowane jako obrazy do Worda.
 
 Opis skupia się głównie na kopiowaniu rysunków wektorowych z PDF jako obrazów rastrowych w DOCX bardzo wysokiej jakości. Równocześnie udaje się uzyskać stosunkowo niewielki rozmiar pliku DOCX.
 Zakładam, że rysunek wektorowy zawiera różnokolorowe linie i figury, a liczba różnych kolorów jest niewielka. Sposób ten może też dotyczyć tekstu, który skopiowany jako obraz można podłożyć pod tekstem w DOCX i nawet coś pisać/rysować ponad nim.
@@ -28,6 +28,10 @@ narzędzie   **Edycja** \ ![AdobeR-wykonaj_zdjecie.png]({{ site.baseurl }}/asset
 Mamy w schowku obraz rastrowy. Najlepiej wkleić go w jakimś programie graficznym, np. IrfanView i zapisać w formacie **PNG** lub w innym bezstratnie spakowanym formacie. <small>Uwaga - nie używamy tutaj JPG, które dobrze pakuje obrazy z płynnymi przejściami kolorów (zdjęcia), ale w tym wypadku drastycznie pogorszy jakość i rozmiar obrazu.</small> Obraz ze schowka można też bezpośrednio skopiować do Worda lub do Painta, ale nie będzie on zbyt dobrze spakowany, więc rozmiar pliku DOCX będzie niepotrzebnie powiększony (ale może rozmiar będzie akceptowalny - więc warto próbować).
 
 W programie graficznym np. IrfanView można zredukować głębię kolorów  (na czas ich edycji!) i z łatwością edytować poszczególne kolory w palecie zamieniając je na inne. Na koniec należy przywrócić pełną głębię kolorów (24bpp) bo inaczej Word potrafi pomijać takie obrazy podczas wydruku.
+
+
+Uwaga:
+* Wybieraj format pliku Word ***.DOCX** a nie *.DOC czy *.RTF. Inaczej pliki wynikowe mogą okazać się ogromne (choć jest na to rada - zob....)
 
 -----
 
