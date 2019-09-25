@@ -7,6 +7,7 @@ categories: System
 
 Drobne sprawy, ale czasem wato coś sobie przypomnieć.
 
+----
 ## Ostatnio używane foldery 
 
 .. to trochę co innego niż *często używane foldery*, które pojawiają się po włączeniu (Win+E) eksploratora plików.
@@ -17,37 +18,34 @@ Kroki w celu dodania do paska "szybki dostęp":
 1. Win+R, wklej  
    `shell:::{22877a6d-37a1-461a-91b0-dbda5aaebc99}`   `[OK]`
 2. Menu: "Przypnij do paska szybki dostęp".
+3. Inne własne ważne foldery też wato tak przypiąć.
 
-.
+<br>
 
 ----
-
-
 ## Zwalnianie miejsca na dysku C:
 
 W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 
 <https://support.microsoft.com/pl-pl/help/12425/windows-10-free-up-drive-space>
 
-![Start-ustawienia.png]({{ site.baseurl }}/assets/img/Start-ustawienia.png "Start-ustawienia.png"){:style="float:left;width:7%;margin-right:3%;"}
-![Zwolnij_miejsce_teraz.png]({{ site.baseurl }}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){:style="float:right;width:45%;"}
+![Start-ustawienia.png]({{ site.baseurl }}/assets/img/Start-ustawienia.png "Start-ustawienia.png"){:style="float:left;width:8%;margin-right:3%;"}
 * [Win + i]  albo Start \ Ustawienia
     * System \ Pamięć \
 
-1. Zmień sposób zwalniania miejsca \ Zwolnij miejsce teraz \ Oczyść teraz
-2. ![Zmien_lok_zapisywania.png]({{ site.baseurl }}/assets/img/Zmien_lok_zapisywania.png "Zmien_lok_zapisywania.png"){:style="float:left;width:50%;"}
+1. ![Zwolnij_miejsce_teraz.png]({{ site.baseurl }}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){:style="float:right;width:45%;"} Zmień sposób zwalniania miejsca \ Zwolnij miejsce teraz \ Oczyść teraz
+2. 
 
-.
+![Zmien_lok_zapisywania.png]({{ site.baseurl }}/assets/img/Zmien_lok_zapisywania.png "Zmien_lok_zapisywania.png"){:style="width:50%;"}
+
+<br>
 
 ----
-
-.
 ![Attribute_Changer.png]({{ site.baseurl }}/assets/img/Attribute_Changer.png "Attribute_Changer.png"){:style="float:right;width:45%;"}
 
 ## Hurtowa zmiana daty folderów
 
-
-Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwy. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat związanych z poszukiwaną sprawą.
+Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwe. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat w interesującym nas zakresie.
 
 **Attribute Changer** <https://www.programosy.pl/program,attribute-changer.html> pozwala na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików. 
 
