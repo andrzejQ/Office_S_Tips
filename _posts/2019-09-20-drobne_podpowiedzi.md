@@ -29,6 +29,7 @@ W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 
 <https://support.microsoft.com/pl-pl/help/12425/windows-10-free-up-drive-space>
 
+![Start-ustawienia.png]({{ site.baseurl }}/assets/img/Start-ustawienia.png "Start-ustawienia.png"){:style="float:left;width:7%;margin-right:3%;"}
 ![Zwolnij_miejsce_teraz.png]({{ site.baseurl }}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){:style="float:right;width:45%;"}
 * [Win + i]  albo Start \ Ustawienia
     * System \ Pamięć \
