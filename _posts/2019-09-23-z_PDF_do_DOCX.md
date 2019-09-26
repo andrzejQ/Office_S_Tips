@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Obrazy z PDF w DOCX"
-date:   2019-09-23 10:21:59 +0100
+date:   2018-09-23 10:21:59 +0100
 categories: PDF-DOCX
 ---
 
