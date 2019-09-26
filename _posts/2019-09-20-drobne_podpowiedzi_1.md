@@ -5,8 +5,7 @@ date:   2019-09-20 09:21:59 +0100
 categories: System
 ---
 
-[Ostatnio używane foldery]({{ site.url }}{{ site.baseurl }}{{ page.url }}#ostatnio-używane-foldery) * [Zwalnianie miejsca na dysku C:]({{ site.url }}{{ site.baseurl }}{{ page.url }}#zwalnianie-miejsca-na-dysku-c) * [Hurtowa zmiana daty folderów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowa-zmiana-daty-folderów)  
- = = = 
+[Ostatnio używane foldery]({{ site.url }}{{ site.baseurl }}{{ page.url }}#ostatnio-używane-foldery) * [Zwalnianie miejsca na dysku C:]({{ site.url }}{{ site.baseurl }}{{ page.url }}#zwalnianie-miejsca-na-dysku-c) * [Hurtowa zmiana daty folderów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowa-zmiana-daty-folderów)
 
 ----
 
