@@ -5,9 +5,11 @@ date:   2019-09-20 09:21:59 +0100
 categories: System
 ---
 
-Ostatnio używane foldery # Zwalnianie miejsca na dysku C: # Hurtowa zmiana daty folderów
+[Ostatnio używane foldery](#ostatnio-używane-foldery) * [Zwalnianie miejsca na dysku C:](#zwalnianie-miejsca-na-dysku-c) * [Hurtowa zmiana daty folderów](#hurtowa-zmiana-daty-folderów)  
+ = = = 
 
 ----
+
 ## Ostatnio używane foldery 
 
 .. to trochę co innego niż *często używane foldery*, które pojawiają się po włączeniu (Win+E) eksploratora plików.
