@@ -5,7 +5,9 @@ date:   2019-09-21 09:21:59 +0100
 categories: CSV
 ---
 
-Podczas przetwarzania surowych danych często chcemy nadać im strukturę tabeli przesyłanej do Excela. Można w tym miejscu posłużyć się plikiem tekstowym CSV. Excel ma tu kilka jawnych ale też kilka ukrytych możliwości.
+Excel-CSV - kilka jawnych, ale też kilka mniej znanych możliwości.
+
+Podczas przetwarzania surowych danych często chcemy nadać im strukturę tabeli przesyłanej do Excela. Można w tym miejscu posłużyć się plikiem tekstowym CSV. 
 
 1. Jeśli tekst dla danej komórki **zaczyna się od `=`** to jest automatycznie interpretowany **jako formuła**.
 2. Dla pliku w kodowaniu ANSI możemy dopisać **w dodatkowym pierwszym wierszu np. `sep=,`** - tu ostatni znak w tym wierszu (przecinek) oznacza separator niezależnie od systemowego separatora danych (np. w Excel PL to `;`). Sposób ten działa _tylko na pliki w starym kodowaniu ANSI_- czyli np. w Windows PL jest to zestaw znaków [cp1250](https://pl.wikipedia.org/wiki/Windows-1250), a więc znaków spoza Europy środkowej nie zobaczymy....
