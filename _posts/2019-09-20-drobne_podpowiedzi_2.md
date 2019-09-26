@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: System
 ---
 
-Drobne sprawy, ale mogą się przydać.
+[króki tekst z komputera w tel. komórkowym przez QR-kod]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * ...
 
 ----
 ## Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:

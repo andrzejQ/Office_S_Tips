@@ -2,7 +2,7 @@
 layout: post
 title:  "Obrazy z PDF w DOCX"
 date:   2018-09-23 10:21:59 +0100
-categories: PDF-DOCX
+categories: zPDFdoDOCX
 ---
 
 Rysunki wektorowe i inne fragmenty PDF można skopiować jako obrazy do Worda w niezłej jakości.

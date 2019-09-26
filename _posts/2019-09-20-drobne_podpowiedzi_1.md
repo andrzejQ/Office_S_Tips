@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Drobne podpowiedzi 1"
+title:  "Drobne podpowiedzi 1 (system)"
 date:   2019-09-20 09:21:59 +0100
 categories: System
 ---
