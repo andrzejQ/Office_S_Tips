@@ -5,7 +5,7 @@ date:   2019-09-20 09:21:59 +0100
 categories: System
 ---
 
-Drobne sprawy, ale mogą się przydać.
+Ostatnio używane foldery # Zwalnianie miejsca na dysku C: # Hurtowa zmiana daty folderów
 
 ----
 ## Ostatnio używane foldery 
