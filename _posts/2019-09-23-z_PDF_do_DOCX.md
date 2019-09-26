@@ -2,14 +2,14 @@
 layout: post
 title:  "Obrazy z PDF w DOCX"
 date:   2018-09-23 10:21:59 +0100
-categories: zPDFdoDOCX
+categories: PDF_DOCX
 ---
 
-Rysunki wektorowe i inne fragmenty PDF można skopiować jako obrazy do Worda w niezłej jakości.<br>
+Rysunki wektorowe i inne fragmenty PDF można skopiować jako obrazy do Worda w niezłej jakości.
 
 
-Ten opis skupia się głównie na kopiowaniu rysunków wektorowych z PDF do obrazów rastrowych w DOCX bardzo wysokiej jakości. Równocześnie udaje się uzyskać stosunkowo niewielki rozmiar pliku DOCX.
-Zakładam, że rysunek wektorowy zawiera różnokolorowe linie i figury, a liczba różnych kolorów jest niewielka. Sposób ten może też dotyczyć tekstu, który skopiowany jako obraz można podłożyć pod tekstem w DOCX i nawet coś pisać/rysować ponad nim.
+* Ten opis skupia się głównie na kopiowaniu rysunków wektorowych z PDF do obrazów rastrowych w DOCX bardzo wysokiej jakości. Równocześnie udaje się uzyskać stosunkowo niewielki rozmiar pliku DOCX.
+* Zakładam, że rysunek wektorowy zawiera różnokolorowe linie i figury, a liczba różnych kolorów jest niewielka. Sposób ten może też dotyczyć tekstu, który skopiowany jako obraz można podłożyć pod tekstem w DOCX i nawet coś pisać/rysować ponad nim.
 
 Plik PDF otwieramy w **Adobe Reader DC** i korzystamy z narzędzia   **Edycja** \ ![AdobeR-wykonaj_zdjecie.png]({{ site.baseurl }}/assets/img/AdobeR-wykonaj_zdjecie.png "AdobeR-wykonaj_zdjecie.png"){:style="width:30px;"} **W<u>y</u>konaj zdjęcie**. Najpierw jednak należy odpowiednio skonfigurować jakość zdjęcia:
 
