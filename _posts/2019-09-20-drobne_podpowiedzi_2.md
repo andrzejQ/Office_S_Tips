@@ -39,9 +39,9 @@ w aktualnie otwartym folderze i  jego wszystkich podfolderach
 INSTALACJA
 -------------------
 1. Potrzebne jest wcześniejsze zainstalowanie https://www.irfanview.com/ np. 32-bit (darmowe do użytku domowego / niekomercyjnego)
-2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/doc/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd` (dla bezpieczeństwa - nie pobieramy bezpośrednio pliku `*.cmd`)
-3a. Umieść pliki `r.cmd` i `i_view32.ini` oraz/lub `i_view64.ini` gdzieś, gdzie wskazuje PATH
-3b. ... albo w aktualnie otwartym folderze
+2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/files/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd` (dla bezpieczeństwa - nie pobieramy bezpośrednio pliku `*.cmd`)
+3. Umieść pliki `r.cmd` i `i_view32.ini` oraz/lub `i_view64.ini` gdzieś, gdzie wskazuje PATH  
+ ... albo w aktualnie otwartym folderze z obrazami *.jpg.
 
 (Plik INI z innymi ustawieniami można też wygenerować w IfranView:
 
@@ -53,5 +53,5 @@ Wpisz
 
     r.cmd
 
-w pasku eksploratora plików w aktualnie otwartym folderze w któym są obrazy `*.jpg`
+w pasku eksploratora plików w aktualnie otwartym folderze w którym są obrazy `*.jpg`
 Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg` - poczekaj i na zakończenie naciśnij dowolny klawisz.
