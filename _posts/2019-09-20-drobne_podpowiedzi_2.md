@@ -23,3 +23,35 @@ Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć 
 * Wykrywane są w tekście odnośniki do stron `http://` i `https://`, które stają się klikalne - otwierają stronę w przeglądarce.
 * W _znajdź / zamień_ działają wyrażenia regularne.
 
+
+
+
+
+- - - -
+
+## Hurtowe zmniejszanie dużych obrazów `*.jpg`
+
+Hurtowe zmniejszanie dużych obrazów `*.jpg` do 50%
+w aktualnie otwartym folderze i  jego wszystkich podfolderach
+
+(można ustawić `set DUZY=4000000` na inną wartość w `r.cmd`).
+
+INSTALACJA
+-------------------
+1. Potrzebne jest wcześniejsze zainstalowanie https://www.irfanview.com/ np. 32-bit (darmowe do użytku domowego / niekomercyjnego)
+2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/doc/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd` (dla bezpieczeństwa - nie pobieramy bezpośrednio pliku `*.cmd`)
+3a. Umieść pliki `r.cmd` i `i_view32.ini` oraz/lub `i_view64.ini` gdzieś, gdzie wskazuje PATH
+3b. ... albo w aktualnie otwartym folderze
+
+(Plik INI z innymi ustawieniami można też wygenerować w IfranView:
+
+     Plik \ Przetwarzanie wsadowe (seryjne) \ Opcja zaawansowane... \ [Zapisz ustawienia])
+
+UŻYWANIE
+-------------------
+Wpisz
+
+    r.cmd
+
+w pasku eksploratora plików w aktualnie otwartym folderze w któym są obrazy `*.jpg`
+Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg` - poczekaj i na zakończenie naciśnij dowolny klawisz.
