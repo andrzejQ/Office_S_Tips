@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: System
 ---
 
-[Króki tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * Hurtowe zmniejszanie dużych obrazów *.jpg
+[Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg)
 
 ----
 ## Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
@@ -31,30 +31,36 @@ Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć 
 
 ## Hurtowe zmniejszanie dużych obrazów *.jpg
 
-Hurtowe zmniejszanie dużych obrazów `*.jpg` do 50%
-w aktualnie otwartym folderze i  jego wszystkich podfolderach
+Gdy chcemy zapamiętać roczną kopię zdjęć, przesłać zdjęcia na dysk sieciowy czy przekazać do oglądania na pendrive to bardzo przydaje się zmniejszenie rozmiaru plików naszych obrazów, do takich, że jakość oglądania jest doskonała, a równocześnie szybko się je kopiuje i wczytuje.
 
-(można ustawić `set DUZY=4000000` na inną wartość w `r.cmd`).
+Wtedy może przydać się 
 
-INSTALACJA
--------------------
-1. Potrzebne jest wcześniejsze zainstalowanie https://www.irfanview.com/ np. 32-bit (darmowe do użytku domowego / niekomercyjnego)
-2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/files/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd` (dla bezpieczeństwa - nie pobieramy bezpośrednio pliku `*.cmd`)
-3. Umieść pliki `r.cmd` i `i_view32.ini` oraz/lub `i_view64.ini` gdzieś, gdzie wskazuje PATH  
- ... albo w aktualnie otwartym folderze z obrazami *.jpg.
+* hurtowe zmniejszanie dużych obrazów `*.jpg` (>4MB) do 50% wymiaru (i wielokrotnie mniejszej pojemności) w aktualnie otwartym folderze i  jego wszystkich podfolderach
+    * (można ustawić `set DUZY=4000000` na inną wartość w `r.cmd`).
 
-(Plik INI z innymi ustawieniami można też wygenerować w IfranView:
+### Instalacja
 
-     Plik \ Przetwarzanie wsadowe (seryjne) \ Opcja zaawansowane... \ [Zapisz ustawienia])
+1. Potrzebne jest wcześniejsze zainstalowanie <https://www.irfanview.com/> (darmowy do użytku domowego i niekomercyjnego)
+2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/files/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd`.
+3. Umieść pliki `r.cmd` i `i_view32.ini` oraz/lub `i_view64.ini` gdzieś, gdzie wskazuje PATH (w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta")  
+ ... albo w folderze z obrazami *.jpg lub folderze nadrzędnym, z którego będziemy uruchamiali skrypt.
 
-UŻYWANIE
--------------------
+Plik `i_view...ini` jest gotowy, ale można go też utworzyć z innymi, swoimi ustawieniami w IfranView:
 
-Uwaga - wypróbuj najpierw działanie na kopii danych!
+     Plik \ Przetwarzanie wsadowe (seryjne) \ Opcja zaawansowane... \ 
+       opcjonalnie - [Ładuj ustawienia]
+       [Zapisz ustawienia]
+
+![i_view_ini.png]({{ site.baseurl }}/assets/img/i_view_ini.png "i_view_ini.png"){:style="float:right;width:77%;"} 
+Załadowanie ustawień pozwala na podgląd tego co jest wpisane w `i_view...ini` ->
+
+### Użytkowanie
+
+**Uwaga - wypróbuj najpierw działanie na kopii danych!**
 
 Wpisz
 
     r.cmd
 
-w pasku eksploratora plików w aktualnie otwartym folderze w którym są obrazy `*.jpg`
+w pasku eksploratora plików w aktualnie otwartym folderze w którym lub poniżej którego są obrazy `*.jpg`.
 Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolderach - poczekaj i na zakończenie naciśnij dowolny klawisz.
