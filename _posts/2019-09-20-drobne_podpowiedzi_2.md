@@ -49,9 +49,12 @@ INSTALACJA
 
 UŻYWANIE
 -------------------
+
+Uwaga - wypróbuj najpierw działanie na kopii danych!
+
 Wpisz
 
     r.cmd
 
 w pasku eksploratora plików w aktualnie otwartym folderze w którym są obrazy `*.jpg`
-Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg` - poczekaj i na zakończenie naciśnij dowolny klawisz.
+Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolderach - poczekaj i na zakończenie naciśnij dowolny klawisz.
