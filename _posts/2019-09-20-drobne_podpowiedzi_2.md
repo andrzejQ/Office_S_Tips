@@ -62,5 +62,7 @@ Wpisz
 
     r.cmd
 
-w pasku eksploratora plików w aktualnie otwartym folderze w którym lub poniżej którego są obrazy `*.jpg`.
+w pasku eksploratora plików w aktualnie otwartym folderze w którym lub poniżej którego są obrazy `*.jpg` i naciśnij [Enter].
 Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolderach - poczekaj i na zakończenie naciśnij dowolny klawisz.
+![cmd-exe.png]({{ site.baseurl }}/assets/img/cmd-exe.png "cmd-exe.png"){:style="float:right;width:33%;"} 
+![r-cmd.png ]({{ site.baseurl }}/assets/img/r-cmd.png  "r-cmd.png "){:style="float:right;width:22%;"} 
