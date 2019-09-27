@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: System
 ---
 
-[Króki tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * ...
+[Króki tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * Hurtowe zmniejszanie dużych obrazów *.jpg
 
 ----
 ## Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
@@ -29,7 +29,7 @@ Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć 
 
 - - - -
 
-## Hurtowe zmniejszanie dużych obrazów `*.jpg`
+## Hurtowe zmniejszanie dużych obrazów *.jpg
 
 Hurtowe zmniejszanie dużych obrazów `*.jpg` do 50%
 w aktualnie otwartym folderze i  jego wszystkich podfolderach
