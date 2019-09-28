@@ -7,6 +7,17 @@ categories: DOCX
 
 Zaawansowane wyszukiwanie i zamiana wraz z możliwością zmiany formatowania w wyszukanych fragmentach oraz przyklejania osamotnionych liter **a**, **w**, **i**, **z**, **o**, **u**  na początek wiersza.
 
+Jeśli interesuje cię tylko sprawa osamotnionych liter to [przeczytaj więcej poniżej](#automatyczne-porzenoszenie-pojedynczych-liter-z-końca-wiersza-do-wiersza-następnego), a krótko mówiąc:
+* w otwartym dokumencie naciśnij `Ctrl+H` (albo menu: Narzędzia główne \ Zamień c)
+* [**Więcej <u>></u>>**] \ [x] **Użyj sym<u>b</u>oli wieloznacznych** 
+* Wklej w polu "Znaj<u>d</u>ź": `<([awizou]) `  (tu na końcu jest spacja!), w "Zam<u>i</u>eń na": `\1^s`. Na koniec [**Zam<u>i</u>eń wszystko**].
+* ![spacja_nierozdzielajaca.png]({{ site.baseurl }}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){:style="float:right;width:31%;margin:12px;"}Dla kontroli na chwilę włącz przycisk [**¶**] <small>(Narzędzia główne - sekcja Akapit)</small> i zobacz czy pojawiły się spacje nierozdzielające.
+
+
+- - - - -
+
+### Symbole wieloznaczne w MS Word
+
 **Zamień** \ [**Więcej <u>></u>>**] \
 * [x] **Użyj sym<u>b</u>oli wieloznacznych**   ![Word-symbole-wieloznaczne.png]({{ site.baseurl }}/assets/img/Word-symbole-wieloznaczne.png "Word-symbole-wieloznaczne.png"){:style="float:right;width:40%;"}
 
@@ -28,7 +39,7 @@ Niektórzy nie preferują pozostawiania pojedynczych liter np. **a**, **w**, **i
 
 W trybie symboli wieloznacznych - pole "Znaj<u>d</u>ź": `<([awizou]) `  (tu na końcu jest spacja), pole "Zam<u>i</u>eń na": `\1^s`. Na koniec [**Zam<u>i</u>eń wszystko**].
 
-Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć naciskając przycisk [**¶**] w menu (wstążce) Worda.
+Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć klikając przycisk [**¶**] w menu (wstążce) Worda.
 
 Uwagi
 1. Zauważ, że przycisk [**Specjalne ^**] po przejściu do pola "Zam<u>i</u>eń na" zmienia listę dostępnych symboli. Również w trybie wyłączonych symboli wieloznacznych lista symboli jest całkiem inna - warto zobaczyć.
