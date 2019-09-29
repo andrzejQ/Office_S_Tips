@@ -8,7 +8,7 @@ categories: System
 [Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg)
 
 ----
-## Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
+### Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
 
 W edytorze tekstu [**Notatnik++**](https://notepad-plus-plus.org/downloads/) zainstaluj wtyczkę **NppQrCode** (menu: Wtyczki \ Plugins Admin...)
 
@@ -29,7 +29,7 @@ Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć 
 
 - - - -
 
-## Hurtowe zmniejszanie dużych obrazów *.jpg
+### Hurtowe zmniejszanie dużych obrazów *.jpg
 
 Gdy chcemy zapamiętać roczną kopię zdjęć, przesłać zdjęcia na dysk sieciowy czy przekazać do oglądania na pendrive to bardzo przydaje się zmniejszenie rozmiaru plików naszych obrazów, do takich, że jakość oglądania jest doskonała, a równocześnie szybko się je kopiuje i wczytuje.
 

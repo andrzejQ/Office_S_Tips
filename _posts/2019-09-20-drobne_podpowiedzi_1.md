@@ -9,7 +9,7 @@ categories: System
 
 ----
 
-## Ostatnio używane foldery 
+### Ostatnio używane foldery 
 
 .. to trochę co innego niż *często używane foldery*, które pojawiają się po włączeniu (Win+E) eksploratora plików.
 
@@ -24,7 +24,7 @@ Kroki w celu dodania do paska "szybki dostęp":
 <br>
 
 ----
-## Zwalnianie miejsca na dysku C:
+### Zwalnianie miejsca na dysku C:
 
 W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 
@@ -44,7 +44,7 @@ W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 ----
 ![Attribute_Changer.png]({{ site.baseurl }}/assets/img/Attribute_Changer.png "Attribute_Changer.png"){:style="float:right;width:45%;"}
 
-## Hurtowa zmiana daty folderów
+### Hurtowa zmiana daty folderów
 
 Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwe. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat w interesującym nas zakresie.
 
