@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: System
 ---
 
-[Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg)
+[Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg) * [Problem ogromnego rozmiaru plików RTF i DOC]({{ site.url }}{{ site.baseurl }}{{ page.url }}#problem-ogromnego-rozmiaru-plików-rtf-i-doc)
 
 ----
 ### Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
@@ -22,9 +22,6 @@ Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć 
 * **Compare** - porównuje teksty 2 plików (nawet nie muszą być zapisane); w MS Word też można porównywać pliki, ale tutaj można szybciej coś skopiować (np. z DOCX czy PDF) i teksty nie muszą być zapisane; dodatkowo mamy porównywany tylko czysty tekst (samą treść)
 * Wykrywane są w tekście odnośniki do stron `http://` i `https://`, które stają się klikalne - otwierają stronę w przeglądarce.
 * W _znajdź / zamień_ działają wyrażenia regularne.
-
-
-
 
 
 - - - -
@@ -66,3 +63,20 @@ w pasku eksploratora plików w aktualnie otwartym folderze w którym lub poniże
 Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolderach - poczekaj i na zakończenie naciśnij dowolny klawisz.
 ![cmd-exe.png]({{ site.baseurl }}/assets/img/cmd-exe.png "cmd-exe.png"){:style="float:right;width:33%;"} 
 ![r-cmd.png ]({{ site.baseurl }}/assets/img/r-cmd.png  "r-cmd.png "){:style="float:right;width:22%;"} 
+
+<br>
+
+- - - -
+
+### Problem ogromnego rozmiaru plików RTF i DOC
+
+... po wstawieniu grafiki PNG, GIF lub JPEG w programie MS Word.
+
+![ExportPictureWithMetafile-0.png ]({{ site.baseurl }}/assets/img/ExportPictureWithMetafile-0.png  "ExportPictureWithMetafile-0.png "){:style="float:right;width:66%;"} 
+Zapisanie dokumentu programu Microsoft Word z grafiką EMF, PNG, GIF lub JPEG w innym formacie pliku (tj. nie docx), na przykład formacie programu Word 6.0/95 (*.doc) lub Tekst sformatowany RTF (*.rtf)), może znacznie zwiększyć rozmiar pliku dokumentu, gdyż powstaje dodatkowa, niespakowana kopia grafiki.
+Aby zapobiec zapisywaniu przez program Word dwóch kopii grafiki w dokumencie i zmniejszyć rozmiar pliku dokumentu należy dodać nową wartość ciągu **ExportPictureWithMetafile=0** w rejestrze systemu Microsoft Windows (uwaga - działaj z ostrożnościową w programie "regedit.exe" = Edytor rejestru):
+
+`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.x\Word\Options`
+
+**xx.x** to aktualny numer wersji MS Office (na ogół najwyższy, jeśli jest kilka).
+ 
