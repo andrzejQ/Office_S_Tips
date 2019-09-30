@@ -12,7 +12,7 @@ categories: System
 
 W edytorze tekstu [**Notatnik++**](https://notepad-plus-plus.org/downloads/) zainstaluj wtyczkę **NppQrCode** (menu: Wtyczki \ Plugins Admin...)
 
-1. Zaznacz fragment tekstu i kliknij ikonę wtyczki ![NppQrCode.png]({{ site.baseurl }}/assets/img/NppQrCode.png "NppQrCode.png"){:style="width:10em;"}
+1. Zaznacz fragment tekstu i kliknij ikonę wtyczki ![NppQrCode.png]({{ site.baseurl }}/assets/img/NppQrCode.png "NppQrCode.png"){:style="width:10em;"} <br><small>Zamiast N++ można też użyć 1-plikowej mini-aplikacji [QR Code generator](https://andrzejq.github.io/Jekyll_app1htmlFile/jekyll/update/2019/01/21/Aplikacje_html.1.html#qr-code---generator-i-czytnik-off-line).</small>
  
 2. W tel. komórkowym włącz aparat i nakieruj go na QR-kod (nie rób zdjęcia, tylko poczekaj na złapanie ostrości). Gdy pojawi się przycisk `( X Pokaż dane )` dotknij go i skopiuj tekst do schowka, a potem gdzieś wklej.  
 <small>Są też specjalistyczne aplikacje do odczytywania QRkodu, np. **Czytnik Kodów QR i paskowych** / TeaCaps.</small>
