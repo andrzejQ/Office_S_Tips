@@ -19,7 +19,7 @@ W pracy biurowej może się przydać m.in.
 ![UlatwieniaDostepu-Wskaznik.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu-Wskaznik.png "UlatwieniaDostepu-Wskaznik.png"){:style="width:32%;"}  
 <br>
 * ![Symbole_1.png]({{ site.baseurl }}/assets/img/Symbole_1.png "Symbole_1.png"){:style="float:right;width:17%;"}     Wstawianie znaków specjalnych **`[Win+.]`** <small>(przytrzymaj klawisz Windows i naciśnij kropkę)</small>. W pierwszej chwili wydawać się może, że tu chodzi o emotikony, ale po przełączeniu na **Symbole** mamy sporo przydatnych znaków specjalnych.  
-Uwaga - nietypowe znaki wymagają przetestowania. Co prawda ich wstawianie działa nawet w notatniku, ale wymaga czcionek używanych w nowoczesnych systemach.
+<small>Uwaga - nietypowe znaki wymagają przetestowania. Co prawda ich wstawianie działa nawet w notatniku, ale wymaga czcionek używanych w nowoczesnych systemach.</small>
 
 ![Symbole_2.png]({{ site.baseurl }}/assets/img/Symbole_2.png "Symbole_2.png"){:style="width:233px;"} 
 ![Symbole_3.png]({{ site.baseurl }}/assets/img/Symbole_3.png "Symbole_3.png"){:style="width:221px;"} 
