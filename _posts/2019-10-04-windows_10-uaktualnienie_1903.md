@@ -7,10 +7,12 @@ categories: System
 
 ...to kilka ciekawych ulepszeń, także w biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej.
 
-Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian. Sporo informacji można znaleźć w <https://www.spidersweb.pl/2019/01/windows-10-1903.html>. <small>(symbol <span>1903</span>{:style="color:blue"} oznacza rok 20<span>19</span>{:style="color:blue"} i miesiąc <span>03</span>{:style="color:blue"}  - zapewne chodzi o czas powstania uaktualnienia, które potem jest wdrażane)</small>. 
+Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian (<small>(symbol <span>1903</span>{:style="color:blue"} oznacza rok 20<span>19</span>{:style="color:blue"} i miesiąc <span>03</span>{:style="color:blue"}  - zapewne chodzi o czas powstania uaktualnienia, które potem jest wdrażane)</small>). Sporo informacji można znaleźć w:
+* <https://www.centrumxp.pl/Publikacja/Pelna-lista-zmian-w-Windows-10-May-2019-Update> 
+* <https://www.spidersweb.pl/2019/01/windows-10-1903.html>. 
 
 W pracy biurowej może się przydać m.in.
-* wygodne kopiowanie wycinka ekranu i nanoszenie na nim notatek: **`[Win+Shift+S]`** (tutaj **`+`** oznacza: przytrzymaj i naciskaj kolejny klawisz)
+* wygodne kopiowanie wycinka ekranu i nanoszenie na nim notatek: **`[Win+Shift+S]`** (tutaj **`+`** oznacza: przytrzymaj i naciskaj kolejny klawisz; zob. też [inne skróty klawiszowe](https://www.komputerswiat.pl/poradniki/programy/windows-10-skroty-klawiaturowe-windows-10-pulpit-pasek-zadan-wiersz-polecenia/pt4gpwy))
 * nowy sposób powiększania kursora myszy, czcionki ekranowej lub wszystkiego:  
 **`[Win+I]`** \ ![UlatwieniaDostepu1.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu1.png "UlatwieniaDostepu1.png"){:style="width:2em;"}**Ułatwienia dostępu**
 ![UlatwieniaDostepu-Ekran.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu-Ekran.png "UlatwieniaDostepu-Ekran.png"){:style="float:right;width:38%;"}
