@@ -5,7 +5,7 @@ date:   2019-10-04 08:41
 categories: System
 ---
 
-...to kilka ciekawych ulepszeń, także w biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej.
+...to kilka ciekawych ulepszeń, także w pracy biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej.
 
 Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian <small>(symbol <span>1903</span>{:style="color:blue"} oznacza rok 20<span>19</span>{:style="color:blue"} i miesiąc <span>03</span>{:style="color:blue"}  - zapewne chodzi o czas powstania uaktualnienia, które potem jest wdrażane)</small>. Sporo informacji można znaleźć w:
 * <https://www.centrumxp.pl/Publikacja/Pelna-lista-zmian-w-Windows-10-May-2019-Update> 
