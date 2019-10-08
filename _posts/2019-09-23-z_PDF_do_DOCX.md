@@ -32,7 +32,8 @@ W programie graficznym np. IrfanView można zredukować głębię kolorów  (na 
 
 
 Uwaga:
-* W Wordzie wybieraj format pliku ***.DOCX** a nie *.DOC czy *.RTF. Inaczej pliki wynikowe mogą okazać się ogromne (choć jest na to rada - zob. [Problem ogromnego rozmiaru plików RTF i DOC]({{ site.baseurl }}{% link _posts/2019-09-20-drobne_podpowiedzi_2.md %}#problem-ogromnego-rozmiaru-plików-rtf-i-doc)).
+* W Wordzie wybieraj format pliku ***.DOCX** a nie *.DOC czy *.RTF. Inaczej pliki wynikowe mogą okazać się ogromne (choć jest na to rada - zob. 
+[Problem ogromnego rozmiaru plików RTF i DOC]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-20-drobne_podpowiedzi_2 %}#problem-ogromnego-rozmiaru-plików-rtf-i-doc)).
 
 - - - - -
 
