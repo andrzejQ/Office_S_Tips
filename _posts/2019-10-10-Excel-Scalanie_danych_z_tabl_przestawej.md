@@ -33,7 +33,8 @@ W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalan
 - - - -
 <small>
 Pamiętajmy też, że możemy sobie błyskawicznie [zmieniać język](https://support.office.com/pl-pl/article/pakiet-akcesori%c3%b3w-j%c4%99zykowych-dla-pakietu-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?legRedir=true&LpArch=x86&ver=15&app=excel.exe&CorrelationId=cc608ee5-a234-4f27-a505-dedd13fa5b52&ui=pl-PL&rs=pl-PL&ad=PL) w menu Excela: `Plik` \ `Opcje` \ `Język` i korzystać z polskich bądź angielskich nazw funkcji.
+<small>
 
-W każdym przypadku w zapisie pliku XLSX wewnętrznie pamiętane są angielskie nazwy funkcji. Aby się o tym przekonać potraktuj plik XLSX jako archiwum ZIP (np. dopisz takie rozszerzenie do pliku) i zobacz pliki XML w folderze "\xl\worksheets". Nowsze funkcje, niedostępne w wersjach 2013 i wcześniejszych mają przedrostek "_xlfn.", np. "_xlfn.TEXTJOIN".
-
+</small>
+W każdym przypadku w wewnętrznym zapisie pliku XLSX pamiętane są angielskie nazwy funkcji. Aby się o tym przekonać potraktuj plik XLSX jako archiwum ZIP (np. dopisz takie rozszerzenie do pliku) i zobacz pliki XML w folderze "\xl\worksheets". Nowsze funkcje, niedostępne w wersjach 2013 i wcześniejszych mają w tych XML przedrostek "_xlfn.", np. "_xlfn.TEXTJOIN".
 </small>
