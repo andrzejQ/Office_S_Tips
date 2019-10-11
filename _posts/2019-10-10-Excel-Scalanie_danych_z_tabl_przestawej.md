@@ -22,6 +22,8 @@ Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek
 
 Instalacja dodatku jest zbędna w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN" (en) / "POŁĄCZ.TEKSTY" (pl). Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
 
+Funkcja "POŁĄCZ.TEKSTY" jest też dostępna w LibreOffice zob. "JoinIfEmpty_LiOf.ods"
+
 - - - -
 
 <br>
