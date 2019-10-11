@@ -20,13 +20,14 @@ Rysunek to obraz pliku "JoinIfEmpty_o.old.xlsx", gdzie opisałem jedno z możliw
 
 Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek. W tym celu - w przypadku wersji Excel 2013 i starszych - można użyć **dodatku dla Excel "AK_dodFunkcje.xlam"**. Opis instalacji dodatku (standardowy - nic specjalnego) jest w pliku "AK_dodFunkcje-test.xlsx". Plik "AK_dodFunkcje.bas" zawiera kod funkcji "TEXTJOIN", którą można dodać bądź to przez instalację dodatku bądź w inny sposób.
 
-Instalacja dodatku jest zbędna w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN". Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
+Instalacja dodatku jest zbędna w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN" (en) / "POŁĄCZ.TEKSTY" (pl). Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
 
 - - - -
 
 <br>
+
 ![TextJoin_2.png]({{ site.baseurl }}/assets/img/TextJoin_2.png "TextJoin_2.png"){:style="float:right;width:50%;"}
-W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalania danych. Gdy przedstawimy jest w tabeli przestawnej tak, że kategorie są we wierszach a dane w kolumnach to w wartościach można wpisać liczbę wystąpień danych i potem scalać je przy danej kategorii.
+W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalania danych. Gdy przedstawimy je w tabeli przestawnej tak, że kategorie są we wierszach a dane w kolumnach to w wartościach tabeli przestawnej można wpisać liczbę wystąpień danych i potem scalać dane z wiersza nagłówkowego obok kategorii.
 
 <small>
 Pamiętajmy też, że możemy sobie błyskawicznie [zmieniać język](https://support.office.com/pl-pl/article/pakiet-akcesori%c3%b3w-j%c4%99zykowych-dla-pakietu-office-82ee1236-0f9a-45ee-9c72-05b026ee809f?legRedir=true&LpArch=x86&ver=15&app=excel.exe&CorrelationId=cc608ee5-a234-4f27-a505-dedd13fa5b52&ui=pl-PL&rs=pl-PL&ad=PL) w menu Excela: `Plik` \ `Opcje` \ `Język` i korzystać z polskich bądź angielskich nazw funkcji.
