@@ -27,7 +27,7 @@ Instalacja dodatku jest zbędna w wersji MS Office 365 lub 2016 i wyższych, kt�
 <br>
 
 ![TextJoin_2.png]({{ site.baseurl }}/assets/img/TextJoin_2.png "TextJoin_2.png"){:style="float:right;width:50%;"}
-W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalania danych. Gdy przedstawimy je w tabeli przestawnej tak, że kategorie są we wierszach a dane w kolumnach to w wartościach tabeli przestawnej można wpisać liczbę wystąpień danych i potem scalać dane z wiersza nagłówkowego obok kategorii.
+W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalania danych. Gdy przedstawimy je w tabeli przestawnej tak, że kategorie są we wierszach a dane w kolumnach to w wartościach tabeli przestawnej można wpisać liczbę wystąpień danych i potem scalać te dane z wiersza nagłówkowego, dla których pojawiła się niezerowa wartość.
 
 
 - - - -
