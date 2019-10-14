@@ -25,7 +25,7 @@ W praktyce nie wstawiam tych danych od lewej kolumny `=$A$1`, lecz zostawiam sob
    * Można też ustawić w XLSX względne położenie źródła TXT względem tego foldera i uniknąć pytania o plik źródłowy TXT po przesiadce na inny komputer:
        * Wchodzimy do danego pliku XLSX jako spakowanego ZIP, np. można dopisać rozszerzenie ZIP, a w Total Commander [Ctrl + PgDn] - (widzimy foldery: `[_rels]`, `[docPros]`, `[xl]`).
        * Edytujemy plik `\xl\connections.xml` usuwając ścieżkę przed nazwą pliku źródła (to wymaga oczywiście wypakowania na chwilę tego pliku a potem spakowania).
-8. Ciekawostka - wpisując hiperłącze ze ścieżką do obrazka względem pliku CSV: `"=HIPERŁĄCZE(""./sciezka/wzgledna/obrazek.jpg"")"` dostajemy klikalny odnośnik do wyświetlenia obrazka. (Choć jeśli działamy w domenie organizacji to nie zawsze jest przyzwolenie na otwieranie odnośników w Excelu i wtedy to nie zadziała.)
+8. Ciekawostka - wpisując hiperłącze ze ścieżką do obrazka względem pliku CSV: `"=HIPERŁĄCZE(""./sciezka/wzgledna/obrazek.jpg"")"` dostajemy klikalny odnośnik do wyświetlenia obrazka. (Choć jeśli działamy w domenie organizacji to nie zawsze jest przyzwolenie na otwieranie odnośników w Excelu i wtedy to nie zadziała.) Inny przykład to odwołania do komórek w arkuszu <http://excelszkolenie.pl/Triki.htm> - *Hiperłącze*, pozwalające na szybkie przeniesienie się w inny obszar arkusza.
 
 - - - - - - - - -
 

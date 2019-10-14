@@ -43,3 +43,8 @@ Pamiętajmy też, że możemy sobie błyskawicznie [zmieniać język](https://su
 <small>
 W każdym przypadku w wewnętrznym zapisie pliku XLSX pamiętane są angielskie nazwy funkcji. Aby się o tym przekonać potraktuj plik XLSX jako archiwum ZIP (np. dopisz takie rozszerzenie do pliku) i zobacz pliki XML w folderze "\xl\worksheets". Nowsze funkcje, niedostępne w wersjach 2013 i wcześniejszych mają w tych XML przedrostek "_xlfn.", np. "_xlfn.TEXTJOIN".
 </small>
+
+- - - -
+
+<small>
+Inne interesujące opcje scalania można znaleźć w szkoleniu <http://excelszkolenie.pl>, np, suma w - [Operacje na wielu arkuszach na raz](http://excelszkolenie.pl/OperacjeNaWieluArkuszach.htm). Działa to też w LibreOffice[ _^_](https://help.libreoffice.org/Calc/Applying_Multiple_Sheets), podobne są też skróty klawiszowe do poruszania się po arkuszach - [Ctrl+PgUp/PgDn] i zaznaczania wielu arkuszy [Shift+Ctrl+PgUp/PgDn]. W LibreOffice wprost nie można łączyć tekstów z kolejnych arkuszy - zresztą bywa to mało sensowne. Natomiast znakomicie działa konsolidacja - można **dodać** wiele arkuszy na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy i obszarów  w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie w liście arkuszy), ale i tak jest to bardzo wygodne. Na skonsolidowanych danych można już używać TEXTJOIN.
