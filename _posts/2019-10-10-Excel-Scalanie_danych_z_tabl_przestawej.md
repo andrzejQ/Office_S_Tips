@@ -50,7 +50,7 @@ W tym miejscu można wspomnieć o [łączeniu danych z plików Excela w folderze
 </small>
 
 <small>
-Inne interesujące opcje łączenia można znaleźć w <http://excelszkolenie.pl> - [Operacje na wielu arkuszach na raz](http://excelszkolenie.pl/OperacjeNaWieluArkuszach.htm) np. `=SUMA(Arkusz1:Arkusz3!B2)`. Działa to też w LibreOffice[ _^_](https://help.libreoffice.org/Calc/Applying_Multiple_Sheets), (nieco inna jest postać wyrażenia: `=SUMA($'Arkusz1'.B2:$'Arkusz3'.B2)`). Podobne są też skróty klawiszowe do poruszania się po arkuszach - [Ctrl+PgUp/PgDn] i zaznaczania wielu arkuszy [Shift+Ctrl+PgUp/PgDn]. 
+Inne interesujące opcje łączenia można znaleźć w <http://excelszkolenie.pl> - [Operacje na wielu arkuszach na raz](http://excelszkolenie.pl/OperacjeNaWieluArkuszach.htm) np. `=SUMA(Arkusz1:Arkusz3!B2)`. Działa to też w LibreOffice[ _^_](https://help.libreoffice.org/Calc/Applying_Multiple_Sheets) - nieco inna jest postać wyrażenia: `=SUMA($'Arkusz1'.B2:$'Arkusz3'.B2)`. Podobne są też skróty klawiszowe do poruszania się po arkuszach - [Ctrl+PgUp/PgDn] i zaznaczania wielu arkuszy [Shift+Ctrl+PgUp/PgDn]. 
 </small>
 
 <small>
