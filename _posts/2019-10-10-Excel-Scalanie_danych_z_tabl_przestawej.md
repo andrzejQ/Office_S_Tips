@@ -45,9 +45,13 @@ W każdym przypadku w wewnętrznym zapisie pliku XLSX pamiętane są angielskie 
 </small>
 
 - - - -
+<small>
+W tym miejscu można wspomnieć o [łączeniu danych z plików Excela w folderze](https://szkolenieexcel.waw.pl/laczenie-danych-z-kilku-plikow-excela-w-jedna-zbiorcza-tabele/) (zob. <https://szkolenieexcel.waw.pl/>) do jednego arkusza i dalej do tabeli przestawnej - o.2016+ : Dane \ Nowe zapytanie \ Z pliku \ Z foderu (w o.2013- : Power Query \ Z pliku \ Z foderu).
+</small>
 
 <small>
-Inne interesujące opcje scalania można znaleźć w szkoleniu <http://excelszkolenie.pl>, np, suma w - [Operacje na wielu arkuszach na raz](http://excelszkolenie.pl/OperacjeNaWieluArkuszach.htm). Działa to też w LibreOffice[ _^_](https://help.libreoffice.org/Calc/Applying_Multiple_Sheets), podobne są też skróty klawiszowe do poruszania się po arkuszach - [Ctrl+PgUp/PgDn] i zaznaczania wielu arkuszy [Shift+Ctrl+PgUp/PgDn]. 
+Inne interesujące opcje łączenia można znaleźć w <http://excelszkolenie.pl> - [Operacje na wielu arkuszach na raz](http://excelszkolenie.pl/OperacjeNaWieluArkuszach.htm) np. `=SUMA(Arkusz1:Arkusz3!B2)`. Działa to też w LibreOffice[ _^_](https://help.libreoffice.org/Calc/Applying_Multiple_Sheets), (nieco inna jest postać wyrażenia: `=SUMA($'Arkusz1'.B2:$'Arkusz3'.B2)`). Podobne są też skróty klawiszowe do poruszania się po arkuszach - [Ctrl+PgUp/PgDn] i zaznaczania wielu arkuszy [Shift+Ctrl+PgUp/PgDn]. 
 </small>
+
 <small>
-Z pomocą TEXTJOIN/POŁĄCZ.TEKSTY wprost nie można łączyć tekstów z kolejnych arkuszy - zresztą bywa to mało sensowne. Natomiast dobrze działa konsolidacja - można **dodać** wiele arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy i obszarów  w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie w liście arkuszy), ale i tak jest to bardzo wygodne. Na skonsolidowanych danych można już używać TEXTJOIN.
+Z pomocą TEXTJOIN/POŁĄCZ.TEKSTY wprost nie można łączyć tekstów z zaznaczonych wielu arkuszy. Może najpierw można wykonać ![Konsoliduj-ikona.png]({{ site.baseurl }}/assets/img/Konsoliduj-ikona.png "Konsoliduj-ikona.png"){:style="width:30px;"} **konsolidację** wielu arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie kolejności arkuszy), ale i tak jest to bardzo wygodne. 
