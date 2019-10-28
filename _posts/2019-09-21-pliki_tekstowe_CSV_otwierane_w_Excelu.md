@@ -9,6 +9,8 @@ Excel-CSV - kilka jawnych, ale też kilka mniej znanych możliwości.
 
 Podczas przetwarzania surowych danych często chcemy nadać im strukturę tabeli przesyłanej do Excela. Można w tym miejscu posłużyć się plikiem tekstowym CSV. Plik tekstowy ma swoje zalety jak choćby możliwość kontroli wersji i wynajdywania zmian treści.
 
+Głównym tematem tych notatek jest takie przygotowanie pliku CSV, żeby można go było przekazywać innym/uaktualniać i otwierać w Excelu bez skomplikowanych zabiegów.
+
 1. Jeśli tekst dla danej komórki **zaczyna się od `=`** to jest automatycznie interpretowany **jako formuła**.
 2. Dla pliku w kodowaniu ANSI możemy dopisać **w dodatkowym pierwszym wierszu np. `sep=,`** - tu ostatni znak w tym wierszu (przecinek) oznacza separator niezależnie od systemowego separatora danych (np. w Excel PL to `;`). Sposób ten działa _tylko na pliki w starym kodowaniu ANSI_- czyli np. w Windows PL jest to zestaw znaków [cp1250](https://pl.wikipedia.org/wiki/Windows-1250), a więc znaków spoza Europy środkowej nie zobaczymy....
 3. Wszelkie **teksty ujęte w cudzysłowy "..."** nawet zawierające wewnątrz znak dowolnego separatora czy nowego wiersza (!) są umieszczane w jednej komórce, a zewnętrzne cudzysłowy są pomijane. <small>Jednak znaki nowego wiersza mogą powodować kłopoty - zob. p.6</small>
