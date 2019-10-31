@@ -34,10 +34,18 @@ W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 * [Win + i]  albo Start \ Ustawienia
     * System \ Pamięć \
 
-1. ![Zwolnij_miejsce_teraz.png]({{ site.baseurl }}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){:style="float:right;width:45%;"} Zmień sposób zwalniania miejsca \ Zwolnij miejsce teraz \ Oczyść teraz
+1. ![Zwolnij_miejsce_teraz.png]({{ site.baseurl }}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){:style="float:right;width:45%;"} Skonfiguruj Czujnik pamięci lub uruchom go teraz <small>(albo: Zmień sposób zwalniania miejsca)</small> \ Zwolnij miejsce teraz \ Oczyść teraz
 2. 
 
 ![Zmien_lok_zapisywania.png]({{ site.baseurl }}/assets/img/Zmien_lok_zapisywania.png "Zmien_lok_zapisywania.png"){:style="width:50%;"}
+
+
+Można tu też wspomnieć o możliwości przesuwania foldera na inny dysk z dysku systemowego (np. gdy mamy mały dysk SSD) i [tworzeniu dowiązania](https://leniwy.eu/news,10,Linki-symboliczne-w-Windowsie.html#Windows-a-linki) udającego, że folder jest na dysku systemowym 
+
+Przykład w linii poleceń Windows (uruchom CMD)
+````bat
+C:\mklink /j "C:\NazwaPseudoFoldera" "D:\Scieżka\NazwaIstniejącegoFoldera"
+````
 
 <br>
 
