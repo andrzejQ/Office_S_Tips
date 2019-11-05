@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: Programowanie
 ---
 
-[Szukanie ścieżek do plików *.exe]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szukanie-plików-exe-dostępnych-poprzez-path) * [Python Launcher for Window]({{ site.url }}{{ site.baseurl }}{{ page.url }}#python-launcher-for-window) 
+[Szukanie ścieżek do plików .exe]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szukanie-plików-exe-dostępnych-poprzez-path) * [Python Launcher for Window]({{ site.url }}{{ site.baseurl }}{{ page.url }}#python-launcher-for-window) 
 
 
 
@@ -67,17 +67,21 @@ Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy
 
 Od wersji 3.3 wraz z instalacją Pythona jest instalowany program `py.exe`[_^](https://docs.python.org/3/using/windows.html#python-launcher-for-windows) oraz `pyw.exe`, np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#! python3.7-64` lub `#! /usr/bin/python3.7-64` - `/usr/bin/` itp. jest pomijany w Windows. Natomiast specjalne znaczenie ma `/usr/bin/env`, np. `#! /usr/bin/env python3` - tu następuje wyszukanie tej wersji, która pasuje do naszych warunków (tzn. możliwie najwyższa wersja 3) przeszukując ścieżki PATH <small>(nie sprawdzałem tego - jeśli ktoś to wypróbował proszę o komentarz).</small>
 
+Aby przetestować który kompilator się uruchomi można przygotować sobie testowy plik _.py_:
+````py
+#! /usr/bin/env python3
+import sys
+input('\n'.join(['',sys.executable,sys.version,'','naciśnij Enter']))
+````
+
 Lista wersji kompilatora do wyboru m.in za pomocą `#! ....`: 
 ````
 py -0
 ````
 `py` bez parametrów wywołuje swój domyślny kompilator `python.exe`. Nie musi to być ten znaleziony jako pierwszy w PATH, stąd wywołanie `py` może dawać całkiem inne efekty niż `python` (wyszukany w PATH).
 
-W Notepad++ można zapamiętać sobie w Uruchom wywołanie programu właściwego dla rozszerzenia aktualnie edytowanego pliku (to działa uniwersalnie na dowolne rozszerzenia, nie tylko `*.py`):
-
-````bat
-%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "$(FULL_CURRENT_PATH)" & pause
-````
+W Notepad++ można zapamiętać sobie w Uruchom wywołanie programu właściwego dla rozszerzenia aktualnie edytowanego pliku (to działa uniwersalnie na dowolne rozszerzenia, nie tylko _*.py_):  
+`%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}
 
 Sprawdzenie aktualnej obsługi pliku `*.py` - skopiuj do linii poleceń:
 ````bat
@@ -91,7 +95,7 @@ ASSOC .py=Python.File
 FTYPE Python.File="C:\WINDOWS\py.exe" "%L" %*
 ````
 
-<small> - jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+
+<small> - jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+. Jeśli jednak dodaliśmy swoją obsługę plików _*.py_, to nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png"). [Błędem jest](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread) wybieranie wprost "C:\WINDOWS\py.exe".
 </small>
 
 <span style="font-size: smaller;">
