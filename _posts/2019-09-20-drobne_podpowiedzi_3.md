@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Drobne podpowiedzi 3 (programowanie)"
-date:   2019-09-20 10:21:59 +0100
+date:   2019-09-20 11:21:59 +0100
 categories: Programowanie
 ---
 
@@ -116,8 +116,8 @@ Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.in
 [defaults]
 python=3.6
 ````
-W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html),
- `py.exe` regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
+
+W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
 
 
 
