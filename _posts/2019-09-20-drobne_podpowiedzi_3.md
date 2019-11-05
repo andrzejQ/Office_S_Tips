@@ -65,7 +65,7 @@ Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy
 
 ### Python Launcher for Window
 
-Od wersji 3.3 wraz z instalacją Pythona jest instalowany program `py.exe`[_^](https://docs.python.org/3/using/windows.html#python-launcher-for-windows) oraz `pyw.exe`, np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#! python3.7-64` lub `#! /usr/bin/python3.7-64` - `/usr/bin/` itp. jest pomijany w Windows. Natomiast specjalne znaczenie ma `/usr/bin/env`, np. `#! /usr/bin/env python3` - tu następuje wyszukanie tej wersji, która pasuje do naszych warunków (tzn. możliwie najwyższa wersja 3) przeszukując ścieżki PATH <small>(nie sprawdzałem tego - jeśli ktoś to wypróbował proszę o komentarz).</small>
+Od wersji 3.3 wraz z instalacją Pythona jest instalowany program `py.exe`[_^](https://docs.python.org/3/using/windows.html#python-launcher-for-windows) oraz `pyw.exe`, np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#! python3.7-64` lub `#! /usr/bin/python3.7-64` - `/usr/bin/` itp. jest pomijany w Windows. Natomiast specjalne znaczenie ma `/usr/bin/env`, np. `#! /usr/bin/env python3` - wg. dokumentacji tu następuje wyszukanie tej wersji, która pasuje do naszych warunków (tzn. możliwie najwyższa wersja 3) przeszukując ścieżki PATH <small>(nie udało mi się uzyskać tego efektu - proszę o komentarz, jeśli to ma być jakoś inaczej rozumiane).</small>
 
 Aby przetestować który kompilator się uruchomi można przygotować sobie testowy plik _.py_:
 ````py
@@ -95,7 +95,8 @@ ASSOC .py=Python.File
 FTYPE Python.File="C:\WINDOWS\py.exe" "%L" %*
 ````
 
-<small> - jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+. Jeśli jednak dodaliśmy swoją obsługę plików _*.py_, to nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png"). [Błędem jest](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread) wybieranie wprost "C:\WINDOWS\py.exe".
+<small> - jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+. Jeśli jednak dodaliśmy swoją obsługę plików _*.py_ (poprzez _"otwórz za pomocą"_), to ten nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png").  
+Wybieranie wprost "C:\WINDOWS\py.exe" [jest błędem](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread).
 </small>
 
 <span style="font-size: smaller;">
