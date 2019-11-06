@@ -5,7 +5,7 @@ date:   2019-09-20 11:21:59 +0100
 categories: Programowanie
 ---
 
-[Szukanie ścieżek do plików .exe]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szukanie-plików-exe-dostępnych-poprzez-path) * [Python Launcher for Window]({{ site.url }}{{ site.baseurl }}{{ page.url }}#python-launcher-for-window) 
+[Szukanie ścieżek do plików .exe]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szukanie-plików-exe-dostępnych-poprzez-path) * [Python Launcher for Windows]({{ site.url }}{{ site.baseurl }}{{ page.url }}#python-launcher-for-window) 
 
 
 
@@ -63,9 +63,9 @@ Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy
 - - - -
 <br>
 
-### Python Launcher for Window
+### Python Launcher for Windows
 
-Od wersji 3.3 wraz z instalacją Pythona jest instalowany program `py.exe`[_^](https://docs.python.org/3/using/windows.html#python-launcher-for-windows) oraz `pyw.exe`, np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#! python3.7-64` lub `#! /usr/bin/python3.7-64` - `/usr/bin/` itp. jest pomijany w Windows. Natomiast specjalne znaczenie ma `/usr/bin/env`, np. `#! /usr/bin/env python3` - wg. dokumentacji tu następuje wyszukanie tej wersji, która pasuje do naszych warunków (tzn. możliwie najwyższa wersja 3) przeszukując ścieżki PATH <small>(nie udało mi się uzyskać tego efektu - proszę o komentarz, jeśli to ma być jakoś inaczej rozumiane).</small>
+Od wersji 3.3 wraz z instalacją Pythona jest instalowany [program `py.exe` oraz `pyw.exe`](https://docs.python.org/3/using/windows.html#python-launcher-for-windows), np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#! python3.7-64` lub `#! /usr/bin/python3.7-64` (w Windows `/usr/bin/` jest pomijany). Natomiast specjalne znaczenie ma `/usr/bin/env`, np. `#! /usr/bin/env python3` - [wg. dokumentacji](https://docs.python.org/3/using/windows.html#shebang-lines) następuje tu najpierw przeszukiwanie ścieżki _PATH_ w celu uruchomienia _Python.exe_ <small>(nie udało mi się uzyskać tego efektu - proszę o komentarz, jeśli to ma być jakoś inaczej rozumiane).</small>
 
 Aby przetestować który kompilator się uruchomi można przygotować sobie testowy plik _.py_:
 ````py
@@ -74,13 +74,13 @@ import sys
 input('\n'.join(['',sys.executable,sys.version,'','naciśnij Enter']))
 ````
 
-Lista wersji kompilatora do wyboru m.in za pomocą `#! ....`: 
+Lista wersji kompilatorów do wyboru m.in za pomocą `#! ....`: 
 ````
-py -0
+py -0p
 ````
-`py` bez parametrów wywołuje swój domyślny kompilator `python.exe`. Nie musi to być ten znaleziony jako pierwszy w PATH, stąd wywołanie `py` może dawać całkiem inne efekty niż `python` (wyszukany w PATH).
+`py` bez parametrów wywołuje swój domyślny kompilator `python.exe` - oznaczany na liście gwiazdką. Nie musi to być ten znaleziony jako pierwszy w PATH, stąd wywołanie `py` może dawać całkiem inne efekty niż `python` (wyszukany w PATH).
 
-W Notepad++ można zapamiętać sobie w Uruchom wywołanie programu właściwego dla rozszerzenia aktualnie edytowanego pliku (to działa uniwersalnie na dowolne rozszerzenia, nie tylko _*.py_):  
+W Notepad++ można zapamiętać sobie w _Uruchom_ wywołanie programu właściwego dla rozszerzenia aktualnie edytowanego pliku (to działa uniwersalnie na dowolne rozszerzenia, nie tylko _*.py_):  
 `%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}
 
 Sprawdzenie aktualnej obsługi pliku `*.py` - skopiuj do linii poleceń:
@@ -95,9 +95,10 @@ ASSOC .py=Python.File
 FTYPE Python.File="C:\WINDOWS\py.exe" "%L" %*
 ````
 
-<small> Jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+. Jeśli jednak dodaliśmy swoją obsługę plików _*.py_ (poprzez _"otwórz za pomocą"_), to ten nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png").  
-Wybieranie wprost "C:\WINDOWS\py.exe" [jest błędem](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread).
-</small>
+<small> Jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+.</small>
+
+Uwaga - jeśli dodaliśmy swoją obsługę plików _*.py_ (poprzez _"Otwórz za pomocą"_), to ten nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png"). Wybieranie wprost "C:\WINDOWS\py.exe" [jest błędem](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread).
+
 
 <span style="font-size: smaller;">
 Ewentualnie, aby uruchamiać skrypt podając samą nazwę bez wpisywania rozszerzenia ".py" można jeszcze dodać  `set PATHEXT=.PY;%PATHEXT%`
@@ -105,7 +106,7 @@ lub trwale zmodyfikować PATHEXT w ["Edytuj zmienne..."](#edytuj-zmienne).
 </span>
 
 <span style="font-size: smaller;">
-Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.ini`{:style="font-size: smaller;"} uzyskamy włączając PYLAUNCH_DEBUG: `set PYLAUNCH_DEBUG=1 & py -0`{:style="font-size: smaller;"}
+Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.ini`{:style="font-size: smaller;"} uzyskamy włączając PYLAUNCH_DEBUG: `set PYLAUNCH_DEBUG=1 & py -0p`{:style="font-size: smaller;"}
 </span>
 
 ----
