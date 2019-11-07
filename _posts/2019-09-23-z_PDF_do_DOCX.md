@@ -19,7 +19,7 @@ Menu: **Edycja** \ **Preferencje** \ **Ogólnie** \
 
 Już użycie rozdzielczości 300dpi daje wysoką jakość na wydruku. Można jednak nawet ustawić 600dpi (jakość jest wtedy doskonała) i pomimo tak dużej rozdzielczości uzyskać obrazy rastrowe rozsądnej pojemności:
 
-Menu: **Wyświetlanie strony** \ **Rendering** - wyłaczyć wszystkie wygładzania.
+Menu: **Wyświetlanie strony** \ **Rendering** - wyłączyć wszystkie wygładzania, także: _Wygładź tekst: Brak_.
 
 Następnie wyświetlamy obszar, który chcemy skopiować (można dowolnie pomniejszać widok, aby na kranie znalazł się cały potrzebny obszar), wywołujemy
 narzędzie   **Edycja** \ ![AdobeR-wykonaj_zdjecie.png]({{ site.baseurl }}/assets/img/AdobeR-wykonaj_zdjecie.png "AdobeR-wykonaj_zdjecie.png"){:style="width:30px;"} **W<u>y</u>konaj zdjęcie** i zaznaczmy obszar do kopiowania.
