@@ -50,8 +50,9 @@ W Notepad++ można zapamiętać sobie w Uruchom wywołanie konkretnego kompilato
 setx PY_PTH "C:\Program Files\Python 3.8"
 ````
 Wtedy możemy w przyszłości wygodnie zmieniać wartość zmiennej, a używać stałej modyfikacji  
-`set PATH=%PY_PTH%;%PATH%`, a wręcz [trwale ją wpisać do _PATH_](https://ss64.com/nt/path.html) za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) (nie powinno się używać _SetX_ do _PATH_, czy do wyżej wspomnianego _PYTHONPATH_) oraz wpisać na stałe w opcjach "uruchom" N++:
-`%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "%PY_PTH%\Python.exe" "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}
+`set PATH=%PY_PTH%;%PATH%`, a wręcz [trwale ją wpisać do _PATH_](https://ss64.com/nt/path.html) za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) oraz wpisać na stałe w opcjach "uruchom" N++:
+`%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "%PY_PTH%\Python.exe" "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}  
+<small>[Nie powinno się używać _SetX_ do _PATH_](https://ss64.com/nt/path.html), czy do wyżej wspomnianego _PYTHONPATH_.</small>
 
 - - - -
 
@@ -108,8 +109,8 @@ lub trwale zmodyfikować PATHEXT w ["Edytuj zmienne..."](#edytuj-zmienne).
 </span>
 
 <span style="font-size: smaller;">
-Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.ini`{:style="font-size: smaller;"} uzyskamy włączając PYLAUNCH_DEBUG:  
-`set PYLAUNCH_DEBUG=1 & py -0p`{:style="font-size: smaller;"}
+Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.ini`{:style="font-size: smaller;"} uzyskamy włączając `PYLAUNCH_DEBUG`{:style="font-size: smaller;"} :  
+`set PYLAUNCH_DEBUG=1 & py -0p`{:style="font-size: smaller;"} . Następnie można uruchamiać plik testowy _v.py_ testując różne opcje w _#!..._
 </span>
 
 ----
@@ -127,9 +128,9 @@ python3=3.6
 ````
 
 <span style="font-size: smaller;">
-Z linii poleceń można dopisać tekst do swojego _py.ini_  
+Z linii poleceń można dopisać tekst do swojego _py.ini_ (modyfikacja działa od razu i nie trzeba restartu aplikacji np. _cmd_ albo _N++_ jak w przypadku SetX): 
 `(echo.[defaults]&echo.python=3&echo.python3=3.6)>>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
-albo stworzyć na nowo używając pojedynczego znaku '>' zamiast '\>>'.
+Aby _py.ini_ stworzyć na nowo należy użyć pojedynczego znaku '>' zamiast '\>>'. Zob. `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
 </span>
 
 W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
