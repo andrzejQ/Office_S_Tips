@@ -50,7 +50,7 @@ W Notepad++ można zapamiętać sobie w Uruchom wywołanie konkretnego kompilato
 setx PY_PTH "C:\Program Files\Python 3.8"
 ````
 Wtedy możemy w przyszłości wygodnie zmieniać wartość zmiennej, a używać stałej modyfikacji  
-`set PATH=%PY_PTH%;%PATH%`, a wręcz [trwale ją wpisać do _PATH_](https://ss64.com/nt/path.html) za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) oraz wpisać na stałe w opcjach "uruchom" N++:
+`set PATH=%PY_PTH%;%PATH%`, a wręcz [trwale ją wpisać do _PATH_](https://ss64.com/nt/path.html) za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) - PATH / Edytuj / Nowy: `%PY_PTH%` i/lub wpisać na stałe w opcjach "uruchom" N++:
 `%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "%PY_PTH%\Python.exe" "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}  
 <small>[Nie powinno się używać _SetX_ do _PATH_](https://ss64.com/nt/path.html), czy do wyżej wspomnianego _PYTHONPATH_.</small>
 
@@ -133,7 +133,7 @@ Z linii poleceń można dopisać tekst do swojego _py.ini_ (modyfikacja działa 
 Aby _py.ini_ stworzyć na nowo należy użyć pojedynczego znaku '>' zamiast '\>>'. Zob. `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
 </span>
 
-W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
+W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) [(zob.^)](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
 
 Można tu jeszcze wspomnieć o wymyślaniu [własnych poleceń](https://www.python.org/dev/peps/pep-0397/#customized-commands) wpisywanych w _py.ini_, które można używać w _#!..._.,tylko należy pamiętać, że nie mogą zaczynać się od _python_.
 
