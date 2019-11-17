@@ -14,19 +14,21 @@ categories: Programowanie
 
 Reguły, które zamierzam sobie stosować:
 
-1. Uruchamianie plików _*.py_ jako skryptów Windows umożliwia _py.exe_ tj. _Python Launcher for Windows_.
-2. Użycie w pierwszym wierszu pliku _*.py_: `#!/usr/bin/env python` pozwala na korzystanie z priorytetu kolejności ścieżek do _python.exe_ w zmiennej środowiskowek _PATH_, w tym do wygodnego korzystania z wygenerowanych środowisk wirtualnych Pythona (na końcu nie może być żadnych cyfr - tylko samo _python_)
+1. Uruchamianie plików _*.py_ jako skryptów Windows przez _py.exe_ tj. _Python Launcher for Windows_, głównie z opcją wynikającą z pierwszeństwa na liście ścieżek do _python.exe_ w zmiennej środowiskowej _PATH_.
+2. Używanie w pierwszym wierszu pliku _*.py_: `#!/usr/bin/env python` - właśnie celu korzystania z _PATH_ (na końcu nie może być żadnych cyfr - tylko samo _python_)
 3. W ["Edytuj zmienne środowiskowe systemu"](#edytuj-zmienne) należy po instalacji kolejnej wersji Pythona przenieść ścieżki do _Python.exe_ z _Path - system_ do _Path - użytkownika_, żeby umożliwić sobie wygodniejszą ich modyfikację.
-4. Na pierwszym miejscu w _Path - użytkownika_ wpisuję *%PY_PTH%*. Zmienną środowiskową *PY_PTH* ustawiam domyślnie na _.venv\Scripts_ np. poleceniem `setx PY_PTH .venv\Scripts` (to daje ścieżkę względną w _Path_ - wygląda że to działa). W ten sposób skrypt uruchamiany z miejsca, gdzie jest wygenerowane środowisko wirtualne będzie wywoływał _python.exe_ właśnie z tego środowiska. Dla doraźnej potrzeby można zmieniać *PY_PTH* na inną ścieżkę.
-5. [Środowsko wirtualne](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) generuję w miejscu skryptu _*.py_ za pomocą:
+4. Na pierwszym miejscu w _Path - użytkownika_ wpisuję *%PY_PTH%*, a zmienną środowiskową *PY_PTH* ustawiam domyślnie na _.venv\Scripts_ np. poleceniem `setx PY_PTH .venv\Scripts` (to daje ścieżkę względną w _Path_). W ten sposób skrypt uruchamiany z miejsca, gdzie jest wygenerowane środowisko wirtualne będzie wywoływał _python.exe_ właśnie z tego środowiska. Dla doraźnej potrzeby można zmieniać *PY_PTH* na inną ścieżkę.
+5. W _Path - użytkownika_ poniżej *%PY_PTH%* umieszczam ścieżkę do wybranego _python.exe_, który ma być uruchamiany, gdy nie korzystam ze środowiska wirtualnego.
+6. Na sam koniec _Path - użytkownika_  przenoszę `%USERPROFILE%\AppData\Local\Microsoft\WindowsApps`, żeby się nie włączał sklep Microsoft po wywołaniu _python.exe_
+7. [Środowsko wirtualne](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) generuję w miejscu (tj. folderze) skryptu _*.py_ za pomocą:
 ````bat
-pełna\lub\względna\ścieżka\do\wzorcowego\python.exe -m venv .venv
+ścieżka\do\wzorcowego\python.exe -m venv .venv
 .venv\Scripts\python -m pip install --upgrade pip setuptools wheel
 setx PY_PTH .venv\Scripts
 ````
-Ostatnie polecenie jest zbędne, gdy nie zmienialiśmy *PY_PTH*. Przy takich ustawieniach nie jest potrzebna aktywacja środowiska wirtualnego. (Można jeszcze mocniej utrwalić aktualne środowisko wirtualne podając pełną ścieżkę: `setx PY_PTH %CD%\.venv\Scripts`)
-6. W _Path - użytkownika_ poniżej *%PY_PTH%* umieszczam ścieżkę do wybranego _python.exe_, który ma być uruchamiany gdy nie korzystam ze środow. wirt.
-7. Na sam koniec _Path - użytkownika_  przenoszę `%USERPROFILE%\AppData\Local\Microsoft\WindowsApps`, żeby się nie włączał sklep Microsoft po wywołaniu _python.exe_
+Przy takich ustawieniach nie jest potrzebna aktywacja środowiska wirtualnego. Będzie się włączało to, które jest w folderze wywoływanego skryptu.  
+Ostatnie polecenie jest zbędne, gdy nie zmienialiśmy *PY_PTH*. (Można by wpisać na trwałe właśnie to środowisko wirtualne podając pełną ścieżkę: `setx PY_PTH %CD%\.venv\Scripts`, ale ścieżka względna jest tu raczej dostateczna, a przede wszystkim uniwersalna).  
+Ścieżka do _python.exe_ może dotyczyć jakiejkolwiek wersji, nawet zainstalowanej tylko na chwilę, bo produkcyjnie używana będzie kopia w _.venv\Scripts_.
 
 - - - -
 
@@ -50,11 +52,7 @@ Uwaga - to chwilę trwa. Tu po `/r` jest nazwa foldera, od którego zaczyna się
 where /r "C:\\" /t python.exe
 ````
 
-Wybraną ścieżkę  "python.exe" można <u>trwale zapamiętać w PATH<a id="edytuj-zmienne"></a></u> na początkowym miejscu (w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" lub "... dla systemu"). Wtedy `python` lub `python mójSkrypt.py` będzie wywoływało właśnie tą wersję. Można też [modyfikować PATH](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) tuż przed wywołaniem `python` w linii poleceń lub w pliku *.cmd, np:
-````
-set PATH=C:\Program Files\Python 3.8;%PATH%
-````
-Jeśli używamy tekstów UTF-8 (np. w nazwach plików) to warto na początek włączyć to kodowanie w linii poleceń: `chcp 65001`.
+Wybraną ścieżkę  "python.exe" można <u>trwale zapamiętać w PATH<a id="edytuj-zmienne"></a></u> na początkowym miejscu (w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" lub "... dla systemu"). Wtedy `python` lub `python mójSkrypt.py` będzie wywoływało właśnie tą wersję. Można też [modyfikować PATH](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) tuż przed wywołaniem `python` w linii poleceń lub w pliku _*.cmd_. Jeśli używamy tekstów UTF-8 (np. w nazwach plików) to warto na początek włączyć to kodowanie w linii poleceń: `chcp 65001`.
 
 Gdy mamy swoje moduły, używane w różnych projektach to można dodać  
 `set PYTHONPATH=%PYTHONPATH%;C:\My_python_lib`
@@ -76,8 +74,10 @@ Wtedy możemy w przyszłości wygodnie zmieniać wartość zmiennej, a używać 
 <span style="font-size: smaller; color:DarkGrey;">
 Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy:
 </span>
-`ECHO.%PATH:;=; & ECHO.%`{:style="font-size: smaller;"}
-
+`ECHO.%PATH:;=; & ECHO.%`{:style="font-size: smaller;"}  
+<span style="font-size: smaller; color:DarkGrey;">
+Uwaga - _Path_ jest składana z 2 części, które w w ["Edytuj zmienne..."](#edytuj-zmienne) widzimy jako - _Path - system_ (priorytetowa) i _Path - użytkownika_. Warto je sobie uporządkować jak opisano na początku artykułu.
+</span>
 - - - -
 <br>
 
