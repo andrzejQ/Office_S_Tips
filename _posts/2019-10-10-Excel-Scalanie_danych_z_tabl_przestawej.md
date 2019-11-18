@@ -20,7 +20,7 @@ Rysunek to obraz pliku "JoinIfEmpty_o.old.xlsx", gdzie opisałem jedno z możliw
 
 Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek. W tym celu - w przypadku wersji MS Office 2013 i starszych - można użyć **dodatku dla Excel "AK_dodFunkcje.xlam"**. Opis instalacji dodatku (standardowy - nic specjalnego) jest w pliku "AK_dodFunkcje-test.xlsx". Plik "AK_dodFunkcje.bas" zawiera kod funkcji "TEXTJOIN" zawartej w tym dodatku. Taką funkcję można też dodać do swojego arkusza w inny sposób.
 
-Instalacja dodatku jest zbędna w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN" (en) / "POŁĄCZ.TEKSTY" (pl). Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
+Instalacja dodatku jest zbędna [w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN" (en) / "POŁĄCZ.TEKSTY" (pl)](https://skuteczneraporty.pl/blog/nowego-programie-excel-2016-cz-5-funkcje-warunki-przelacz-oraz-polacz-teksty/). Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
 
 Funkcja "POŁĄCZ.TEKSTY" jest standardowo dostępna w LibreOffice - zob. "JoinIfEmpty_LiOf.ods". 
 W LibreOffice można się też łatwo przełączać na ang. nazwy funkcji:
