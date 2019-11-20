@@ -5,7 +5,8 @@ date:   2019-10-10 09:21:59 +0100
 categories: CSV
 ---
 
-Wielokrotne dane w danej kategorii jako pojedynczy tekst.
+Wielokrotne dane w danej kategorii jako pojedynczy tekst.  
+A także dodatek do Excel 2013- "AK_dodFunkcje.xlam" dla kilku nowych funkcji Excel 2016+ : TEXTJOIN/POŁĄCZ.TEKSTY, CONCAT/ZŁĄCZ.TEKST, SWITCH/PRZEŁĄCZ, IFS/WARUNKI
 
 Tabela przestawna to świetny sposób na wykrywanie powiązań danych. 
 Gdy korzystam z tej funkcjonalności to najczęściej 
@@ -18,7 +19,7 @@ i otrzymuję układ kategorii z potencjalnie wielokrotnymi danymi - jak w kolumn
 Rysunek to obraz pliku "JoinIfEmpty_o.old.xlsx", gdzie opisałem jedno z możliwych rozwiązań. Omawiane tutaj pliki znajdują się w spakowanej paczce
 * [**TextJoin.zip**]({{ site.baseurl }}/assets/files/TextJoin.zip) 
 
-Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek. W tym celu - w przypadku wersji MS Office 2013 i starszych - można użyć **dodatku dla Excel "AK_dodFunkcje.xlam"**. Opis instalacji dodatku (standardowy - nic specjalnego) jest w pliku "AK_dodFunkcje-test.xlsx". Plik "AK_dodFunkcje.bas" zawiera kod funkcji "TEXTJOIN" zawartej w tym dodatku. Taką funkcję można też dodać do swojego arkusza w inny sposób.
+Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek. W tym celu - w przypadku wersji MS Office 2013 i starszych - można użyć **dodatku dla Excel "AK_dodFunkcje.xlam"**. Opis instalacji dodatku (standardowy - nic specjalnego) jest w pliku "AK_dodFunkcje-test.xlsx". Plik "AK_dodFunkcje.bas" zawiera kod funkcji "TEXTJOIN" zawartej w tym dodatku (a także funkcji CONCAT, SWITCH, IFS występującyh w Excel 2016+).
 
 Instalacja dodatku jest zbędna [w wersji MS Office 365 lub 2016 i wyższych, które standardowo zawierają funkcję "TEXTJOIN" (en) / "POŁĄCZ.TEKSTY" (pl)](https://skuteczneraporty.pl/blog/nowego-programie-excel-2016-cz-5-funkcje-warunki-przelacz-oraz-polacz-teksty/). Przykład jej użycia do celu jak wyżej jest w pliku "JoinIfEmpty_o.2016.xlsx".
 
@@ -54,4 +55,22 @@ Inne interesujące opcje łączenia można znaleźć w <http://excelszkolenie.pl
 </small>
 
 <small>
-Z pomocą TEXTJOIN/POŁĄCZ.TEKSTY wprost nie można łączyć tekstów z zaznaczonych wielu arkuszy. Może najpierw można wykonać ![Konsoliduj-ikona.png]({{ site.baseurl }}/assets/img/Konsoliduj-ikona.png "Konsoliduj-ikona.png"){:style="width:30px;"} **konsolidację** wielu arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie kolejności arkuszy), ale i tak jest to bardzo wygodne. 
+TEXTJOIN / POŁĄCZ.TEKSTY działa w Excel 2016+ także na zakres wielu arkuszy, np. `=POŁĄCZ.TEKSTY(" ~ ";0;Arkusz1:Arkusz3!A1)`.  
+Nie działa to (na razie) z dodatkiem "AK_dodFunkcje.xlam" w Excel 2013-, ani w LibreOffice. We wszystkich wersjach Excel Może najpierw można wykonać ![Konsoliduj-ikona.png]({{ site.baseurl }}/assets/img/Konsoliduj-ikona.png "Konsoliduj-ikona.png"){:style="width:30px;"} **konsolidację** wielu arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie kolejności arkuszy), ale i tak jest to bardzo wygodne. <small>
+
+- - - -
+.
+
+#### Moje notatki -> tworzenie / uaktualnianie "AK_dodFunkcje.xlam":
+
+* W pierwotnym pliku XLSX: Plik \ Informacje \ Pokaż wszystkie właściwości \ Tytuł ... \ Komentarze ...  
+(tak powstaje ogólny opis dodatku widoczny w: Plik \ Opcje \ Dodatki)
+
+* Developer \ Visual Basic
+	* Import File "AK_dodFunkcje.bas " (Module1)
+	* [F2], search "Module1" (VBAProj Module1)
+		* Members of...
+		* prawy.kl.m. na każdej f.: Properties (tak powstaje opis widoczny w pomocy funkcji) (istotne są też wymowne nazwy parametrów - przywołanie parametrów: [Ctrl+Shift+A])
+
+* Zamykam Developer (bez zapisu). Zapisuję plik XLSX jako XLAM, np."AK_dodFunkcje_2.xlam".
+* Po zamknięciu wszelkich plików Excela podmieniam nazwę na "AK_dodFunkcje.xlam"
