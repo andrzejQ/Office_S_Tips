@@ -13,9 +13,11 @@ Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian <sma
 
 W pracy biurowej może się przydać m.in.
 * wygodne kopiowanie wycinka ekranu i nanoszenie na nim notatek: **`[Win+Shift+S]`** (tutaj **`+`** oznacza: przytrzymaj i naciskaj kolejny klawisz; zob. też [inne skróty klawiszowe](https://www.komputerswiat.pl/poradniki/programy/windows-10-skroty-klawiaturowe-windows-10-pulpit-pasek-zadan-wiersz-polecenia/pt4gpwy))  
+Można sobie też taką funkcję [przypisać do klawisza Print Screen](https://www.centrumxp.pl/Publikacja/Jak-wywolac-wycinanie-obrazu-klawiszem-Print-Screen) (polecam):  
+**`[Win+I]`** \ ![UlatwieniaDostepu1.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu1.png "UlatwieniaDostepu1.png"){:style="width:2em;"}Ułatwienia dostępu \ Klawiatura \ Skrót klawisza Print Screen \ Włączone
 <br>
 * nowy sposób powiększania kursora myszy, czcionki ekranowej lub wszystkiego:  
-**`[Win+I]`** \ ![UlatwieniaDostepu1.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu1.png "UlatwieniaDostepu1.png"){:style="width:2em;"}**Ułatwienia dostępu**
+**`[Win+I]`** \ ![UlatwieniaDostepu1.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu1.png "UlatwieniaDostepu1.png"){:style="width:2em;"}Ułatwienia dostępu
 ![UlatwieniaDostepu-Ekran.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu-Ekran.png "UlatwieniaDostepu-Ekran.png"){:style="float:right;width:38%;"}
 ![UlatwieniaDostepu-Wskaznik.png]({{ site.baseurl }}/assets/img/UlatwieniaDostepu-Wskaznik.png "UlatwieniaDostepu-Wskaznik.png"){:style="width:32%;"}
   * Ogólnie powiększenie wszystkiego jest w przypadku monitorów wysokiej rozdzielczości bardzo potrzebne, ale równocześnie stwarza dużo problemów z rozmywaniem czcionek. Ten sposób pozawala na osobne ustawianie powiększana na każdym ekranie - jeśli mamy dwa. Na razie wydaje mi się, że najmniej problemów z rozmywaniem czcionek jest wtedy, gdy na obu monitorach ustawimy to samo powiększenie.
