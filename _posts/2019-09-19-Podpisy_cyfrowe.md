@@ -20,6 +20,7 @@ Podpis zaawansowany występuje też w nowym [**e-dowodzie osobistym** z warstwą
 ### Format e-podpisu
 
 Najbardziej przydatną wersją jest e-podpis **otoczony**. Plik z podpisem zawiera treść dokumentu oraz podpis i zwykle można go odczytać wprost za pomocą np. Adobe Reader, MS Word, łącznie z możliwością weryfikacji poprawności podpisu. Dla pliku PDF takim formatem jest m.in. **PAdES**.
+![PDF_z_podpisem.png]({{ site.baseurl }}/assets/img/PDF_z_podpisem.png "PDF_z_podpisem.png"){:style="float:right;width:40%;"}
 
 ### Podpisy w PDF i DOCX 
 
