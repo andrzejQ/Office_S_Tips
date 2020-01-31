@@ -35,7 +35,7 @@ Wtedy może przydać się
 * hurtowe zmniejszanie dużych obrazów `*.jpg` (>4MB) do 50% wymiaru (i wielokrotnie mniejszej pojemności) w aktualnie otwartym folderze i  jego wszystkich podfolderach
     * (można ustawić `set DUZY=4000000` na inną wartość w `r.cmd`).
 
-### Instalacja
+#### Instalacja
 
 1. Potrzebne jest wcześniejsze zainstalowanie <https://www.irfanview.com/> (darmowy do użytku domowego i niekomercyjnego)
 2. Wypakuj [**i_view_advancedbatch.zip**]({{ site.baseurl }}/assets/files/i_view_advancedbatch.zip) i zamień/skopiuj plik `r.txt` na `r.cmd`.
@@ -51,7 +51,7 @@ Plik `i_view...ini` jest gotowy, ale można go też utworzyć z innymi, swoimi u
 ![i_view_ini.png]({{ site.baseurl }}/assets/img/i_view_ini.png "i_view_ini.png"){:style="float:right;width:77%;"} 
 Załadowanie ustawień pozwala na podgląd tego co jest wpisane w `i_view...ini` ->
 
-### Użytkowanie
+#### Użytkowanie
 
 **Uwaga - wypróbuj najpierw działanie na kopii danych!**
 
@@ -63,6 +63,31 @@ w pasku eksploratora plików w aktualnie otwartym folderze w którym lub poniże
 Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolderach - poczekaj i na zakończenie naciśnij dowolny klawisz.
 ![cmd-exe.png]({{ site.baseurl }}/assets/img/cmd-exe.png "cmd-exe.png"){:style="float:right;width:33%;"} 
 ![r-cmd.png ]({{ site.baseurl }}/assets/img/r-cmd.png  "r-cmd.png "){:style="float:right;width:22%;"} 
+
+<br>
+
+- - - -
+
+### Po pierwszej instalacji MS Office
+
+Zamieszczone tutaj pliki konfiguracji 
+
+[**MS_office_exportedUI.zip**]({{ site.baseurl }}/assets/files/MS_office_exportedUI.zip)
+
+ pochodzą z MS Office 2013, ale zdaje się zadziałają także w innych wersjach.
+
+![DostosowanieWord.png]({{ site.baseurl }}/assets/img/DostosowanieWord.png "DostosowanieWord.png"){:style="float:left;width:33%;"} 
+Nad wstążką można dodać swoje ikony szybkiego dostępu do operacji jak "Zapisz jako..." czy "Podgląd wydruku". 
+![DostosowanieExcel.png]({{ site.baseurl }}/assets/img/DostosowanieExcel.png "DostosowanieExcel.png"){:style="float:right;width:37%;"} 
+
+
+   
+
+Jeśli nie przepadasz za agresywną autokorektą to kopiując plik `MSO1045.acl` do fodlera `%appdata%\Microsoft\Office\` uzyskasz skrócony do minimum słownik
+
+![Autokorekta.png]({{ site.baseurl }}/assets/img/Autokorekta.png "Autokorekta.png"){:style="float:right;width:57%;"} 
+
+
 
 <br>
 
