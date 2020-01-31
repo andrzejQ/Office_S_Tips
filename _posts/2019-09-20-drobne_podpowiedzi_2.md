@@ -88,7 +88,6 @@ Jeśli nie przepadasz za agresywną autokorektą to kopiując plik `MSO1045.acl`
 ![Autokorekta.png]({{ site.baseurl }}/assets/img/Autokorekta.png "Autokorekta.png"){:style="float:right;width:57%;"} 
 
 
-
 <br>
 
 - - - -
