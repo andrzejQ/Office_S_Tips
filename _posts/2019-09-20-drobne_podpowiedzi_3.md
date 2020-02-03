@@ -133,20 +133,19 @@ Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.in
 ----
 <br>
 
-`set PY_PYTHON=3` & `set PY_PYTHON3=3.6` - 
+`set PY_PYTHON=3` & `set PY_PYTHON3=3.6-32` , albo ustawić trwale: `setx PY_PYTHON 3` & `setx PY_PYTHON3 3.6-32` - 
 [ustala domyślną wersję dla](https://docs.python.org/3/using/windows.html#customizing-default-python-versions)
  uruchamianych _*.py_. 
-Równoważny zapis]
- w `py.ini`:
+Równoważny zapis w `py.ini`:
 ````ini
 [defaults]
 python=3
-python3=3.6
+python3=3.6-32
 ````
 
 <span style="font-size: smaller;">
 Z linii poleceń można dopisać tekst do swojego _py.ini_ (modyfikacja działa od razu i nie trzeba restartu aplikacji np. _cmd_ albo _N++_ jak w przypadku SetX): 
-`(echo.[defaults]&echo.python=3&echo.python3=3.6)>>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
+`(echo.[defaults]&echo.python=3&echo.python3=3.6-32)>>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
 Aby _py.ini_ stworzyć na nowo należy użyć pojedynczego znaku '>' zamiast '\>>'. Zob. `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
 </span>
 
