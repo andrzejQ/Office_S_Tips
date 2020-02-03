@@ -5,7 +5,7 @@ date:   2019-09-20 10:21:59 +0100
 categories: System
 ---
 
-[Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg) * [Problem ogromnego rozmiaru plików RTF i DOC]({{ site.url }}{{ site.baseurl }}{{ page.url }}#problem-ogromnego-rozmiaru-plików-rtf-i-doc)
+[Tekst z komputera przez QR-kod do tel. kom.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#szybkie-przenoszenie-niewielkiego-tekstu-z-komputera-do-tel-komórkowego) * [Hurtowe zmniejszanie dużych obrazów *.jpg]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowe-zmniejszanie-dużych-obrazów-jpg) * [Po pierwszej instalacji MS Office]({{ site.url }}{{ site.baseurl }}{{ page.url }}#po-pierwszej-instalacji-ms-office) * [Problem ogromnego rozmiaru plików RTF i DOC]({{ site.url }}{{ site.baseurl }}{{ page.url }}#problem-ogromnego-rozmiaru-plików-rtf-i-doc)
 
 ----
 ### Szybkie przenoszenie niewielkiego tekstu z komputera do tel. komórkowego:
@@ -70,22 +70,25 @@ Nastąpi automatyczne zmniejszenie wszystkich dużych `*.jpg`, także w podfolde
 
 ### Po pierwszej instalacji MS Office
 
-Zamieszczone tutaj pliki konfiguracji 
+Pliki konfiguracji w paczce
 
 [**MS_office_exportedUI.zip**]({{ site.baseurl }}/assets/files/MS_office_exportedUI.zip)
 
- pochodzą z MS Office 2013, ale zdaje się zadziałają także w innych wersjach.
+("Dostosowania programu Word 2013.exportedUI", "Dostosowania programu Excel 2013.exportedUI", "MSO1045.acl") pochodzą z MS Office 2013, ale zdaje się zadziałają także w innych wersjach.
 
-![DostosowanieWord.png]({{ site.baseurl }}/assets/img/DostosowanieWord.png "DostosowanieWord.png"){:style="float:left;width:33%;"} 
-Nad wstążką można dodać swoje ikony szybkiego dostępu do operacji jak "Zapisz jako..." czy "Podgląd wydruku". 
-![DostosowanieExcel.png]({{ site.baseurl }}/assets/img/DostosowanieExcel.png "DostosowanieExcel.png"){:style="float:right;width:37%;"} 
+![Word-Opcje-Pasek.png]({{ site.baseurl }}/assets/img/Word-Opcje-Pasek.png "Word-Opcje-Pasek.png"){:style="float:right;width:77%;"} 
+Pliki "*..exportedUI" można zaimportować poprzez `Plik \ Opcje \ Pasek ... \ Importuj` i nad wstążką pojawią się ikony szybkiego dostępu dla operacji jak "Zapisz jako...", "Podgląd wydruku" czy "Wklej specjalnie".
+![Excel-Opcje-Pasek.png]({{ site.baseurl }}/assets/img/Excel-Opcje-Pasek.png "Excel-Opcje-Pasek.png"){:style="width:77%;"} 
+
+- - - -
+
+![Autokorekta.png]({{ site.baseurl }}/assets/img/Autokorekta.png "Autokorekta.png"){:style="float:right;width:60%;"} 
+Jeśli nie przepadasz za agresywną autokorektą w MS Office to kopiując plik `MSO1045.acl`  do fodlera `%appdata%\Microsoft\Office` uzyskasz skrócony słownik autokorekty (1045 to wersja dla j.polskiego).
 
 
-   
+![MSO1045.acl.png]({{ site.baseurl }}/assets/img/MSO1045.acl.png "MSO1045.acl.png"){:style="width:30%;"} 
 
-Jeśli nie przepadasz za agresywną autokorektą to kopiując plik `MSO1045.acl` do fodlera `%appdata%\Microsoft\Office\` uzyskasz skrócony do minimum słownik
 
-![Autokorekta.png]({{ site.baseurl }}/assets/img/Autokorekta.png "Autokorekta.png"){:style="float:right;width:57%;"} 
 
 
 <br>
