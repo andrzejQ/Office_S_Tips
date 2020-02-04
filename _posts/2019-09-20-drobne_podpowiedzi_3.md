@@ -27,8 +27,7 @@ Reguły, które zamierzam sobie stosować:
 setx PY_PTH .venv\Scripts
 ````
 Przy takich ustawieniach nie jest potrzebna aktywacja środowiska wirtualnego. Będzie się włączało to, które jest w folderze wywoływanego skryptu.  
-Ostatnie polecenie jest zbędne, gdy nie zmienialiśmy *PY_PTH*. (Można by wpisać na trwałe właśnie to środowisko wirtualne podając pełną ścieżkę: `setx PY_PTH %CD%\.venv\Scripts`, ale ścieżka względna jest tu raczej dostateczna, a przede wszystkim uniwersalna).  
-Ścieżka do _python.exe_ może dotyczyć jakiejkolwiek wersji, nawet zainstalowanej tylko na chwilę, bo produkcyjnie używana będzie kopia w _.venv\Scripts_.
+Ostatnie polecenie jest zbędne, gdy nie zmienialiśmy *PY_PTH*.  
 
 - - - -
 
@@ -38,36 +37,19 @@ Ostatnie polecenie jest zbędne, gdy nie zmienialiśmy *PY_PTH*. (Można by wpis
 where /t "$path:python.exe"
 ````
 
-`/t` - można pominąć; wtedy nie wyświetla się rozmiar i data pliku. W najprostszej wersji, najlepiej w jakimś folderze gdzie nie ma "python.exe":
-
-````
-where python.exe
-````
+`/t` - można pominąć; wtedy nie wyświetla się rozmiar i data pliku. Albo `where /t python.exe` w jakimś folderze gdzie nie ma "python.exe":
 
 #### Przeszukiwanie w głąb całych folderów 
-
-Uwaga - to chwilę trwa. Tu po `/r` jest nazwa foldera, od którego zaczyna się szukanie - chyba powinno się stosować podwójne `\\` np. dla całego dysku: `C`
 
 ````
 where /r "C:\\" /t python.exe
 ````
+Uwaga - to chwilę trwa. Tu po `/r` jest nazwa foldera, od którego zaczyna się szukanie - chyba powinno się stosować podwójne `\\` np. dla całego dysku: `C`
 
-Wybraną ścieżkę  "python.exe" można <u>trwale zapamiętać w PATH<a id="edytuj-zmienne"></a></u> na początkowym miejscu (w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" lub "... dla systemu"). Wtedy `python` lub `python mójSkrypt.py` będzie wywoływało właśnie tą wersję. Można też [modyfikować PATH](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) tuż przed wywołaniem `python` w linii poleceń lub w pliku _*.cmd_. Jeśli używamy tekstów UTF-8 (np. w nazwach plików) to warto na początek włączyć to kodowanie w linii poleceń: `chcp 65001`.
+Znalezioną ścieżkę  "python.exe" można <u>trwale zapamiętać w PATH<a id="edytuj-zmienne"></a></u> (w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" lub "... dla systemu"). Wtedy `python` lub `python mójSkrypt.py` będzie wywoływało właśnie tą wersję. Można też [modyfikować PATH](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) tuż przed wywołaniem `python` w linii poleceń lub w pliku _*.cmd_. Jeśli używamy tekstów UTF-8 (np. w nazwach plików) to warto na początek włączyć to kodowanie w linii poleceń: `chcp 65001`.
 
 Gdy mamy swoje moduły, używane w różnych projektach to można dodać  
 `set PYTHONPATH=%PYTHONPATH%;C:\My_python_lib`
-
-W Notepad++ można zapamiętać sobie w Uruchom wywołanie konkretnego kompilatora dla aktualnie edytowanego pliku _*.py_:
-`%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "C:\Program Files\Python 3.8\Python.exe" "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}
-
-Ścieżkę do aktualnie potrzebnej nam wersji Python.exe można wpisać trwale do zmiennej środowiskowej za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) lub pliku _*.CMD_ z _SetX_ (po tym okna cmd lub N++ należy uruchomić na nowo):
-````bat
-setx PY_PTH "C:\Program Files\Python 3.8"
-````
-Wtedy możemy w przyszłości wygodnie zmieniać wartość zmiennej, a używać stałej modyfikacji  
-`set PATH=%PY_PTH%;%PATH%`, a wręcz [trwale ją wpisać do _PATH_](https://ss64.com/nt/path.html) za pomocą ["Edytuj zmienne..."](#edytuj-zmienne) - PATH / Edytuj / Nowy: `%PY_PTH%` i/lub wpisać na stałe w opcjach "uruchom" N++:
-`%ComSpec% /c chcp 65001 & cd /D "$(CURRENT_DIRECTORY)" & "%PY_PTH%\Python.exe" "$(FULL_CURRENT_PATH)" & pause`{:style="font-size: smaller;"}  
-<small>[Nie powinno się używać _SetX_ do _PATH_](https://ss64.com/nt/path.html), czy do wyżej wspomnianego _PYTHONPATH_.</small>
 
 - - - -
 
@@ -85,9 +67,9 @@ Uwaga - _Path_ jest składana z 2 części, które w w ["Edytuj zmienne..."](#ed
 
 Od wersji 3.3 wraz z instalacją Pythona jest instalowany [program `py.exe` oraz `pyw.exe`](https://docs.python.org/3/using/windows.html#python-launcher-for-windows), np. `C:\Windows\py.exe`, który pozwala na kompilację wprost poprzez uruchamianie pliku `*.py`. W pierwszym wierszu naszego skryptu `*.py` można wpisać np. `#!python3.7-64` lub `#!/usr/bin/python3.7-64` (w Windows `/usr/bin/` jest pomijany). 
 
-Natomiast specjalne znaczenie ma `#!/usr/bin/env python` - [wg. dokumentacji](https://docs.python.org/3/using/windows.html#shebang-lines) następuje tu przeszukiwanie ścieżki _PATH_ w celu uruchomienia pierwszego(?) napotkanego _Python.exe_ . Jest to również przydatna opcja do uruchamiania [środowiska wirtualnego](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) <small>(Uwaga - niestety nie można wpisać np. _#!/usr/bin/env python3_, i to pomimo tego, że _python3.exe_ jest znajdywalny w _PATH_. Gdy tylko użyjemy jakichś cyfr, to sposób uruchamiania ignoruje _/usr/bin/env_ i działa wg. [reguły poszukiwania wersji](https://learning-python.com/py33-windows-launcher.html) podanej w `*`{:style="font-size: smaller;"} w `#!/usr/bin/env python*`{:style="font-size: smaller;"} lub `#!/usr/bin/python*`{:style="font-size: smaller;"} lub `#!/usr/local/bin/python*`{:style="font-size: smaller;"} lub `#!python*`{:style="font-size: smaller;"}).</small>
+Natomiast specjalne znaczenie ma `#!/usr/bin/env python` - [wg. dokumentacji](https://docs.python.org/3/using/windows.html#shebang-lines) następuje tu przeszukiwanie ścieżki _PATH_ w celu uruchomienia pierwszego(?) napotkanego _Python.exe_ . Jest to również przydatna opcja do uruchamiania [środowiska wirtualnego](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) <small>(Uwaga - niestety nie można wpisać np. _#!/usr/bin/env python3_, i to pomimo tego, że _python3.exe_ jest znajdywalny w _PATH_. Gdy tylko użyjemy jakichś cyfr, to sposób uruchamiania ignoruje _/usr/bin/env_ i działa wg. [reguły poszukiwania wersji](https://learning-python.com/py33-windows-launcher.html) determinowanej przez te cyfry.</small>
 
-Aby przetestować który kompilator się uruchamia można przygotować sobie testowy plik _v.py_:
+<a id="v_py"></a>Aby przetestować który kompilator się uruchamia można przygotować sobie testowy plik _v.py_:
 ````py
 #!/usr/bin/env python
 import sys
@@ -117,8 +99,9 @@ FTYPE Python.File="C:\WINDOWS\py.exe" "%L" %*
 
 <small> Jest to już zrobione jak w tym przykładzie, jeśli instalowaliśmy jakikolwiek pakiet PYTHONa 3.3+.</small>
 
+<span style="font-size: smaller;">
 Uwaga - jeśli dodaliśmy swoją obsługę plików _*.py_ (poprzez _"Otwórz za pomocą"_), to ten nasz wybór będzie miał [priorytet nad powyższą konfiguracją](https://code.activestate.com/lists/python-list/727915/). Aby to naprawić należy wybierać do uruchomienia _*.py_ aplikację Python z ikoną rakiety ![py32.png]({{ site.baseurl }}/assets/img/py32.png "py32.png"). Wybieranie wprost "C:\WINDOWS\py.exe" [jest błędem](https://code.activestate.com/lists/python-list/727915/#as_lists_article_thread).
-
+</span>
 
 <span style="font-size: smaller;">
 Ewentualnie, aby uruchamiać skrypt podając samą nazwę bez wpisywania rozszerzenia ".py" można jeszcze dodać  `set PATHEXT=.PY;%PATHEXT%`
@@ -127,13 +110,24 @@ lub trwale zmodyfikować PATHEXT w ["Edytuj zmienne..."](#edytuj-zmienne).
 
 <span style="font-size: smaller;">
 Więcej inf. o aktualnym stanie  konfiguracji, np. z pliku `%LocalAppData%\py.ini`{:style="font-size: smaller;"} uzyskamy włączając `PYLAUNCH_DEBUG`{:style="font-size: smaller;"} :  
-`set PYLAUNCH_DEBUG=1 & py -0p`{:style="font-size: smaller;"} . Następnie można uruchamiać plik testowy _v.py_ testując różne opcje w _#!..._
-</span>
+`set PYLAUNCH_DEBUG=1 & py -0p`{:style="font-size: smaller;"} . Następnie można uruchamiać plik testowy [_v.py_](#v_py) z rożnymi opcjami w _#!..._</span>
+
+<span style="font-size: smaller;">
+Przykładowy wynik działania opcji  `PYLAUNCH_DEBUG`{:style="font-size: smaller;"} dla `#!/usr/bin/env python`{:style="font-size: smaller;"} w pliku _v.py_ z kodowaniem _utf-8-BOM_:</span>
+<pre>  File 'C:\Users\user\AppData\Local\py.ini' non-existent  
+  File 'C:\Windows\py.ini' non-existent  
+  Called with command line: "C:\test\v.py"  
+  maybe_handle_shebang: read 112 bytes  
+  maybe_handle_shebang: BOM found, code page 65001  
+  parse_shebang: found command: python  
+  searching PATH for python executable  
+  Python on path: C:\Kompil\Python36-32\python.exe  
+  ...</pre>{:style="font-size: smaller;"} 
 
 ----
 <br>
 
-`set PY_PYTHON=3` & `set PY_PYTHON3=3.6-32` , albo ustawić trwale: `setx PY_PYTHON 3` & `setx PY_PYTHON3 3.6-32` - 
+`set PY_PYTHON=3` & `set PY_PYTHON3=3.6-32` - 
 [ustala domyślną wersję dla](https://docs.python.org/3/using/windows.html#customizing-default-python-versions)
  uruchamianych _*.py_. 
 Równoważny zapis w `py.ini`:
@@ -142,11 +136,13 @@ Równoważny zapis w `py.ini`:
 python=3
 python3=3.6-32
 ````
+Skutecznie działa również `set PY_PYTHON=3.6-32`, lub trwale pamiętane `setx PY_PYTHON 3.6-32`
+
 
 <span style="font-size: smaller;">
 Z linii poleceń można dopisać tekst do swojego _py.ini_ (modyfikacja działa od razu i nie trzeba restartu aplikacji np. _cmd_ albo _N++_ jak w przypadku SetX): 
-`(echo.[defaults]&echo.python=3&echo.python3=3.6-32)>>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
-Aby _py.ini_ stworzyć na nowo należy użyć pojedynczego znaku '>' zamiast '\>>'. Zob. `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
+`(echo.[defaults]&echo.python=3.6-32)>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
+Sprawdzenie: `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
 </span>
 
 W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) [(zob.^)](https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/) regułą nadrzędną jest wywołanie aktywowanego kompilatora Python.exe.
