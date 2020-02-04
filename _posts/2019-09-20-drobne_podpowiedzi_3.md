@@ -51,15 +51,7 @@ Znalezioną ścieżkę  "python.exe" można <u>trwale zapamiętać w PATH<a id="
 Gdy mamy swoje moduły, używane w różnych projektach to można dodać  
 `set PYTHONPATH=%PYTHONPATH%;C:\My_python_lib`
 
-- - - -
 
-<span style="font-size: smaller; color:DarkGrey;">
-Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy:
-</span>
-`ECHO.%PATH:;=; & ECHO.%`{:style="font-size: smaller;"}  
-<span style="font-size: smaller; color:DarkGrey;">
-Uwaga - _Path_ jest składana z 2 części, które w w ["Edytuj zmienne..."](#edytuj-zmienne) widzimy jako - _Path - system_ (priorytetowa) i _Path - użytkownika_. Warto je sobie uporządkować jak opisano na początku artykułu.
-</span>
 - - - -
 <br>
 
@@ -141,7 +133,7 @@ Skutecznie działa również `set PY_PYTHON=3.6-32`, lub trwale pamiętane `setx
 
 <span style="font-size: smaller;">
 Z linii poleceń można dopisać tekst do swojego _py.ini_ (modyfikacja działa od razu i nie trzeba restartu aplikacji np. _cmd_ albo _N++_ jak w przypadku SetX): 
-`(echo.[defaults]&echo.python=3.6-32)>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
+`(echo:[defaults]&echo:python=3.6-32)>%LocalAppData%\py.ini`{:style="font-size: smaller;"}  
 Sprawdzenie: `type %LocalAppData%\py.ini`{:style="font-size: smaller;"}
 </span>
 
@@ -149,4 +141,35 @@ W [środowisku wirtualnym](https://docs.python.org/3/library/venv.html) [(zob.^)
 
 Można tu jeszcze wspomnieć o wymyślaniu [własnych poleceń](https://www.python.org/dev/peps/pep-0397/#customized-commands) wpisywanych w _py.ini_, które można używać w _#!..._.,tylko należy pamiętać, że nie mogą zaczynać się od _python_.
 
+- - - -
 
+<span style="font-size: smaller; color:DarkGrey;">
+Można wyświetlić ścieżki PATH w linii poleceń wstawiając łamanie wierszy:
+</span>
+`echo:%PATH:;=; & echo:%`{:style="font-size: smaller;"}  
+<span style="font-size: smaller; color:DarkGrey;">
+Uwaga - _Path_ jest składana z 2 części, które w ["Edytuj zmienne..."](#edytuj-zmienne) widzimy jako - _Path - system_ (priorytetowa) i _Path - użytkownika_. Warto je sobie uporządkować jak opisano na początku artykułu. 
+</span>
+<span style="font-size: smaller; color:DarkGrey;">
+Można też wyświelić aktualny stan środowiska wykonując w oknie `cmd` polecenia:
+</span>
+<pre>
+echo:&echo|set /p="*** %computername%  %date%  " & for /f "tokens=1,2,* " %G in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"') do @echo setx /m %G "%I
+echo:&echo|set /p="*** %username%              " & for /f "tokens=1,2,* " %G in ('reg query "HKCU\Environment"') do @echo setx %G "%I
+
+</pre>{:style="font-size: smaller;"} 
+
+<span style="font-size: smaller; color:DarkGrey;">
+... albo wykonując skrypt _**get_environment.cmd**_:
+</span>
+<pre>
+@echo off
+echo|set /p="*** %computername%  %date%  "
+for /f "tokens=1,2,* " %%G in (
+'reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"'
+) do echo setx /m %%G "%%I
+echo|set /p="*** %username%              "
+for /f "tokens=1,2,* " %%G in (
+'reg query "HKCU\Environment"'
+) do echo setx %%G "%%I
+</pre>{:style="font-size: smaller;"} 
