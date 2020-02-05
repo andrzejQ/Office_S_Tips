@@ -56,9 +56,15 @@ C:\mklink /j "C:\NazwaPseudoFoldera" "D:\Scieżka\NazwaIstniejącegoFoldera"
 
 Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwe. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat w interesującym nas zakresie.
 
-**Attribute Changer** <https://www.programosy.pl/program,attribute-changer.html> pozwala na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików. 
+**Attribute Changer** (https://www.programosy.pl/program,attribute-changer.html) pozwala na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików. 
 
 Uwagi:
 1. Gdy wewnątrz są tylko podfoldery, a nie ma ani jednego pliku, to czas folderu nie jest zmieniany. Szkoda, bo można by zasadę zmiany taką jak do plików wewn. także przyjąć do folderów wewnętrznych.
 2. U mnie zmieniał się tylko czas modyfikacji folderów. Ale to na szczęście załatwia sprawę na podglądzie listy folderów.
 3. Są jakieś kłopoty z pobraniem pliku z oryginalnej strony (ESET wykrywa trojana), stąd podałem zastępczy link.
+
+2020-02-05 - https://www.petges.lu/ - w najnowszej wersji powyższe wady są zdaje się usunięte
+
+### Hurtowa zmiana daty zdjęć i  filmów na podstawie metadanych 
+
+* Można to zrobić także za pomocą powyżej opisanego [**Attribute Changer**](https://www.petges.lu/)
