@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Backup dysku SSD i kopia ważnych plików"
-date:   2020-02-18 18:41
+date:   2020-03-18 08:41
 categories: System
 ---
 
@@ -11,7 +11,7 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 
 ### 1. MS Windows 10
 
-Backup całego dysku to nierozwijana aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "Historia plików" podobno też wygaszanej. Chyba warto szukać czegoś innego. 
+Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "Historia plików" podobno też wygaszanej. Chyba warto szukać czegoś innego. 
 
 Jak chodzi o przejrzystość docierania do plików historycznych to interfejs nie jest wygodny.
 
@@ -23,7 +23,17 @@ Pamiętaj:
 
 ### 2. Acronis
 
-Seagate DiscWizart (Acronis)
+
+#### Acronis True Image OEM
+
+* Bywa dołączane do dysków SSD i zewnętrznych dysków USB
+* Czasem potrzebny jest 16-znakowy klucz.
+* Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service), ma kopie przyrostowe
+* Pozwala na wygodne przeglądanie folderów/plików na kopii zapasowej partycji *.tib (także tej przyrostowej) i wyciąganie pojedynczych plików
+* Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników
+
+
+#### Seagate DiscWizart (Acronis)
 
 **Instalacja**
 
@@ -79,6 +89,8 @@ Na konie backupu zamykam aplikację `Toolkit`, bo od razu zaczyna się męczyć 
 .
 
 ### 5. EasyUS
+
+#### EaseUS Todo Backup Free 12.0 
 
 W wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partycji SSD (nie plików) jest wygodnie przeszukiwalna - można docierać do dowolnego pliku. Ma opcję kopii zapasowej pliku także w wersji darmowej. Nabrałem wątpliwości, czy poprawnie są zapamiętywane pliki zaszyfrowane - i porzuciłem dalsze próby. Być może są to wątpliwości niezasadne. Gdy nie potrzebujesz się zajmować zaszyfrowanymi plikami EFS to na pewno można tego używać.
 
