@@ -1,72 +1,87 @@
 ---
 layout: post
 title:  "Backup dysku SSD i kopia ważnych plików"
-date:   2020-03-18 08:41
+date:   2020-02-20 06:41
 categories: System
 ---
 
-Testy kilku systemów backupu.
+Przegląd kilku systemów backupu.
 
-To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem w miarę komunikatywnego orientowania się w tym co i kiedy jest zapamiętywane. Pod kątem przejrzystej możliwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela.
+To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem w miarę komunikatywnego orientowania się w tym co i kiedy jest zapamiętywane. Pod kątem przejrzystej możliwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej)
 
 ### 1. MS Windows 10
 
-Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "Historia plików" podobno też wygaszanej. Chyba warto szukać czegoś innego. 
+Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej. 
 
-Jak chodzi o przejrzystość docierania do plików historycznych to interfejs nie jest wygodny.
+Jak chodzi o przejrzystość docierania do plików historycznych to interfejs jest trochę niewygodny (moim zdaniem). Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.
 
 Pamiętaj:
-1. Zdaje się, że zapamiętywane są pliki ze standardowych bibliotek użytkownika. Jeśli masz coś poza bibliotekami to dodaj to jako swoją dodatkową bibliotekę.
+1. "Opcje kopii zapasowych" pozwalają dodawać / wykluczać foldery. Dodaj swoje foldery, jeśli masz dane poza standardowymi bibliotekami jak Dokumenty, Obrazy, Pulpit, ...
 2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz jednorazowe(!) pytanie czy przyłączyć tą historię do aktualnego dysku.
 
 .
 
-### 2. Acronis
-
+### 2. Acronis True Image
 
 #### Acronis True Image OEM
 
-* Bywa dołączane do dysków SSD i zewnętrznych dysków USB
-* Czasem potrzebny jest 16-znakowy klucz.
-* Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service), ma kopie przyrostowe
-* Pozwala na wygodne przeglądanie folderów/plików na kopii zapasowej partycji *.tib (także tej przyrostowej) i wyciąganie pojedynczych plików
-* Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników
+* W wersji bez opłaty pozawala na klonowanie dysku i kopię bezpieczeństwa całych partycji czy dysków.
+* Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), ma kopie przyrostowe.
+* Pozwala na wygodne przeglądanie folderów/plików na kopii zapasowej partycji *.tib (także tej przyrostowej) i wyciąganie pojedynczych plików.
+* Bywa dołączane do dysków SSD,  i zewnętrznych dysków USB, np. 
+[ADATA](http://www.adata.com/us/ss/software-5/), [Apacer](http://event.apacer.com/SSD-installation/How_EN/), [WD](https://support.wdc.com/downloads.aspx?p=119), [Intel](https://downloadcenter.intel.com/download/19324/Intel-Data-Migration-Software?product=80098), [Seagate](https://www.seagate.com/support/downloads/discwizard/), [Kingston](https://www.kingston.com/en/support/technical/acronis-download), [Crucial](http://www.crucial.com/clone), [OCZ (Toshiba)](https://ssd.toshiba-memory.com/en-amer/download/acronis), [SanDisk](https://kb.sandisk.com/app/answers/detail/a_id/19869/~/acronis-true-image-support-information), [PNY](http://www.pny.com/qr/acronis-install).
+* Czasem potrzebny jest 16-znakowy klucz, a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
+* Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
 
+**Przykład:**
 
-#### Seagate DiscWizart (Acronis)
+#### Seagate DiscWizart (=Acronis True Image OEM)
+![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
 
 **Instalacja**
 
-Pojawia się ostrzeżenie, że nie można uruchomić harmonogramu zadań i proponowany jest restart komputera
-- Restartuję
+W niektórych systemach pojawia się ostrzeżenie, że nie można uruchomić harmonogramu zadań i proponowany jest restart komputera
+- Restart
 
-Po instalacji usuwam instalację programu
+Po instalacji odinstalowuję program
 - Bonjur 
-	- jeśli ile nastąpiła właśnie razem z instalacją Acronis; program wydaje mi się zbędny.
+
+jeśli ile nastąpiła właśnie razem z instalacją Acronis. Program wydaje mi się zbędny.
 
 Po starcie Seagate DiscWizart:
 1. Backup
-2. Wpisuję nazwę sugerującą, że to backup dysku C
-3. Źródło: [Disk and partitions] (Tu widać, że "Files and Folders" jest zablokowane w tej wersji) Wybrać cały dysk SSD z C
-4. Cel: Albo dysk zewnętrzny, albo [Browse...] \ Mój komputer \ Dysk zewnętrzny \ Folder z moją nazwą
-5. Backup Now (ma też opcje "Za godzinę", ...)
+2. Wpisuję nazwę sugerującą, że to backup dysku C.
+3. Źródło: [Disk and partitions] (Tu widać, że "Files and Folders" jest zablokowane w tej wersji) Wybrać cały dysk SSD z C.
+4. Cel: Albo dysk zewnętrzny, albo [Browse...] \ Mój komputer \ Dysk zewnętrzny \ Folder z moją nazwą.
+5. Backup Now (ma też opcje "Za godzinę", ...).
 
 
 Dodatkowo warto sobie utworzyć:
 - Tools \ Rescue Media Builder
-	- co najmniej zrobić sobie ISO i w razie potrzeby w przyszłości nagrać płytę lub dysk USB.
+
+(co najmniej zrobić sobie ISO i w razie potrzeby w przyszłości nagrać płytę lub dysk USB).
 
 .
 
-### 3. Veeam
+### 3. Veeam Agent FREE
+![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
 
-...
+Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
+
+* Edycja Free nie wymaga licencji. 
+* Można robić kopię zapasową wybranych całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. (Można np. użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów)
+* Ma funkcje profesjonalnego systemu backupu - przeszukiwanie plików w kopii partycji, [VSS](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service), dysk ratunkowy, poprawna obsługa zaszyfrowanych plików EFS różnych użytkowników.
+* Raczej nie ma wersji językowej polskiej.
+
+* [BitLocker Encrypted Volumes Support](https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html?ver=40)
+
 
 .
 
+![ToolkitIcon.jpg]({{ site.baseurl }}/assets/img/ToolkitIcon.jpg "ToolkitIcon.jpg"){:style="float:right;width:12%;"}
 ### 4. Seagate Toolkit
 
-Backup wybranych folderów/plików. Po uruchomieniu siedzi w zasobniku obok zegara. Jest dostarczany m.in. z zewnętrznym dyskiem USB Seagate.
+Narzędzie dołączane do zewn. dysków USB Seagate. Pozwala na backup wybranych folderów/plików. Po uruchomieniu siedzi w zasobniku obok zegara. (Być może podobne aplikacje są dostarczane z dyskami innych producentów).
 
 Jest instrukcja po polsku: <https://www.seagate.com/pl/pl/support/software/toolkit/>, 
 ale chyba nie ma języka polskiego w aplikacji.
@@ -84,7 +99,7 @@ Wygląda na to, że backup to pliki w folderze:
 
 	<DyskUSB>:\Toolkit\Backup\<NazwaKomp>\
 
-Na konie backupu zamykam aplikację `Toolkit`, bo od razu zaczyna się męczyć nad robieniem kopii przyrostowej (a może różnicowej - nie wiem).
+Na koniec backupu zamykam aplikację `Toolkit`, bo od razu zaczyna się męczyć nad robieniem kopii przyrostowej (a może różnicowej - nie sprawdzałem).
 
 .
 
@@ -92,7 +107,7 @@ Na konie backupu zamykam aplikację `Toolkit`, bo od razu zaczyna się męczyć 
 
 #### EaseUS Todo Backup Free 12.0 
 
-W wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partycji SSD (nie plików) jest wygodnie przeszukiwalna - można docierać do dowolnego pliku. Ma opcję kopii zapasowej pliku także w wersji darmowej. Nabrałem wątpliwości, czy poprawnie są zapamiętywane pliki zaszyfrowane - i porzuciłem dalsze próby. Być może są to wątpliwości niezasadne. Gdy nie potrzebujesz się zajmować zaszyfrowanymi plikami EFS to na pewno można tego używać.
+Nawet w wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partycji SSD jest wygodnie przeszukiwalna - można docierać do dowolnego pliku. A równocześnie ma opcję kopii zapasowej folderów. Nabrałem wątpliwości, czy poprawnie są zapamiętywane pliki zaszyfrowane EFS i porzuciłem dalsze próby - być może są to wątpliwości niezasadne. Ogólnie jest to bardzo użyteczne narzędzie kopii zapasowej.
 
 .
 
@@ -100,7 +115,8 @@ W wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partycji SSD
 
 #### Robocopy jako polecenie kopii zapasowej
 
-Na razie nie próbowałem tego produkcyjnie, ale może się mi to kiedyś przyda...
+Na razie nie próbowałem tego produkcyjnie, ale może się mi to kiedyś przyda...  
+Co ważne - działa w (czarnym) oknie poleceń `cmd` w trybie awaryjnym.
 
 	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
 
@@ -139,4 +155,12 @@ Lista plików nie starszych niż  (maxage:n; gdy n < 1900 to n = liczba dni, ina
 
 [Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
 
+**Uwaga: Wiersz polecenia, tryb awaryjny**
 
+W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fizyczne do innych liter. Jeśli w tym trybie w wierszu polecenia używasz `robocopy` lub `mklink /j` żeby utworzyć dowiązanie symboliczne do folderu to mogą się przydać instrukcje:
+`diskpart`  
+`list volume`
+`select volume <nr>`
+`list volume`
+`assign letter=L`
+.
