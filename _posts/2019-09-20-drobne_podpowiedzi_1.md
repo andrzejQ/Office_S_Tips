@@ -50,21 +50,50 @@ C:\mklink /j "C:\NazwaPseudoFoldera" "D:\Scieżka\NazwaIstniejącegoFoldera"
 <br>
 
 ----
-![Attribute_Changer.png]({{ site.baseurl }}/assets/img/Attribute_Changer.png "Attribute_Changer.png"){:style="float:right;width:45%;"}
 
 ### Hurtowa zmiana daty folderów
 
 Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwe. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat w interesującym nas zakresie.
 
-**Attribute Changer** (https://www.programosy.pl/program,attribute-changer.html) pozwala na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików. 
+![Touch32.gif]({{ site.baseurl }}/assets/img/Touch32.gif "Touch32.gif"){:style="float:right;width:55%;"}
 
-Uwagi:
-1. Gdy wewnątrz są tylko podfoldery, a nie ma ani jednego pliku, to czas folderu nie jest zmieniany. Szkoda, bo można by zasadę zmiany taką jak do plików wewn. także przyjąć do folderów wewnętrznych.
-2. U mnie zmieniał się tylko czas modyfikacji folderów. Ale to na szczęście załatwia sprawę na podglądzie listy folderów.
-3. Są jakieś kłopoty z pobraniem pliku z oryginalnej strony (ESET wykrywa trojana), stąd podałem zastępczy link.
+Można do tego wykorzystać aplikację, która potrafi ustawiać datę folderu na na podstawie dat plików/folderów wewnętrznych. Przykładem jest mój programik [**Touch32.exe**](https://pei.prz.edu.pl/~kubaszek/freeware/index_pl.html).
 
-2020-02-05 - https://www.petges.lu/ - w najnowszej wersji powyższe wady są zdaje się usunięte
+Aby dopasować daty folderów do plików i folderów wewnętrznych należy w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> umieścić plik `Touch32.exe` oraz [`dt.cmd`]({{ site.baseurl }}/assets/files/dt.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). W Eksploratorze plików 
+![Eksplorator_dt.png]({{ site.baseurl }}/assets/img/Eksplorator_dt.png "Eksplorator_dt.png"){:style="float:left;width:40%;"}
+ustawiamy się w folderze dla którego (i dla podfolderów) chcemy zmienić datę. W pasku adresu 
+(tam gdzie jest "Ten komputer") wpisujemy `dt.cmd 0` albo krócej `dt 0` i następuje wykonanie skryptu. Najpierw podfoldery są ustawiane na datę 1980-01-01, a potem na datę jak najnowszy wewnętrzny plik lub folder.
+
+````bat
+@echo off & chcp 1250
+:: Set date and time for folder like it newest file or folder
+if [%1] EQU [0] for /D /r %%G in (*.*) do Touch32.exe "%%G" 1980-01-01
+if [%1] NEQ [1] for /D /r %%G in (*.*) do call :DirLastFile "%%G"
+call :DirLastFile "."
+goto:eof
+:DirLastFile
+  for /f "tokens=*" %%i in ('dir "%~1\*.*" /b/o-d') do (
+    Touch32.exe "%~1" /f "%~1\%%~i" & exit /b )
+  Touch32.exe "%~1" 1980-01-01
+````
+
+W tym skrypcie przeglądane są foldery wewnętrzne oraz bieżący i wykonywana jest dla nich procedura `DirLastFile`.
+* W procedurze `DirLastFile` odbywa się zamiana daty folderu na 
+	* datę najnowszego pliku/folderu wewnętrznego
+	* albo 1980-01-01, gdy dany folder jest pusty
+	* Pętla `for /f` przebiega po liście plików/folderów posortowanych od daty najnowszej `/o-d` i jest przerywana przy pierwszym elemencie `& exit /b`. Ten element jest referencją dla daty folderu podanego jako parametr tej procedury. 
+* Jeśli trzeba podglądnąć co się dzieje to należy zamienić  `goto:eof` na `pause&goto:eof`. Można też pominąć `& chcp 1250`. 
+* Gdy w ramach folderu są tylko podfoldery i nie ma plików, to w zależności od kolejności przeglądania folderów data aktualnego folderu może pozostać nie uaktualniona. Można wtedy wykonać ponownie skrypt  `dt.cmd` (bez parametru 0 - który jest używany jednorazowo na początek). A najlepiej wejść do wewnątrz foldera, który nie skorygował daty i tam wykonać ten skrypt `dt.cmd`. 
+* `dt.cmd 1` wykona szybkie działanie nierekurencyjne - tylko dla bieżącego folderu dostosuje jego datę dla najnowszego pliku lub folderu wewnętrznego.
+
+<small>
+Uwaga - program *Touch32* nie jest gruntownie przetestowany – używasz go na własną odpowiedzialność  (nie ma zbyt wielu użytkowników, choć jeden używa go od wielu lat). Sprawdź jego działanie na początek na niewielkiej na kopii danych. Proszę o kontakt w przypadku zauważenia błędów.
+</small>
+
+<small>
+Aplikacja _Attribute Changer_ (<https://www.petges.lu/>) pozwala zdaje się na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików/folderów. Podobno także pozwala na zmianę dat zdjęć na podstawie metadanych. Można monitorować stan tej aplikacji, bo wygląda na to, że jest aktualnie rozwijana. </small>
+
 
 ### Hurtowa zmiana daty zdjęć i  filmów na podstawie metadanych 
 
-* Można to zrobić także za pomocą powyżej opisanego [**Attribute Changer**](https://www.petges.lu/)
+* ....
