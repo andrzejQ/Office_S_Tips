@@ -93,6 +93,21 @@ Uwaga - program *Touch32* nie jest gruntownie przetestowany – używasz go na w
 <small>
 Aplikacja _Attribute Changer_ (<https://www.petges.lu/>) pozwala zdaje się na hurtową zmianę czasu modyfikacji folderów na podstawie dat wewnętrznych plików/folderów. Podobno także pozwala na zmianę dat zdjęć na podstawie metadanych. Można monitorować stan tej aplikacji, bo wygląda na to, że jest aktualnie rozwijana. </small>
 
+**Notatki**
+{:style="font-size: smaller;"}
+
+<small>1. Zamiast daty początkowej 1980-01-01 można by brać datę z jakiegoś napotkanego pliku wewnątrz folderów ...</small>  
+`set "_AnyFile=" & call :FindAnyFile "%CD%"`{:style="font-size: smaller;"}  
+`::... use "%_AnyFile%"`{:style="font-size: smaller;"}  
+`goto:eof`{:style="font-size: smaller;"}  
+`:FindAnyFile`{:style="font-size: smaller;"}  
+`for /R %1 %%G in (*.*) do (set "_AnyFile=%%G" & exit /b)`{:style="font-size: smaller;"}
+
+
+<small>2. Gdyby pobierać tylko listę plików 'dir /a-d' to dla pustego folderu pojawia się napis 'File Not Found', który można przekierować do NUL: '2>NUL', np.:</small>  
+`@for /f "tokens=*" %%i in ('dir "EmptyFolder\*.*" /b/o-d/a-d 2^>NUL') do (@echo %%i)`{:style="font-size: smaller;"}
+
+.
 
 ### Hurtowa zmiana daty zdjęć i  filmów na podstawie metadanych 
 
