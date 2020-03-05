@@ -1,0 +1,4 @@
+@echo off & chcp 65001 & rem Set date and time for multimedia files from exif info
+for %%G in (*.*) do (
+  exiftool.exe -P "-exif:DateTimeOriginal>FileModifyDate" -if "$exif:DateTimeOriginal" "%%G")
+pause

@@ -62,7 +62,7 @@ Można do tego wykorzystać aplikację, która potrafi ustawiać datę folderu n
 Aby dopasować daty folderów do plików i folderów wewnętrznych należy w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> umieścić plik `Touch32.exe` oraz [`dt.cmd`]({{ site.baseurl }}/assets/files/dt.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). W Eksploratorze plików 
 ![Eksplorator_dt.png]({{ site.baseurl }}/assets/img/Eksplorator_dt.png "Eksplorator_dt.png"){:style="float:left;width:40%;"}
 ustawiamy się w folderze dla którego (i dla podfolderów) chcemy zmienić datę. W pasku adresu 
-(tam gdzie jest "Ten komputer") wpisujemy `dt.cmd 0` albo krócej `dt 0` i następuje wykonanie skryptu. Najpierw podfoldery są ustawiane na datę 1980-01-01, a potem na datę jak najnowszy wewnętrzny plik lub folder.
+(tam gdzie jest "Ten komputer") wpisujemy `dt.cmd 0` albo krócej `dt 0` i następuje wykonanie skryptu. (Jednak lepiej nie pomijać `.cmd`). Najpierw podfoldery są ustawiane na datę 1980-01-01, a potem na datę jak najnowszy wewnętrzny plik lub folder.
 
 ````bat
 @echo off & chcp 1250
@@ -111,4 +111,14 @@ Aplikacja _Attribute Changer_ (<https://www.petges.lu/>) pozwala zdaje się na h
 
 ### Hurtowa zmiana daty zdjęć i  filmów na podstawie metadanych 
 
-* ....
+#### ExifTool
+* Trochę surowo wyglądające narzędzie: [ExifTool by Phil Harvey](https://exiftool.org/). Pobieram ZIP, umieszczam w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> wewnętrzny plik `exiftool(-k).exe`. Kopiuję go na `exiftool.exe`. 
+* Tam też tworzę plik [**`ex.cmd`**]({{ site.baseurl }}/assets/files/ex.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). Będę go używał w  Eksploratorze plików - podobnie jak plik **dt.cmd** powyżej. Wywołanie **ex.cmd** w folderze ze zdjęciami/filmami spowoduje, że daty modyfikacji tych plików staną się takie jak w metadanych np. exif.
+````bat
+@echo off & chcp 65001 & rem Set date and time for multimedia files from exif info
+for %%G in (*.*) do (
+  exiftool.exe -P "-exif:DateTimeOriginal>FileModifyDate" -if "$exif:DateTimeOriginal" "%%G")
+pause
+````
+Zamiast `(*.*)` można użyć bardziej szczegółowej wyliczanki `(*.jpg *.jpeg *.mov *.mp*)`. Należy wypróbować działanie na niewielkiej liczbie plików. Potem można usunąc `pause`.
+`1 files failed condition` oznacza na ogół, że sprawdzano plik, gdzie nie ma informacji `exif`. Wtedy taki plik nie ma zmienianej daty.
