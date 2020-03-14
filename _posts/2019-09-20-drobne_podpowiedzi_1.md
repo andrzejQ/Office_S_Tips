@@ -5,7 +5,7 @@ date:   2019-09-20 09:21:59 +0100
 categories: System
 ---
 
-[Ostatnio używane foldery]({{ site.url }}{{ site.baseurl }}{{ page.url }}#ostatnio-używane-foldery) * [Zwalnianie miejsca na dysku C:]({{ site.url }}{{ site.baseurl }}{{ page.url }}#zwalnianie-miejsca-na-dysku-c) * [Hurtowa zmiana daty folderów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowa-zmiana-daty-folderów)
+[Ostatnio używane foldery]({{ site.url }}{{ site.baseurl }}{{ page.url }}#ostatnio-używane-foldery) * [Zwalnianie miejsca na dysku C:]({{ site.url }}{{ site.baseurl }}{{ page.url }}#zwalnianie-miejsca-na-dysku-c) * [Hurtowa zmiana daty folderów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowa-zmiana-daty-folderów) * [Hurtowa zmiana daty, a także nazwy zdjęć/filmów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#hurtowa-zmiana-daty-zdjęć-i-filmów-na-podstawie-metadanych)
 
 ----
 
@@ -109,10 +109,9 @@ Aplikacja _Attribute Changer_ (<https://www.petges.lu/>) pozwala zdaje się na h
 
 .
 
-### Hurtowa zmiana daty zdjęć i  filmów na podstawie metadanych 
+### Hurtowa zmiana daty zdjęć i filmów na podstawie metadanych
 
-#### ExifTool
-* Trochę surowo wyglądające narzędzie: [ExifTool by Phil Harvey](https://exiftool.org/). Pobieram ZIP, umieszczam w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> wewnętrzny plik `exiftool(-k).exe`. Kopiuję go na `exiftool.exe`. 
+* [**ExifTool** by Phil Harvey](https://exiftool.org/) to trochę surowo wyglądające narzędzie, ale korzystając z poniższych porad da się go wygodnie używać. Pobieram ZIP, umieszczam zawartość w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small>. Plik `exiftool(-k).exe`. Kopiuję go na `exiftool.exe`. 
 * Tam też tworzę plik [**`et.cmd`**]({{ site.baseurl }}/assets/files/et.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). Będę go używał w  Eksploratorze plików - podobnie jak plik **dt.cmd** powyżej. Wywołanie **et.cmd** w folderze ze zdjęciami/filmami spowoduje, że daty modyfikacji tych plików staną się takie jak w metadanych np. exif.
 ````bat
 exiftool.exe -k "-exif:DateTimeOriginal>FileModifyDate" -if "$exif:DateTimeOriginal" .
@@ -122,9 +121,19 @@ Polecenie pobiera zapisaną w metadanych datę zdjęcia/filmu (`exif:DateTimeOri
 Na końcu polcenia jest kropka `.`, która tu oznacza aktualny folder. Przetwarzaniu będą podlegać pliki znane [ExifTool](https://exiftool.org/) z tego foldera.
 Można tu użyć  dowolnej wyliczanki folderów a także plików, np. `*.jpg *.jpeg *.mov *.mp*`. 
 * Warto jeszcze wspomnieć o innych przełącznikach [ExifTool](https://exiftool.org/): `-r` operacja dotyczy także podfolderów; `-P` przy operacjach zapisu zachowywana jest pierwotna data modyfikacji pliku.
-* Za pomocą ExifTool](https://exiftool.org/) można skorygować czas pliku, np. przesunąć o +1 godzinę: `exiftool.exe -alldates+=1 -filemodifydate+=1 .`
-* Można też zmienić nazwę pliku [np. na taką jak data/czas](https://exiftool.org/filename.html#ex0): `exiftool.exe -k -P -d "%Y-%m-%d %H-%M-%S%%+c.%%e" "-TestName<DateTimeOriginal" .`
-. Tutaj dla plików z foldera aktualnego `.` (pamiętaj, że można tu wstawić dowolną listę folderów i plików) jest wytwarzana nazwa pliku/foldera wg. wzorca podanego w `-d` - np. `'2020-03-27 10-44-55.jpg'`. Przy końcu wzorca jest `%%+c`, co poduje dodanie `_1, _2, ...` do nazwy pliku o ile istnieje inny plik o nazwie jak data/czas (właściwie to powinno być `%%-c`, co daje `-1, -2, ...`, ale tutaj `_` jest lepsze). `.%%e` odtwarza oryginalne rozszerzenie pliku. Można tu też sobie dodać `_%%f.%%e`, żeby po dacie wystąpiła oryginalna nazwa pliku. `TestName` to taka testowa nazwa, która pozwala wypróbować działanie bez efektu końcowego. Gdy już przetestujemy działanie to zamieniamy to na `FileName`. We wzorcu można użyć `/`, co spowoduje, że w `FileName` znajdzie się i ścieżka i nazwa pliku. (W Windows do rozdzielania folderów jest używany `\`, ale może być używany`/`, co jest tutaj najwygodniejsze). Aby zapisać takie polecenie w pliku np. [**`ft.cmd`**]({{ site.baseurl }}/assets/files/ft.cmd.txt) należy [podwoić znaki `%`](https://ss64.com/nt/syntax-esc.html#escape):
-````bat
-exiftool.exe -k -P -d "%%Y-%%m-%%d %%H-%%M-%%S%%%%+c.%%%%e" "-TestName<DateTimeOriginal" .
-````
+* Za pomocą [ExifTool](https://exiftool.org/) można skorygować czas pliku, np. przesunąć o +1 godzinę: `exiftool.exe -alldates+=1 -FileModifyDate+=1 .`
+
+### Hurtowa zmiana nazwy zdjęć i filmów
+
+* Można też zmienić nazwę pliku [np. na taką jak data/czas](https://exiftool.org/filename.html#ex0) wykonania zdjęcia/filmu:  
+`exiftool.exe -k -P -d "%Y-%m-%d %H-%M-%S%%+c.%%e" "-TestName<DateTimeOriginal" .`{:style="font-size: smaller;"}  
+Tutaj dla plików multimedialnych z foldera aktualnego `.` (pamiętaj, że można tu wstawić dowolną listę folderów i plików) jest wytwarzana nazwa pliku/foldera wg. wzorca podanego w `-d` - np. `'2020-03-27 10-44-55.jpg'`. Przy końcu wzorca jest `%%+c`, co poduje dodanie `_1, _2, ...` do nazwy pliku o ile istnieje inny plik o nazwie jak data/czas (właściwie to powinno być `%%-c`, co daje `-1, -2, ...`, ale tutaj `_` jest lepsze). `.%%e` odtwarza oryginalne rozszerzenie pliku. Można tu też sobie dodać `_%%f.%%e`, żeby po dacie wystąpiła oryginalna nazwa pliku. `TestName` to taka testowa nazwa, która pozwala wypróbować działanie bez efektu końcowego. Gdy już przetestujemy działanie to zamieniamy to na `FileName`. We wzorcu można użyć `/`, co spowoduje, że w `FileName` znajdzie się i ścieżka i nazwa pliku. (W Windows do rozdzielania folderów jest używany `\`, ale może być używany`/`, co jest tutaj najwygodniejsze). Aby zapisać takie polecenie w pliku np. [**`fnt.cmd`**]({{ site.baseurl }}/assets/files/fnt.cmd.txt) należy [podwoić znaki `%`](https://ss64.com/nt/syntax-esc.html#escape): 
+`exiftool.exe -k -P -d "%%Y-%%m-%%d %%H-%%M-%%S%%%%+c.%%%%e" "-TestName<DateTimeOriginal" .`
+* Podobną zmianę nazwy pliku można przeprowadzić na podstawie daty ostatniej modyfikacji pliku; np. [**`fnt0.cmd`**]({{ site.baseurl }}/assets/files/fnt0.cmd.txt): 
+`exiftool.exe -k -ext "*" --ext . -P -d "%%Y-%%m-%%d %%H-%%M-%%S%%%%+c.%%%%e" "-TestName<FileModifyDate" .`  
+Użyte tutaj przełączniki `-ext "*" --ext . `  oznaczają [uwzględnianie wszystkich plików](https://exiftool.org/exiftool_pod.html) - nie tylko multimedialnych, choć z pominięciem tych, które nie mają żadnego rozszerzenia.
+
+Powyższe operacje z _ExifTool_ można wpisać w _Total Commander_ do listy poleceń [Start]. Ostatnią kropkę zastępujemy przez `%S` - co będzie oznaczało wykonanie polecenia dla zaznaczonych plików/folderów w oknie _Total Commander_. `exiftool.exe` wpisujemy jako polecenie, a dalsze elementy jako parametry.
+
+
+
