@@ -129,11 +129,12 @@ Można tu użyć  dowolnej wyliczanki folderów a także plików, np. `*.jpg *.j
 `exiftool.exe -k -P -d "%Y-%m-%d %H-%M-%S%%+c.%%e" "-TestName<DateTimeOriginal" .`{:style="font-size: smaller;"}  
 Tutaj dla plików multimedialnych z foldera aktualnego `.` (pamiętaj, że można tu wstawić dowolną listę folderów i plików) jest wytwarzana nazwa pliku/foldera wg. wzorca podanego w `-d` - np. `'2020-03-27 10-44-55.jpg'`. Przy końcu wzorca jest `%%+c`, co poduje dodanie `_1, _2, ...` do nazwy pliku o ile istnieje inny plik o nazwie jak data/czas (właściwie to powinno być `%%-c`, co daje `-1, -2, ...`, ale tutaj `_` jest lepsze). `.%%e` odtwarza oryginalne rozszerzenie pliku. Można tu też sobie dodać `_%%f.%%e`, żeby po dacie wystąpiła oryginalna nazwa pliku. `TestName` to taka testowa nazwa, która pozwala wypróbować działanie bez efektu końcowego. Gdy już przetestujemy działanie to zamieniamy to na `FileName`. We wzorcu można użyć `/`, co spowoduje, że w `FileName` znajdzie się i ścieżka i nazwa pliku. (W Windows do rozdzielania folderów jest używany `\`, ale może być używany`/`, co jest tutaj najwygodniejsze). Aby zapisać takie polecenie w pliku np. [**`fnt.cmd`**]({{ site.baseurl }}/assets/files/fnt.cmd.txt) należy [podwoić znaki `%`](https://ss64.com/nt/syntax-esc.html#escape): 
 `exiftool.exe -k -P -d "%%Y-%%m-%%d %%H-%%M-%%S%%%%+c.%%%%e" "-TestName<DateTimeOriginal" .`
-* Podobną zmianę nazwy pliku można przeprowadzić na podstawie daty ostatniej modyfikacji pliku; np. [**`fnt0.cmd`**]({{ site.baseurl }}/assets/files/fnt0.cmd.txt): 
+* Podobną zmianę nazwy pliku można przeprowadzić na podstawie daty ostatniej modyfikacji pliku; np. [**`fnft.cmd`**]({{ site.baseurl }}/assets/files/fnft.cmd.txt): 
 `exiftool.exe -k -ext "*" --ext . -P -d "%%Y-%%m-%%d %%H-%%M-%%S%%%%+c.%%%%e" "-TestName<FileModifyDate" .`  
 Użyte tutaj przełączniki `-ext "*" --ext . `  oznaczają [uwzględnianie wszystkich plików](https://exiftool.org/exiftool_pod.html) - nie tylko multimedialnych, choć z pominięciem tych, które nie mają żadnego rozszerzenia.
 
 Powyższe operacje z _ExifTool_ można wpisać w _Total Commander_ do listy poleceń [Start]. Ostatnią kropkę zastępujemy przez `%S` - co będzie oznaczało wykonanie polecenia dla zaznaczonych plików/folderów w oknie _Total Commander_. `exiftool.exe` wpisujemy jako polecenie, a dalsze elementy jako parametry.
 
+Inną pomocą w zapamiętaniu tych kilku poleceń `*.cmd` może być uruchomienie pliku [**`-.cmd`**]({{ site.baseurl }}/assets/files/-.cmd.txt)
 
 
