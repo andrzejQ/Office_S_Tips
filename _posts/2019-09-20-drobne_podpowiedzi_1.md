@@ -137,4 +137,15 @@ Powyższe operacje z _ExifTool_ można wpisać w _Total Commander_ do listy pole
 
 Inną pomocą w zapamiętaniu tych kilku poleceń `*.cmd` może być uruchomienie pliku [**`-.cmd`**]({{ site.baseurl }}/assets/files/-.cmd.txt)
 
+- - - -
+
+Przykład - import zdjęć/filmów z telefonu/aparatu z automatyczną zmianą nazwy zdjęcia jak data:
+
+W programie "Zdjęcia" ustawiam import zdjęć/filmów do foldera "Moje obrazy\Camera Roll", który jest w Win10 PL pokazywany jako Moje "obrazy\z aparatu".
+* Uruchamiam [**`import-.cmd`**]({{ site.baseurl }}/assets/files/import-.cmd.txt)
+* podłączam telefon do komputera i importuję zdjęcia/filmy
+* naciskam jakiś klawisz np. SPACJA i następuje automatyczna zmiana nazwy plików na nazwę jak data wykonania np. "2020-03-20 19-44-55.jpg" z przeniesieniem ich do foldera powyżej o nazwie jak rok i dzień np. "../2020/2020-03-20/".
+
+
+
 
