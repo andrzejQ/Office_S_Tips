@@ -7,36 +7,44 @@ categories: System
 
 Przegląd kilku systemów backupu.
 
-To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem w miarę komunikatywnego orientowania się w tym co i kiedy jest zapamiętywane. Pod kątem przejrzystej możliwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej)
+To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej)
 
-### 1. MS Windows 10
+![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
+### 1. Veeam Agent FREE
 
-Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej. 
+Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
 
-Jak chodzi o przejrzystość docierania do plików historycznych to interfejs jest trochę niewygodny (moim zdaniem). Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.
+* Edycja Free nie wymaga kupowania licencji. 
+* Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. (Można np. użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
+* Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania swojej pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
+* Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
+* Tworzy dysk ratunkowy z dołączonymi sterownikami.
+* Chyba nie ma wersji językowej polskiej.
 
-Pamiętaj:
-1. "Opcje kopii zapasowych" pozwalają dodawać / wykluczać foldery. Dodaj swoje foldery, jeśli masz dane poza standardowymi bibliotekami jak Dokumenty, Obrazy, Pulpit, ...
-2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz jednorazowe(!) pytanie czy przyłączyć tą historię do aktualnego dysku.
+* [BitLocker Encrypted Volumes Support](https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html?ver=40)
+
 
 .
+
+
 
 ### 2. Acronis True Image
 
 #### Acronis True Image OEM
 
 * W wersji bez opłaty pozawala na klonowanie dysku i kopię bezpieczeństwa całych partycji czy dysków.
-* Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), ma kopie przyrostowe.
+* Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe.
 * Pozwala na wygodne przeglądanie folderów/plików na kopii zapasowej partycji *.tib (także tej przyrostowej) i wyciąganie pojedynczych plików.
 * Bywa dołączane do dysków SSD,  i zewnętrznych dysków USB, np. 
 [ADATA](http://www.adata.com/us/ss/software-5/), [Apacer](http://event.apacer.com/SSD-installation/How_EN/), [WD](https://support.wdc.com/downloads.aspx?p=119), [Intel](https://downloadcenter.intel.com/download/19324/Intel-Data-Migration-Software?product=80098), [Seagate](https://www.seagate.com/support/downloads/discwizard/), [Kingston](https://www.kingston.com/en/support/technical/acronis-download), [Crucial](http://www.crucial.com/clone), [OCZ (Toshiba)](https://ssd.toshiba-memory.com/en-amer/download/acronis), [SanDisk](https://kb.sandisk.com/app/answers/detail/a_id/19869/~/acronis-true-image-support-information), [PNY](http://www.pny.com/qr/acronis-install).
 * Czasem potrzebny jest 16-znakowy klucz, a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
 * Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
 
+
+![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
 **Przykład:**
 
-#### Seagate DiscWizart (=Acronis True Image OEM)
-![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
+#### Seagate DiscWizart <br>(=Acronis True Image OEM)
 
 **Instalacja**
 
@@ -63,23 +71,8 @@ Dodatkowo warto sobie utworzyć:
 
 .
 
-### 3. Veeam Agent FREE
-![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
-
-Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
-
-* Edycja Free nie wymaga licencji. 
-* Można robić kopię zapasową wybranych całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. (Można np. użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów)
-* Ma funkcje profesjonalnego systemu backupu - przeszukiwanie plików w kopii partycji, [VSS](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service), dysk ratunkowy, poprawna obsługa zaszyfrowanych plików EFS różnych użytkowników.
-* Raczej nie ma wersji językowej polskiej.
-
-* [BitLocker Encrypted Volumes Support](https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html?ver=40)
-
-
-.
-
 ![ToolkitIcon.jpg]({{ site.baseurl }}/assets/img/ToolkitIcon.jpg "ToolkitIcon.jpg"){:style="float:right;width:12%;"}
-### 4. Seagate Toolkit
+### 3. Seagate Toolkit
 
 Narzędzie dołączane do zewn. dysków USB Seagate. Pozwala na backup wybranych folderów/plików. Po uruchomieniu siedzi w zasobniku obok zegara. (Być może podobne aplikacje są dostarczane z dyskami innych producentów).
 
@@ -92,7 +85,7 @@ Gdy chcemy sami zdecydować co zapamiętywać:
 * Custom (poniżej [Backup now])
 	* Advanced
 		* Można coś pozaznaczać i wewnątrz dodatkowo odznaczać...
-		* (jest obiecane, że po pierwszym pełnym backup w kolejnych są uwzględniane tylko zmiany i ma być szybciej)
+		* (aplikacja obiecuje, że po pierwszym pełnym backupie w kolejnych są uwzględniane tylko zmiany i ma być szybciej)
 
 
 Wygląda na to, że backup to pliki w folderze:
@@ -103,11 +96,23 @@ Na koniec backupu zamykam aplikację `Toolkit`, bo od razu zaczyna się męczyć
 
 .
 
-### 5. EasyUS
+### 4. EasyUS
 
 #### EaseUS Todo Backup Free 12.0 
 
 Nawet w wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partycji SSD jest wygodnie przeszukiwalna - można docierać do dowolnego pliku. A równocześnie ma opcję kopii zapasowej folderów. Nabrałem wątpliwości, czy poprawnie są zapamiętywane pliki zaszyfrowane EFS i porzuciłem dalsze próby - być może są to wątpliwości niezasadne. Ogólnie jest to bardzo użyteczne narzędzie kopii zapasowej.
+
+.
+
+### 5. MS Windows 10
+
+Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej. 
+
+Jak chodzi o przejrzystość docierania do plików historycznych to interfejs jest trochę niewygodny (moim zdaniem). Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.
+
+Pamiętaj:
+1. "Opcje kopii zapasowych" pozwalają dodawać / wykluczać foldery. Dodaj swoje foldery, jeśli masz dane poza standardowymi bibliotekami jak Dokumenty, Obrazy, Pulpit, ...
+2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz jednorazowe(!) pytanie czy przyłączyć tą historię do aktualnego dysku.
 
 .
 
