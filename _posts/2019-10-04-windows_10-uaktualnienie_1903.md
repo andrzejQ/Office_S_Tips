@@ -33,3 +33,20 @@ Można sobie też taką funkcję [przypisać do klawisza Print Screen](https://w
 ![Symbole_5.png]({{ site.baseurl }}/assets/img/Symbole_5.png "Symbole_5.png"){:style="width:220px;"} 
 ![Symbole_6.png]({{ site.baseurl }}/assets/img/Symbole_6.png "Symbole_6.png"){:style="width:231px;"}
 
+* **Format daty**: Windows 10 ma format krókiej daty `'dd.MM.yyyy'`. Gdyby jednak była potrzeba przełączenia na format 'yyyy-MM-dd' to trzeba się trochę naklikać. Ale można wkleić do okienka Powershell polecenie
+````powershell
+($c=Get-Culture).DateTimeFormat.ShortDatePattern='yyyy-MM-dd'; Set-Culture $c
+````
+i po naciśnięciu `[Enter]` błyskawicznie uzyskać nowe ustawienie.
+
+Można też sobie zrobić szybki przełącznik `DateFormatSwitch.ps1`:
+````powershell
+$c = Get-Culture
+$f = if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy') {'yyyy-MM-dd'} else {'dd.MM.yyyy'}
+$c.DateTimeFormat.ShortDatePattern = $f
+Set-Culture $c
+````
+albo, gdyby nam [przeszkadzały ustawienia `*.ps1`](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) to w wersji `DateFormatSwitch.cmd`:
+````bat
+Powershell -c "$c=Get-Culture;$f=if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy'){'yyyy-MM-dd'}else{'dd.MM.yyyy'};$c.DateTimeFormat.ShortDatePattern=$f;Set-Culture $c"
+````
