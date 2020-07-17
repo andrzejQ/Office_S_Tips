@@ -50,3 +50,26 @@ albo, gdyby nam [przeszkadzały ustawienia `*.ps1`](https://blog.netspi.com/15-w
 ````bat
 Powershell -c "$c=Get-Culture;$f=if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy'){'yyyy-MM-dd'}else{'dd.MM.yyyy'};$c.DateTimeFormat.ShortDatePattern=$f;Set-Culture $c"
 ````
+
+* <small>Na marginesie - można podczas wywoływania Powershell można skorzystać hybrydowego pliku CMD-Powershell, np.: </small>
+
+````powershell
+@chcp 65001>null&@findstr/v "^@chcp.* -&goto:eof$" "%~f0"|powershell -&goto:eof
+<#
+koment. powershell
+#>
+
+# Ale dlaczego po `#>` lub `"@` musi być pusty wiersz?
+${ąćę} = "ĄĆŁĘŃÓŚŹŻ ąćłęńóśźż €" 
+"polskie literki (kodowanie pliku: utf-8 bez BOM) - ${ąćę}" 
+"test@chcp ... -&goto:eof"
+@"
+===
+Uwaga - w nowej wersji konsoli Win10 - czcionka `"Consolas`" jakoś przełącza 
+się na mikroczcionkę rastrową po wywołaniu Powershell. Ale np. 
+`"Source Code Pro Medium`" działa dobrze. Już nie trzeba włączać czcionki 
+w Default. Pamiętane jest ostatnie ustawienie właściwości.
+"@
+
+"==="
+````
