@@ -73,3 +73,4 @@ w Default. Pamiętane jest ostatnie ustawienie właściwości.
 
 "==="
 ````
+<style> code {font-size: smaller;} </style>
