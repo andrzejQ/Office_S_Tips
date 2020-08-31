@@ -5,7 +5,7 @@ date:   2019-10-04 08:41
 categories: System
 ---
 
-...to kilka ciekawych ulepszeń, także w pracy biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej.
+...to kilka ciekawych ulepszeń, także w pracy biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej. * [Szybka zmiana formatu daty z pomocą Powershell]({{ site.url }}{{ site.baseurl }}{{ page.url }}#format-daty) 
 
 Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian <small>(symbol <span>1903</span>{:style="color:blue"} oznacza rok 20<span>19</span>{:style="color:blue"} i miesiąc <span>03</span>{:style="color:blue"}  - zapewne chodzi o czas powstania uaktualnienia, które potem jest wdrażane)</small>. Sporo informacji można znaleźć w:
 * <https://www.centrumxp.pl/Publikacja/Pelna-lista-zmian-w-Windows-10-May-2019-Update> 
@@ -33,7 +33,9 @@ Można sobie też taką funkcję [przypisać do klawisza Print Screen](https://w
 ![Symbole_5.png]({{ site.baseurl }}/assets/img/Symbole_5.png "Symbole_5.png"){:style="width:220px;"} 
 ![Symbole_6.png]({{ site.baseurl }}/assets/img/Symbole_6.png "Symbole_6.png"){:style="width:231px;"}
 
-* **Format daty**: Windows 10 ma format krókiej daty `'dd.MM.yyyy'`. Gdyby jednak była potrzeba przełączenia na format 'yyyy-MM-dd' to trzeba się trochę naklikać. Ale można wkleić do okienka Powershell polecenie
+### Format daty
+
+Windows 10 ma format krókiej daty `'dd.MM.yyyy'`. Gdyby jednak była potrzeba przełączenia na format 'yyyy-MM-dd' to trzeba się trochę naklikać. Ale można wkleić do okienka Powershell polecenie
 ````powershell
 ($c=Get-Culture).DateTimeFormat.ShortDatePattern='yyyy-MM-dd'; Set-Culture $c
 ````
@@ -46,7 +48,10 @@ $f = if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy') {'yyyy-MM-dd'} els
 $c.DateTimeFormat.ShortDatePattern = $f
 Set-Culture $c
 ````
-albo, gdyby nam [przeszkadzały ustawienia `*.ps1`](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) to w wersji `DateFormatSwitch.cmd`:
+<small>(aby bezpośrednio uruchamiać takie skrypty należy w oknie adm.Powershell wpisać:  
+`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`)</small>
+
+albo, gdyby nam przeszkadzały ustawienia uruchamiania  `*.ps1` [(co można obejść na 15 sposobów)](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) to w wersji `DateFormatSwitch.cmd`:
 ````bat
 Powershell -c "$c=Get-Culture;$f=if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy'){'yyyy-MM-dd'}else{'dd.MM.yyyy'};$c.DateTimeFormat.ShortDatePattern=$f;Set-Culture $c"
 ````
@@ -56,10 +61,10 @@ Powershell -c "$c=Get-Culture;$f=if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.
 ````powershell
 @chcp 65001>null&@findstr/v "^@chcp.* -&goto:eof$" "%~f0"|powershell -&goto:eof
 <#
-koment. powershell
+Tu jest komentarz powershell
 #>
 
-# Ale dlaczego po `#>` lub `"@` musi być pusty wiersz?
+# Nie wiem dlaczego po `#>` lub `"@` musi być pusty wiersz...
 ${ąćę} = "ĄĆŁĘŃÓŚŹŻ ąćłęńóśźż €" 
 "polskie literki (kodowanie pliku: utf-8 bez BOM) - ${ąćę}" 
 "test@chcp ... -&goto:eof"
