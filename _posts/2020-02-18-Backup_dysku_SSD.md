@@ -131,7 +131,7 @@ Co ważne - działa w (czarnym) oknie poleceń `cmd` w trybie awaryjnym.
 `/R:1 /W:3` - powtarzanie, czekanie (sek.)  
 `/COPYALL` - kopiuj wszystkie inf. o pliku (= `/COPY:DATSOU`; ->do Linux użyj: `/COPY:DT`)  
 `/EFSRAW` - kopiuj pliki zaszyfrowane w trybie EFS RAW mode (nie używaj w tym przypadku `/MT`)  
-`/ZB` - Tryb restarowania; gdy plik zablokowany użyj trybu Backup  
+`/ZB` - Tryb restartowania; gdy plik zablokowany użyj trybu Backup  
 
 `/LOG:C:\LogFileName.txt /TEE /NP`   (`/NP` = NOT show the progress - nie pokazuj postępu w log)  
 `/LOG+:C:\LogFileName.txt /TEE /NP`  
