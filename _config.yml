@@ -36,8 +36,9 @@ baseurl: "/Office_S_Tips" # the subpath of your site, e.g. /blog
 url: "https://andrzejq.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  andrzejQ
 
-disqus:
-  shortname: aq-office-s-tips
+#disqus:
+#  shortname: aq-office-s-tips
+# Wyłączam disqus - nikt nic nie napisał przez 2 lata, w dodatku Privay Badger ma zastrzeżenia...
 
 # Build settings
 markdown: kramdown
