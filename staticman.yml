@@ -43,7 +43,7 @@ comments:
   moderation: true
 
   # Name of the site. Used in notification emails.
-  name: "Performance Matters Blog"
+  name: "Programy biurowe - drobne podpowiedzi"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
@@ -77,7 +77,10 @@ comments:
   transforms:
     email: md5
 
+  # you are going to want reCaptcha set up, but for now leave it disabled because we need the API
+  # bridge up and running in order to encrypt the secrets that go in this section
+
   reCaptcha:
-    enabled: true
-    siteKey: 6LcHRdsZAAAAADb0O8lAN3N3a_aYwAsUmhDbj2vP
-    secret: nYfEhYuRsH4U1R5c6AhpiVihBDZ74rfNFcQgxveJ7AoREs1uL5BFeIqaVkpv6BGjiD9sssPddU/k/cje08T4DOWDuzOBF+av7NAC1rWxh0zhGGLyBYVlZXh0IJPx2vpExfWCytWBjfWPvLsVyGEq9/eBlKi1ULLKOgxYErTUrMYAK8Jt7bAwnograjcpMfdYkTRcU6fLTilctDq66Nq9ECED2emUDZVvsA+8ngk/ocz4x/e9PxWTYrR+M3z2oe1yZVELhkCKIabcmzWqqczQ5Yi3plweKqGNidyz4lxE37Fd3rQm6ZeeIQhThCiviykcsbXM+IKedJtKh1+FZ4Uns8vE96OZ9Owy7+kBe/pM5mvr5TImK2gZousxX9kLQMNiEyS8TpLuGBQ/eIPNuQgx+1J8ny9+hfvRvILocburm9XgagYesda755cUZXX2wP/9QFmOVZglHVpHIJB7RDyc6LEyEZbsRjG8Iwv78tXpKkboX/lCz05GpniUHCdHbE8nEikeXK3+yIOVaAInlvgo7zdzU7gTB9JuFQXGYpBvGH3qUQT9rP1ixLvHR4hSCHXGxZu+5cp5bge7coaSeuqfuJazHylDgaeGLnkewt/AHoQF21lOgNxVpwQG/qvox228LPcTGa1InSodoB1xnncqtgQm3/7Y+rQqWTZpjSwrfA8=
+    enabled: false
+#    siteKey: 6LcHRdsZAAAAADb0O8lAN3N3a_aYwAsUmhDbj2vP
+#    secret: nYfEhYuRsH4U1R5c6AhpiVihBDZ74rfNFcQgxveJ7AoREs1uL5BFeIqaVkpv6BGjiD9sssPddU/k/cje08T4DOWDuzOBF+av7NAC1rWxh0zhGGLyBYVlZXh0IJPx2vpExfWCytWBjfWPvLsVyGEq9/eBlKi1ULLKOgxYErTUrMYAK8Jt7bAwnograjcpMfdYkTRcU6fLTilctDq66Nq9ECED2emUDZVvsA+8ngk/ocz4x/e9PxWTYrR+M3z2oe1yZVELhkCKIabcmzWqqczQ5Yi3plweKqGNidyz4lxE37Fd3rQm6ZeeIQhThCiviykcsbXM+IKedJtKh1+FZ4Uns8vE96OZ9Owy7+kBe/pM5mvr5TImK2gZousxX9kLQMNiEyS8TpLuGBQ/eIPNuQgx+1J8ny9+hfvRvILocburm9XgagYesda755cUZXX2wP/9QFmOVZglHVpHIJB7RDyc6LEyEZbsRjG8Iwv78tXpKkboX/lCz05GpniUHCdHbE8nEikeXK3+yIOVaAInlvgo7zdzU7gTB9JuFQXGYpBvGH3qUQT9rP1ixLvHR4hSCHXGxZu+5cp5bge7coaSeuqfuJazHylDgaeGLnkewt/AHoQF21lOgNxVpwQG/qvox228LPcTGa1InSodoB1xnncqtgQm3/7Y+rQqWTZpjSwrfA8=
