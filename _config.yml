@@ -30,7 +30,8 @@ title: Office_S_Tips
 lang: pl
 email: kubaszek@prz.edu.pl
 description: >- # this means to ignore newlines until "baseurl:"
-  Drobne podpowiedzi dotyczące obsługi programów biurowych. Piszę o tym co sam wypróbowałem jako przydatne, więc może i komuś się to przyda...
+  Drobne podpowiedzi dotyczące obsługi programów biurowych. 
+  Piszę tu o tym co sam wypróbowałem ...
 
 baseurl: "/Office_S_Tips" # the subpath of your site, e.g. /blog
 url: "https://andrzejq.github.io" # the base hostname & protocol for your site, e.g. http://example.com
