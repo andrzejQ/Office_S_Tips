@@ -1,0 +1,12 @@
+_id: 764d08d0-1773-11eb-8c6f-1d05fc26a295
+_parent: >-
+  https://andrzejq.github.io/Office_S_Tips/csv/2019/12/11/pliki_CSV_a_brak_arkusza_kalkulacyjnego.html
+replying_to_uid: ''
+message: >-
+  Po pierwszym użyciu pamięta ostatnio wyświetlany plik w oknie CSV Query. Dla
+  innego pliku trzeba wtedy użyć [Read File], i jeśli wyskoczy okno konfiguracji
+  - podać znak rozdzielający kolumny.
+name: Andrzej
+email: ''
+hp: ''
+date: 1603707024
