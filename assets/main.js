@@ -18,7 +18,7 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        showModal('Komentarz wysłany. Comment submitted', 'Twój komentarz czeka teraz na moją <a href="https://github.com/andrzejQ/Office_S_Tips/pulls">akceptację</a>.');
+        showModal('Komentarz został wysłany', 'Twój komentarz czeka teraz na moją <a href="https://github.com/andrzejQ/Office_S_Tips/pulls">akceptację</a>.');
 
         $("#comment-form-submit")
           .html("Submit");
