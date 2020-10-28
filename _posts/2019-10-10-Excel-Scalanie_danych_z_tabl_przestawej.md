@@ -6,7 +6,8 @@ categories: CSV
 ---
 
 Wielokrotne dane w danej kategorii jako pojedynczy tekst.  
-A także dodatek do Excel 2013- "AK_dodFunkcje.xlam" dla kilku nowych funkcji Excel 2016+ : TEXTJOIN/POŁĄCZ.TEKSTY, CONCAT/ZŁĄCZ.TEKST, SWITCH/PRZEŁĄCZ, IFS/WARUNKI
+Także dodatek do Excel 2013- "AK_dodFunkcje.xlam" dla kilku nowych funkcji Excel 2016+ : TEXTJOIN/POŁĄCZ.TEKSTY, CONCAT/ZŁĄCZ.TEKST, SWITCH/PRZEŁĄCZ, IFS/WARUNKI  
+(+ opis szybkiego przełączania języka funkcji Excel)
 
 Tabela przestawna to świetny sposób na wykrywanie powiązań danych. 
 Gdy korzystam z tej funkcjonalności to najczęściej 
