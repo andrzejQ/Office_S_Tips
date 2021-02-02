@@ -2,7 +2,7 @@
 layout: post
 title:  "Excel - scalanie danych z tablicy przestawnej"
 date:   2019-10-10 09:21:59 +0100
-categories: CSV
+categories: Excel
 ---
 
 Wielokrotne dane w danej kategorii jako pojedynczy tekst.  
