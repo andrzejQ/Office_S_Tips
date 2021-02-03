@@ -27,14 +27,16 @@ Uwagi:
 1. Formuła tablicowa (CSE) bez użycia VBA. 
 2. W jednym kroku zamienia tylko 1 wyszukaną pozycję z listy **n_znajdz**. 
 3. Fomuła może być uproszczona, gdy zamieniamy wszystko na stałą wartość, np. " ". 
-4. 
-W MS Office365 (2016+) nie są potrzebne formuły tablicowe w kol. B, D i E powyżej (?), pomimo użycia tablicy tekstów w ZNAJDŹ()  
-Ten dokument w niższych Office (gdzie nie było tablic dynamicznych) w kolumnie B, C, D i E pokazuje formułę tablicową (CSE).  
-Po powrocie do wyższego MS Office w kol. C pojawia się operator @, tj. niejawny operator przecięcia.  
+4. <small>
+W MS Office365 (2016+) nie są potrzebne formuły tablicowe (CSE) w kol. B, D i E powyżej (?), pomimo użycia tablicy tekstów w ZNAJDŹ(). 
+Ten dokument w niższych Office (gdzie nie było tablic dynamicznych) w kolumnie B, C, D i E pokazuje formułę tablicową (CSE). 
+Po powrocie do wyższego MS Office w kol. C pojawia się operator @, tj. niejawny operator przecięcia.</small>
 
-````excel
+```` js
 B23: =PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0)
 C23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;B23);INDEKS(n_zamien;B23));A23)
 D23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0));INDEKS(n_zamien;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0)));A23)
 E23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0));"_x_");A23)
 ````
+
+<style> pre code {font-size: smaller;} </style>
