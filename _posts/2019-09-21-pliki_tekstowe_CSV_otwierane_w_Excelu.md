@@ -13,7 +13,7 @@ Głównym tematem tych notatek jest takie przygotowanie pliku CSV, żeby można 
 
 1. Jeśli tekst dla danej komórki **zaczyna się od `=`** to jest automatycznie interpretowany **jako formuła**.
 2. Dla pliku w kodowaniu ANSI możemy dopisać **w dodatkowym pierwszym wierszu np. `sep=,`** - tu ostatni znak w tym wierszu (przecinek) oznacza separator niezależnie od systemowego separatora danych (np. w Excel PL to `;`). Sposób ten działa _tylko na pliki w starym kodowaniu ANSI_- czyli np. w Windows PL jest to zestaw znaków [cp1250](https://pl.wikipedia.org/wiki/Windows-1250), a więc znaków spoza Europy środkowej nie zobaczymy....
-3. Wszelkie **teksty ujęte w cudzysłowy "..."** nawet zawierające wewnątrz znak dowolnego separatora czy nowego wiersza (!) są umieszczane w jednej komórce, a zewnętrzne cudzysłowy są pomijane. <small>Jednak znaki nowego wiersza mogą powodować kłopoty - zob. p.6</small>
+3. Wszelkie **teksty ujęte w cudzysłowy "..."** nawet zawierające wewnątrz znak dowolnego separatora czy nowego wiersza (!) są umieszczane w jednej komórce, a zewnętrzne cudzysłowy są pomijane. <small>Jednak znaki nowego wiersza mogą powodować kłopoty - zob. p.7</small>
 4. Aby [zablokować automatyczne przekształcanie tekstu](https://stackoverflow.com/questions/165042/stop-excel-from-automatically-converting-certain-text-values-to-dates) (np. `1E2` jest przekształcany na `1,00E+02`) podczas otwierania CSV w Excelu i zachować tekst pierwotny mnożna stosować zapis <small>(tu przykład z `1E2`)</small>: `="1E2"` lub `"=""1E2"""`<small> - ten ostatni zapis działa także w Excelu 2007, a obie formy w LibreOffice</small>.
 5. ![Notatnik-utf8.png]({{ site.baseurl }}/assets/img/Notatnik-utf8.png "Notatnik-utf8.png"){:style="float:right;width:55%;"} Da się używać wszelkich znaków gdy plik tekstowy jest w kodowaniu **UTF-8 z BOM** (bez BOM to nie działa). Obecnie nawet Notatnik Windowsa ma te potrzebne kodowania UTF-8 i dalej opisane USC-2. Oczywiście ma je od dawna Notatnik++.  
  **Wypróbuj** [**test01.csv**]({{ site.baseurl }}/assets/files/test01.csv) <!--a href="{{ site.baseurl }}/assets/files/test01.csv" download="test01.csv">test01.csv</a-->.
@@ -36,5 +36,5 @@ W praktyce nie wstawiam tych danych od lewej kolumny `=$A$1`, lecz zostawiam sob
 
 Nie wiem o tym, czy te sposoby są oficjalnie udokumentowane w Microsoft (zwłaszcza 4 i 5), czy tylko działają i nie wiadomo od kiedy. Oczywiście udokumentowany jest "sep=..." i "...". Gdyby ktoś natrafił na oficjalną dokumentację to piszcie.
 
-W mojej praktyce najbardziej przydatne są sposoby opisane w 4 i 6.
+W mojej praktyce najbardziej przydatne są sposoby opisane w 4, 5 i 7.
 
