@@ -17,7 +17,7 @@ Powyższe dwa 1-wymiarowe zakresy mogą być gdziekolwiek, także w  innym arkus
  
 Jeżeli w liście **n_znajdz** pewne elementy są podtekstami innych elementów, to muszą być na dalszej pozycji. 
 
-Poniżej fragment pliku-demo "ZnajdzZamienWgListy.xlsx ", zob. [**ZnajdzZamienWgListy.zip**]({{ site.baseurl }}/assets/files/TextJoin.zip) 
+Poniżej fragment pliku-demo "ZnajdzZamienWgListy.xlsx ", zob. [**ZnajdzZamienWgListy.zip**]({{ site.baseurl }}/assets/files/ZnajdzZamienWgListy.zip) 
 
 ![Po-zamianie.png]({{ site.baseurl }}/assets/img/Po-zamianie.png "Po-zamianie.png"){:style="width:100%;"}
 
@@ -29,7 +29,7 @@ Uwagi:
 3. Fomuła może być uproszczona, gdy zamieniamy wszystko na stałą wartość, np. " ". 
 4. 
 W MS Office365 (2016+) nie są potrzebne formuły tablicowe w kol. B, D i E powyżej (?), pomimo użycia tablicy tekstów w ZNAJDŹ()  
-Ten dokument w niższych Office (gdzie nie było tablic dynamicznych) w kolumnie B, D i E pokazuje formułę tablicową (CSE).  
+Ten dokument w niższych Office (gdzie nie było tablic dynamicznych) w kolumnie B, C, D i E pokazuje formułę tablicową (CSE).  
 Po powrocie do wyższego MS Office w kol. C pojawia się operator @, tj. niejawny operator przecięcia.  
 
 ````excel
