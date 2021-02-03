@@ -32,11 +32,20 @@ W MS Office365 (2016+) nie są potrzebne formuły tablicowe (CSE) w kol. B, D i 
 Ten dokument w niższych Office (gdzie nie było tablic dynamicznych) w kolumnie B, C, D i E pokazuje formułę tablicową (CSE). 
 Po powrocie do wyższego MS Office w kol. C pojawia się operator @, tj. niejawny operator przecięcia.</small>
 
+<small>pl:</small>
 ```` js
 B23: =PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0)
 C23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;B23);INDEKS(n_zamien;B23));A23)
 D23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0));INDEKS(n_zamien;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0)));A23)
 E23: =JEŻELI.ND(PODSTAW(A23;INDEKS(n_znajdz;PODAJ.POZYCJĘ(0;0*ZNAJDŹ(n_znajdz;A23);0));"_x_");A23)
+````
+
+<small>en:</small>
+```` js
+B23: =MATCH(0,0*FIND(n_znajdz,A23),0)
+C23: =IFNA(SUBSTITUTE(A23,INDEX(n_znajdz,B23),INDEX(n_zamien,B23)),A23)
+D23: =IFNA(SUBSTITUTE(A23,INDEX(n_znajdz,MATCH(0,0*FIND(n_znajdz,A23),0)),INDEX(n_zamien,MATCH(0,0*FIND(n_znajdz,A23),0))),A23)
+E23: =IFNA(SUBSTITUTE(A23,INDEX(n_znajdz,MATCH(0,0*FIND(n_znajdz,A23),0)),"_x_"),A23)
 ````
 
 <style> pre code {font-size: smaller;} </style>
