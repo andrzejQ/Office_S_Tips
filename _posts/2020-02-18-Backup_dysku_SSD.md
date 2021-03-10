@@ -35,9 +35,10 @@ Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/
 * W wersji bez opłaty pozawala na klonowanie dysku i kopię bezpieczeństwa całych partycji czy dysków.
 * Działa bardzo szybko (klika minut dla dysku 240GB), nie wymaga przerywania pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe.
 * Pozwala na wygodne przeglądanie folderów/plików na kopii zapasowej partycji *.tib (także tej przyrostowej) i wyciąganie pojedynczych plików.
-* Bywa dołączane do dysków SSD,  i zewnętrznych dysków USB, np. 
-[ADATA](http://www.adata.com/us/ss/software-5/), [Apacer](http://event.apacer.com/SSD-installation/How_EN/), [WD](https://support.wdc.com/downloads.aspx?lang=pl), [Intel](https://downloadcenter.intel.com/download/19324/Intel-Data-Migration-Software?product=80098), [Seagate](https://www.seagate.com/support/downloads/discwizard/), [Kingston](https://www.kingston.com/en/support/technical/acronis-download), [Crucial](http://www.crucial.com/clone), [OCZ (Toshiba)](https://ssd.toshiba-memory.com/en-amer/download/acronis), [SanDisk](https://kb.sandisk.com/app/answers/detail/a_id/19869/~/acronis-true-image-support-information), [PNY](http://www.pny.com/qr/acronis-install).
-* Czasem potrzebny jest 16-znakowy klucz, a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
+* [Bywa dołączane](https://kb.acronis.com/content/2201) do dysków SSD,  i zewnętrznych dysków USB, np. 
+[ADATA (?)](https://www.adata.com/us/support/online?tab=downloads), [Apacer](http://event.apacer.com/SSD-installation/How_EN/), [WD](https://support.wdc.com/downloads.aspx?lang=pl), [Seagate](https://www.seagate.com/support/downloads/discwizard/), [Kingston](https://www.kingston.com/en/support/technical/acronis-download), [Crucial](http://www.crucial.com/clone), [OCZ (Toshiba)](https://ssd.toshiba-memory.com/en-amer/download/acronis), [SanDisk](https://kb.sandisk.com/app/answers/detail/a_id/19869/~/acronis-true-image-support-information), [PNY](http://www.pny.com/qr/acronis-install).
+* Czasem potrzebny jest 16-znakowy klucz (Kingston, Adata), a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
+* Wersja OEM ma ograniczoną funkcjonalność w stosunku do wersji pełnej Acronis True Image.
 * Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
 
 
