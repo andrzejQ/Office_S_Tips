@@ -55,7 +55,7 @@ W niektórych systemach pojawia się ostrzeżenie, że nie można uruchomić har
 Po instalacji odinstalowuję program
 - Bonjur 
 
-jeśli ile nastąpiła właśnie razem z instalacją Acronis. Program wydaje mi się zbędny.
+jeśli zainstalował się razem z Acronis. Program wydaje mi się zbędny.
 
 Po starcie Seagate DiscWizart:
 1. Backup
