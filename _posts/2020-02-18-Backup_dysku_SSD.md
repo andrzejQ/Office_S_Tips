@@ -124,8 +124,9 @@ Pamiętaj:
 Na razie nie próbowałem tego produkcyjnie, ale może się mi to kiedyś przyda...  
 Co ważne - działa w (czarnym) oknie poleceń `cmd` w trybie awaryjnym.
 
-	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
+	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /E /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
 
+`/E` - kopiuj podfoldery, także puste  
 `/MIR` - mirror; usuwa w kopii to co usunięte w źródle  
 `/XJD` - pomijanie linków symbolicznych - junction directory  
 `/XA:SH` - pomiń pliki systemowe i ukryte  
@@ -137,6 +138,16 @@ Co ważne - działa w (czarnym) oknie poleceń `cmd` w trybie awaryjnym.
 `/LOG:C:\LogFileName.txt /TEE /NP`   (`/NP` = NOT show the progress - nie pokazuj postępu w log)  
 `/LOG+:C:\LogFileName.txt /TEE /NP`  
 (`/XD "folder"` `/XF "plik"` - pomiń podany folder lub plik)
+
+Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów:
+
+	robocopy a:\ b:\ *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB /XO /XD a:\$RECYCLE.BIN a:\tmp
+
+W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego. (Uwaga: ukośnik `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik nie może występować)
+
+`/XO` - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
+`/XJ` - pomijaj dowiązania symboliczne  
+`/XD` - pomijaj foldery wymienione na liście
 
 
 #### Inne przykłady `robocopy`:
