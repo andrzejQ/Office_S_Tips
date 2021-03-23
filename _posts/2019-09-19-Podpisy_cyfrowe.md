@@ -16,11 +16,24 @@ Kilka informacji o podpisie cyfrowym i dokumencie elektronicznym.
 Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierowym. Procedura wydawania tego podpisu ma mocne podstawy prawne i wymaga udziału zaufanej instytucji potwierdzającej tożsamość użytkownika. Dokumenty tak podpisane można wysyłać jako załącznik e-maila. Roczny koszt podpisu jest równy kosztowi kilku wysyłek kurierskich. 
 1. **Podpis zaawansowany** to podpis, gdzie przestrzegane są procedury zapewniające wiarygodny związek użytkownika z jego kluczem publicznym i prywatnym. Podpis taki może być używany do szyfrowania e-maili. Podpis może być przechowywany na karcie pracowniczej <http://orlowski.info/blog-arts/75-karta-z-chipem-dla-urzednika-jest-zalecana>.  
 Podpis zaawansowany występuje też w nowym [**e-dowodzie osobistym** z warstwą elektroniczną](https://obywatel.gov.pl/dokumenty-i-dane-osobowe/dowod-osobisty-informacja-o-dokumencie) - "W kontakcie z urzędem (podmiotem publicznym) jest tak samo ważny jak podpis własnoręczny. Możesz go też używać do załatwiania innych spraw - z firmami lub osobami, jeśli zgodzą się na to obie strony".
-1. Szczególnym przypadkiem podpisu zaawansowanego jest **Profil Zaufany** powiązany z ePUAP <https://epuap.gov.pl/> (obecnie wydzielony jako osobny system <https://pz.gov.pl/>). Każdy obywatel może bezpłatnie otrzymać taki podpis, którego klucze są przechowywane na serwerach rządowych. Osoby, które posiadają swój podpis kwalifikowany mogą same potwierdzić profil zaufany. Inni muszą skorzystać z wizyty w wybranym urzędzie lub skorzystać z pośrednictwa swojego banku w celu potwierdzenia profilu zaufanego. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.
+1. Szczególnym przypadkiem podpisu zaawansowanego jest **Profil Zaufany** powiązany z ePUAP <https://epuap.gov.pl/>. Obecnie jest on wydzielony jako osobny system <https://pz.gov.pl/>. Każdy obywatel może bezpłatnie otrzymać taki podpis, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z pośrednictwa swojego banku w celu potwierdzenia profilu zaufanego. Mozna to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśi taki posiadamy. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.  
+Za pomocą profilu zaufanego można można m.in. podpisywać dokumenty PDF - zob. instrukcję i przykład podpisanego dokumentu
+[PAdES.Podpisywanie_PDF_podpisem_zaufanym.pdf]({{ site.baseurl }}/assets/files/PAdES.Podpisywanie_PDF_podpisem_zaufanym.pdf). Tak podpisany dokument można wysłać dalej w postaci elektronicznej.  
+<small>
+Informacje o podpisie widoczne w dokumencie:  
+Podpisane przez: Minister do spraw informatyzacji - pieczęć podpisu zaufanego  
+Certyfikat jest kwalifikowany zgodnie z rozporządzeniem UE 910/2014 Aneks III  
+Powód: Opatrzono pieczęcią ministra właściwego do spraw informatyzacji w imieniu: (Imię Nazwisko, ...)
+</small>
 
 ### Format e-podpisu
 
-Najbardziej przydatną wersją jest e-podpis **otoczony**. Plik z podpisem zawiera treść dokumentu oraz podpis i zwykle można go odczytać wprost za pomocą np. Adobe Reader, MS Word, łącznie z możliwością weryfikacji poprawności podpisu. Dla pliku PDF takim formatem jest m.in. **PAdES**.
+Najbardziej przydatną wersją jest e-podpis **otoczony**. Plik z podpisem zawiera treść dokumentu oraz podpis i zwykle można go odczytać wprost za pomocą np. Adobe Reader, MS Word, łącznie z możliwością weryfikacji poprawności podpisu. Dla pliku PDF takim formatem jest m.in. **PAdES**.  
+<small>
+Podpis **otaczający** może mieć formę pliku XML i wymaga użycia specjalnej aplikacji do jego zweryfikowania/odczytania - zwykle tej samej, która służy do składania podpisu. Zob. też. skrypt `1.cmd` na moim blogu [PowerShell - wyodrębnianie plików z XML](http://localhost:4000/El_Prog/programowanie/2021/03/22/Powershell-wyodrebnianie-plikow-z-xml.html#hybrydowy-skrypt-1cmd-cmd-powershell).
+</small>
+
+
 ![PDF_z_podpisem.png]({{ site.baseurl }}/assets/img/PDF_z_podpisem.png "PDF_z_podpisem.png"){:style="float:right;width:40%;"}
 
 ### Podpisy w PDF i DOCX 
