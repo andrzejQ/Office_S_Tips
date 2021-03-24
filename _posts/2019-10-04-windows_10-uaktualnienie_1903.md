@@ -41,7 +41,16 @@ Windows 10 ma format krókiej daty `'dd.MM.yyyy'`. Gdyby jednak była potrzeba p
 ````
 i po naciśnięciu `[Enter]` błyskawicznie uzyskać nowe ustawienie.
 
-Można też sobie zrobić szybki przełącznik `DateFormatSwitch.ps1`:
+*Aktualizacja 2021-03-24:*  
+Wygląda na to, że w nowszych kompilacjach Win10, np. 20H2 `Set-Culture` działa tylko na aktualną sesję PowerShell.
+Trwale działa modyfikacja zapisu w rejestrze w PowerShell (i działa od razu - nie trzeba restartować systemu)
+
+````powershell
+Set-ItemProperty -Path "HKCU:\Control Panel\International" -Name sShortDate -Value yyyy-MM-dd
+````
+
+
+Można też sobie zrobić szybki przełącznik `DateFormatSwitch.ps1` (jeśli `Set-Culture` działa):
 ````powershell
 $c = Get-Culture
 $f = if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy') {'yyyy-MM-dd'} else {'dd.MM.yyyy'}
