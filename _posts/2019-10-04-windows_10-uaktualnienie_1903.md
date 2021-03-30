@@ -49,22 +49,7 @@ Trwale działa modyfikacja zapisu w rejestrze w PowerShell (i działa od razu - 
 Set-ItemProperty -Path "HKCU:\Control Panel\International" -Name sShortDate -Value yyyy-MM-dd
 ````
 
+<small>Zob. też post: [Hybrydowy plik CMD-Powershell](https://andrzejq.github.io/El_Prog/programowanie/2021/03/22/Hybrydowy_skrypt_CMD-Powershell.html).</small>.
 
-Można też sobie zrobić szybki przełącznik `DateFormatSwitch.ps1` (jeśli `Set-Culture` działa):
-````powershell
-$c = Get-Culture
-$f = if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy') {'yyyy-MM-dd'} else {'dd.MM.yyyy'}
-$c.DateTimeFormat.ShortDatePattern = $f
-Set-Culture $c
-````
-<small>(aby bezpośrednio uruchamiać takie skrypty należy w oknie adm.Powershell wpisać:  
-`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`)</small>
-
-albo, gdyby nam przeszkadzały ustawienia uruchamiania  `*.ps1` [(co można obejść na 15 sposobów)](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) to w wersji `DateFormatSwitch.cmd`:
-````bat
-Powershell -c "$c=Get-Culture;$f=if ($c.DateTimeFormat.ShortDatePattern -eq 'dd.MM.yyyy'){'yyyy-MM-dd'}else{'dd.MM.yyyy'};$c.DateTimeFormat.ShortDatePattern=$f;Set-Culture $c"
-````
-
-* <small>Na marginesie - można podczas wywoływania Powershell można skorzystać [hybrydowego pliku CMD-Powershell](https://andrzejq.github.io/El_Prog/programowanie/2020/11/24/Powershell-wyodrebnianie-plikow-z-xml.html#hybrydowy-plik-cmd-powershell).</small>
 
 <style> code {font-size: smaller;} </style>
