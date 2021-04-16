@@ -158,12 +158,20 @@ Lista plików większych niż....
 
 * Folder docelowy powinien być pusty! (tutaj to jest `"..\_%date%_%time::=.%"`); /L - tylko wyświetlaj; min:bajtów
 		
-Lista plików nie starszych niż  (maxage:n; gdy n < 1900 to n = liczba dni, inaczej data n = YYYYMMDD):
+Lista plików nie starszych niż 7 dni (maxage:n; gdy n < 1900 to n = liczba dni, inaczej data n = YYYYMMDD):
 
-	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /nC /nJH /nJS /nS /maxage:7
+	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /nC /nJH /nJS /nS /maxAge:7
 
 * /nS - bez rozmiaru, więc dostajemy same nazwy plików; albo /TS - będzie rozmiar i czas 
 * Usuwając /L dostaniemy kopiowanie wybranych plików
+
+Kopiowanie (po usunięciu `/L`) plików z 3 ostatnich dni, nie większych niż (`/MAX`) 20MB z pominięciem (`/XD`) niektórych folderów:
+
+	ROBOCOPY "C:\SOURCE" "d:\dest" *.* /L /S /nDL /nC /nJH /nJS /nS /MAX:20971520 /XD .git SeaDriverCache "Google Drive" /maxAge:3
+
+<small>
+/L : List only; /S : copy Subfolders; /nDL,C,JH,JS,S : no - DirectoryList,Class,JobHeader,JobSummary,Size
+</small> 
 
 **Dokumentacja:**
 
