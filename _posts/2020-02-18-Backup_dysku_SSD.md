@@ -117,12 +117,11 @@ Pamiętaj:
 
 .
 
-### 6. Robocopy
+### 6. Robocopy (Robust File Copy)
 
 #### Robocopy jako polecenie kopii zapasowej
 
-Na razie nie próbowałem tego produkcyjnie, ale może się mi to kiedyś przyda...  
-Co ważne - działa w (czarnym) oknie poleceń `cmd` w trybie awaryjnym.
+Ważne: to działa w (czarnym) oknie poleceń `cmd`, także w wierszu polecenia w trybie awaryjnym Windows.
 
 	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /E /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
 
@@ -143,7 +142,7 @@ Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów:
 
 	robocopy a:\ b:\ *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB /XO /XD a:\$RECYCLE.BIN a:\tmp
 
-W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego. (Uwaga: ukośnik `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik nie może występować)
+W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego. (Uwaga: **ukośnik** `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik **nie może występować**)
 
 `/XO` - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
 `/XJ` - pomijaj dowiązania symboliczne  
@@ -160,17 +159,17 @@ Lista plików większych niż....
 		
 Lista plików nie starszych niż 7 dni (maxage:n; gdy n < 1900 to n = liczba dni, inaczej data n = YYYYMMDD):
 
-	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /nC /nJH /nJS /nS /maxAge:7
+	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /maxAge:7
 
 * /nS - bez rozmiaru, więc dostajemy same nazwy plików; albo /TS - będzie rozmiar i czas 
 * Usuwając /L dostaniemy kopiowanie wybranych plików
 
 Kopiowanie (po usunięciu `/L`) plików z 3 ostatnich dni, nie większych niż (`/MAX`) 20MB z pominięciem (`/XD`) niektórych folderów:
 
-	ROBOCOPY "C:\SOURCE" "d:\dest" *.* /L /S /nDL /nC /nJH /nJS /nS /MAX:20971520 /XD .git SeaDriverCache "Google Drive" /maxAge:3
+	ROBOCOPY "C:\SOURCE" "d:\dest" *.* /L /S /nDL /MAX:20971520 /XD .git SeaDriverCache "Google Drive" "c:\temp" /maxAge:3
 
 <small>
-/L : List only; /S : copy Subfolders; /nDL,C,JH,JS,S : no - DirectoryList,Class,JobHeader,JobSummary,Size
+/L : List only; /S : copy Subfolders; /nDL : no Directory List
 </small> 
 
 **Dokumentacja:**
