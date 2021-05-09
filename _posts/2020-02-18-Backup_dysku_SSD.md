@@ -68,7 +68,7 @@ Po starcie Seagate DiscWizart:
 Dodatkowo warto sobie utworzyć:
 - Tools \ Rescue Media Builder
 
-(co najmniej zrobić sobie ISO i w razie potrzeby w przyszłości nagrać płytę lub dysk USB).
+(co najmniej zrobić sobie plik ISO, aby w razie potrzeby w przyszłości nagrać płytę lub dysk USB).
 
 .
 
@@ -136,17 +136,25 @@ Ważne: to działa w (czarnym) oknie poleceń `cmd`, także w wierszu polecenia 
 
 `/LOG:C:\LogFileName.txt /TEE /NP`   (`/NP` = NOT show the progress - nie pokazuj postępu w log)  
 `/LOG+:C:\LogFileName.txt /TEE /NP`  
+`/TEE`   - log na w konsoli jak i zapisywany do pliku  
 (`/XD "folder"` `/XF "plik"` - pomiń podany folder lub plik)
 
-Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów:
+Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów (uruchom w trybie administratora):
 
-	robocopy a:\ b:\ *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB /XO /XD a:\$RECYCLE.BIN a:\tmp
 
-W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego. (Uwaga: **ukośnik** `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik **nie może występować**)
+	robocopy a:\ b:\ *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /DCOPY:DAT /EFSRAW /ZB /XO /XD a:\$RECYCLE.BIN a:\tmp /TEE /NP /LOG+:C:\robocopy_log.txt
 
-`/XO` - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
-`/XJ` - pomijaj dowiązania symboliczne  
-`/XD` - pomijaj foldery wymienione na liście
+
+W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego.  
+Uwaga 1: **ukośnik** `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik **nie może występować**.  
+Uwaga 2: a jednak zdarzyło się, że przy tak zadanym kopiowaniu całych dysków skopiowały się tylko puste foldery. Może trzeba spróbować `a:\. b:\.` ?  
+Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródłowe, nawet jeśli żadne pliki nie wymagają skopiowania, bo np. są nie-nowsze. Można więc tego używac do naprawy dat folderów po wcześniejszym skopiowaniu plików.
+
+`/XO`    - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
+`/XJ`    - pomijaj dowiązania symboliczne (opcja domyślna - można nie podawać)  
+`/XD`    - pomijaj foldery wymienione na liście  
+
+
 
 
 #### Inne przykłady `robocopy`:
@@ -176,6 +184,8 @@ Kopiowanie (po usunięciu `/L`) plików z 3 ostatnich dni, nie większych niż (
 
 * <https://ss64.com/nt/robocopy.html>
 * <https://docs.microsoft.com/pl-pl/windows-server/administration/windows-commands/robocopy>
+* https://adamtheautomator.com/robocopy-the-ultimate/
+
 
 [Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
 
