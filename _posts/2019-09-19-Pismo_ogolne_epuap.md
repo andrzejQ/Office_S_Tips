@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pismo ogólne - ePUAP"
-date:   2019-09-19 10:21:58 +0100
+date:   2019-09-19 10:21:50 +0100
 categories: epuap
 ---
 

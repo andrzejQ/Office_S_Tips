@@ -24,11 +24,10 @@ Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierow
 	* <https://pz.gov.pl/>.
 	
 	Każdy obywatel może bezpłatnie otrzymać taki podpis, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z pośrednictwa swojego banku w celu potwierdzenia profilu zaufanego. Mozna to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśi taki posiadamy. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.
-	Każdy obywatel może bezpłatnie otrzymać taki podpis, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z pośrednictwa swojego banku w celu potwierdzenia profilu zaufanego. Mozna to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśi taki posiadamy. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.
-	
+
 	Za pomocą profilu zaufanego można można m.in. podpisywać dokumenty  
 * <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany>  
-	zob. instrukcję i przykład podpisanego dokumentu PDF:  
+	zob. instrukcję, a równocześnie przykład podpisanego dokumentu PDF:  
 * [PAdES.Podpisywanie_PDF_podpisem_zaufanym-instrukcja.pdf]({{ site.baseurl }}/assets/files/PAdES.Podpisywanie_PDF_podpisem_zaufanym.pdf). 
 
 	Tak podpisany dokument można wysłać dalej w postaci elektronicznej.  
@@ -68,5 +67,7 @@ Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania.
 ...  
 Intencją ustawodawcy było zapewnienie niezaprzeczalnego związku osoby podpisującej dokument z tym dokumentem w związku z faktem, że podpisywanie odbywa się „zaocznie”, tzn o dowolnej porze i w dowolnym miejscu dogodnym dla podpisującego. Właśnie podpis elektroniczny, dzięki **certyfikatowi** służącemu do jego złożenia, zapewnia ów związek konkretnej osoby z podpisywanym dokumentem. Certyfikat jest widoczny w czasie czynności weryfikacji podpisu - i zawiera dane jednoznacznie wskazujące na konkretną osobę fizyczną, która podpis złożyła.  
 ...
+
+* Zob. też [Weryfikacja podpisu cyfrowego]({% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
 
 <style> code {font-size: smaller;} </style>
