@@ -23,7 +23,7 @@ Oczywiście jako przeglądarkę PDF należy ustawić Adobe Reader DC
 
 Nowy Microsoft Edge - weryfikacja e-podpisów od razu w przeglądarce:
 
-**Konfiguracja Microsoft Edge** (*jednorazowa*)  
+**Konfiguracja Microsoft Edge** (*jednorazowa - ale chyba to przestało działać w 2021r*)  
 W pasku adresu wpisujemy:  
 `edge://flags/#edge-digsig-enabled-pdf` albo  
 `edge://flags` i przechodzimy do sekcji: `Enable Digital Signature for PDF`  
