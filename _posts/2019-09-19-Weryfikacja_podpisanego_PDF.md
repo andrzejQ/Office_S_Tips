@@ -39,6 +39,6 @@ W przypadku podpisu zaufanego z pieczęcią kwalifikowaną (na razie) "Niektóry
 
 
 Zob. też 
-* [Podpisy cyfrowe]({% post_url 2019-09-19-Podpisy_cyfrowe %})
-* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
+* [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
+* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
 

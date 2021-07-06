@@ -20,8 +20,8 @@ Certyfikat jest kwalifikowany zgodnie z rozporządzeniem UE 910/2014 Aneks III
 Powód: Opatrzono pieczęcią ministra właściwego do spraw informatyzacji w imieniu: (Imię Nazwisko, ...)
 </small>
 
-**Poprawność e-podpisu** można zweryfikować w darmowej aplikacji Adobe Reader DC. Są też inne narzędzia. Również [można skorzystać z przeglądarki internetowej]({% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %}).
+**Poprawność e-podpisu** można zweryfikować w darmowej aplikacji Adobe Reader DC. Są też inne narzędzia. Również [można skorzystać z przeglądarki internetowej]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %}).
 
-* Zob. też [Podpisy cyfrowe]({% post_url 2019-09-19-Podpisy_cyfrowe %})
+* Zob. też [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
 
 <style> code {font-size: smaller;} </style>

@@ -68,6 +68,6 @@ Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania.
 Intencją ustawodawcy było zapewnienie niezaprzeczalnego związku osoby podpisującej dokument z tym dokumentem w związku z faktem, że podpisywanie odbywa się „zaocznie”, tzn o dowolnej porze i w dowolnym miejscu dogodnym dla podpisującego. Właśnie podpis elektroniczny, dzięki **certyfikatowi** służącemu do jego złożenia, zapewnia ów związek konkretnej osoby z podpisywanym dokumentem. Certyfikat jest widoczny w czasie czynności weryfikacji podpisu - i zawiera dane jednoznacznie wskazujące na konkretną osobę fizyczną, która podpis złożyła.  
 ...
 
-* Zob. też [Weryfikacja podpisu cyfrowego]({% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
+* Zob. też [Weryfikacja podpisu cyfrowego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
 
 <style> code {font-size: smaller;} </style>
