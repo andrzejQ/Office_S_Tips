@@ -38,3 +38,9 @@ Nie wiem o tym, czy te sposoby są oficjalnie udokumentowane w Microsoft (zwłas
 
 W mojej praktyce najbardziej przydatne są sposoby opisane w 4, 5 i 7.
 
+- - - - - - - - -
+
+<small>W korespondecji seryjnej MS Word 2016 jest błędna interpretacja cudzysłowów innych niż podstawowy `"`. Można zastosować konwersję jak w 
+[unicodeDoubleQuote.py]({{ site.baseurl }}/assets/files/unicodeDoubleQuote.py.html )</small>.
+
+
