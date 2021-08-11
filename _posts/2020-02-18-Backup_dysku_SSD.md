@@ -121,7 +121,7 @@ Pamiętaj:
 
 #### Robocopy jako polecenie kopii zapasowej
 
-Ważne: to działa w (czarnym) oknie poleceń `cmd`, także w wierszu polecenia w trybie awaryjnym Windows.
+Ważne: to działa w oknie poleceń `cmd` (czarnym) lub `PowerShell`, a także w wierszu polecenia w trybie awaryjnym Windows.
 
 	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /E /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
 
@@ -142,19 +142,19 @@ Ważne: to działa w (czarnym) oknie poleceń `cmd`, także w wierszu polecenia 
 Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów (uruchom w trybie administratora):
 
 
-	robocopy a:\ b:\ *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /DCOPY:DAT /EFSRAW /ZB /XO /XD a:\$RECYCLE.BIN a:\tmp /TEE /NP /LOG+:C:\robocopy_log.txt
+	robocopy a:\. b:\. *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /DCOPY:DAT /EFSRAW /ZB /XO /XD "a:\$RECYCLE.BIN" "a:\tmp" "a:\Recovery" "a:\System Volume Information" /TEE /NP /NFL /NDL /UNILOG+:C:\robocopy_log.txt
 
-
-W tym przykładzie `a:\` i `b:\` to nazwa dysku źródłowego i docelowego.  
-Uwaga 1: **ukośnik** `\` musi występować tylko po `:`, natomiast na koniec nazwy foldera ukośnik **nie może występować**.  
-Uwaga 2: a jednak zdarzyło się, że przy tak zadanym kopiowaniu całych dysków skopiowały się tylko puste foldery. Może trzeba spróbować `a:\. b:\.` ?  
-Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródłowe, nawet jeśli żadne pliki nie wymagają skopiowania, bo np. są nie-nowsze. Można więc tego używac do naprawy dat folderów po wcześniejszym skopiowaniu plików.
+W tym przykładzie `a:` i `b:` to nazwa dysku źródłowego i docelowego.  
+Uwaga 1: Na koniec nazwy foldera ukośnik **nie może występować**.  Stąd odwołanie do głównych folderów dysku przez `\. `.  
+Uwaga 2: Gdy w kopii pliki zaszyfrowane mają być odszyfrowane to należy usunąć opcję `/EFSRAW`. Wtedy też można przyśpieszyć kopiowanie dając opcję `/MT` (MultiThreaded). (Można też czasowo wyłączyć program antywirusowy).  
+Uwaga 3: Pomimo zmiany kodowania znaków w oknie poleceń (`chcp 65001`) zdaje się, że `/LOG` jest i tak w kodowaniu `OEM852`. `/UNILOG` daje kodowanie Unicode. Opcje `/NFL /NDL` powodują, że plik LOGu nie jest olbrzymi, a równocześnie zawiera ważne informacje o ewentualnych problemach.  
+Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródłowe, nawet jeśli żadne pliki nie wymagają skopiowania, bo np. są nie-nowsze. Można więc tego używać do naprawy dat folderów na dysku docelowym.
 
 `/XO`    - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
 `/XJ`    - pomijaj dowiązania symboliczne (opcja domyślna - można nie podawać)  
 `/XD`    - pomijaj foldery wymienione na liście  
-
-
+`/NFL`   - No File List - w logu nie pokazuj nazw plików  
+`/NDL`   - No Directory List - w logu nie pokazuj nazw folderów  
 
 
 #### Inne przykłady `robocopy`:

@@ -1,21 +1,40 @@
 ﻿Robocopy - skrypt kopii zapasowej
 ====
 
-Na razie nie próbowałem tego produkcyjnie, ale może się mi to kiedyś przyda...
+Ważne: to działa w oknie poleceń `cmd` (czarnym) lub `PowerShell`, a także w wierszu polecenia w trybie awaryjnym Windows.
 
-	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
+	robocopy "D:\Dokumenty" "F:\Backup\Dokumenty" *.* /E /MIR /XJD /XA:SH /R:1 /W:3 /COPYALL /EFSRAW /ZB
 
-	/MIR - mirror; usuwa w kopii to co usunięte w źródle
-	/XJD - pomijanie linków symbolicznych - junction directory
-	/XA:SH - pomiń pliki systemowe i ukryte
-	/R:1 /W:3 - powtarzanie, czekanie (sek.)
-	/COPYALL - kopiuj wszystkie inf. o pliku (= /COPY:DATSOU; ->do Linux użyj: /COPY:DT)
-	/EFSRAW : kopiuj pliki zaszyfrowane w trybie EFS RAW mode (nie używaj w tym przypadku /MT)
-	/ZB : Tryb restarowania - gdy plik zablokowany użyj trybu Backup
-	
-	/LOG:C:\LogFileName.txt /TEE /NP   (/NP = NOT show the progress - nie pokazuj postępu w log)
-	/LOG+:C:\LogFileName.txt /TEE /NP 
-	(/XD "folder" /XF "plik" - pomiń podany folder / plik)
+`/E` - kopiuj podfoldery, także puste  
+`/MIR` - mirror; usuwa w kopii to co usunięte w źródle  
+`/XJD` - pomijanie linków symbolicznych - junction directory  
+`/XA:SH` - pomiń pliki systemowe i ukryte  
+`/R:1 /W:3` - powtarzanie, czekanie (sek.)  
+`/COPYALL` - kopiuj wszystkie inf. o pliku (= `/COPY:DATSOU`; ->do Linux użyj: `/COPY:DT`)  
+`/EFSRAW` - kopiuj pliki zaszyfrowane w trybie EFS RAW mode (nie używaj w tym przypadku `/MT`)  
+`/ZB` - Tryb restartowania; gdy plik zablokowany użyj trybu Backup  
+
+`/LOG:C:\LogFileName.txt /TEE /NP`   (`/NP` = NOT show the progress - nie pokazuj postępu w log)  
+`/LOG+:C:\LogFileName.txt /TEE /NP`  
+`/TEE`   - log na w konsoli jak i zapisywany do pliku  
+(`/XD "folder"` `/XF "plik"` - pomiń podany folder lub plik)
+
+
+Kolejny przykład - kopiowanie całych dysków z wykluczeniem pewnych folderów (uruchom w trybie administratora):
+
+	robocopy a:\. b:\. *.* /E /XJ /XA:SH /R:1 /W:3 /COPYALL /DCOPY:DAT /EFSRAW /ZB /XO /XD "a:\$RECYCLE.BIN" "a:\tmp" "a:\Recovery" "a:\System Volume Information" /TEE /NP /NFL /NDL /UNILOG+:C:\robocopy_log.txt
+
+W tym przykładzie `a:` i `b:` to nazwa dysku źródłowego i docelowego.  
+Uwaga 1: Na koniec nazwy foldera ukośnik **nie może występować**.  Stąd odwołanie do głównych folderów dysku przez `\. `.  
+Uwaga 2: Gdy w kopii pliki zaszyfrowane mają być odszyfrowane to należy usunąć opcję `/EFSRAW`. Wtedy też można przyśpieszyć kopiowanie dając opcję `/MT` (MultiThreaded). (Można też czasowo wyłączyć program antywirusowy).  
+Uwaga 3: Pomimo zmiany kodowania znaków w oknie poleceń (`chcp 65001`) zdaje się, że `/LOG` jest i tak w kodowaniu `OEM852`. `/UNILOG` daje kodowanie Unicode. Opcje `/NFL /NDL` powodują, że plik LOGu nie jest olbrzymi, a równocześnie zawiera ważne informacje o ewentualnych problemach.  
+Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródłowe, nawet jeśli żadne pliki nie wymagają skopiowania, bo np. są nie-nowsze. Można więc tego używać do naprawy dat folderów na dysku docelowym.
+
+`/XO`    - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
+`/XJ`    - pomijaj dowiązania symboliczne (opcja domyślna - można nie podawać)  
+`/XD`    - pomijaj foldery wymienione na liście  
+`/NFL`   - No File List - w logu nie pokazuj nazw plików  
+`/NDL`   - No Directory List - w logu nie pokazuj nazw folderów  
 
 
 Inne przykłady `robocopy`:
