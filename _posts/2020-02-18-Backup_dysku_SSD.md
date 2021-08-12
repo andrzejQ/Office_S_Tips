@@ -184,7 +184,7 @@ Kopiowanie (po usunięciu `/L`) plików z 3 ostatnich dni, nie większych niż (
 
 * <https://ss64.com/nt/robocopy.html>
 * <https://docs.microsoft.com/pl-pl/windows-server/administration/windows-commands/robocopy>
-* https://adamtheautomator.com/robocopy-the-ultimate/
+* <https://adamtheautomator.com/robocopy-the-ultimate/>
 
 
 [Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
@@ -198,3 +198,19 @@ W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fi
 `list volume`
 `assign letter=L`
 .
+
+
+**Odzyskanie partycji skasowanej podczas konwersji dysku z MBR na GPT**
+
+Gdy mamy nowe dyski, to warto je konwertować z formatu MBR na GPT.  
+<https://www.dell.com/support/kbdoc/pl-pl/000137854/konwertowanie-dysku-twardego-z-mbr-na-gpt>
+
+Jeśli podczas montowania dysku MBR Windows10 zmusi nas do zainicjowania go jako GPT, to powstaje pusty dysk i nie widać partycji z danymi. 
+Może się udać odzyskanie takiej partycji z pomocą TestDisk:  
+<https://www.cgsecurity.org/wiki/TestDisk_Krok_po_kroku>
+
+**Właściciel plików i folderów**
+
+Podczas zamontowania dysku z innego systemu można dla całego dysku i wszystkich podfolderów zmienić właściciela na siebie (ale nie jest to konieczne):
+
+Ten komputer \ <dysk> - właściości \ Zabezpieczenia \ [Zaawansowane] \ Właściciel - Zmień.
