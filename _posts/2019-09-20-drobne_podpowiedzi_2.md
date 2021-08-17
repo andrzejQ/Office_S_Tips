@@ -31,7 +31,7 @@ Pliki konfiguracji w paczce
 
 [**MS_office_exportedUI.zip**]({{ site.baseurl }}/assets/files/MS_office_exportedUI.zip)
 
-("Dostosowania programu Word 2013.exportedUI", "Dostosowania programu Excel 2013.exportedUI", "MSO1045.acl") pochodzą z MS Office 2013, ale zdaje się zadziałają także w innych wersjach.
+("Dostosowania programu Word 2013.exportedUI", "Dostosowania programu Excel 2013.exportedUI", "MSO1045.acl") pochodzą z MS Office 2013, ale zadziałają także w innych wersjach, np. Office 2019 - być może trzeba wyjść z plikacji i ponownie wejść, aby zobaczyć efekt.
 
 ![Word-Opcje-Pasek.png]({{ site.baseurl }}/assets/img/Word-Opcje-Pasek.png "Word-Opcje-Pasek.png"){:style="float:right;width:77%;"} 
 Pliki "*..exportedUI" można zaimportować poprzez `Plik \ Opcje \ Pasek ... \ Importuj` i nad wstążką pojawią się ikony szybkiego dostępu dla operacji jak "Zapisz jako...", "Podgląd wydruku" czy "Wklej specjalnie".
@@ -40,7 +40,7 @@ Pliki "*..exportedUI" można zaimportować poprzez `Plik \ Opcje \ Pasek ... \ I
 - - - -
 
 ![Autokorekta.png]({{ site.baseurl }}/assets/img/Autokorekta.png "Autokorekta.png"){:style="float:right;width:60%;"} 
-Jeśli nie przepadasz za agresywną autokorektą w MS Office to kopiując plik `MSO1045.acl`  do fodlera `%appdata%\Microsoft\Office` uzyskasz skrócony słownik autokorekty (1045 to wersja dla j.polskiego).
+Jeśli nie przepadasz za agresywną autokorektą w MS Office to kopiując plik `MSO1045.acl`  do fodlera `%appdata%\Microsoft\Office` uzyskasz skrócony słownik autokorekty (1045 to wersja dla j.polskiego). Gdy zastaniesz tam oryginalny plik `MSO1045.acl` to zmień jego nazwę, aby zachowć oryginał.
 
 
 ![MSO1045.acl.png]({{ site.baseurl }}/assets/img/MSO1045.acl.png "MSO1045.acl.png"){:style="width:30%;"} 
