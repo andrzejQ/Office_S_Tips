@@ -23,7 +23,8 @@ Oczywiście jako przeglądarkę PDF należy ustawić Adobe Reader DC
 
 Nowy Microsoft Edge - weryfikacja e-podpisów od razu w przeglądarce:
 
-**Konfiguracja Microsoft Edge** (*jednorazowa - ale chyba to przestało działać w 2021r*)  
+**Konfiguracja Microsoft Edge** (*jednorazowa*)  
+<small>Na razie jest to wersja eksperymentalna usługi.</small>  
 W pasku adresu wpisujemy:  
 `edge://flags/#edge-digsig-enabled-pdf` albo  
 `edge://flags` i przechodzimy do sekcji: `Enable Digital Signature for PDF`  
@@ -35,8 +36,7 @@ Po kliknięciu PDF \ "Podgląd" pojawia się w przeglądarce nad dokumentem pase
 
 Wybieramy `[Wyświetl podpisy]` \ `Właściwości` \ `Sprawdź poprawność`
 
-W przypadku podpisu zaufanego z pieczęcią kwalifikowaną (na razie) "Niektórych podpisów nie można zweryfikować." Ale widać dobrze dane podpisu.
-
+Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów pz.gov.pl czy tych z pieczęcią kwalifikowaną), to jednak widać dobrze dane podpisu - kto, kiedy.
 
 Zob. też 
 * [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
