@@ -12,13 +12,13 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 ![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
 ### 1. Veeam Agent FREE
 
-Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
+* [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/pl/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
 
-* Edycja Free nie wymaga kupowania licencji. 
-* Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. (Można np. użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
-* Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania swojej pracy (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
+* Edycja Free nie wymaga kupowania licencji (gdy jest pytanie o licencję, to odp. - nie mam).
+* Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
+* Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania pracy na komputerze (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
 * Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
-* Tworzy dysk ratunkowy z dołączonymi sterownikami.
+* Tworzy dysk ratunkowy z dołączonymi sterownikami (co najmniej warto sobie zrobić plik ISO na zewnętrznym dysku, żeby się było jak ratować, gdy komputer nie startuje)
 * Chyba nie ma wersji językowej polskiej.
 
 * [BitLocker Encrypted Volumes Support](https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html?ver=40)
@@ -38,8 +38,9 @@ Np. * [Veeam Agent for Microsoft Windows FREE - download](https://www.veeam.com/
 * [Bywa dołączane](https://kb.acronis.com/content/2201) do dysków SSD,  i zewnętrznych dysków USB, np. 
 [ADATA (?)](https://www.adata.com/us/support/online?tab=downloads), [Western Digital](https://support.wdc.com/downloads.aspx?lang=pl), [Seagate](https://www.seagate.com/support/downloads/discwizard/), [Kingston](https://www.kingston.com/en/support/technical/acronis-download), [Crucial](http://www.crucial.com/clone), [OCZ (Toshiba)](https://ssd.toshiba-memory.com/en-amer/download/acronis), [SanDisk](https://kb.sandisk.com/app/answers/detail/a_id/19869/~/acronis-true-image-support-information), [PNY](http://www.pny.com/qr/acronis-install).
 * Czasem potrzebny jest 16-znakowy klucz (Kingston, Adata), a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
-* Wersja OEM ma ograniczoną funkcjonalność w stosunku do wersji pełnej Acronis True Image.
+* Wersja OEM ma ograniczoną funkcjonalność w stosunku do wersji pełnej Acronis True Image. Brakujące moduły są wyszarzone.
 * Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
+* Wrzuca do systemu kilka programów działających automatycznie i kilka automatycznie uruchamianych serwisów - nie widać spowalniania, ale ciągle coś działa.
 
 
 ![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
@@ -55,7 +56,7 @@ W niektórych systemach pojawia się ostrzeżenie, że nie można uruchomić har
 Po instalacji odinstalowuję program
 - Bonjur 
 
-jeśli zainstalował się razem z Acronis. Program wydaje mi się zbędny.
+jeśli zainstalował się razem z Acronis. Program wydaje mi się zbędny. Wyłączam też programy Acronis z autostartu, ale i tak ciągle działa kilka serwisów Acronis.
 
 Po starcie Seagate DiscWizart:
 1. Backup
@@ -107,7 +108,7 @@ Nawet w wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partyc
 
 ### 5. MS Windows 10
 
-Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej. 
+Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej (ale ciągle działa, np. 2021r).
 
 Jak chodzi o przejrzystość docierania do plików historycznych to interfejs jest trochę niewygodny (moim zdaniem). Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.
 
@@ -119,7 +120,7 @@ Pamiętaj:
 
 ### 6. Robocopy (Robust File Copy)
 
-#### Robocopy jako polecenie kopii zapasowej
+#### Robocopy jako polecenie kopii zapasowej (dla zaawansowanych)
 
 Ważne: to działa w oknie poleceń `cmd` (czarnym) lub `PowerShell`, a także w wierszu polecenia w trybie awaryjnym Windows.
 
