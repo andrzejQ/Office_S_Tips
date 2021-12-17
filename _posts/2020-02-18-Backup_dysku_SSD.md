@@ -7,15 +7,15 @@ categories: System
 
 Przegląd kilku systemów backupu.
 
-To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej)
+To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej). W domowych zastosowaniach backup zaszyfrowanych plików może nie być istotny (a w Windows Home szyfrowanie EFS jest w ogóle niedostępne).
 
 ![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
 ### 1. Veeam Agent FREE
 
 * [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/pl/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
-
-* Edycja Free nie wymaga kupowania licencji (gdy jest pytanie o licencję, to odp. - nie mam).
-* Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
+* Edycja Free nie wymaga kupowania licencji (gdy jest pytanie czy instalowć licencję, to odpowiadamy "Nie").
+![veeamAgLicNo.png]({{ site.baseurl }}/assets/img/veeamAgLicNo.png "veeamAgLicNo.png"){:style="float:right;width:37%;"} 
+* Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. Do kopii wybranych danych można użyć [Historii plików MS Windows - zob. niżej](#5-ms-windows-10). (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
 * Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania pracy na komputerze (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
 * Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
 * Tworzy dysk ratunkowy z dołączonymi sterownikami (co najmniej warto sobie zrobić plik ISO na zewnętrznym dysku, żeby się było jak ratować, gdy komputer nie startuje)
@@ -25,7 +25,6 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 
 
 .
-
 
 
 ### 2. Acronis True Image
@@ -40,7 +39,8 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 * Czasem potrzebny jest 16-znakowy klucz (Kingston, Adata), a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
 * Wersja OEM ma ograniczoną funkcjonalność w stosunku do wersji pełnej Acronis True Image. Brakujące moduły są wyszarzone.
 * Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
-* Wrzuca do systemu kilka programów działających automatycznie i kilka automatycznie uruchamianych serwisów - nie widać spowalniania, ale ciągle coś działa.
+* Nośnik ratunkowy Acronis, np. na DVD lub pendrive, pozwala na klonowanie dysków. Wygląda na to, że nośnik ratunkowy oparty na systemie Linux może więcej niż oparty na WinPE (nawet w stosunku do dysków używanych tylko w systemie Windows).
+* Po uruchomieniu backupu wrzuca do systemu kilka programów działających automatycznie i kilka automatycznie uruchamianych serwisów - nie widać spowalniania, ale ciągle coś działa.
 
 
 ![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
@@ -108,13 +108,22 @@ Nawet w wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partyc
 
 ### 5. MS Windows 10
 
-Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Kopia zapasowa plików jest w opcji "[Historia plików](https://trybawaryjny.pl/backup-plikow-windows10/)" podobno też wygaszanej (ale ciągle działa, np. 2021r).
+Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Nie używam. 
 
-Jak chodzi o przejrzystość docierania do plików historycznych to interfejs jest trochę niewygodny (moim zdaniem). Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.
+![Win10HistoriaPlikow.png]({{ site.baseurl }}/assets/img/Win10HistoriaPlikow.png "Win10HistoriaPlikow.png"){:style="float:right;width:53%;margin:0px 0px 10px 10px"}
+Kopia zapasowa plików jest w opcji "**Historia plików**" [zob. szczegółową instrukcję na https://trybawaryjny.pl/](https://trybawaryjny.pl/backup-plikow-windows10/). Używam historii plików, bo jest dobrze zintegrowana w systemie plików Windows. Historia jest zapamiętywana w miejscu tymczasowym i co jakiś czas pojawia się zachęta do podłączenia dysku zewnętrznego w celu zabezpieczenia kopii.
 
-Pamiętaj:
+![Win10HistoriaPlikow-wersje.png]({{ site.baseurl }}/assets/img/Win10HistoriaPlikow-wersje.png "Win10HistoriaPlikow-wersje.png"){:style="float:left;width:42%;margin:10px 10px 10px 0px"}
+Interfejs historii plików przypomina przeglądanie slajdów. Równocześnie dostępne wersje historii są dostępne we właściwościach pliku.
+
+
+
+<small>Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.</small>
+
+<div>Pamiętaj:</div>{:style="clear:left"}
+
 1. "Opcje kopii zapasowych" pozwalają dodawać / wykluczać foldery. Dodaj swoje foldery, jeśli masz dane poza standardowymi bibliotekami jak Dokumenty, Obrazy, Pulpit, ...
-2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz jednorazowe(!) pytanie czy przyłączyć tą historię do aktualnego dysku.
+2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz **jednorazowe(!) pytanie** czy przyłączyć tą historię do aktualnego dysku.
 
 .
 
