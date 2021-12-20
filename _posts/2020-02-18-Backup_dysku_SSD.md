@@ -39,8 +39,8 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 * Czasem potrzebny jest 16-znakowy klucz (Kingston, Adata), a czasem wystarczy, że dołączony jest odpowiedni dysk danej marki (przynajmniej jeden).
 * Wersja OEM ma ograniczoną funkcjonalność w stosunku do wersji pełnej Acronis True Image. Brakujące moduły są wyszarzone.
 * Dobrze sobie radzi z zaszyfrowanymi plikami EFS różnych użytkowników.
-* Nośnik ratunkowy Acronis, np. na DVD lub pendrive, pozwala na klonowanie dysków. Wygląda na to, że nośnik ratunkowy oparty na systemie Linux może więcej niż oparty na WinPE (nawet w stosunku do dysków używanych tylko w systemie Windows).
 * Po uruchomieniu backupu wrzuca do systemu kilka programów działających automatycznie i kilka automatycznie uruchamianych serwisów - nie widać spowalniania, ale ciągle coś działa.
+* Nośnik startowy Acronis (warto sobie zrobić), np. na DVD lub pendrive, pozwala też na klonowanie dysków. Nośnik ratunkowy oparty na systemie Linux radzi sobie z plikami zablokowanymi w Windows. <small> Choć podobno nośnik z WinPE działa szybciej.</small> Uwaga: Nośnik ratunkowy musi być uruchomiony w trybie BIOS takim samym jak tryb dysku systemowego - np. UEFI BIOS (a nie starszy MBR/BIOS) - w tym celu należy podczas uruchamiania włączyć [menu bootowania (np. F8, F10, F12, F2, Esc itp.)](https://techofide.com/blogs/boot-menu-option-keys-for-all-computers-and-laptops-updated-list-2021-techofide/).
 
 
 ![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
@@ -66,10 +66,9 @@ Po starcie Seagate DiscWizart:
 5. Backup Now (ma też opcje "Za godzinę", ...).
 
 
-Dodatkowo warto sobie utworzyć:
+Dodatkowo warto sobie utworzyć zewnętrzny nośnik startowy, a co najmniej zapisać plik ISO na zewnętrznym nośniku, aby w razie potrzeby w przyszłości nagrać płytę lub dysk USB:
 - Tools \ Rescue Media Builder
 
-(co najmniej zrobić sobie plik ISO, aby w razie potrzeby w przyszłości nagrać płytę lub dysk USB).
 
 .
 
