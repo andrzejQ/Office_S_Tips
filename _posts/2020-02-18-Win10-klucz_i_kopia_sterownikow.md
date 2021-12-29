@@ -5,7 +5,13 @@ date:   2020-02-20 06:40
 categories: System
 ---
 
-Klucz licencyjny Windows 10 jest na ogół zachowany w BIOS...
+Klucz licencyjny Windows 10 jest na ogół zachowany w BIOS.
+
+Dlatego podczas (re)instalacji Windows warto wybierać opcję "Nie mam klucza MS Windows" - opisaną jako właściwy wybór dla klucza przechowywanego w BIOS. A w razie potrzeby posiadany klucz można podać potem.
+
+<small>
+Najnowsze wersje systemu Windows 10 bezwzględnie domagają się użycia konta Microsoft do zalogowania do systemu. Jeśli wolimy używać konta lokalnego, to można podać jakiś swój prawdziwy e-mail, bezsensowne hasło (nieprawdziwe) - Win10 pisze, że ma kłopot z zalogowaniem do konta, ale idzie dalej. Potem, w ramach rozwiązywania problemu z kontem można to przekształcić na konto lokalne.
+</small>
 
 ### 1. Klucz licencyjny Windows 10
 
@@ -25,9 +31,7 @@ Są też narzędzia na stronie
 <https://www.nirsoft.net/>
 choć czasem te programy jako zbyt głęboko grzebiące w systemie są uważane przez programy antywirusowe za niepewne.
 
-Podczas czystej reinstalacji systemu możemy wybrać opcję "Nie mam klucza" (choć go faktycznie mamy). Jeśli klucz jest w BIOS to się automatycznie wczyta na dalszym etapie instalacji systemu. 
-
-Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft radzi używać logowania do Windows za pomocą konta Microsoft](https://support.microsoft.com/pl-pl/windows/ponowne-aktywowanie-systemu-windows-10-po-zmianie-sprz%C4%99towej-2c0e962a-f04c-145b-6ead-fb3fc72b6665) w poprzedniej konfiguracji systemu. Gdy zalogujesz się na to konto w nowej konfiguracji sprzętowej, to jakoś można przekonać system, że to jest właśnie ta konfiguracja, którą ma zaakceptować. Nie ćwiczyłem, bo nie używam takiego logowania.
+Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft radzi używać logowania do Windows za pomocą konta Microsoft](https://support.microsoft.com/pl-pl/windows/ponowne-aktywowanie-systemu-windows-10-po-zmianie-sprz%C4%99towej-2c0e962a-f04c-145b-6ead-fb3fc72b6665) w poprzedniej konfiguracji systemu. Gdy zalogujesz się na to konto w nowej konfiguracji sprzętowej, to jakoś można przekonać system, że to jest właśnie ta konfiguracja, którą ma zaakceptować. (Nie testowałem).
 
 W przypadku używania konta lokalnego użytkownika do logowania Windows: 
 1. Jeśli spodziewamy się, że klucz jest w BIOS, to podczas czystej instalacji stwierdzamy "nie mam klucza" i potem sprawa się rozwiązuje automatycznie.
