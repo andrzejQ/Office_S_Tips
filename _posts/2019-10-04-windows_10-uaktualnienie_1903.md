@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Windows 10 - uaktualnienie 1903"
+title:  "Windows 10 - uaktualnienia"
 date:   2019-10-04 08:41
 categories: System
 ---
 
-...to kilka ciekawych ulepszeń, także w pracy biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej. * [Szybka zmiana formatu daty z pomocą Powershell]({{ site.url }}{{ site.baseurl }}{{ page.url }}#format-daty) 
+Kilka ciekawych ulepszeń w kolejnych wydaniach Win 10, dotyczące także pracy biurowej, np. wstawianie symboli, powiększanie czcionki ekranowej. * [Szybka zmiana formatu daty z pomocą Powershell]({{ site.url }}{{ site.baseurl }}{{ page.url }}#format-daty) * [Microsoft PowerToys]({{ site.url }}{{ site.baseurl }}{{ page.url }}#microsoft-powertoys)
+
 
 Majowe tzw. duże uaktualnienie Windowsa 10 z 2019r wprowadza trochę zmian <small>(symbol <span>1903</span>{:style="color:blue"} oznacza rok 20<span>19</span>{:style="color:blue"} i miesiąc <span>03</span>{:style="color:blue"}  - zapewne chodzi o czas powstania uaktualnienia, które potem jest wdrażane)</small>. Sporo informacji można znaleźć w:
 * <https://www.centrumxp.pl/Publikacja/Pelna-lista-zmian-w-Windows-10-May-2019-Update> 
@@ -51,5 +52,11 @@ Set-ItemProperty -Path "HKCU:\Control Panel\International" -Name sShortDate -Val
 
 <small>Zob. też post: [Hybrydowy plik CMD-Powershell](https://andrzejq.github.io/El_Prog/programowanie/2021/03/22/Hybrydowy_skrypt_CMD-Powershell.html).</small>.
 
+### Microsoft PowerToys
+
+... to kolekcja przydatnych narzędzi, m.in. zmniejszanie rozmiaru wielu zdjęć, zaawansowana zmiana nazw wielu plików, w obszarze podglądu dodatkowe typy plików - SVG i Markdown, przeprogramowywanie klawiatury, wstrzymywanie przed uśpieniem.
+
+* <https://github.com/microsoft/PowerToys/releases>
+* <https://www.komputerswiat.pl/poradniki/programy/osiem-przydatnych-wskazowek-do-power-toys-praktycznych-narzedzi-dla-windows/vb5bmnk>
 
 <style> code {font-size: smaller;} </style>
