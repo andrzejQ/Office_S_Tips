@@ -31,6 +31,8 @@ W praktyce nie wstawiam tych danych od lewej kolumny `=$A$1`, lecz zostawiam sob
        * Wchodzimy do danego pliku XLSX jako spakowanego ZIP, np. można dopisać rozszerzenie ZIP, a w Total Commander [Ctrl + PgDn] - (widzimy foldery: `[_rels]`, `[docPros]`, `[xl]`).
        * Edytujemy plik `\xl\connections.xml` usuwając ścieżkę do "Dokumenty\\" włącznie przed nazwą pliku źródła. To wymaga oczywiście wypakowania na chwilę tego pliku a potem spakowania.
 9. Ciekawostka - wpisując hiperłącze ze ścieżką do obrazka względem pliku CSV: `"=HIPERŁĄCZE(""./sciezka/wzgledna/obrazek.jpg"")"` dostajemy klikalny odnośnik do wyświetlenia obrazka. (Choć jeśli działamy w domenie organizacji to nie zawsze jest przyzwolenie na otwieranie odnośników w Excelu i wtedy to nie zadziała.) Inny przykład to odwołania do komórek w arkuszu <http://excelszkolenie.pl/Triki.htm> - *Hiperłącze*, pozwalające na szybkie przeniesienie się w inny obszar arkusza.
+10. Niekiedy w tekstach może się przydać indeks górny / dolny, np. m³, H₂O. Zakładając współczesne kodowanie CSV, np, UTF-8 można skorzystać z trybu tekstowego - [utf8_sup_sub.txt]({{ site.baseurl }}/assets/files/utf8_sup_sub.txt ), zob. też. [[Win+ . ]]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-10-04-windows_10-uaktualnienie_1903 %}).
+
 
 - - - - - - - - -
 
