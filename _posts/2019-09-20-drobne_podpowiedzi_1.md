@@ -55,12 +55,12 @@ C:\mklink /j "C:\NazwaPseudoFoldera" "D:\Scieżka\NazwaIstniejącegoFoldera"
 
 Podczas kopiowania zawartości dysku, np. po zakupie nowego komputera, na ogół wszystkie foldery uzyskują datę z momentu kopiowania. Na nasze szczęście pliki mają prawdziwe daty, ale gubienie faktycznych dat dla folderów jest kłopotliwe. Przecież nie raz chcemy coś przeszukać i nie musielibyśmy zaglądać do folderów, które nie mają dat w interesującym nas zakresie.
 
-![Touch32.gif]({{ site.baseurl }}/assets/img/Touch32.gif "Touch32.gif"){:style="float:right;width:55%;"}
+![Touch32.gif]({{ site.baseurl }}/assets/img/Touch32.gif "Touch32.gif"){:style="float:right;width:57%;"}
 
 Można do tego wykorzystać aplikację, która potrafi ustawiać datę folderu na na podstawie dat plików/folderów wewnętrznych. Przykładem jest mój programik [**Touch32.exe**](https://pei.prz.edu.pl/~kubaszek/freeware/index_pl.html).
 
-Aby dopasować daty folderów do plików i folderów wewnętrznych należy w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> umieścić plik `Touch32.exe` oraz [`dt.cmd`]({{ site.baseurl }}/assets/files/dt.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). W Eksploratorze plików 
-![Eksplorator_dt.png]({{ site.baseurl }}/assets/img/Eksplorator_dt.png "Eksplorator_dt.png"){:style="float:left;width:40%;"}
+Aby dopasować daty folderów do plików i folderów wewnętrznych należy w jednej ze ścieżek **Path**  <small>(w menu START zacznij pisać "Edytuj zmienne środowiskowe dla konta" aby zobaczyć listę ścieżek)</small> umieścić plik `Touch32.exe` oraz [`dt.cmd`]({{ site.baseurl }}/assets/files/dt.cmd.txt) o zawartości jak poniżej (dla wygody nazwa powinna być dość krótka). W Eksploratorze plików 
+![Eksplorator_dt.png]({{ site.baseurl }}/assets/img/Eksplorator_dt.png "Eksplorator_dt.png"){:style="float:left;width:40%;margin:10px"}
 ustawiamy się w folderze dla którego (i dla podfolderów) chcemy zmienić datę. W pasku adresu 
 (tam gdzie jest "Ten komputer") wpisujemy `dt.cmd 0` albo krócej `dt 0` i następuje wykonanie skryptu. (Jednak lepiej nie pomijać `.cmd`). Najpierw podfoldery są ustawiane na datę 1980-01-01, a potem na datę jak najnowszy wewnętrzny plik lub folder.
 
