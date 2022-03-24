@@ -24,19 +24,10 @@ Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierow
 	* <https://pz.gov.pl/>.
 	
 	Każdy obywatel może bezpłatnie otrzymać taki podpis, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z [pośrednictwa swojego banku](https://pz.gov.pl/dt/registerByXidp) w celu potwierdzenia profilu zaufanego. Można to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśli taki posiadamy. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.
+	
+	Za pomocą profilu zaufanego pz.gov.pl można można m.in. podpisywać cyfrowo swoje dokumenty, pobrać je i przesyłać/załączać do swojej e-korespondencji. Zobacz:
+	* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
 
-	Za pomocą profilu zaufanego można można m.in. podpisywać dokumenty  
-* <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany>  
-	zob. instrukcję, a równocześnie przykład podpisanego dokumentu PDF:  
-* [PAdES.Podpisywanie_PDF_podpisem_zaufanym-instrukcja.pdf]({{ site.baseurl }}/assets/files/PAdES.Podpisywanie_PDF_podpisem_zaufanym.pdf). 
-
-	Tak podpisany dokument można wysłać dalej w postaci elektronicznej.  
-<small>
-Informacje o podpisie widoczne w dokumencie:  
-Podpisane przez: Minister do spraw informatyzacji - pieczęć podpisu zaufanego  
-Certyfikat jest kwalifikowany zgodnie z rozporządzeniem UE 910/2014 Aneks III  
-Powód: Opatrzono pieczęcią ministra właściwego do spraw informatyzacji w imieniu: (Imię Nazwisko, ...)
-</small>
 
 ### Format e-podpisu
 
