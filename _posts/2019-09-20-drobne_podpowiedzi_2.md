@@ -17,6 +17,12 @@ W edytorze tekstu [**Notatnik++**](https://notepad-plus-plus.org/downloads/) zai
 2. W tel. komórkowym włącz aparat i nakieruj go na QR-kod (nie rób zdjęcia, tylko poczekaj na złapanie ostrości). Gdy pojawi się przycisk `( X Pokaż dane )` dotknij go i skopiuj tekst do schowka, a potem gdzieś wklej.  
 <small>Są też specjalistyczne aplikacje do odczytywania QRkodu, np. **Czytnik Kodów QR i paskowych** / TeaCaps.</small>
 
+Zob też.:
+* <https://github.com/zxing/zxing/wiki/Barcode-Contents>  
+(url, e-mail, phone, contact, sms, maps, calendar events, Wi-Fi config)
+* <https://www.nirsoft.net/utils/qr_code_generator.html>
+
+
 Pamiętaj: Notatnik++ to jeden edytorów tekstowych w którym można włączyć wtyczki:
 * **DSpellCheck** - z automatycznym sprawdzaniem pisowni; można nawet nie instalować słownika, a w ustawieniach włączyć _Library_: Native(Windows)
 * **Compare** - porównuje teksty 2 plików (nawet nie muszą być zapisane); w MS Word też można porównywać pliki, ale tutaj można szybciej coś skopiować (np. z DOCX czy PDF) i teksty nie muszą być zapisane; dodatkowo mamy porównywany tylko czysty tekst (samą treść)
