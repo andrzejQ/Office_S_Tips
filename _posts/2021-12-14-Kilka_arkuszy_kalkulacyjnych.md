@@ -5,14 +5,14 @@ date:   2021-12-14 06:30:30 +0100
 categories: Excel
 ---
 
-[1. Czy święta wypadają w sob. lub niedz.]({{ site.url }}{{ site.baseurl }}{{ page.url }}#1-czy-święta-wypadają-w-sobotę-lub-niedzielę) &nbsp;
+[1. Czy święta wypadają w sobotę]({{ site.url }}{{ site.baseurl }}{{ page.url }}#1-czy-święta-wypadają-w-sobotę) &nbsp;
 [2. Planowanie urlopów]({{ site.url }}{{ site.baseurl }}{{ page.url }}#2-planowanie-urlopów) &nbsp;
 
 
-### 1. Czy święta wypadają w sobotę lub niedzielę.
+### 1. Czy święta wypadają w sobotę.
 
-![Swieta-sob.niedz_GooExcLiO.png]({{ site.baseurl }}/assets/img/Swieta-sob.niedz_GooExcLiO.png "Swieta-sob.niedz_GooExcLiO.png"){:style="float:right;width:63%;"} 
-[**Swieta-sob.niedz_GooExcLiO.xlsx**]({{ site.baseurl }}/assets/files/Swieta-sob.niedz_GooExcLiO.xlsx)
+![Swieta-sob_GooExcLiO.png]({{ site.baseurl }}/assets/img/Swieta-sob_GooExcLiO.png "Swieta-sob_GooExcLiO.png"){:style="float:right;width:63%;"} 
+[**Swieta-sob_GooExcLiO.xlsx**]({{ site.baseurl }}/assets/files/Swieta-sob_GooExcLiO.xlsx)
 
 * Oszacowanie daty Wielkanocy pochodzi z: <https://www.contextures.com/exceleastercalculation.html>
 * Tłumaczenie funkcji EN-PL: <https://pl.excelfunctions.eu/DOLLAR/Polski>
