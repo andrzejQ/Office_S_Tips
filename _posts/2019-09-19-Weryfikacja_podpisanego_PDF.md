@@ -5,7 +5,12 @@ date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
-Poprawność podpisu można zweryfikować w darmowej aplikacji Adobe Reader DC. Ale również można skorzystać z przeglądarki internetowej
+Poprawność podpisu można zweryfikować w aplikacji do składania podpisu. W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Reader DC. 
+
+![AdobeR-PanelPodpis.png]({{ site.baseurl }}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){:style="float:right;width:65%;"}
+Po otwarciu pliku w Adobe Reader DC pojawia się pasek z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
+
+Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować sobie przeglądarkę internetową:
 
 #### Firefox
 
@@ -36,9 +41,10 @@ Po kliknięciu PDF \ "Podgląd" pojawia się w przeglądarce nad dokumentem pase
 
 Wybieramy `[Wyświetl podpisy]` \ `Właściwości` \ `Sprawdź poprawność`
 
-Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów pz.gov.pl czy tych z pieczęcią kwalifikowaną), to jednak widać dobrze dane podpisu - kto, kiedy.
+Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów pz.gov.pl czy tych z pieczęcią kwalifikowaną), to jednak można odczytać istotne dane podpisu - kto, kiedy.
 
 Zob. też 
 * [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
 * [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
+* [Długoterminowe potwierdzanie ważności e-podpisu]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Dlugoterminowa_waznosc_e-podpisu %})
 

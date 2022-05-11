@@ -45,8 +45,25 @@ Zob. też. skrypt `1.cmd` na moim blogu:
 
 Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania. Wbudowane opcje podpisywania dokumentów są dostępne m.in. w: 
 
-1. Adobe Reader DC: Narzędzia \ Certyfikaty (a nie: "Wypełnij i podpisz") \ Podpisz cyfrowo 
-1. Microsoft Office: Wstawianie \ Wiersz podpisu, potem 2x klikając na ten obiekt - Podpisywanie
+1. Adobe Reader DC:  
+Narzędzia \ 
+![AdobeR-certyfikaty.png]({{ site.baseurl }}/assets/img/AdobeR-certyfikaty.png "AdobeR-certyfikaty.png"){:style="width:27px;"}
+Certyfikaty \ Podpisz cyfrowo.  
+Narzędzie: 
+![AdobeR-wypelnij_podpisz.png]({{ site.baseurl }}/assets/img/AdobeR-wypelnij_podpisz.png "AdobeR-wypelnij_podpisz.png"){:style="width:18px;"}
+"Wypełnij i podpisz" wbrew nazwie, nie służy do wstawiania certyfikatów. Ma natomiast świetną funkcję dopisywania własnych tekstów w dodatkowej warstwie PDF oraz do **wstawiania kopii swojego podpisu odręcznego** - co warto stosować przed wstawieniem cyfrowego certyfikatu, bo osoby nie obeznane z tematyką podpisów cyfrowych mogą uznawać tak wypełniony dokument za podpisany.
+2. Microsoft Office:  
+Wstawianie \ Wiersz podpisu, potem 2x klikając na ten obiekt - Podpisywanie
+
+----
+
+Zob. też
+* [Weryfikacja podpisu cyfrowego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
+* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
+* [Długoterminowe potwierdzanie ważności e-podpisu]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Dlugoterminowa_waznosc_e-podpisu %})
+
+----
+ 
 
 ### Dokument w formie pisemnej, postać papierowa albo elektroniczna
 
@@ -59,6 +76,11 @@ Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania.
 Intencją ustawodawcy było zapewnienie niezaprzeczalnego związku osoby podpisującej dokument z tym dokumentem w związku z faktem, że podpisywanie odbywa się „zaocznie”, tzn o dowolnej porze i w dowolnym miejscu dogodnym dla podpisującego. Właśnie podpis elektroniczny, dzięki **certyfikatowi** służącemu do jego złożenia, zapewnia ów związek konkretnej osoby z podpisywanym dokumentem. Certyfikat jest widoczny w czasie czynności weryfikacji podpisu - i zawiera dane jednoznacznie wskazujące na konkretną osobę fizyczną, która podpis złożyła.  
 ...
 
-* Zob. też [Weryfikacja podpisu cyfrowego]({% if jekyll.environment == "production" %}{{ site.baseurl }}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
+----
+
+Zob. też
+* ["Kwalifikowane podpisy elektroniczne - praktyczne aspekty", Tomasz Zalewski](https://www.twobirds.com/pl/insights/2021/poland/210712-kwalifikowane-podpisy-elektroniczne) <small>(m.in. eliminacja wad podpisu własnoręcznego, długoterminowa konserwacja podpisów, zbędne postanowienie o miejscu zawarcia umowy, zbędne postanowienie o dacie zawarcia umowy i liczbie „jednobrzmiących” egzemplarzy)</small)
+
+----
 
 <style> code {font-size: smaller;} </style>
