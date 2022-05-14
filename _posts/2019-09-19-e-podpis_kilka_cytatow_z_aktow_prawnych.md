@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Podpis elektroniczny - kilka cytatów z aktów prawnych"
+title:  "Podpis elektroniczny - kilka cytatów z aktów prawnych"
 date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
@@ -25,7 +25,7 @@ categories: PKI
 
 ### UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania
 
-Powyższa ustawa odnosi się też do **[rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania](https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32014R0910 "rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania ")**, w którym czytamy m.in.:
+Powyższa ustawa odnosi się też do **[rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania](https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32014R0910 "rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania ")**, w którym czytamy m.in.:
 
 **Art. 3** - Definicje
 
