@@ -168,6 +168,19 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 
 #### Inne przykłady `robocopy`:
 
+Kopiowanie dat plików i folderów - gdy nie-nowsze:
+
+````bat
+set "src=c:\aaa"
+set "dst=d:\bbb"
+robocopy /e /xn /timfix /copy:t /dcopy:t "%src%" "%dst%"
+````
+`/e` - uwzględnij podfoldery, także puste  
+`/xn` - uwzględnij tylko nie-nowsze  
+`/timfix` - skoryguj czasy plików we wszystkich plikach, także pominiętych  
+`/copy:t` - skopiuj daty plików (bez zawartości); `/dcopy:t` - daty folderów  
+
+
 Lista plików większych niż....
 
 	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /nC /nJH /nJS /min:44444444
