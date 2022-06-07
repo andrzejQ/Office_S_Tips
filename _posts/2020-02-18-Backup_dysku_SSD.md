@@ -168,47 +168,13 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 
 #### Inne przykłady `robocopy`:
 
-Kopiowanie dat plików i folderów - gdy nie-nowsze:
-
-````bat
-set "src=c:\aaa"
-set "dst=d:\bbb"
-robocopy /e /xn /timfix /copy:t /dcopy:t "%src%" "%dst%"
-````
-`/e` - uwzględnij podfoldery, także puste  
-`/xn` - uwzględnij tylko nie-nowsze  
-`/timfix` - skoryguj czasy plików we wszystkich plikach, także pominiętych  
-`/copy:t` - skopiuj daty plików (bez zawartości); `/dcopy:t` - daty folderów  
-<small>**Total Commander** - skopiuj starsze daty z 2-giego panela: **cmd** /k robocopy /e /xn /timfix /copy:t /dcopy:t "%T\." "%P\."</small>
-
-
-Lista plików większych niż....
-
-	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /nC /nJH /nJS /min:44444444
-
-* Folder docelowy powinien być pusty! (tutaj to jest `"..\_%date%_%time::=.%"`); /L - tylko wyświetlaj; min:bajtów
-		
-Lista plików nie starszych niż 7 dni (maxage:n; gdy n < 1900 to n = liczba dni, inaczej data n = YYYYMMDD):
-
-	ROBOCOPY . "..\_%date%_%time::=.%" *.* /L /S /nDL /maxAge:7
-
-* /nS - bez rozmiaru, więc dostajemy same nazwy plików; albo /TS - będzie rozmiar i czas 
-* Usuwając /L dostaniemy kopiowanie wybranych plików
-
-Kopiowanie (po usunięciu `/L`) plików z 3 ostatnich dni, nie większych niż (`/MAX`) 20MB z pominięciem (`/XD`) niektórych folderów:
-
-	ROBOCOPY "C:\SOURCE" "d:\dest" *.* /L /S /nDL /MAX:20971520 /XD .git SeaDriverCache "Google Drive" "c:\temp" /maxAge:3
-
-<small>
-/L : List only; /S : copy Subfolders; /nDL : no Directory List
-</small> 
+- zobacz <https://andrzejq.github.io/El_Prog/programowanie/2019/09/07/RoboCopy.html>
 
 **Dokumentacja:**
 
 * <https://ss64.com/nt/robocopy.html>
 * <https://docs.microsoft.com/pl-pl/windows-server/administration/windows-commands/robocopy>
 * <https://adamtheautomator.com/robocopy-the-ultimate/>
-
 
 [Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
 
