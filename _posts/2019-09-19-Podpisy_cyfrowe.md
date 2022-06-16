@@ -79,7 +79,7 @@ Intencją ustawodawcy było zapewnienie niezaprzeczalnego związku osoby podpisu
 ----
 
 Zob. też
-* ["Kwalifikowane podpisy elektroniczne - praktyczne aspekty", Tomasz Zalewski](https://www.twobirds.com/pl/insights/2021/poland/210712-kwalifikowane-podpisy-elektroniczne) <small>(m.in. eliminacja wad podpisu własnoręcznego, długoterminowa konserwacja podpisów, zbędne postanowienie o miejscu zawarcia umowy, zbędne postanowienie o dacie zawarcia umowy i liczbie „jednobrzmiących” egzemplarzy)</small)
+* ["Kwalifikowane podpisy elektroniczne - praktyczne aspekty", Tomasz Zalewski](https://www.twobirds.com/pl/insights/2021/poland/210712-kwalifikowane-podpisy-elektroniczne) <small>(m.in. eliminacja wad podpisu własnoręcznego, długoterminowa konserwacja podpisów, zbędne postanowienie o miejscu zawarcia umowy, zbędne postanowienie o dacie zawarcia umowy i liczbie „jednobrzmiących” egzemplarzy)</small>
 
 ----
 
