@@ -5,4 +5,4 @@ Drobne podpowiedzi dotyczące obsługi programów biurowych. M.in. przenoszenie 
 Zapraszam do odwiedzenia bloga https://andrzejq.github.io/Office_S_Tips/
 
 
-(github - jekyll - staticman)
+(github - jekyll - giscus -> GitHub Discussions)
