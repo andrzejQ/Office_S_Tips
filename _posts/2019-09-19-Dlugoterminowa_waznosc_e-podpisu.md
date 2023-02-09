@@ -25,6 +25,17 @@ Po otwarciu tego pliku i rozwinięciu szczegółów podpisu zobaczymy, że mamy 
 
 ----
 
+Można też wybrać opcję LTV w aplikacji do składania podpisu, np. w aplikacji  Sigillum Sign jest profil "Podpis długoterminowy" oraz pojawia się wariant "A" lub "XL". Tak podpisane pliki pozwalają na łatwą weryfikację e-podpisu także w czasie, gdy minął okres jego ważności (ale oczywiście - w momencie podpisywania był ważny).
+
+Z instr. Sigillum Sign:
+
+5. XAdES-XL – (Extended Long Term) – format umożliwia dodanie dodatkowych certyfikatów (poza certyfikatem osoby podpisującej). Ponadto zawiera informacje pobrane z serwerów CRL lub OCSP. Podpis w tym formacie szczegółowo określa warunki, w jakich został złożony. Zapewnia on, że certyfikat osoby podpisującej w chwili podpisania pliku był ważny;
+
+6. XAdES-A – (Archival) – format ten umożliwia dodawanie znaczników czasowych wystawianych przez Urząd Znakowania Czasem. Jest on stosowany m.in. w celu konserwacji podpisu (przedłużenia jego ważności). Dzięki niemu, właściciel podpisanego pliku może dodawać nowe zaświadczenia certyfikacyjne UZC przed upływem terminu ważności poprzedniego.
+
+----
+
+
 Odnośniki:
 
 * [Długoterminowa walidacja (LTV) podpisów cyfrowych PDF w Adobe Acrobat](https://www.ssl.com/pl/jak/d%C5%82ugoterminowa-weryfikacja-LTV-podpis%C3%B3w-cyfrowych-pdf-w-programie-Adobe-Acrobat/)
