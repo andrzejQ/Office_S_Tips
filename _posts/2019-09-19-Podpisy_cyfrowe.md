@@ -81,6 +81,9 @@ Intencją ustawodawcy było zapewnienie niezaprzeczalnego związku osoby podpisu
 Zob. też
 * ["Kwalifikowane podpisy elektroniczne - praktyczne aspekty", Tomasz Zalewski](https://www.twobirds.com/pl/insights/2021/poland/210712-kwalifikowane-podpisy-elektroniczne) <small>(m.in. eliminacja wad podpisu własnoręcznego, długoterminowa konserwacja podpisów, zbędne postanowienie o miejscu zawarcia umowy, zbędne postanowienie o dacie zawarcia umowy i liczbie „jednobrzmiących” egzemplarzy)</small>
 
+* ["Skan" - epodrecznik.mc.gov.pl, Kajetan Wojsyk](https://epodrecznik.mc.gov.pl/mediawiki/index.php?title=Skan) <small>(m.in.: ... Skan lub kserokopia jest wtedy wiarygodnym dokumentem, jeśli zawiera w swej treści identyfikator pozwalający na  uzyskanie kopii danego dokumentu ze źródła przez osobę, która chce zweryfikować wiarygodność skanu. ...  
+Jeśli skan zostanie wykonany z dokumentu, którego oryginalność nie budzi wątpliwości i zostanie poświadczony przez osobę, która zachowuje dokument oryginalny jako dowód ..., wtedy skan poświadczony za zgodność jego treści z treścią oryginału może być wiarygodnym dokumentem wewnątrz podmiotu, posiadającego oryginał. )</small>
+
 ----
 
 <style> code {font-size: smaller;} </style>
