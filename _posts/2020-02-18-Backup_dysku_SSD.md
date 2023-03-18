@@ -5,12 +5,19 @@ date:   2020-02-20 06:41
 categories: System
 ---
 
-Przegląd kilku systemów backupu.
+Przegląd kilku systemów backupu. <br/>
+[1.&nbsp;Veeam Agent FREE]({{ site.url }}{{ site.baseurl }}{{ page.url }}#1-veeam-agent-free) &nbsp; 
+[2.&nbsp;Acronis True Image]({{ site.url }}{{ site.baseurl }}{{ page.url }}#2-acronis-true-image) &nbsp; 
+[3.&nbsp;Seagate Toolkit]({{ site.url }}{{ site.baseurl }}{{ page.url }}#3-seagate-toolkit) &nbsp; 
+[4.&nbsp;EasyUS]({{ site.url }}{{ site.baseurl }}{{ page.url }}#4-easyus) &nbsp; 
+[5.&nbsp;MS Windows 10]({{ site.url }}{{ site.baseurl }}{{ page.url }}#5-ms-windows-10) &nbsp; 
+[6.&nbsp;Robocopy (Robust File Copy)]({{ site.url }}{{ site.baseurl }}{{ page.url }}#6-robocopy-robust-file-copy) &nbsp; 
+[7.&nbsp;Uwagi]({{ site.url }}{{ site.baseurl }}{{ page.url }}#7-uwagi) &nbsp; 
 
 To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej). W domowych zastosowaniach backup zaszyfrowanych plików może nie być istotny (a w Windows Home szyfrowanie EFS jest w ogóle niedostępne).
 
 ![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
-### 1. Veeam Agent FREE
+### 1. Veeam Agent FRE
 
 * [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/pl/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
 * Edycja Free nie wymaga kupowania licencji (gdy jest pytanie czy instalowć licencję, to odpowiadamy "Nie").
@@ -178,15 +185,13 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 
 [Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
 
-**Uwaga: Wiersz polecenia, tryb awaryjny**
+### 7. Uwagi
 
-W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fizyczne do innych liter. Jeśli w tym trybie w wierszu polecenia używasz `robocopy` lub `mklink /j` żeby utworzyć dowiązanie symboliczne do folderu to mogą się przydać instrukcje:
-`diskpart`  
-`list volume`
-`select volume <nr>`
-`list volume`
-`assign letter=L`
-.
+**Konwersja RAID -> AHCI**
+
+Podobno dla dysków SSD lepsze jest AHCI. W laptopach z jednym dyskiem HDD zdarza się konfiguracja RAID. Po przełożeniu dysku HDD na SSD można zmienić konfigurację z RAID na ACI bez reinstalacji systemu
+* [Switch RAID to AHCI without reinstalling Windows 10](https://superuser.com/questions/1280141/switch-raid-to-ahci-without-reinstalling-windows-10) - porada z wejściem w tryb awaryjny (safe mode). To działa też w Windows 11. Pamiętaj, że po wejściu w tym awaryjny nie zadziała [Win+X] \ Terminal(Administrator). Trzeba zgodnie z instrukcją wywołać "cmd" w trybie administratora.
+* [RAID vs. AHCI, Which One Should I Choose?](https://www.ubackup.com/articles/raid-vs-ahci-jkzbj.html) - rozdział "How to Switch from RAID to AHCI in Windows 10" (taka sama procedura jak powyżej).
 
 
 **Odzyskanie partycji skasowanej podczas konwersji dysku z MBR na GPT**
@@ -197,6 +202,16 @@ Gdy mamy nowe dyski, to warto je konwertować z formatu MBR na GPT.
 Jeśli podczas montowania dysku MBR Windows10 zmusi nas do zainicjowania go jako GPT, to powstaje pusty dysk i nie widać partycji z danymi. 
 Może się udać odzyskanie takiej partycji z pomocą TestDisk:  
 <https://www.cgsecurity.org/wiki/TestDisk_Krok_po_kroku>
+
+**Uwaga: Wiersz polecenia, tryb awaryjny**
+
+W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fizyczne do innych liter. Jeśli w tym trybie w wierszu polecenia używasz `robocopy` lub `mklink /j` żeby utworzyć dowiązanie symboliczne do folderu to mogą się przydać instrukcje:
+`diskpart`  
+`list volume`
+`select volume <nr>`
+`list volume`
+`assign letter=L`
+.
 
 **Właściciel plików i folderów**
 
