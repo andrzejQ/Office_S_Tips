@@ -8,7 +8,7 @@ categories: Excel
 Przepis na hurtową zamianę fragmentów tekstu z uwzględnianiem wielkości znaków - z użyciem ZNAJDŹ() i PODSTAW(). 
 
 
-![n_znajdz.png]({{ site.baseurl }}/assets/img/n_znajdz.png "n_znajdz.png"){:style="float:left;width:25%;"}
+![n_znajdz.png]({{site.baseurl}}/assets/img/n_znajdz.png "n_znajdz.png"){: style="float:left;width:25%;"}
 Parametry:  
 Lista (1 wymiarowa) elementów do znalezienia w **n_znajdz**  
 (n_... - to nazwany zakres).  
@@ -17,9 +17,9 @@ Powyższe dwa 1-wymiarowe zakresy mogą być gdziekolwiek, także w  innym arkus
  
 Jeżeli w liście **n_znajdz** pewne elementy są podtekstami innych elementów, to muszą być na dalszej pozycji. 
 
-Poniżej fragment pliku-demo "ZnajdzZamienWgListy.xlsx ", zob. [**ZnajdzZamienWgListy.zip**]({{ site.baseurl }}/assets/files/ZnajdzZamienWgListy.zip) 
+Poniżej fragment pliku-demo "ZnajdzZamienWgListy.xlsx ", zob. [**ZnajdzZamienWgListy.zip**]({{site.baseurl}}/assets/files/ZnajdzZamienWgListy.zip) 
 
-![Po-zamianie.png]({{ site.baseurl }}/assets/img/Po-zamianie.png "Po-zamianie.png"){:style="width:100%;"}
+![Po-zamianie.png]({{site.baseurl}}/assets/img/Po-zamianie.png "Po-zamianie.png"){: style="width:100%;"}
 
 
  
@@ -49,3 +49,16 @@ E23: =IFNA(SUBSTITUTE(A23,INDEX(n_znajdz,MATCH(0,0*FIND(n_znajdz,A23),0)),"_x_")
 ````
 
 <style> pre code {font-size: smaller;} </style>
+
+<!-- {% unless jekyll.environment %} -->
+<script>
+
+(function() {
+  const images = document.getElementsByTagName('img'); 
+  for(let i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace('%7B%7Bsite.baseurl%7D%7D','..');
+  } //{{site.baseurl}} - without spaces!  
+})();
+
+</script>
+<!-- {% endunless %} -->

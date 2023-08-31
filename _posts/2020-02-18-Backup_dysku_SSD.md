@@ -6,22 +6,22 @@ categories: System
 ---
 
 Przegląd kilku systemów backupu. <br/>
-[1.&nbsp;Veeam Agent FREE]({{ site.url }}{{ site.baseurl }}{{ page.url }}#1-veeam-agent-free) &nbsp; 
-[2.&nbsp;Acronis True Image]({{ site.url }}{{ site.baseurl }}{{ page.url }}#2-acronis-true-image) &nbsp; 
-[3.&nbsp;Seagate Toolkit]({{ site.url }}{{ site.baseurl }}{{ page.url }}#3-seagate-toolkit) &nbsp; 
-[4.&nbsp;EasyUS]({{ site.url }}{{ site.baseurl }}{{ page.url }}#4-easyus) &nbsp; 
-[5.&nbsp;MS Windows 10]({{ site.url }}{{ site.baseurl }}{{ page.url }}#5-ms-windows-10) &nbsp; 
-[6.&nbsp;Robocopy (Robust File Copy)]({{ site.url }}{{ site.baseurl }}{{ page.url }}#6-robocopy-robust-file-copy) &nbsp; 
-[7.&nbsp;Uwagi]({{ site.url }}{{ site.baseurl }}{{ page.url }}#7-uwagi) &nbsp; 
+[1.&nbsp;Veeam Agent FREE]({{site.url}}{{site.baseurl}}{{page.url}}#1-veeam-agent-free) &nbsp; 
+[2.&nbsp;Acronis True Image]({{site.url}}{{site.baseurl}}{{page.url}}#2-acronis-true-image) &nbsp; 
+[3.&nbsp;Seagate Toolkit]({{site.url}}{{site.baseurl}}{{page.url}}#3-seagate-toolkit) &nbsp; 
+[4.&nbsp;EasyUS]({{site.url}}{{site.baseurl}}{{page.url}}#4-easyus) &nbsp; 
+[5.&nbsp;MS Windows 10]({{site.url}}{{site.baseurl}}{{page.url}}#5-ms-windows-10) &nbsp; 
+[6.&nbsp;Robocopy (Robust File Copy)]({{site.url}}{{site.baseurl}}{{page.url}}#6-robocopy-robust-file-copy) &nbsp; 
+[7.&nbsp;Uwagi]({{site.url}}{{site.baseurl}}{{page.url}}#7-uwagi) &nbsp; 
 
 To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej). W domowych zastosowaniach backup zaszyfrowanych plików może nie być istotny (a w Windows Home szyfrowanie EFS jest w ogóle niedostępne).
 
-![VeeamBackupJob.png]({{ site.baseurl }}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){:style="float:right;width:60%;"}
+![VeeamBackupJob.png]({{site.baseurl}}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){: style="float:right;width:60%;"}
 ### 1. Veeam Agent FRE
 
 * [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/pl/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
 * Edycja Free nie wymaga kupowania licencji (gdy jest pytanie czy instalowć licencję, to odpowiadamy "Nie").
-![veeamAgLicNo.png]({{ site.baseurl }}/assets/img/veeamAgLicNo.png "veeamAgLicNo.png"){:style="float:right;width:37%;"} 
+![veeamAgLicNo.png]({{site.baseurl}}/assets/img/veeamAgLicNo.png "veeamAgLicNo.png"){: style="float:right;width:37%;"} 
 * Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. Do kopii wybranych danych można użyć [Historii plików MS Windows - zob. niżej](#5-ms-windows-10). (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
 * Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania pracy na komputerze (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
 * Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
@@ -50,7 +50,7 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 * Nośnik startowy Acronis (warto sobie zrobić), np. na DVD lub pendrive, pozwala też na klonowanie dysków. Nośnik ratunkowy oparty na systemie Linux radzi sobie z plikami zablokowanymi w Windows. <small> Choć podobno nośnik z WinPE działa szybciej.</small> Uwaga: Nośnik ratunkowy musi być uruchomiony w trybie BIOS takim samym jak tryb dysku systemowego - np. UEFI BIOS (a nie starszy MBR/BIOS) - w tym celu należy podczas uruchamiania włączyć [menu bootowania (np. F8, F10, F12, F2, Esc itp.)](https://techofide.com/blogs/boot-menu-option-keys-for-all-computers-and-laptops-updated-list-2021-techofide/).
 
 
-![Seagate_DiscWizart.png]({{ site.baseurl }}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){:style="float:right;width:60%;"}
+![Seagate_DiscWizart.png]({{site.baseurl}}/assets/img/Seagate_DiscWizart.png "Seagate_DiscWizart.png"){: style="float:right;width:60%;"}
 **Przykład:**
 
 #### Seagate DiscWizart <br>(=Acronis True Image OEM)
@@ -79,7 +79,7 @@ Dodatkowo warto sobie utworzyć zewnętrzny nośnik startowy, a co najmniej zapi
 
 .
 
-![ToolkitIcon.jpg]({{ site.baseurl }}/assets/img/ToolkitIcon.jpg "ToolkitIcon.jpg"){:style="float:right;width:12%;"}
+![ToolkitIcon.jpg]({{site.baseurl}}/assets/img/ToolkitIcon.jpg "ToolkitIcon.jpg"){: style="float:right;width:12%;"}
 ### 3. Seagate Toolkit
 
 Narzędzie dołączane do zewn. dysków USB Seagate. Pozwala na backup wybranych folderów/plików. Po uruchomieniu siedzi w zasobniku obok zegara. (Być może podobne aplikacje są dostarczane z dyskami innych producentów).
@@ -116,17 +116,17 @@ Nawet w wersji darmowej może wykonać sporo dobrej roboty. Kopia dysku / partyc
 
 Backup całego dysku to nierozwijana od Win10 1709 aplikacja z Windows 7. Nie używam. 
 
-![Win10HistoriaPlikow.png]({{ site.baseurl }}/assets/img/Win10HistoriaPlikow.png "Win10HistoriaPlikow.png"){:style="float:right;width:53%;margin:0px 0px 10px 10px"}
+![Win10HistoriaPlikow.png]({{site.baseurl}}/assets/img/Win10HistoriaPlikow.png "Win10HistoriaPlikow.png"){: style="float:right;width:53%;margin:0px 0px 10px 10px"}
 Kopia zapasowa plików jest w opcji "**Historia plików**" [zob. szczegółową instrukcję na https://trybawaryjny.pl/](https://trybawaryjny.pl/backup-plikow-windows10/). Używam historii plików, bo jest dobrze zintegrowana w systemie plików Windows. Historia jest zapamiętywana w miejscu tymczasowym i co jakiś czas pojawia się zachęta do podłączenia dysku zewnętrznego w celu zabezpieczenia kopii.
 
-![Win10HistoriaPlikow-wersje.png]({{ site.baseurl }}/assets/img/Win10HistoriaPlikow-wersje.png "Win10HistoriaPlikow-wersje.png"){:style="float:left;width:42%;margin:10px 10px 10px 0px"}
+![Win10HistoriaPlikow-wersje.png]({{site.baseurl}}/assets/img/Win10HistoriaPlikow-wersje.png "Win10HistoriaPlikow-wersje.png"){: style="float:left;width:42%;margin:10px 10px 10px 0px"}
 Interfejs historii plików przypomina przeglądanie slajdów. Równocześnie dostępne wersje historii są dostępne we właściwościach pliku.
 
 
 
 <small>Być może pliki użytkownika zaszyfrowane EFS są też zaszyfrowane w kopii (gdy kopia jest na NTFS to widać kłódkę na ikonie pliku). Wydaje się, że pliki EFS innych użytkowników są pomijane.</small>
 
-<div>Pamiętaj:</div>{:style="clear:left"}
+<div>Pamiętaj:</div>{: style="clear:left"}
 
 1. "Opcje kopii zapasowych" pozwalają dodawać / wykluczać foldery. Dodaj swoje foldery, jeśli masz dane poza standardowymi bibliotekami jak Dokumenty, Obrazy, Pulpit, ...
 2. Gdy zmieniasz dysk/system to podczas pierwszego włączenia nośnika ze starą historią plików masz **jednorazowe(!) pytanie** czy przyłączyć tą historię do aktualnego dysku.
@@ -183,7 +183,7 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 * <https://docs.microsoft.com/pl-pl/windows-server/administration/windows-commands/robocopy>
 * <https://adamtheautomator.com/robocopy-the-ultimate/>
 
-[Notatki - robocopy_as_backup.txt]({{ site.baseurl }}/assets/files/robocopy_as_backup.txt)
+[Notatki - robocopy_as_backup.txt]({{site.baseurl}}/assets/files/robocopy_as_backup.txt)
 
 ### 7. Uwagi
 
@@ -218,3 +218,16 @@ W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fi
 Podczas zamontowania dysku z innego systemu można dla całego dysku i wszystkich podfolderów zmienić właściciela na siebie (ale nie jest to konieczne):
 
 Ten komputer \ <dysk> - właściości \ Zabezpieczenia \ [Zaawansowane] \ Właściciel - Zmień.
+
+<!-- {% unless jekyll.environment %} -->
+<script>
+
+(function() {
+  const images = document.getElementsByTagName('img'); 
+  for(let i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace('%7B%7Bsite.baseurl%7D%7D','..');
+  } //{{site.baseurl}} - without spaces!  
+})();
+
+</script>
+<!-- {% endunless %} -->

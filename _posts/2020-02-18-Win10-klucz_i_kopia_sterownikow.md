@@ -64,22 +64,22 @@ xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxxxxxx
 ````
 
 Podobnie można aktywować Office:
-{:style="font-size: smaller;"}
+{: style="font-size: smaller;"}
 
 Otwieramy pusty dokument Word
 Manu: Plik \ Konto \ Wymagana aktywacja \ Zmień klucz produktu (25 znaków) [Zainstaluj]
-{:style="font-size: smaller;"}
+{: style="font-size: smaller;"}
 
 Ponowne uruchomienie  
 Kreator aktywacji produktu  
 (*) Chcę aktywować oprogramowanie przez telefon [Dalej] [OK] (2x)  
 identyfikator instalacji oraz ident. potwierdzenia są jednorazowe  
-{:style="font-size: smaller;"}
+{: style="font-size: smaller;"}
 
 Można aktywować MS Office prze Internet  
 ALBO aktywować przez telefon (działa pomimo komunikatu, [że dla tej wersji usługa nie jest aktywna](https://support.office.com/pl-pl/article/b%C5%82%C4%85d-%E2%80%9Eaktywacja-telefoniczna-nie-jest-ju%C5%BC-obs%C5%82ugiwana-dla-tego-produktu-podczas-aktywowania-pakietu-office-9b016cd2-0811-4cb3-b896-5a6a13177713)):  
 Polska (48) (22) 594 19 99 (lub bezpłatne 00 800 121 1654) - czyli powyższe numery  
-{:style="font-size: smaller;"}
+{: style="font-size: smaller;"}
 
 
 ### 2. Kopia sterowników
@@ -91,7 +91,7 @@ Są w sieci porady polegające na skopiowaniu foldera:
 
 Albo za pomocą poleceń - 
 [zob. www.drivereasy.com/knowledge/how-to-back-up-your-drivers-in-windows-10-easily](https://www.drivereasy.com/knowledge/how-to-back-up-your-drivers-in-windows-10-easily/):
-{:style="font-size: smaller;"}
+{: style="font-size: smaller;"}
 
 PowerShell (Administrator)
 ````powershell
@@ -105,3 +105,15 @@ dism /online /export-driver /destination:"D:\Drivers Backup"
 
 <style> pre code {font-size: smaller;} </style>
 
+<!-- {% unless jekyll.environment %} -->
+<script>
+
+(function() {
+  const images = document.getElementsByTagName('img'); 
+  for(let i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace('%7B%7Bsite.baseurl%7D%7D','..');
+  } //{{site.baseurl}} - without spaces!  
+})();
+
+</script>
+<!-- {% endunless %} -->

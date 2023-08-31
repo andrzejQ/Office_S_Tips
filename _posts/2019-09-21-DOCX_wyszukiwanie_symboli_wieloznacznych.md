@@ -11,7 +11,7 @@ Jeśli interesuje cię tylko sprawa osamotnionych liter to [przeczytaj więcej p
 * W otwartym dokumencie naciśnij `Ctrl+H` (albo menu: Narzędzia główne \ Zamień)
 * [**Więcej <u>></u>>**] \ [x] **Użyj sym<u>b</u>oli wieloznacznych** 
 * Wklej w polu "Znaj<u>d</u>ź": `<([awizou]) `  (tu na końcu jest spacja!), w "Zam<u>i</u>eń na": `\1^s`. Na koniec [**Zam<u>i</u>eń wszystko**].
-* ![spacja_nierozdzielajaca.png]({{ site.baseurl }}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){:style="float:right;width:31%;margin:12px;"}Dla kontroli na chwilę włącz przycisk [**¶**] <small>(Narzędzia główne - sekcja Akapit)</small> i zobacz czy pojawiły się spacje nierozdzielające.  
+* ![spacja_nierozdzielajaca.png]({{site.baseurl}}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){: style="float:right;width:31%;margin:12px;"}Dla kontroli na chwilę włącz przycisk [**¶**] <small>(Narzędzia główne - sekcja Akapit)</small> i zobacz czy pojawiły się spacje nierozdzielające.  
 <br>
 
 - - - - -
@@ -19,7 +19,7 @@ Jeśli interesuje cię tylko sprawa osamotnionych liter to [przeczytaj więcej p
 ### Symbole wieloznaczne w MS Word
 
 **Zamień** \ [**Więcej <u>></u>>**] \
-* [x] **Użyj sym<u>b</u>oli wieloznacznych**   ![Word-symbole-wieloznaczne.png]({{ site.baseurl }}/assets/img/Word-symbole-wieloznaczne.png "Word-symbole-wieloznaczne.png"){:style="float:right;width:40%;"}
+* [x] **Użyj sym<u>b</u>oli wieloznacznych**   ![Word-symbole-wieloznaczne.png]({{site.baseurl}}/assets/img/Word-symbole-wieloznaczne.png "Word-symbole-wieloznaczne.png"){: style="float:right;width:40%;"}
 
 wygląda _prawie_ jak korzystanie z wyrażeń regularnych. Jednak tutaj to _prawie_ potrafi być naprawdę denerwujące. Tym nie mniej czasem warto się przebić przez osobliwości takich wyrażeń:
 
@@ -34,13 +34,27 @@ Dobra wiadomość - w polu "Zamień na" nie potrzeba nic wpisywać, a można tyl
 
 ### Automatyczne porzenoszenie pojedynczych liter z końca wiersza do wiersza następnego
 
-![Word-symbole-wieloznaczne-zamien-na.png]({{ site.baseurl }}/assets/img/Word-symbole-wieloznaczne-zamien-na.png "Word-symbole-wieloznaczne-zamien-na.png"){:style="float:right;width:40%;"}
+![Word-symbole-wieloznaczne-zamien-na.png]({{site.baseurl}}/assets/img/Word-symbole-wieloznaczne-zamien-na.png "Word-symbole-wieloznaczne-zamien-na.png"){: style="float:right;width:40%;"}
 Niektórzy nie preferują pozostawiania pojedynczych liter np. **a**, **w**, **i**, **z**, **o**, **u** na końcu wiersza. Sposobem na automatyczne przenoszenie ich do kolejnego wiersza jest wstawianie z ich prawej strony spacji nierozdzielającej (niełamliwej). Można to zrobić automatycznie w całym dokumencie.
 
 W trybie symboli wieloznacznych - pole "Znaj<u>d</u>ź": `<([awizou]) `  (tu na końcu jest spacja), pole "Zam<u>i</u>eń na": `\1^s`. Na koniec [**Zam<u>i</u>eń wszystko**].
 
-Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć klikając przycisk [**¶**] w menu (wstążce) Worda (tu ![spacja_nierozdzielajaca.png]({{ site.baseurl }}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){:style="width:31%;"}).
+Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć klikając przycisk [**¶**] w menu (wstążce) Worda (tu ![spacja_nierozdzielajaca.png]({{site.baseurl}}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){: style="width:31%;"}).
 
 Uwagi
 1. Zauważ, że przycisk [**Specjalne ^**] po przejściu do pola "Zam<u>i</u>eń na" zmienia listę dostępnych symboli. Również w trybie wyłączonych symboli wieloznacznych lista symboli jest całkiem inna - warto zobaczyć.
 2. W trybie symboli wieloznacznych jest rozróżniana wielkość liter. Jeśli należałoby uwzględniać także pojedyncze wielkie litery to w polu "Znaj<u>d</u>ź" wstawiamy `<([AWIZOUawizou]) `. 
+
+
+<!-- {% unless jekyll.environment %} -->
+<script>
+
+(function() {
+  const images = document.getElementsByTagName('img'); 
+  for(let i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace('%7B%7Bsite.baseurl%7D%7D','..');
+  } //{{site.baseurl}} - without spaces!  
+})();
+
+</script>
+<!-- {% endunless %} -->

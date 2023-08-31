@@ -14,11 +14,11 @@ Gdy korzystam z tej funkcjonalności to najczęściej
 * przełączam widok we wstążce "Narzędzia tabel przestawnych": `Projektowanie` \ `Układ raportu` \ `Pokaż w formie tabelarycznej`
 * wyłączam sumy częściowe i końcowe (gdy są mi niepotrzebne)
 
-![TextJoin_1.png]({{ site.baseurl }}/assets/img/TextJoin_1.png "TextJoin_1.png"){:style="float:right;width:41%;"}
+![TextJoin_1.png]({{site.baseurl}}/assets/img/TextJoin_1.png "TextJoin_1.png"){: style="float:right;width:41%;"}
 i otrzymuję układ kategorii z potencjalnie wielokrotnymi danymi - jak w kolumnach A i B na rys. Często potrzebuję scalić te wielokrotne dane w jeden tekst - jak w kol. D, żeby się nimi posługiwać w kolejnym raporcie. 
 
 Rysunek to obraz pliku "JoinIfEmpty_o.old.xlsx", gdzie opisałem jedno z możliwych rozwiązań. Omawiane tutaj pliki znajdują się w spakowanej paczce
-* [**TextJoin.zip**]({{ site.baseurl }}/assets/files/TextJoin.zip) 
+* [**TextJoin.zip**]({{site.baseurl}}/assets/files/TextJoin.zip) 
 
 Podstawą tego rozwiązania jest możliwość scalenia tekstów z wielu komórek. W tym celu - w przypadku wersji MS Office 2013 i starszych - można użyć **dodatku dla Excel "AK_dodFunkcje.xlam"**. Opis instalacji dodatku (standardowy - nic specjalnego) jest w pliku "AK_dodFunkcje-test.xlsx". Plik "AK_dodFunkcje.bas" zawiera kod funkcji "TEXTJOIN" zawartej w tym dodatku (a także funkcji CONCAT, SWITCH, IFS występującyh w Excel 2016+).
 
@@ -33,7 +33,7 @@ Narzędzia \ Opcje [Alt+F12] \ LibreOffice Calc \ Formuła \ [x] Użyj angielski
 
 <br>
 
-![TextJoin_2.png]({{ site.baseurl }}/assets/img/TextJoin_2.png "TextJoin_2.png"){:style="float:right;width:50%;"}
+![TextJoin_2.png]({{site.baseurl}}/assets/img/TextJoin_2.png "TextJoin_2.png"){: style="float:right;width:50%;"}
 W pliku "AK_dodFunkcje-test.xlsx" jest przedstawiony jeszcze inny sposób scalania danych. Gdy przedstawimy je w tabeli przestawnej tak, że kategorie są we wierszach a dane w kolumnach to w wartościach tabeli przestawnej można wpisać liczbę wystąpień danych i potem scalać te dane z wiersza nagłówkowego, dla których pojawiła się niezerowa wartość.
 
 
@@ -57,7 +57,7 @@ Inne interesujące opcje łączenia można znaleźć w <http://excelszkolenie.pl
 
 <small>
 TEXTJOIN / POŁĄCZ.TEKSTY działa w Excel 2016+ także na zakres wielu arkuszy, np. `=POŁĄCZ.TEKSTY(" ~ ";0;Arkusz1:Arkusz3!A1)`.  
-Nie działa to (na razie) z dodatkiem "AK_dodFunkcje.xlam" w Excel 2013-, ani w LibreOffice. We wszystkich wersjach Excel Może najpierw można wykonać ![Konsoliduj-ikona.png]({{ site.baseurl }}/assets/img/Konsoliduj-ikona.png "Konsoliduj-ikona.png"){:style="width:30px;"} **konsolidację** wielu arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie kolejności arkuszy), ale i tak jest to bardzo wygodne. <small>
+Nie działa to (na razie) z dodatkiem "AK_dodFunkcje.xlam" w Excel 2013-, ani w LibreOffice. We wszystkich wersjach Excel Może najpierw można wykonać ![Konsoliduj-ikona.png]({{site.baseurl}}/assets/img/Konsoliduj-ikona.png "Konsoliduj-ikona.png"){: style="width:30px;"} **konsolidację** wielu arkuszy. W MS Office stosunkowo wygodnie dodaje się te same obszary przeklikując kolejne arkusze. W LibreOffice można wręcz dodać je na raz przy zaznaczonych wielu arkuszach. Choć zostanie to zamienione na statyczną listę arkuszy w oknie "Obszary konsolidacji" (nie zadziała potem dynamicznie mieszanie kolejności arkuszy), ale i tak jest to bardzo wygodne. <small>
 
 - - - -
 .
@@ -75,3 +75,17 @@ Nie działa to (na razie) z dodatkiem "AK_dodFunkcje.xlam" w Excel 2013-, ani w 
 
 * Zamykam Developer (bez zapisu). Zapisuję plik XLSX jako XLAM, np."AK_dodFunkcje_2.xlam".
 * Po zamknięciu wszelkich plików Excela podmieniam nazwę na "AK_dodFunkcje.xlam"
+
+
+<!-- {% unless jekyll.environment %} -->
+<script>
+
+(function() {
+  const images = document.getElementsByTagName('img'); 
+  for(let i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace('%7B%7Bsite.baseurl%7D%7D','..');
+  } //{{site.baseurl}} - without spaces!  
+})();
+
+</script>
+<!-- {% endunless %} -->
