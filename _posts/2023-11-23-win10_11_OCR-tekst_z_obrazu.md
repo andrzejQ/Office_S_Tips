@@ -44,10 +44,20 @@ Co ciekawe rozpoznawanie tekstu z obrazu działa w trybie off-line. Ale nie wiad
 ## Dyktowanie tekstu
 
 ![Slucham.png]({{site.baseurl}}/assets/img/Slucham.png "Słucham - dyktowanie tekstu"){: style="float:left;width:18%;"}
-Po naciśnięciu `[ ⊞ Win + H ]` można dyktować tekst, zamiast wpisywania go z klawiatury. 
+Po naciśnięciu `[ ⊞ Win + H ]` można dyktować tekst, zamiast wpisywania go z klawiatury. 
 Oczywiście trzeba mieć mikrofon - np. w kamerce internetowej.
 
 Dyktowanie nie działa w trybie off-line.
+
+&nbsp;
+
+<small>
+W Windows 11 dyktowanie w języku polskim działa od razu. Zapewne też jest jakaś możliwość w Windows 10, skoro w dniu 02.06.2021 ogłoszono możliwość dyktowania w języku polskim w Microsoft Office - zob. 
+![Win10-dod_jezyk.png]({{site.baseurl}}/assets/img/Win10-dod_jezyk.png "Windows 10 - rozpoznawanie mowy tylko w j. angielskim"){: style="float:right;width:22%;"}
+[www.centrumxp.pl/Aktualnosci » ](https://www.centrumxp.pl/Aktualnosci/Dyktowanie-w-Microsoft-Office-teraz-ze-wsparciem-dla-jezyka-polskiego) . Ale prosta próba pobrania pakietu mowy dla języka polskiego kończy się niepowodzeniem. Dostępne jest dyktowanie w języku angielskim. 
+![Office365_dyktafon.png]({{site.baseurl}}/assets/img/Office365_dyktafon.png "Office365 - dyktowanie tekstu"){: style="float:left;width:35%;"}  
+Działa za to dyktowanie w przeglądarkowej wersji MS Word 365 (po zezwoleniu na korzystanie z mikrofonu w przeglądarce).
+</small>
 
 <style> code {font-size: smaller;} </style>
 
