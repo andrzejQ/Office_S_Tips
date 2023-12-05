@@ -47,17 +47,30 @@ Co ciekawe rozpoznawanie tekstu z obrazu działa w trybie off-line. Ale nie wiad
 Po naciśnięciu `[ ⊞ Win + H ]` można dyktować tekst, zamiast wpisywania go z klawiatury. 
 Oczywiście trzeba mieć mikrofon - np. w kamerce internetowej.
 
-Dyktowanie nie działa w trybie off-line.
+Dyktowanie **nie działa w trybie off-line**.
 
 &nbsp;
 
 <small>
 W Windows 11 dyktowanie w języku polskim działa od razu. Zapewne też jest jakaś możliwość w Windows 10, skoro w dniu 02.06.2021 ogłoszono możliwość dyktowania w języku polskim w Microsoft Office - zob. 
-![Win10-dod_jezyk.png]({{site.baseurl}}/assets/img/Win10-dod_jezyk.png "Windows 10 - rozpoznawanie mowy tylko w j. angielskim"){: style="float:right;width:22%;"}
-[www.centrumxp.pl/Aktualnosci » ](https://www.centrumxp.pl/Aktualnosci/Dyktowanie-w-Microsoft-Office-teraz-ze-wsparciem-dla-jezyka-polskiego) . Ale prosta próba pobrania pakietu mowy dla języka polskiego kończy się niepowodzeniem. Dostępne jest dyktowanie w języku angielskim. 
-![Office365_dyktafon.png]({{site.baseurl}}/assets/img/Office365_dyktafon.png "Office365 - dyktowanie tekstu"){: style="float:left;width:35%;"}  
+[www.centrumxp.pl/Aktualnosci » ](https://www.centrumxp.pl/Aktualnosci/Dyktowanie-w-Microsoft-Office-teraz-ze-wsparciem-dla-jezyka-polskiego) . 
+![Win10-dod_jezyk.png]({{site.baseurl}}/assets/img/Win10-dod_jezyk.png "Windows 10 - rozpoznawanie mowy tylko w j. angielskim"){: style="float:left;width:22%;"}
+Ale prosta próba pobrania pakietu mowy dla języka polskiego kończy się niepowodzeniem. Dostępne jest dyktowanie w języku angielskim. 
+![Office365_dyktafon.png]({{site.baseurl}}/assets/img/Office365_dyktafon.png "Office365 - dyktowanie tekstu"){: style="float:right;width:35%;"}  
 Działa za to dyktowanie w przeglądarkowej wersji MS Word 365 (po zezwoleniu na korzystanie z mikrofonu w przeglądarce).
 </small>
+
+&nbsp;
+
+## Napisy na żywo
+
+`[ ⊞ Win + Ctrl + L ]`  
+Można wyświetlać napisy tekstowe dla dźwięku generowanego przez dowolną aplikację. Aktualnie dostępne dla języka angielskiego - niedostępne dla języka polskiego.
+
+[Włączenie napisów na żywo](https://support.microsoft.com/pl-pl/windows/u%C5%BCywanie-napis%C3%B3w-na-%C5%BCywo-w-celu-lepszego-zrozumienia-d%C5%BAwi%C4%99ku-b52da59c-14b8-4031-aeeb-f6a47e6055df)
+ spowoduje pobranie plików języka napisów na żywo. Dane głosowe będą przetwarzane lokalnie i nie są one udostępniane w chmurze.
+
+
 
 <style> code {font-size: smaller;} </style>
 
