@@ -30,7 +30,7 @@ Sposób użycia:
 3. Naciskamy `[ ⊞ Win + ⇧ Shift + T ]` i zaznaczamy myszą obszar do odczytu tekstu. 
 4. Po puszczeniu przycisku myszy tekst jest w tle kopiowany do schowka. W klejamy go w aplikacji docelowej np. MS Word:  `[ Ctrl + V ]`
 
-Tekst może być przekrzywiony. OCR radzi sobie też ze starannym pismem odręcznym.
+Obraz z tekstem może być przekrzywiony. OCR radzi sobie też ze starannym pismem odręcznym.
 
 * więcej na <https://learn.microsoft.com/en-us/windows/powertoys/text-extractor>
 
