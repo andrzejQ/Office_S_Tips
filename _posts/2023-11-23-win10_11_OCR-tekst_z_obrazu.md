@@ -21,21 +21,24 @@ Jest jeszcze szybszy sposób na takie kopiowanie tekstu. **Działa w Windows 10 
 
 * **Wymaga zainstalowania  Microsoft PowerToys**: <https://aka.ms/installpowertoys> - zwykle należy wybrać `...EXE` obok "Per user - x64"
 
-![PowerToys-Ekstraktor_tekstu.png]({{site.baseurl}}/assets/img/PowerToys-Ekstraktor_tekstu.png "PowerToys - Ustawienia - Ekstraktor tekstu"){: style="float:right;width:54%;"}
+![PowerToys-Ekstraktor_tekstu.png]({{site.baseurl}}/assets/img/PowerToys-Ekstraktor_tekstu.png "PowerToys - Ustawienia - Ekstraktor tekstu"){: style="float:right;width:58%;"}
 Microsoft PowerToys to kolekcja przydatnych narzędzi, m.in. zmniejszanie rozmiaru wielu zdjęć, zaawansowana zmiana nazw wielu plików, a także moduł "Ekstraktor tekstu"
 
 Sposób użycia:
 1. Uruchamiamy program, do którego będziemy kopiowali tekst, np. MS Word, Notatnik. itp.
 2. W drugim oknie odtwarzamy obraz, film, prezentację, pdf, itp..
 3. Naciskamy `[ ⊞ Win + ⇧ Shift + T ]` i zaznaczamy myszą obszar do odczytu tekstu. 
-4. Po puszczeniu przycisku myszy tekst jest w tle kopiowany do schowka. W klejamy go w aplikacji docelowej np. MS Word:  `[ Ctrl + V ]`
+4. Po puszczeniu przycisku myszy tekst jest w tle kopiowany do schowka. Wklejamy go w aplikacji docelowej np. MS Word:  `[ Ctrl + V ]`
+
+<small>Przed skopiowaniem tekstu można jeszcze wybrać opcję "Formatuj wynik jako tabelę (T)". Domyślnie jest wybrane formatowanie jako zwykły tekst (S):</small>  
+![Win_T_opcje.png]({{site.baseurl}}/assets/img/Win_T_opcje.png "PowerToys-Ekstraktor_tekstu - opcje"){: style="width:420px;"}
 
 Obraz z tekstem może być przekrzywiony. OCR radzi sobie też ze starannym pismem odręcznym.
 
-* więcej na <https://learn.microsoft.com/en-us/windows/powertoys/text-extractor>
+* Więcej na <https://learn.microsoft.com/en-us/windows/powertoys/text-extractor>
 
 UWAGA: Kopiowanie tekstu z obrazu czy dyktowanie oparte jest zwykle na usługach chmurowych. Czyli obraz lub głos jest przesyłany gdzieś dalej na serwery Microsoftu. 
-* więcej na: [Opis OCR - Optical Character Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr)
+* Więcej na: [Opis OCR - Optical Character Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr)
 
 W przypadkach wymagających szczególnej poufności powinniśmy zachowywać ostrożność. (Podobny problem dotyczy korzystania z takich usług na telefonie).
 Co ciekawe rozpoznawanie tekstu z obrazu działa w trybie off-line. Ale nie wiadomo (na razie) czy nasze dane nie są przesyłane, gdy komputer jest połączony z internetem. 
