@@ -11,15 +11,20 @@ categories: System
 
 ### Ostatnio używane foldery 
 
-.. to trochę co innego niż *często używane foldery*, które pojawiają się po włączeniu (Win+E) eksploratora plików.
+.. to trochę co innego niż *często używane foldery*, które pojawiają się po włączeniu (`⊞ Win`+`E`) eksploratora plików.
 
 ![Przypnij_do_szybki_dostep.png]({{site.baseurl}}/assets/img/Przypnij_do_szybki_dostep.png "Przypnij_do_szybki_dostep.png"){: style="float:right;width:35%;"}
 Kroki w celu dodania do paska "szybki dostęp":
 
-1. Win+R, wklej  
+1. `⊞ Win`+`R`, wklej  
    `shell:::{22877a6d-37a1-461a-91b0-dbda5aaebc99}`   `[OK]`
-2. Menu: "Przypnij do paska szybki dostęp".
-3. Inne własne ważne foldery też wato tak przypiąć.
+2. Menu Windows 10: "Przypnij do paska szybki dostęp" ➜
+   ![Eksplorator_przypnij.png]({{site.baseurl}}/assets/img/Eksplorator_przypnij.png "Windows 11 Eksplorator-przypnij"){: style="float:right;width:25%;"}  
+   W Windows 11 wybieramy `⋯` ➜
+3. Dla takiego foldera zapewne warto ustawić sortowanie według daty modyfikacji.
+4. Podobnie można przypiąć "Niedawno używane elementy" tj. pliki i foldery: `⊞ Win`+`R`, wklej: `shell:recent` `[OK]`  
+   <small> - to jest folder</small> `%AppData%\Microsoft\Windows\Recent\`{: style="font-size:smaller;"}.
+5. <small>Uwaga - jeśli dopuszczasz inne osoby do pracy na Twoim koncie Windows to powyższe wskazówki mogą nie być odpowiednie. Generalnie każdy powinien pracować na osobistym koncie Windows, a przełączanie jest wygodne.</small>
 
 <br>
 
@@ -31,7 +36,7 @@ W Win 10 jest wbudowanych kilka ciekawych opcji zwalniania miejsca na dysku C:
 <https://support.microsoft.com/pl-pl/help/12425/windows-10-free-up-drive-space>
 
 ![Start-ustawienia.png]({{site.baseurl}}/assets/img/Start-ustawienia.png "Start-ustawienia.png"){: style="float:left;width:8%;margin-right:3%;"}
-* [Win + i]  albo Start \ Ustawienia
+* `⊞ Win`+`i`  albo Start \ Ustawienia
     * System \ Pamięć \
 
 1. ![Zwolnij_miejsce_teraz.png]({{site.baseurl}}/assets/img/Zwolnij_miejsce_teraz.png "Zwolnij_miejsce_teraz.png"){: style="float:right;width:45%;"} Skonfiguruj Czujnik pamięci lub uruchom go teraz <small>(albo: Zmień sposób zwalniania miejsca)</small> \ Zwolnij miejsce teraz \ Oczyść teraz
