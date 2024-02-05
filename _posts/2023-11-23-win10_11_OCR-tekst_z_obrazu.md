@@ -5,7 +5,8 @@ date:   2023-11-23 09:41
 categories: System
 ---
 
-[1. Tekst z obrazu na ekranie]({{site.url}}{{site.baseurl}}{{page.url}}#tekst-z-obrazu-na-ekranie)   [2. Dyktowanie tekstu]({{site.url}}{{site.baseurl}}{{page.url}}#dyktowanie-tekstu)
+  [1. Tekst z obrazu na ekranie](#tekst-z-obrazu-na-ekranie)
+  [2. Dyktowanie tekstu](#dyktowanie-tekstu)
 
 
 ## Tekst z obrazu na ekranie
@@ -22,7 +23,7 @@ Jest jeszcze szybszy sposób na takie kopiowanie tekstu. **Działa w Windows 10 
 * **Wymaga zainstalowania  Microsoft PowerToys**: <https://aka.ms/installpowertoys> - zwykle należy wybrać `...EXE` obok "Per user - x64"
 
 ![PowerToys-Ekstraktor_tekstu.png]({{site.baseurl}}/assets/img/PowerToys-Ekstraktor_tekstu.png "PowerToys - Ustawienia - Ekstraktor tekstu"){: style="float:right;width:58%;"}
-Microsoft PowerToys to kolekcja przydatnych narzędzi, m.in. zmniejszanie rozmiaru wielu zdjęć, zaawansowana zmiana nazw wielu plików, a także moduł "Ekstraktor tekstu"
+Microsoft PowerToys to kolekcja przydatnych narzędzi, m.in. zmniejszanie rozmiaru wielu zdjęć, zaawansowana zmiana nazw wielu plików, a także moduł "Ekstraktor tekstu". Po zainstalowaniu **w ustawieniach** warto wyłączyć "Zawsze na wierzchu" i "Awake", a **należy włączyć "Ekstraktor tekstu"** (trzeba przewinąć okno na dół).
 
 Sposób użycia:
 1. Uruchamiamy program, do którego będziemy kopiowali tekst, np. MS Word, Notatnik. itp.
@@ -31,7 +32,7 @@ Sposób użycia:
 4. Po puszczeniu przycisku myszy tekst jest w tle kopiowany do schowka. Wklejamy go w aplikacji docelowej np. MS Word:  `[ Ctrl + V ]`
 
 <small>Przed skopiowaniem tekstu można jeszcze wybrać opcję "Formatuj wynik jako tabelę (T)". Domyślnie jest wybrane formatowanie jako zwykły tekst (S):</small>  
-![Win_T_opcje.png]({{site.baseurl}}/assets/img/Win_T_opcje.png "PowerToys-Ekstraktor_tekstu - opcje"){: style="width:420px;"}
+![Win_T_opcje.png]({{site.baseurl}}/assets/img/Win_T_opcje.png "PowerToys-Ekstraktor_tekstu - opcje"){: style="width:440px;"}
 
 Obraz z tekstem może być przekrzywiony. OCR radzi sobie też ze starannym pismem odręcznym.
 
