@@ -5,8 +5,8 @@ date:   2023-11-23 09:41
 categories: System
 ---
 
-  [1. Tekst z obrazu na ekranie](#tekst-z-obrazu-na-ekranie)
-  [2. Dyktowanie tekstu](#dyktowanie-tekstu)
+  [1. Tekst z obrazu na ekranie]({{site.url}}{{site.baseurl}}{{page.url}}#tekst-z-obrazu-na-ekranie)
+  [2. Dyktowanie tekstu]({{site.url}}{{site.baseurl}}{{page.url}}#dyktowanie-tekstu)
 
 
 ## Tekst z obrazu na ekranie
