@@ -33,6 +33,8 @@ Zauważ: `C1`, przy zaznaczonej kolumnie `B`:
 
 przykład 2: [**Pilne_terminy_2.xlsx**]({{site.baseurl}}/assets/files/Pilne_terminy_2.xlsx)
 
+<small>Arkusz działa także w aplikacji Arkusz kalkulacyjny Google. Domyślnie obejmuje zakres B1:B1000 - jeśli potrzeba więcej wierszy to zapewne trzeba sprawdzić zakres.  
+Działa też w LibreOffice Calc - zakres B1:B1048576 (czyli cała kolumna).</small>
 
 - - - -
 |
