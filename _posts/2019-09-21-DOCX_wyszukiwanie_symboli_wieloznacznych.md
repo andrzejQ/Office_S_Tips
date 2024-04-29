@@ -47,7 +47,7 @@ Niektórzy nie preferują pozostawiania pojedynczych liter np. **a**, **w**, **i
 
 W trybie symboli wieloznacznych - pole "Znaj<u>d</u>ź": `<([awizou]) <`  (tu na końcu jest spacja i "<" oznaczający początek wyrazu), pole "Zam<u>i</u>eń na": `\1^s`. Na koniec [**Zam<u>i</u>eń wszystko**].
 
-Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć klikając przycisk [**¶**] w menu (wstążce) Worda (tu ![spacja_nierozdzielajaca.png]({{site.baseurl}}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){: style="width:31%;"}).
+Różnicę pomiędzy spacją a spacją nierozdzielającą można podejrzeć klikając przycisk [**¶**] w menu (wstążce) Worda <small>=[Ctrl+Shift+8]</small> (tu ![spacja_nierozdzielajaca.png]({{site.baseurl}}/assets/img/spacja_nierozdzielajaca.png "spacja_nierozdzielajaca.png"){: style="width:31%;"}).
 
 Uwagi
 1. Zauważ, że przycisk [**Specjalne ^**] po przejściu do pola "Zam<u>i</u>eń na" zmienia listę dostępnych symboli. Również w trybie wyłączonych symboli wieloznacznych lista symboli jest całkiem inna - warto zobaczyć.
