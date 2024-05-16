@@ -27,6 +27,7 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 * Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
 * Tworzy dysk ratunkowy z dołączonymi sterownikami (co najmniej warto sobie zrobić plik ISO na zewnętrznym dysku, żeby się było jak ratować, gdy komputer nie startuje)
 * Chyba nie ma wersji językowej polskiej.
+* Co jakiś czas warto wykonać "Active Full Backup", względem którego będą wykonywane kolejne kopie przyrostowe. <small>"Standalone Full Backup" to pełna kopia zapasowa, która nie ma związku z łańcuchem kopii przyrostowych. Można ją zapamiętać w osobnym miejscu.</small>
 
 * [BitLocker Encrypted Volumes Support](https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html?ver=40)
 
