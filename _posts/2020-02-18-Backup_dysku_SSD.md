@@ -169,7 +169,7 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 `/TEE`   - komunikaty zarówno na konsoli jak i w pliku Log.
 `/XO`    - eXclude Older - jeśli plik docelowy istnieje i ma tę samą datę lub nowszą niż źródło - nie nadpisuj  
 `/XJ`    - pomijaj dowiązania symboliczne (opcja domyślna - można nie podawać)  
-`/XD`    - pomijaj foldery wymienione na liście  
+`/XD`    - pomijaj foldery wymienione na liście (UWAGA: pełne ścieżki, ewentualnie względem źródłowego, [ale tylko 1 poziom](https://superuser.com/questions/690839/robocopy-xd-wont-work-with-relative-paths))  
 `/NFL`   - No File List - w logu nie pokazuj nazw plików  
 `/NDL`   - No Directory List - w logu nie pokazuj nazw folderów  
 
