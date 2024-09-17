@@ -41,14 +41,16 @@ Zob. też. skrypt `1.cmd` na moim blogu:
 
 ![PDF_z_podpisem.png]({{site.baseurl}}/assets/img/PDF_z_podpisem.png "PDF_z_podpisem.png"){: style="float:right;width:40%;"}
 
-### Podpisy w PDF i DOCX 
+### Podpisy w ![PDF_32.png]({{site.baseurl}}/assets/img/PDF_32.png "PDF_32.png") PDF i DOCX 
 
 Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania. Wbudowane opcje podpisywania dokumentów są dostępne m.in. w: 
 
-1. Adobe Reader DC:  
+
+1.  Adobe Reader DC:  
+![PDF_24.png]({{site.baseurl}}/assets/img/PDF_24.png "PDF_24.png"){: style="float:left; margin-right: 6px;"}
 Narzędzia \ 
 ![AdobeR-certyfikaty.png]({{site.baseurl}}/assets/img/AdobeR-certyfikaty.png "AdobeR-certyfikaty.png"){: style="width:27px;"}
-Certyfikaty \ Podpisz cyfrowo.  
+**Certyfikaty** \ Podpisz cyfrowo.  
 Narzędzie: 
 ![AdobeR-wypelnij_podpisz.png]({{site.baseurl}}/assets/img/AdobeR-wypelnij_podpisz.png "AdobeR-wypelnij_podpisz.png"){: style="width:18px;"}
 "Wypełnij i podpisz" wbrew nazwie, nie służy do wstawiania certyfikatów. Ma natomiast świetną funkcję dopisywania własnych tekstów w dodatkowej warstwie PDF oraz do **wstawiania kopii swojego podpisu odręcznego** - co warto stosować przed wstawieniem cyfrowego certyfikatu, bo osoby nie obeznane z tematyką podpisów cyfrowych mogą uznawać tak wypełniony dokument za podpisany.
