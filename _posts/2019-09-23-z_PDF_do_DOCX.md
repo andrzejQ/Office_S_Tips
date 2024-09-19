@@ -11,7 +11,7 @@ Rysunki wektorowe i inne fragmenty PDF można skopiować jako obrazy do Worda w 
 * Ten opis skupia się głównie na kopiowaniu rysunków wektorowych z PDF do obrazów rastrowych w DOCX bardzo wysokiej jakości. Równocześnie udaje się uzyskać stosunkowo niewielki rozmiar pliku DOCX.
 * Zakładam, że rysunek wektorowy zawiera różnokolorowe linie i figury, a liczba różnych kolorów jest niewielka. Sposób ten może też dotyczyć tekstu, który skopiowany jako obraz można podłożyć pod tekstem w DOCX i nawet coś pisać/rysować ponad nim.
 
-Plik PDF otwieramy w **Adobe Reader DC** i korzystamy z narzędzia   **Edycja** \ ![AdobeR-wykonaj_zdjecie.png]({{site.baseurl}}/assets/img/AdobeR-wykonaj_zdjecie.png "AdobeR-wykonaj_zdjecie.png"){: style="width:30px;"} **W<u>y</u>konaj zdjęcie**. Najpierw jednak należy odpowiednio skonfigurować jakość zdjęcia:
+Plik PDF otwieramy w **Adobe Acrobat Reader** i korzystamy z narzędzia   **Edycja** \ ![AdobeR-wykonaj_zdjecie.png]({{site.baseurl}}/assets/img/AdobeR-wykonaj_zdjecie.png "AdobeR-wykonaj_zdjecie.png"){: style="width:30px;"} **W<u>y</u>konaj zdjęcie**. Najpierw jednak należy odpowiednio skonfigurować jakość zdjęcia:
 
 ![AdobeR-Preferencje.png]({{site.baseurl}}/assets/img/AdobeR-Preferencje.png "AdobeR-Preferencje.png"){: style="float:right;width:55%;"}
 Menu: **Edycja** \ **Preferencje** \ **Ogólnie** \
@@ -37,7 +37,7 @@ Uwaga:
 
 - - - - -
 
-<small> Gdy już jesteśmy przy konfiguracji Adobe Reader DC to warto trwale odchudzić panel z narzędziami z prawej strony, który niepotrzebnie zajmuje obszar okna programu - Menu: **Dokumenty** \ [x] **Zapamiętaj bieżący stan panelu narzędzi**</small>
+<small> Gdy już jesteśmy przy konfiguracji Adobe Acrobat Reader to warto trwale odchudzić panel z narzędziami z prawej strony, który niepotrzebnie zajmuje obszar okna programu - Menu: **Dokumenty** \ [x] **Zapamiętaj bieżący stan panelu narzędzi**</small>
 
 
 <!-- {% unless jekyll.environment %} -->

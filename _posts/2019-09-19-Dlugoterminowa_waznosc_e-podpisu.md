@@ -13,7 +13,7 @@ Podpis elektroniczny lub pieczęć elektroniczna weryfikowane za pomocą certyfi
 Podczas podpisywania należy wybrać podpis ze znacznikiem czasu. To pozwala ustalić dokładną datę złożenia podpisu elektronicznego ("datę pewną" w rozumieniu przepisów kodeksu cywilnego) i weryfikację, że podpis został złożony w okresie ważności certyfikatu. Jeśli jest przy tym dostęna opcja LTV to warto ją wybrać.
 
 ![PDF_z_podpisem.png]({{site.baseurl}}/assets/img/PDF_z_podpisem.png "PDF_z_podpisem.png"){: style="float:right;width:44%;"}
-Ale listę certyfikatów można też dopisać później do dokumentu, np. w Adobe Reader DC do dokumentu PDF z podpisem **PAdES** w wariancie **T** (znacznik czasu).
+Ale listę certyfikatów można też dopisać później do dokumentu, np. w Adobe Acrobat Reader do dokumentu PDF z podpisem **PAdES** w wariancie **T** (znacznik czasu).
 
 Po otwarciu dokumentu PDF z e-podpisem należy rozwinąć szczegóły podpisu. 
 Zobaczymy informację, że podpis nie obsługuje LTV i wygaśnie po wskazanym czasie. Należy kliknąć prawym klawiszem myszy na `Wersja 1: podpisane przez...` wybrać `Dodaj informacje weryfikacji` i zapisać nową wersję pliku PDF.  

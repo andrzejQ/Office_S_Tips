@@ -46,7 +46,7 @@ Zob. też. skrypt `1.cmd` na moim blogu:
 Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania. Wbudowane opcje podpisywania dokumentów są dostępne m.in. w: 
 
 
-1.  Adobe Reader DC:  
+1.  Adobe Acrobat Reader:  
 ![PDF_24.png]({{site.baseurl}}/assets/img/PDF_24.png "PDF_24.png"){: style="float:left; margin-right: 6px;"}
 Narzędzia \ 
 ![AdobeR-certyfikaty.png]({{site.baseurl}}/assets/img/AdobeR-certyfikaty.png "AdobeR-certyfikaty.png"){: style="width:27px;"}
