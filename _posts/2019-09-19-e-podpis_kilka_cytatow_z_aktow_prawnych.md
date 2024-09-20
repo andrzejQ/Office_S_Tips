@@ -7,7 +7,7 @@ categories: PKI
 
 ### Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej
 
-**[Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)](http://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20160001579 "Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)")**:  
+**[Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20160001579 "Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)")**:  
 
 **Art.40**.1. Kto składa kwalifikowany podpis elektroniczny lub zaawansowany podpis elektroniczny z wykorzystaniem danych do składania podpisu elektronicznego przyporządkowanych do innej osoby, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 3
 
@@ -25,7 +25,7 @@ categories: PKI
 
 ### UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania
 
-Powyższa ustawa odnosi się też do **[rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania](https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32014R0910 "rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania ")**, w którym czytamy m.in.:
+Powyższa ustawa odnosi się też do **[rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania](https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX:02014R0910-20240520 "rozporządzenia UE NR 910/2014 z 23.07.2014 w sprawie identyfikacji elektronicznej i usług zaufania ")**, w którym czytamy m.in.:
 
 **Art. 3** - Definicje
 
