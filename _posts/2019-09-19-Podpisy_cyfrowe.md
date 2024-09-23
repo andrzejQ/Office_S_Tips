@@ -61,6 +61,7 @@ Wstawianie \ Wiersz podpisu, potem 2x klikając na ten obiekt - Podpisywanie
 ----
 
 Zob. też
+* [Podpis elektroniczny - kilka cytatów z aktów prawnych]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-e-podpis_kilka_cytatow_z_aktow_prawnych %})
 * [Weryfikacja podpisu cyfrowego]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %})
 * [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
 * [Długoterminowe potwierdzanie ważności e-podpisu]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Dlugoterminowa_waznosc_e-podpisu %})

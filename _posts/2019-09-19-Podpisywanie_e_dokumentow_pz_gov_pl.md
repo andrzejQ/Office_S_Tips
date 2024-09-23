@@ -23,6 +23,16 @@ Powód: Opatrzono pieczęcią ministra właściwego do spraw informatyzacji w im
 
 **Poprawność e-podpisu** można zweryfikować w darmowej aplikacji Adobe Acrobat Reader. Są też inne narzędzia. Również [można skorzystać z przeglądarki internetowej]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Weryfikacja_podpisanego_PDF %}).
 
+<small>
+Podpis zaufany jest uregulowany w **ustawie o informatyzacji** (Dz.U.2024.307), która dotyczy ściśle określonych podmiotów publicznych  
+(m.in. organów administracji publicznej, sądów, prokuratury, jednostek samorządu terytorialnego, jednostek budżetowych i funduszy celowych, ZUS, KRUS, NFZ, SPZOZ, uczelni, federacji podmiotów systemu szkolnictwa wyższego i nauki, instytutów badawczych, instytutów działających w ramach Sieci Badawczej Łukasiewicz, jednostek organizacyjnych tworzonych przez Polską Akademię Nauk, Polskiej Komisji Akredytacyjnej, Rady Doskonałości Naukowej - art. 2 ust. 1)  
+.  
+Szersze zastosowanie ma **podpis osobisty** (Dz.U.2022.671 - ustawa o dowodach osobistych), który zgodnie z prawem ma skutek prawny **równoważny podpisowi własnoręcznemu** w stosunku do podmiotu publicznego. Dodatkowo może być wykorzystany w innych relacjach, np. cywilnoprawnych z kontrahentem w przypadku obopólnej zgody stron (art. 12d). Podpis osobisty występuje w kpa, w prawie podatkowym, w informatyzacji i doręczeniach elektronicznych, w sprawozdaniach finansowych spółek, we wnioskach do KRS i w skargach do WSA/NSA.  
+.  
+Kodeks postępowania administracyjnego (Dz.U.2024.572 t.j.) przywołuje te podpisy w art.  14.  (Zasada pisemności postępowania...) §  1a.: 
+Sprawy należy prowadzić i załatwiać na piśmie utrwalonym w postaci papierowej lub elektronicznej. Pisma utrwalone w postaci papierowej opatruje się podpisem własnoręcznym. Pisma utrwalone w postaci elektronicznej opatruje się kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym lub kwalifikowaną pieczęcią elektroniczną organu administracji publicznej ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią.
+</small>
+
 * Zob. też [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
 
 <style> code {font-size: smaller;} </style>

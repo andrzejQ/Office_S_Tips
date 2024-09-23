@@ -5,6 +5,41 @@ date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
+### Kodeks postępowania administracyjnego (Dz.U.2024.572) z dnia 15.04.2024
+
+Zasada pisemności postępowania:
+
+Art.  14. §  1a.  
+Sprawy należy **prowadzić i załatwiać na piśmie** utrwalonym **w postaci papierowej lub elektronicznej**. Pisma utrwalone w postaci papierowej opatruje się podpisem własnoręcznym. Pisma utrwalone w postaci elektronicznej opatruje się **kwalifikowanym podpisem elektronicznym**, **podpisem zaufanym** albo **podpisem osobistym** lub kwalifikowaną pieczęcią elektroniczną organu administracji publicznej ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią.
+
+1.**Podpis osobisty**
+
+**Podpis osobisty** to rodzaj zaawansowanego podpisu cyfrowego, którego certyfikat jest zapisany **w warstwie elektronicznej dowodu osobistego**.
+
+Art. 12d ustawy o dowodach osobistych (Dz.U.2022.671)
+1. Opatrzenie danych podpisem osobistym wywołuje w stosunku do podmiotu publicznego skutek prawny równoważny podpisowi własnoręcznemu.
+2. Skutek, o którym mowa w ust. 1, wywołuje opatrzenie danych podpisem osobistym w stosunku do podmiotu innego niż podmiot publiczny, jeżeli obie strony wyrażą na to zgodę.
+
+Czyli w relacjach, np. cywilnoprawnych z kontrahentem potrzebne jest zapisanie obopólnej zgody stron na użycie podpisu osobistego. W stosunku do podmiotu publicznego Unii Europejskiej mamy skutek prawny jak dla podpisu kwalifikowanego. Podpis osobisty jest przywoływany w kpa, w prawie podatkowym, w informatyzacji i doręczeniach elektronicznych, w sprawozdaniach finansowych spółek, we wnioskach do KRS i w skargach do WSA/NSA.
+
+Podpisywanie dokumentów może odbywać się za pomocą telefonu komórkowego, albo dodatkowego czytnika NFC dołączonego do komputera. Po zakupie takiego czytnika posługiwanie się podpisem osobistym na komputerze przebiega tak samo jak podpisem kwalifikowanym.
+
+Od 22.10.2022 r. można korzystać z podpisu osobistego w programie Płatnik <https://www.zus.pl/firmy/program-platnik/poradnik/co-nowego-w-programie-platnik>
+
+Dowody osobiste z funkcją podpisu osobistego są wydawane od 04.03.2019. Można też wystąpić o bezpłatną wymianę dowodu na nowy, uzasadniając to potrzebą używania podpisu osobistego. Okres ważności podpisu to 10 lat.
+
+* <https://www.biznes.gov.pl/pl/portal/0076>
+
+
+2.**Podpis zaufany**
+
+Podpis zaufany jest uregulowany w **ustawie o informatyzacji** (Dz.U.2024.307), która dotyczy ściśle określonych podmiotów publicznych, m.in. organów administracji publicznej, sądów, prokuratury, jednostek samorządu terytorialnego, jednostek budżetowych i funduszy celowych, ZUS, KRUS, NFZ, SPZOZ, uczelni, federacji podmiotów systemu szkolnictwa wyższego i nauki, instytutów badawczych, instytutów działających w ramach Sieci Badawczej Łukasiewicz, jednostek organizacyjnych tworzonych przez Polską Akademię Nauk, Polskiej Komisji Akredytacyjnej, Rady Doskonałości Naukowej - art. 2 ust. 1. Czyli ma szerokie zastosowanie w sprawach administracyjnych. Jest on dostępny dla użytkowników profilu zaufanego, który można zarejestrować m.in. poprzez bankowość elektroniczną.
+
+Podpisem zaufanym można podpisywać pliki, np. PDF, które potem mogą być przekazywane dowolnymi kanałami do odbiorców.
+
+--------
+.
+
 ### Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej
 
 **[Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20160001579 "Ustawa z 05.09.2016 o usługach zaufania oraz identyfikacji elektronicznej (Dz.U. 2016 poz. 1579)")**:  
