@@ -8,8 +8,10 @@ categories: PKI
 Za pomocą profilu zaufanego pz.gov.pl można można m.in. podpisywać cyfrowo swoje dokumenty, pobrać je i przesyłać/załączać do swojej e-korespondencji.
 
 
-* <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany>  
-	zob. instrukcję, a równocześnie przykład podpisanego dokumentu PDF:  
+* <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany>
+
+**Zobacz krótką instrukcję**, a równocześnie przykład podpisanego dokumentu PDF:
+
 * [PAdES.Podpisywanie_PDF_podpisem_zaufanym-instrukcja.pdf]({{site.baseurl}}/assets/files/PAdES.Podpisywanie_PDF_podpisem_zaufanym.pdf).  
 <small>Uwaga - w p. 6 chodzi o zatrzymanie się przed opisanym w p. 7 [PODPISZ PROFILEM ZAUFANYM] - już po kliknięciu [PODPSZ] w p.4. To daje możliwość umieszczenia stempla podpisu na dowolnej stronie w dowolnym miejscu.</small>
 
