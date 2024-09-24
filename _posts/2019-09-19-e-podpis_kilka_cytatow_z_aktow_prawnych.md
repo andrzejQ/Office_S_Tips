@@ -1,22 +1,28 @@
 ---
 layout: post
-title:  "Podpis elektroniczny - kilka cytatów z aktów prawnych"
+title:  "Podpis elektroniczny - kilka cytatów z aktów prawnych"
 date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
-### Kodeks postępowania administracyjnego (Dz.U.2024.572) z dnia 15.04.2024
+_+ 24.09.2024_{: .date}
+
+<style>.date{font-size: smaller;color:#828282;}</style>
+
+### Kodeks postępowania administracyjnego (Dz.U.2024.572, 15.04.2024)
 
 Zasada pisemności postępowania:
 
 Art.  14. §  1a.  
-Sprawy należy **prowadzić i załatwiać na piśmie** utrwalonym **w postaci papierowej lub elektronicznej**. Pisma utrwalone w postaci papierowej opatruje się podpisem własnoręcznym. Pisma utrwalone w postaci elektronicznej opatruje się **kwalifikowanym podpisem elektronicznym**, **podpisem zaufanym** albo **podpisem osobistym** lub kwalifikowaną pieczęcią elektroniczną organu administracji publicznej ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią.
+Sprawy należy **prowadzić i załatwiać na piśmie** utrwalonym **w postaci papierowej lub elektronicznej**.  
+Pisma utrwalone w postaci papierowej opatruje się podpisem własnoręcznym.  
+Pisma utrwalone w postaci elektronicznej opatruje się **kwalifikowanym podpisem elektronicznym**, **podpisem zaufanym** albo **podpisem osobistym** lub kwalifikowaną pieczęcią elektroniczną organu administracji publicznej ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią.
 
-1.**Podpis osobisty**
+### Ustawa o dowodach osobistych (Dz.U.2022.671)
 
 **Podpis osobisty** to rodzaj zaawansowanego podpisu cyfrowego, którego certyfikat jest zapisany **w warstwie elektronicznej dowodu osobistego**.
 
-Art. 12d ustawy o dowodach osobistych (Dz.U.2022.671)
+Art. 12d
 1. Opatrzenie danych podpisem osobistym wywołuje w stosunku do podmiotu publicznego skutek prawny równoważny podpisowi własnoręcznemu.
 2. Skutek, o którym mowa w ust. 1, wywołuje opatrzenie danych podpisem osobistym w stosunku do podmiotu innego niż podmiot publiczny, jeżeli obie strony wyrażą na to zgodę.
 
@@ -31,9 +37,9 @@ Dowody osobiste z funkcją podpisu osobistego są wydawane od 04.03.2019. Można
 * <https://www.biznes.gov.pl/pl/portal/0076>
 
 
-2.**Podpis zaufany**
+### Ustawia o informatyzacji ... (Dz.U.2024.307)
 
-Podpis zaufany jest uregulowany w **ustawie o informatyzacji** (Dz.U.2024.307), która dotyczy ściśle określonych podmiotów publicznych, m.in. organów administracji publicznej, sądów, prokuratury, jednostek samorządu terytorialnego, jednostek budżetowych i funduszy celowych, ZUS, KRUS, NFZ, SPZOZ, uczelni, federacji podmiotów systemu szkolnictwa wyższego i nauki, instytutów badawczych, instytutów działających w ramach Sieci Badawczej Łukasiewicz, jednostek organizacyjnych tworzonych przez Polską Akademię Nauk, Polskiej Komisji Akredytacyjnej, Rady Doskonałości Naukowej - art. 2 ust. 1. Czyli ma szerokie zastosowanie w sprawach administracyjnych. Jest on dostępny dla użytkowników profilu zaufanego, który można zarejestrować m.in. poprzez bankowość elektroniczną.
+**Podpis zaufany** jest uregulowany w ustawie o informatyzacji, która dotyczy ściśle określonych podmiotów publicznych, m.in. organów administracji publicznej, sądów, prokuratury, jednostek samorządu terytorialnego, jednostek budżetowych i funduszy celowych, ZUS, KRUS, NFZ, SPZOZ, uczelni, federacji podmiotów systemu szkolnictwa wyższego i nauki, instytutów badawczych, instytutów działających w ramach Sieci Badawczej Łukasiewicz, jednostek organizacyjnych tworzonych przez Polską Akademię Nauk, Polskiej Komisji Akredytacyjnej, Rady Doskonałości Naukowej - art. 2 ust. 1. Czyli ma szerokie zastosowanie w sprawach administracyjnych. Jest on dostępny dla użytkowników profilu zaufanego, który można zarejestrować m.in. poprzez bankowość elektroniczną.
 
 Podpisem zaufanym można podpisywać pliki, np. PDF, które potem mogą być przekazywane dowolnymi kanałami do odbiorców.
 
@@ -118,6 +124,7 @@ d) jest powiązana z danymi, do których się odnosi, w taki sposób, że każda
 
 Zob. też
 * [Długoterminowe potwierdzanie ważności e-podpisu]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Dlugoterminowa_waznosc_e-podpisu %})
+* [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
 
 ----
 

@@ -5,8 +5,10 @@ date:   2019-09-19 10:21:59 +0100
 categories: PKI
 ---
 
+_+ 24.09.2024_{: .date}  
 Kilka informacji o podpisie cyfrowym i dokumencie elektronicznym.
 
+<style>.date{font-size: smaller;color:#828282;}</style>
 
 1. **Podpis cyfrowy** związany jest kryptografią. Przez jakąś zaufaną instytucję, która potwierdza tożsamość konkretnego użytkownika generowana jest para kluczy (unikalnych ciągów bitów/cyfr): **klucz prywatny** - chroniony przez użytkownika (niedostępny dla nikogo innego, nawet dla instytucji generującej go) i **klucz publiczny** pasujący do klucza prywatnego. Na podstawie klucza publicznego "nie da się" odgadnąć klucza prywatnego - odgadniecie metodą prób i błędów powinno zajmować superkomputerowi setki lat.
 1. Klucz prywatny może służyć do stworzenia **podpisu** dla danych cyfrowych w postaci "odcisku palca", tj. jawny algorytm korzysta z klucza prywatnego i danych tworząc dość krótki ciąg bitów, który potem daje się zweryfikować z pomocą klucza publicznego, że dane cyfrowe nie zostały zmienione od momentu "podpisania".  
@@ -14,21 +16,23 @@ Kilka informacji o podpisie cyfrowym i dokumencie elektronicznym.
 1. Z pomocą klucza prywatnego użytkownika i klucza publicznego adresata danych cyfrowych można podpisać i **zaszyfrować** dane tak, że odbiorca odszyfruje je z pomocą swojego klucza prywatnego i klucza publicznego nadawcy. Jest to odpowiednik korespondencji typu list polecony. 
 1. **Podpis kwalifikowany** to elektroniczny podpis zaawansowany, który jest składany za pomocą kwalifikowanego urządzenia i który opiera się na kwalifikowanym certyfikacie podpisu elektronicznego. Klucz prywatny tego certyfikatu jest tworzony automatycznie w karcie z procesorem (tzw. karcie inteligentnej) i nie jest dostępny na zewnątrz niej. Nie można go skopiować, wyeksportować, nigdy nie opuszcza karty procesorowej. Kryptografia realizowana jest z użyciem procesora kraty.  
 Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierowym. Procedura wydawania tego podpisu ma mocne podstawy prawne i wymaga udziału zaufanej instytucji potwierdzającej tożsamość użytkownika. Dokumenty tak podpisane można wysyłać jako załącznik e-maila. Roczny koszt podpisu jest równy kosztowi kilku wysyłek kurierskich. 
-1. **Podpis zaawansowany** to podpis, gdzie przestrzegane są procedury zapewniające wiarygodny związek użytkownika z jego kluczem publicznym i prywatnym. Podpis taki może być używany do szyfrowania e-maili. Podpis może być przechowywany na karcie pracowniczej  
-	<http://orlowski.info/blog-arts/75-karta-z-chipem-dla-urzednika-jest-zalecana> ».  
-	Podpis zaawansowany występuje pod nazwą **podpis osobisty** w nowym  
+1. **Podpis zaawansowany** to podpis, gdzie przestrzegane są procedury zapewniające wiarygodny związek użytkownika z jego kluczem publicznym i prywatnym. 
+1. Ważnym przypadkiem podpisu zaawansowanego jest **podpis osobisty** w nowym  
 	[**e-dowodzie osobistym** z warstwą elektroniczną »](https://obywatel.gov.pl/dokumenty-i-dane-osobowe/dowod-osobisty-informacja-o-dokumencie)  
-	"W kontakcie z urzędem (podmiotem publicznym) jest tak samo ważny jak podpis własnoręczny. Możesz go też używać do załatwiania innych spraw - z firmami lub osobami, jeśli zgodzą się na to obie strony" <small>- np. zgodzą się na dodanie klauzuli: "strony zgodnie ustalają, iż do zachowania formy pisemnej w rozumieniu niniejszej umowy wystarczy opatrzenie danych podpisem osobistym"</small>. Zob. też: 
+	"W kontakcie z podmiotem publicznym UE jest tak samo ważny jak podpis własnoręczny. Można go też używać do załatwiania innych spraw - z firmami lub osobami, jeśli zgodzą się na to obie strony" <small>- np. zgodzą się na dodanie klauzuli: "strony zgodnie ustalają, iż do zachowania formy pisemnej w rozumieniu niniejszej umowy wystarczy opatrzenie danych podpisem osobistym"</small>. Zob. też: 
 	* [Kwalifikowany podpis elektroniczny, podpis osobisty, podpis zaufany… - skutki i moc prawna »]( https://czasopismo.legeartis.org/2022/03/kwalifikowany-podpis-elektroniczny-podpis-osobisty-zaufany-moc-prawna-skutki-formalne-roznice/)
-1. Przypadkiem podpisu zaawansowanego jest **Profil Zaufany** powiązany z ePUAP  
+1. Przypadkiem podpisu zaawansowanego jest także **podpis zaufany** powiązany z profilem zaufanym ePUAP
 	<https://epuap.gov.pl/> Obecnie jest on wydzielony jako osobny system  
 	* <https://pz.gov.pl/> ».
 	
-	Każdy obywatel może bezpłatnie otrzymać taki **podpis zaufany**, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z [pośrednictwa swojego banku](https://pz.gov.pl/dt/registerByXidp) w celu potwierdzenia profilu zaufanego. Można to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśli taki posiadamy. Profil zaufany ma umocowanie w Kodeksie Postępowania Administracyjnego.
+	Każdy obywatel może bezpłatnie otrzymać taki podpis zaufany, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z [pośrednictwa swojego banku](https://pz.gov.pl/dt/registerByXidp) w celu potwierdzenia profilu zaufanego. Można to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśli taki posiadamy. Podpis zaufany ma zastosowanie w stosunku do polskiego podmiotu publicznego.
 	
-	Za pomocą profilu zaufanego pz.gov.pl można można m.in. podpisywać cyfrowo swoje dokumenty, pobrać je i przesyłać/załączać do swojej e-korespondencji. Zobacz:
+	Za pomocą profilu zaufanego [pz.gov.pl](https://pz.gov.pl/) można można m.in. podpisywać cyfrowo swoje dokumenty, pobrać je i przesyłać/załączać do swojej e-korespondencji. Zobacz:
 	* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
 
+### Zakres stosowania e-podpisu
+
+W polityce świadczenia usługi wskazanej w certyfikacie jest określony zakres jego stosowania. Np. podpis kwalifikowany i podpis osobisty służą do wyrażania woli i wiedzy na temat podpisywanych treści plików. Nie mogą być one wykorzystywane np. do szyfrowania e-maili. Do tego potrzebny jest inny certyfikat z właściwym zakresem stosowania.
 
 ### Format e-podpisu
 
