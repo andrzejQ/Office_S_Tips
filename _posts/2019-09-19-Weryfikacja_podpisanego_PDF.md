@@ -55,13 +55,15 @@ Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów 
 
 #### Weryfikacja podpisu osobistego
 
-* Weryfikacja na komputerze:
+* **Weryfikacja na komputerze**:
 
-Obsługę podpisów cyfrowych zapewnia Polska Wytwórnia Papierów Wartościowych S.A. (PWPW). Do podpisywania i weryfikacji podpisu osobistego można używać aplikacji "E-dowód podpis elektroniczny" - zob. <https://www.gov.pl/web/e-dowod> - Pliki do pobrania.
+Obsługę podpisów cyfrowych zapewnia Polska Wytwórnia Papierów Wartościowych S.A. (PWPW). Do podpisywania i weryfikacji podpisu osobistego można używać aplikacji "**E-dowód podpis elektroniczny**" - zob. <https://www.gov.pl/web/e-dowod> - Pliki do pobrania.
 
-Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie: Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL! 
+Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie: <span style="color: brown;">Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL!</span> 
+{: style="color: darkblue;"}
 
 Na moje zapytanie w tej sprawie otrzymałem odpowiedź z PWPW ServiceDesk, która nie odniosła się do treści ostrzeżenia, tylko do weryfikacji w Adobe Reader:
+{: style="color: darkblue;"}
 
 "  
 Każdy podpis złożony przy użyciu e-dowodu można zweryfikować w narzędziu e-dowód Podpis elektroniczny możliwym do pobrania z <https://www.gov.pl/web/e-dowod>.
