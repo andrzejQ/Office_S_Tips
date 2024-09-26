@@ -51,14 +51,17 @@ Zob. też. skrypt `1.cmd` na moim blogu:
 Można składać podpisy elektroniczne bez dodatkowej aplikacji do podpisywania. Wbudowane opcje podpisywania dokumentów są dostępne m.in. w: 
 
 
-1.  Adobe Acrobat Reader:  
+1. Adobe Acrobat Reader:  
 ![PDF_24.png]({{site.baseurl}}/assets/img/PDF_24.png "PDF_24.png"){: style="float:left; margin-right: 6px;"}
 Narzędzia \ 
 ![AdobeR-certyfikaty.png]({{site.baseurl}}/assets/img/AdobeR-certyfikaty.png "AdobeR-certyfikaty.png"){: style="width:27px;"}
-**Certyfikaty** \ Podpisz cyfrowo.  
-Narzędzie: 
-![AdobeR-wypelnij_podpisz.png]({{site.baseurl}}/assets/img/AdobeR-wypelnij_podpisz.png "AdobeR-wypelnij_podpisz.png"){: style="width:18px;"}
-"Wypełnij i podpisz" wbrew nazwie, nie służy do wstawiania certyfikatów. Ma natomiast świetną funkcję dopisywania własnych tekstów w dodatkowej warstwie PDF oraz do **wstawiania kopii swojego podpisu odręcznego** - co warto stosować przed wstawieniem cyfrowego certyfikatu, bo osoby nie obeznane z tematyką podpisów cyfrowych mogą uznawać tak wypełniony dokument za podpisany.
+**Certyfikaty** \ Podpisz cyfrowo. 
+    * Narzędzie: 
+    ![AdobeR-wypelnij_podpisz.png]({{site.baseurl}}/assets/img/AdobeR-wypelnij_podpisz.png "AdobeR-wypelnij_podpisz.png"){: style="width:18px;"}
+    "Wypełnij i podpisz" wbrew nazwie, nie służy do wstawiania certyfikatów. Ma natomiast świetną funkcję dopisywania własnych tekstów w dodatkowej warstwie PDF oraz do wstawiania kopii swojego podpisu odręcznego - co można zastosować przed wstawieniem pierwszego certyfikatu cyfrowego. 
+    * Można też dodać kopię odręcznego podpisu/parafki w stemplu certyfikatu, zob.: 
+        * [Adobe \ Preferencje...[Ctrl+K] \ Podpisy \ **konfiguracja stempla cetryfikatu**...]({{site.baseurl}}/assets/img/Adobe-preferencje-konfig-stempla-certyfikatu.png "Adobe-preferencje-konfig-stempla-certyfikatu.png")  
+    .
 2. Microsoft Office:  
 Wstawianie \ Wiersz podpisu, potem 2x klikając na ten obiekt - Podpisywanie
 
