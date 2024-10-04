@@ -13,7 +13,8 @@ Poprawność podpisu można zweryfikować w aplikacji do składania podpisu. W p
 [Microsoft Edge]({{site.url}}{{site.baseurl}}{{page.url}}#microsoft-edge)  *
 [Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) 
 
-<style>.date{font-size: smaller;color:#828282;}</style>
+<style>.smaller{font-size:smaller;} .date{font-size:smaller;color:#828282;} .answ{font-size:smaller;color:DarkSlateBlue;}
+blockquote{font-style: normal;letter-spacing: 0px;}</style>
 
 #### Adobe Acrobat Reader
 
@@ -53,43 +54,59 @@ Wybieramy `[Wyświetl podpisy]` \ `Właściwości` \ `Sprawdź poprawność`
 
 Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów pz.gov.pl czy tych z pieczęcią kwalifikowaną), to jednak można odczytać istotne dane podpisu - kto, kiedy.
 
+------
+.
+
 #### Weryfikacja podpisu osobistego
 
-* **Weryfikacja na komputerze**:
+* **Weryfikacja na komputerze** <small>_(na razie jest drobny problem)_</small>:
 
 Obsługę podpisów cyfrowych zapewnia Polska Wytwórnia Papierów Wartościowych S.A. (PWPW). Do podpisywania i weryfikacji podpisu osobistego można używać aplikacji "**E-dowód podpis elektroniczny**" - zob. <https://www.gov.pl/web/e-dowod> - Pliki do pobrania.
 
-Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie: <span style="color: brown;">Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL!</span> 
-{: style="color: darkblue;"}
+Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie:  
+<span style="color: brown;">Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL!</span> 
 
-Na moje zapytanie w tej sprawie otrzymałem odpowiedź z PWPW ServiceDesk, która nie odniosła się do treści ostrzeżenia, tylko do weryfikacji w Adobe Reader:
-{: style="color: darkblue;"}
 
-"  
-Każdy podpis złożony przy użyciu e-dowodu można zweryfikować w narzędziu e-dowód Podpis elektroniczny możliwym do pobrania z <https://www.gov.pl/web/e-dowod>.
+Na moje kolejne zapytanie w tej sprawie do twórców aplikacji _e-dowód Podpis elektroniczny_:
+{: style="color: MidnightBlue;"}
+> Zastanawiam się, czy jednak nie warto pociągnąć tematu. Skoro można jakoś usprawnić weryfikację w Adobe Reader, to może da się jakoś złagodzić ostrzeżenie w tej aplikacji. Uważam, że jest ono mocno niepokojące i zniechęcające do używania podpisu osobistego.  
+Inna sprawa to adres http://repo.e-dowod.gov.pl/certs/ - czy nie warto przenieść certyfikatów na serwer z certyfikatem?
+{: .smaller}
 
-Status weryfikacji w oprogramowaniu Adobe Acrobat Reader „Tożsamość autora podpisu nie jest znana …” (weryfikacja „na żółto”) wynika z faktu, iż Adobe prowadzi własną listę zaufanych urzędów CA Adobe Approved Trust List (AATL) na której znajdują się certyfikowani przez Adobe wystawcy oraz wystawcy z listy TSL (europejska lista dostawców usług zaufanych).  
+otrzymałem odpowiedź z PWPW ServiceDesk, że to sprawa MSWiA, a nie weryfikacji w aplikacji:
+{: style="color: MidnightBlue;"}
+
+>Szanowny Użytkowniku, 
+dziękujemy za przesłane uwagi, zostały przekazane do Menadżera Produktu.  
+Finalnie tylko CPD MSWiA, jako prawny wystawca certyfikatów, może zawnioskować o zmiany. Dotyczy to również Repozytorium.  
+Ponieważ tematy nie dotyczą wprost działania aplikacji e-dowód Podpis elektroniczny (brak zadań do wykonania dla pomocy technicznej), zgłoszenia zostają rozwiązane.
+{: .answ}
+
+Na moje poprzednie zapytanie otrzymałem odpowiedź z PWPW ServiceDesk, która nie odniosła się do treści ostrzeżenia, tylko do weryfikacji w Adobe Reader:
+{: style="color: MidnightBlue;"}
+
+> Każdy podpis złożony przy użyciu e-dowodu można zweryfikować w narzędziu e-dowód Podpis elektroniczny możliwym do pobrania z <https://www.gov.pl/web/e-dowod>.
+{: .answ}
+> Status weryfikacji w oprogramowaniu Adobe Acrobat Reader „Tożsamość autora podpisu nie jest znana …” (weryfikacja „na żółto”) wynika z faktu, iż Adobe prowadzi własną listę zaufanych urzędów CA Adobe Approved Trust List (AATL) na której znajdują się certyfikowani przez Adobe wystawcy oraz wystawcy z listy TSL (europejska lista dostawców usług zaufanych).  
 Status ten nie oznacza, że złożony podpis jest niepoprawny („weryfikacja na czerwono”), lecz to, że certyfikat którym się posłużono nie jest traktowany jako zaufany w tym oprogramowaniu.
-
-Aby podpis osobisty złożony przy użyciu e-dowodu weryfikował się poprawnie w Adobe Acrobat Reader, wystawca certyfikatów e-dowodu (MSWiA) powinien wystąpić do firmy Adobe o wpisanie na listę AATL urzędu PL.ID Root CA lub notyfikować ten urząd w ramach Unii Europejskiej.  
-Do czasu zakończenia formalnych procedur certyfikacji można samodzielnie dodać CA PLID do listy zaufanych w Adobe Acrobat Reader.  
-W tym celu należy zaimportować certyfikaty CA urzędów: PLID_Root_CA, PLID_Authorization_CA_*, (do pobrania z http://repo.e-dowod.gov.pl/certs/) do magazynu zaufanych certyfikatów w Adobe Acrobat Reader:
-
-menu -> Edycja -> Preferencje -> Podpisy -> Tożsamości i certyfikaty zaufane -> Więcej -> Zaufane certyfikaty.
-
+{: .answ}
+> Aby podpis osobisty złożony przy użyciu e-dowodu weryfikował się poprawnie w Adobe Acrobat Reader, wystawca certyfikatów e-dowodu (MSWiA) powinien wystąpić do firmy Adobe o wpisanie na listę AATL urzędu PL.ID Root CA lub notyfikować ten urząd w ramach Unii Europejskiej.  
+Do czasu zakończenia formalnych procedur certyfikacji można samodzielnie dodać CA PLID do listy zaufanych w Adobe Acrobat Reader. W tym celu należy zaimportować certyfikaty CA urzędów: PLID_Root_CA, PLID_Authorization_CA_*, (do pobrania z http://repo.e-dowod.gov.pl/certs/) do magazynu zaufanych certyfikatów w Adobe Acrobat Reader:  
+   
+menu -> Edycja -> Preferencje -> Podpisy -> Tożsamości i certyfikaty zaufane -> Więcej -> Zaufane certyfikaty.  
+   
 Tutaj należy po kolei zaimportować (Importuj) i zaufać wybranym CA:
 - PLID_Root_CA,
 - PLID_Authorization_CA_20190221,
 - PLID_Authorization_CA_20191207,
-- PLID_Authorization_CA_20201202,
-
-Po wykonaniu powyższego należy zamknąć aplikację, otworzyć na nowo i ponownie zweryfikować pliki.  
-Podpisy złożone przy użyciu e-dowodu powinny być weryfikowane „na zielono”.
-
+- PLID_Authorization_CA_20201202.
+{: .answ}
+> Po wykonaniu powyższego należy zamknąć aplikację, otworzyć na nowo i ponownie zweryfikować pliki.  
+Podpisy złożone przy użyciu e-dowodu powinny być weryfikowane „na zielono”.  
+   
 Pozdrawiamy  
-Zespół eDO  
-"
-
+Zespół eDO
+{: .answ}
 
 
 
