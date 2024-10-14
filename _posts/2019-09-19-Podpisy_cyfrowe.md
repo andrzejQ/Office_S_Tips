@@ -25,7 +25,7 @@ Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierow
 	<https://epuap.gov.pl/> Obecnie jest on wydzielony jako osobny system  
 	* <https://pz.gov.pl/> ».
 	
-	Każdy obywatel może bezpłatnie otrzymać taki podpis zaufany, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z [pośrednictwa swojego banku](https://pz.gov.pl/dt/registerByXidp) w celu potwierdzenia profilu zaufanego. Można to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśli taki posiadamy. Podpis zaufany ma zastosowanie w stosunku do polskiego podmiotu publicznego.
+	Każdy obywatel może bezpłatnie otrzymać taki podpis zaufany, którego klucze są przechowywane na serwerach rządowych. Można skorzystać z [pośrednictwa swojego banku](https://pz.gov.pl/dt/registerByXidp) w celu potwierdzenia profilu zaufanego. Można to też zrobić podczas z wizyty w wybranym urzędzie lub skorzystać z podpisu kwalifikowanego jeśli taki posiadamy. Podpis zaufany ma zastosowanie w stosunku do polskiego podmiotu publicznego i w takim kontekście jest równoważny pod względem skutków prawnych dokumentowi opatrzonemu podpisem własnoręcznym (art. 20ae, Dz.U.2024.307 - Informatyzacja działalności podmiotów realizujących zadania publiczne).
 	
 	Za pomocą profilu zaufanego [pz.gov.pl](https://pz.gov.pl/) można można m.in. podpisywać cyfrowo swoje dokumenty, pobrać je i przesyłać/załączać do swojej e-korespondencji. Zobacz:
 	* [Podpisywanie e-dokumentów za pomocą profilu zaufanego]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisywanie_e_dokumentow_pz_gov_pl %})
