@@ -60,7 +60,10 @@ Narzędzia \
     ![AdobeR-wypelnij_podpisz.png]({{site.baseurl}}/assets/img/AdobeR-wypelnij_podpisz.png "AdobeR-wypelnij_podpisz.png"){: style="width:18px;"}
     "Wypełnij i podpisz" wbrew nazwie, nie służy do wstawiania certyfikatów. Ma natomiast świetną funkcję dopisywania własnych tekstów w dodatkowej warstwie PDF oraz do wstawiania kopii swojego podpisu odręcznego - co można zastosować przed wstawieniem pierwszego certyfikatu cyfrowego. 
     * Można też dodać kopię odręcznego podpisu/parafki w stemplu certyfikatu, zob.: 
-        * [Adobe \ Preferencje...[Ctrl+K] \ Podpisy \ **konfiguracja stempla cetryfikatu**...]({{site.baseurl}}/assets/img/Adobe-preferencje-konfig-stempla-certyfikatu.png "Adobe-preferencje-konfig-stempla-certyfikatu.png")  
+        * [Adobe \ Preferencje...[Ctrl+K] \ Podpisy \ **konfiguracja stempla cetryfikatu**...]({{site.baseurl}}/assets/img/Adobe-preferencje-konfig-stempla-certyfikatu.png "Adobe-preferencje-konfig-stempla-certyfikatu.png")
+    * W pliku PDF może być wstawione "**pole podpisu**". Wystarczy kliknąć w takie pole, aby złożyć podpis w programie Adobe Reader. Zob. przykład na:
+      [Wstawianie pola podpisu w pliku PDF »](https://andrzejq.github.io/El_Prog/programowanie/2024/10/17/Wstawianie-pola-podpisu-w-PDF.html)
+
     .
 2. Microsoft Office:  
 Wstawianie \ Wiersz podpisu, potem 2x klikając na ten obiekt - Podpisywanie
