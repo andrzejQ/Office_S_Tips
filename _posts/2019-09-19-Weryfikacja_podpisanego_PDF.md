@@ -59,15 +59,50 @@ Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów 
 
 #### Weryfikacja podpisu osobistego
 
-* **Weryfikacja na komputerze** <small>_(na razie jest drobny problem)_</small>:
+Podpisując dokument należy wybierać podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA" - jeśli aplikacja jak. np. Adobe Reader podpowiada nam 2 możliwości.
+
+* **Weryfikacja na serwerze zdalnym przez przeglądarkę** <small>_(m.in. przeglądarkę internetową w telefonie)_</small>:
+
+    * [![puesc.gov.pl_wer_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png"){: style="float:right;width:45%;"}
+
+      <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów  
+      <small>Warto zbierać informacje o tego rodzaju weryfikatorach, które nie wymagają instalacji. Z drugiej strony trzeba zaufać deklaracji 
+      jak w powyższym serwisie "§3.5 Dane z dokumentów przekazywanych w celu weryfikacji podpisu są przetwarzane przez okres niezbędny do 
+      prawidłowego wykonania usługi. Dane te nie są gromadzone ani przechowywane, z wyjątkiem sytuacji, gdy jest to niezbędne dla 
+      zdiagnozowania błędów, ...".</small>
+
+.
+
+* **Weryfikacja na komputerze**:
+
 
 Obsługę podpisów cyfrowych zapewnia Polska Wytwórnia Papierów Wartościowych S.A. (PWPW). Do podpisywania i weryfikacji podpisu osobistego można używać aplikacji "**E-dowód podpis elektroniczny**" - zob. <https://www.gov.pl/web/e-dowod> - Pliki do pobrania.
 
-Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie:  
-<span style="color: brown;">Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL!</span> 
+
+* [![e-dowod_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/e-dowod_weryfikacja_eDo.png "e-dowod_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/e-dowod_weryfikacja_eDo.png "e-dowod_weryfikacja_eDo.png"){: style="float:right;width:45%;"} 
+     Podpis osobisty jest w niej weryfikowany poprawnie, ale pojawia się ostrzeżenie, które może sugerować, że są problemy z zaufaniem do tego podpisu:  
+     <span style="color: brown;">Żaden z certyfikatów w ścieżce nie znajduje się na zaufanej liście TSL!</span> 
+
+Podczas gdy w (darmowej) [aplikacji "Szafir" z Krajowej Izby Rozliczeniowej (KIR)](https://www.elektronicznypodpis.pl/aplikacje-i-sterowniki) 
+weryfikacja przebiega bez problemów.
+[![Szafir_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/Szafir_weryfikacja_eDo.png "Szafir_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/Szafir_weryfikacja_eDo.png "Szafir_weryfikacja_eDo.png")
+{: style="width:55%;"}
 
 
-Na moje kolejne zapytanie w tej sprawie do twórców aplikacji _e-dowód Podpis elektroniczny_:
+* [![Adobe_eDo_zaufany.png]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png")]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png"){: style="float:right;width:73%;"} 
+  W programie **Adobe Reader** wyświetlane są informacje o osobie podpisującej, ale jest ostrzeżenie "Wystąpiły problemy z ..." i opis "Poprawność podpisu jest nieznana". Problem znika, gdy dodamy certyfikat `pl.ID` do zaufanych →
+
+.
+
+.
+
+Próbowałem dopytać twórców aplikacji _e-dowód Podpis elektroniczny_
+{: style="margin-bottom:0px;"}
+
+<details markdown=1><summary markdown="span"><u>w sprawie problemów z listą zaufania:</u> <br/> . . .</summary>
+
+
+Na moje kolejne zapytanie w tej sprawie do PWPW ServiceDesk:
 {: style="color: MidnightBlue;"}
 > Zastanawiam się, czy jednak nie warto pociągnąć tematu. Skoro można jakoś usprawnić weryfikację w Adobe Reader, to może da się jakoś złagodzić ostrzeżenie w tej aplikacji. Uważam, że jest ono mocno niepokojące i zniechęcające do używania podpisu osobistego.  
 Inna sprawa to adres http://repo.e-dowod.gov.pl/certs/ - czy nie warto przenieść certyfikatów na serwer z certyfikatem?
@@ -108,9 +143,11 @@ Pozdrawiamy
 Zespół eDO
 {: .answ}
 
+</details>
 
+- - - -
 
-...
+.
 
 Zob. też 
 * [Podpisy cyfrowe]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-Podpisy_cyfrowe %})
