@@ -10,8 +10,9 @@ Poprawność podpisu można zweryfikować w aplikacji do składania podpisu. W p
 [Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#adobe-acrobat-reader) *
 [Firefox]({{site.url}}{{site.baseurl}}{{page.url}}#firefox) *
 [Google Chrome]({{site.url}}{{site.baseurl}}{{page.url}}#google-chrome) *
-[Microsoft Edge]({{site.url}}{{site.baseurl}}{{page.url}}#microsoft-edge)  *
-[Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) 
+[Microsoft Edge]({{site.url}}{{site.baseurl}}{{page.url}}#microsoft-edge) *
+[Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) *
+[pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe) 
 
 <style>.smaller{font-size:smaller;} .date{font-size:smaller;color:#828282;} .answ{font-size:smaller;color:DarkSlateBlue;}
 blockquote{font-style: normal;letter-spacing: 0px;}</style>
@@ -89,10 +90,18 @@ weryfikacja przebiega bez problemów.
 {: style="width:55%;"}
 
 
-* [![Adobe_eDo_zaufany.png]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png")]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png"){: style="float:right;width:73%;"} 
-  W programie **Adobe Reader** wyświetlane są informacje o osobie podpisującej, ale jest ostrzeżenie "Wystąpiły problemy z ..." i opis "Poprawność podpisu jest nieznana". Problem znika, gdy dodamy certyfikat `pl.ID` do zaufanych →
-
-.
+* <a name="pl_ID_zaufany_w_Adobe"></a>
+ [![Adobe_eDo_zaufany.png]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png")]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany_i_dalej.png "Adobe_eDo_zaufany_i_dalej.png"){: style="float:right;width:73%;"} 
+  W programie **Adobe Reader** wyświetlane są informacje o osobie podpisującej, ale jest ostrzeżenie "Wystąpiły problemy z ..." i opis "Poprawność podpisu jest nieznana". Problem znika, gdy dodamy certyfikat `pl.ID Root CA` do zaufanych:   →
+    1. **[ Panel podpis ]** \ Wersja ... \ Szczegóły podpisu \ Szczegóły zatwierdzenia ...
+    2. `pl.ID Root CA` \ [ Zaufanie ] \ **[ Dodaj do zaudanych certyfikatów... ]**
+    3. Zabezpieczenia Adobe: "... Czy na pewno ..." \ [ OK ]
+    4. Ustawienia importu... \ [ OK ]
+    5. [ OK ] (na odsłoniętym oknie "Przegląd cetyfikatów"!)
+    6. Wyjdź z programu Adobe Reader.
+    7. **Uruchom ponownie Adobe Reader**.
+    8. [Można upewnić się]({{site.baseurl}}/assets/img/Adobe_eDo_ZaufaneCertyfikaty.png "Adobe_eDo_ZaufaneCertyfikaty.png"), 
+       że `pl.ID Root CA` jest na liście w menu: Preferencje [Ctrl+K] \ Podpisy \ Tożsamości i certyfikaty zaufane [ Więcej ] \ Zaufane certyfikaty.
 
 .
 
