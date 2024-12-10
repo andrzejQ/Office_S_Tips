@@ -42,7 +42,10 @@ choć czasem te programy jako zbyt głęboko grzebiące w systemie są uważane 
 
 Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft radzi używać logowania do Windows za pomocą **konta Microsoft**](https://support.microsoft.com/pl-pl/windows/ponowne-aktywowanie-systemu-windows-10-po-zmianie-sprz%C4%99towej-2c0e962a-f04c-145b-6ead-fb3fc72b6665) w poprzedniej konfiguracji systemu. Gdy zalogujesz się na to konto w nowej konfiguracji sprzętowej, to jakoś można przekonać system, że to jest właśnie ta konfiguracja, którą ma zaakceptować. (Nie testowałem).
 
-Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np. gdy zmieniamy płytę gł.) to można przeprowadzić **deaktywację klucza**:
+
+Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np. gdy zmieniamy płytę gł.) to można (być może) przeprowadzić **deaktywację klucza**:
+{: style="font-size: smaller;"}
+
 1. [Win+X] wiersz poleceń jako administrator.
 2. Odinstalowanie bieżącego klucza produktu z systemu Windows i wprowadzenie go w stan nielicencjonowany:  
 `slmgr /upk`
@@ -50,6 +53,12 @@ Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np.
 `slmgr /cpky`
 4. Zresetowanie liczników aktywacji systemu Windows, dzięki czemu nowi użytkownicy zostaną poproszeni o aktywację systemu Windows po włożeniu klucza:  
 `slmgr /rearm`
+{: style="font-size: smaller;"}
+
+* Może się też udać aktualizacja systemu do wyższej wersji np. win 11:  
+  <https://key-soft.pl/blog/aktualizacja-systemu-do-nowszej-wersji>
+
+.
 
 W przypadku używania **konta lokalnego** użytkownika do logowania Windows: 
 1. Jeśli spodziewamy się, że klucz jest w BIOS, to podczas czystej instalacji stwierdzamy "nie mam klucza" i potem sprawa się rozwiązuje automatycznie.
