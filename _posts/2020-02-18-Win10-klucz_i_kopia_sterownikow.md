@@ -56,7 +56,8 @@ Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np.
 {: style="font-size: smaller;"}
 
 * Może się też udać aktualizacja systemu do wyższej wersji np. win 11:  
-  <https://key-soft.pl/blog/aktualizacja-systemu-do-nowszej-wersji>
+  <https://key-soft.pl/blog/aktualizacja-systemu-do-nowszej-wersji>  
+  (aktualnie w 2024r wygląda na to, że nie można przejść bezpłatnie z Win8.1 na Win10)
 
 .
 
