@@ -40,9 +40,22 @@ Są też narzędzia na stronie
 <https://www.nirsoft.net/>
 choć czasem te programy jako zbyt głęboko grzebiące w systemie są uważane przez programy antywirusowe za niepewne.
 
-Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft radzi używać logowania do Windows za pomocą **konta Microsoft**](https://support.microsoft.com/pl-pl/windows/ponowne-aktywowanie-systemu-windows-10-po-zmianie-sprz%C4%99towej-2c0e962a-f04c-145b-6ead-fb3fc72b6665) w poprzedniej konfiguracji systemu. Gdy zalogujesz się na to konto w nowej konfiguracji sprzętowej, to jakoś można przekonać system, że to jest właśnie ta konfiguracja, którą ma zaakceptować. (Nie testowałem).
+Zauważyłem, że taki klucz nie działa przy czystej instalacji na zmienionym sprzęcie. Ale raczej działa w przypadku, gdy jest ten sam sam sprzęt i np. pusty dysk (przypadek licencji cyfrowej nie powiązanej z kontem Microsoft). Gdy już mamy aktywowaną licencję cyfrową to można dodać konto Microsoft - jakiekolwiek np. zupełnie nowe - i skorzystać z możliwości zmiany sprzętu, na którym pojawi się poprawna aktywacja. Ponowna instalacja wyższego Windows np. 11 (a było 10) nawet na pustym/nowym dysku, po zalogowaniu na to konto Microsoft także daje poprawną aktywację.
+
+Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft poleca używać logowania do Windows za pomocą **konta Microsoft**](https://support.microsoft.com/pl-pl/windows/ponowne-aktywowanie-systemu-windows-10-po-zmianie-sprz%C4%99towej-2c0e962a-f04c-145b-6ead-fb3fc72b6665) w poprzedniej konfiguracji systemu. Dotyczy to Windows 10 wersja 1607+. 
+
+**Czyli** (testowałem dla przypadku licencji cyfrowej Win 10 z darmowej aktualizacji Win 8):
+
+1. **Przed zmianą sprzętu**, na którym konto administratora jest kontem lokalnym dodaję do niego konto Microsoft (istniejące lub zakładam całkiem nowe), aby "System Windows został aktywowany przy użyciu licencji cyfrowej **połączonej z kontem Microsoft**." - zob. Ustawienia  > Aktualizacje i zabezpieczenia > Aktywacja. Warto też zadbać, żeby nazwa komputera była konkretna.
+2. Po zmianie sprzętu (i tym samym dysku - tak testowałem, ale może to nieważne) loguję się na to samo konto administratora (e-mail Microsoft). System "nie może zostać aktywowany". Rozwiązywanie problemów - jest propozycja zakupu, ale poniżej jest też link: "W tym urządzeniu dokonano niedawno zmiany sprzętu".
+3. Po wejściu w ten link zdarza się, że pojawia się błąd o niedostępności serwerów Microsoft i trzeba cierpliwie próbować później. Ale gdy już się dostajemy dalej to proces przebiega automatycznie:
+    * pojawia się lista zarejestrowanych na to konto komputerów
+    * na wybranej pozycji zaznaczam [x] Używam teraz tego urządzenia.[Aktywuj]
+    
+Uwaga! Gdy poprzedni sprzęt był dość stary, to być może dysk systemowy miał partycjonowanie MBR. Na nowym sprzęcie taki dysk nie będzie w ogóle widziany jako dysk systemowy. Po po wejściu w tryb awaryjny - konsola - można go [bezstratnie przerobić na GPT z pomocą `mbr2gpt.exe`](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-uwagi). To samo można zrobić na wczesnym etapie instalacji nowego Windows (np. na etapie wyboru partycji do instalacji) - po naciśnięciu [Shift + F10].
 
 
+**To chyba dotyczy starszych wersji Windows, np. 7 czy 8**
 Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np. gdy zmieniamy płytę gł.) to można (być może) przeprowadzić **deaktywację klucza**:
 {: style="font-size: smaller;"}
 
@@ -63,8 +76,8 @@ Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np.
 
 W przypadku używania **konta lokalnego** użytkownika do logowania Windows: 
 1. Jeśli spodziewamy się, że klucz jest w BIOS, to podczas czystej instalacji stwierdzamy "nie mam klucza" i potem sprawa się rozwiązuje automatycznie.
-2. Jeśli jednak konieczne jest podawanie klucza to można próbować z tym kluczem odczytanym wcześniej.
-3. [Gdy i to się nie powiedzie](https://answers.microsoft.com/pl-pl/windows/forum/windows_7-windows_install-winactivate/brak-po%C5%82%C4%85czenia-z-microsoft-problem-z/9914049e-e874-4987-95d6-942bc510cb20)  to jest metoda z aktywacją przez internet lub telefon:  
+2. Jeśli jednak konieczne jest podawanie klucza to można próbować z tym kluczem odczytanym wcześniej. Ale warto próbować na tym samym sprzęcie (np. płyta główna) -zob. wyżej.
+3. [Gdy i to się nie powiedzie](https://answers.microsoft.com/pl-pl/windows/forum/windows_7-windows_install-winactivate/brak-po%C5%82%C4%85czenia-z-microsoft-problem-z/9914049e-e874-4987-95d6-942bc510cb20)  to jest metoda z aktywacją przez internet lub telefon <small> - ale to raczej poniżej Windows 10 - 1607</small>:  
 `⊞ Win`, wpisz `slui` [Enter], aktywacja przez internet  
 lub z automatem telefonicznym: Start, wpisz `slui 4` [Enter]  
 <small>Zdaje się, że od jakiegoś czasu numer `48 22...` nie działa. Na numer `00 800...` udaje się dodzwonić tylko z numeru telefonu stacjonarnego. VoIP nie działa.</small> 
@@ -120,6 +133,7 @@ Najnowsze wersje systemu Windows 10/11 bezwzględnie domagają się użycia kont
     * Tu wyłączyłem sieć (tryb samolotowy - klawisze funkcyjne).
     * W oknie terminala: `OOBE\BYPASSNRO` `↵ Enter` - system zresetuje się i powróci z oknem konfiguracji sieci, ale z dodatkową możliwością "Nie mam Internetu"
     * Dalej "Kontynuuj z ograniczoną konfiguracją" i w "Wprowadź swoje imię" wpisujemy nazwę użytkownika lokalnego (niekoniecznie imię).
+3. W przypadku Win 11 czy Win 10 - 1607+ może jednak lepiej używać konta Microsoft, a ewentualnie dodać potem konto lokalne.
 
 ### 4. Kopia sterowników
 
