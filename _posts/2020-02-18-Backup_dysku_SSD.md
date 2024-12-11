@@ -194,11 +194,15 @@ Podobno dla dysków SSD lepsze jest AHCI. W laptopach z jednym dyskiem HDD zdarz
 * [Switch RAID to AHCI without reinstalling Windows 10](https://superuser.com/questions/1280141/switch-raid-to-ahci-without-reinstalling-windows-10) - porada z wejściem w tryb awaryjny (safe mode). To działa też w Windows 11. Pamiętaj, że po wejściu w tym awaryjny nie zadziała [Win+X] \ Terminal(Administrator). Trzeba zgodnie z instrukcją wywołać "cmd" w trybie administratora.
 * [RAID vs. AHCI, Which One Should I Choose?](https://www.ubackup.com/articles/raid-vs-ahci-jkzbj.html) - rozdział "How to Switch from RAID to AHCI in Windows 10" (taka sama procedura jak powyżej).
 
-
-**Odzyskanie partycji skasowanej podczas konwersji dysku z MBR na GPT**
+**Konwersja dysku z MBR na GPT**
 
 Gdy mamy nowe dyski, to warto je konwertować z formatu MBR na GPT.  
 <https://www.dell.com/support/kbdoc/pl-pl/000137854/konwertowanie-dysku-twardego-z-mbr-na-gpt>
+
+Z tym, że przy takiej konwersji na ogół czyścimy swoje dane! Ale można też użyć [`mbr2gpt.exe`](https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt) dostępnego w Win10+. Działa domyślnie w trybie awaryjnym, ale może też działać w pełnym systemie win10+. Na początek należy uruchomić `diskpart`,  >`list disk`, żeby odczytać numer dysku.  
+<small>Pamiętaj: Upewnij się, że BIOS obsługuje UEFI. Po przekonwertowaniu dysku na GPT, przestaw BIOS na tryb UEFI zamiast Legacy BIOS.</small>
+
+**Odzyskanie partycji skasowanej podczas zmiany z MBR na GPT**
 
 Jeśli podczas montowania dysku MBR Windows10 zmusi nas do zainicjowania go jako GPT, to powstaje pusty dysk i nie widać partycji z danymi. 
 Może się udać odzyskanie takiej partycji z pomocą TestDisk:  
