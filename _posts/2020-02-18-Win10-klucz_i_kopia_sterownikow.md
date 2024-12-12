@@ -38,7 +38,7 @@ wmic path softwarelicensingservice get OA3xOriginalProductKey
 
 Są też narzędzia na stronie 
 <https://www.nirsoft.net/>
-choć czasem te programy jako zbyt głęboko grzebiące w systemie są uważane przez programy antywirusowe za niepewne.
+<small>choć czasem te programy jako zbyt głęboko grzebiące w systemie są uważane przez programy antywirusowe za niepewne</small>.
 
 Zauważyłem, że taki klucz nie działa przy czystej instalacji na zmienionym sprzęcie. Ale raczej działa w przypadku, gdy jest ten sam sam sprzęt i np. pusty dysk (przypadek licencji cyfrowej nie powiązanej z kontem Microsoft). Gdy już mamy aktywowaną licencję cyfrową to można dodać konto Microsoft - jakiekolwiek np. zupełnie nowe - i skorzystać z możliwości zmiany sprzętu, na którym pojawi się poprawna aktywacja. Ponowna instalacja wyższego Windows np. 11 (a było 10) nawet na pustym/nowym dysku, po zalogowaniu na to konto Microsoft także daje poprawną aktywację.
 
@@ -46,12 +46,16 @@ Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft pole
 
 **Czyli** (testowałem dla przypadku licencji cyfrowej Win 10 z darmowej aktualizacji Win 8):
 
-1. **Przed zmianą sprzętu**, na którym konto administratora jest kontem lokalnym dodaję do niego konto Microsoft (istniejące lub zakładam całkiem nowe), aby "System Windows został aktywowany przy użyciu licencji cyfrowej **połączonej z kontem Microsoft**." - zob. Ustawienia  > Aktualizacje i zabezpieczenia > Aktywacja. Warto też zadbać, żeby nazwa komputera była konkretna.
-2. Po zmianie sprzętu (i tym samym dysku - tak testowałem, ale może to nieważne) loguję się na to samo konto administratora (e-mail Microsoft). System "nie może zostać aktywowany". Rozwiązywanie problemów - jest propozycja zakupu, ale poniżej jest też link: "W tym urządzeniu dokonano niedawno zmiany sprzętu".
-3. Po wejściu w ten link zdarza się, że pojawia się błąd o niedostępności serwerów Microsoft i trzeba cierpliwie próbować później. Ale gdy już się dostajemy dalej to proces przebiega automatycznie:
+1. **Przed zmianą sprzętu**, na którym konto administratora jest kontem lokalnym dodaję do niego konto Microsoft (istniejące lub zakładam całkiem nowe), aby "System Windows został aktywowany przy użyciu licencji cyfrowej **połączonej z Twoim kontem Microsoft**." - zob. Ustawienia  > Aktualizacje i zabezpieczenia > Aktywacja. Warto też zadbać, żeby nazwa komputera była konkretna.
+2. ![Aktywacja-rozwiazywanie_problemow.png]({{site.baseurl}}/assets/img/Aktywacja-rozwiazywanie_problemow.png "Aktywacja-rozwiazywanie_problemow.png"){: style="float:right;width:67%;margin:0px 0px 10px 10px"} 
+Po zmianie sprzętu (i tym samym dysku - tak testowałem, ale może to nieważne) loguję się na to samo konto administratora (e-mail Microsoft). Systemu "nie można aktywować...".  
+Wybieram **Rozwiązywanie problemów** - jest propozycja zakupu, 
+a poniżej jest też link: "**W tym urządzeniu dokonano niedawno zmiany sprzętu**".
+3. ![Aktywacja_ponowna.png]({{site.baseurl}}/assets/img/Aktywacja_ponowna.png "Aktywacja_ponowna.png"){: style="float:right;width:67%;margin:0px 0px 10px 10px"} 
+Po wejściu w ten link zdarza się, że pojawia się błąd o niedostępności serwerów Microsoft i trzeba cierpliwie próbować później. Ale gdy już się dostajemy dalej to proces przebiega automatycznie:
     * pojawia się lista zarejestrowanych na to konto komputerów
-    * na wybranej pozycji zaznaczam [x] Używam teraz tego urządzenia.[Aktywuj]
-    
+    * na wybranej pozycji zaznaczam **[x] Używam teraz tego urządzenia**. [Aktywuj]
+
 Uwaga! Gdy poprzedni sprzęt był dość stary, to być może dysk systemowy miał partycjonowanie MBR. Na nowym sprzęcie taki dysk nie będzie w ogóle widziany jako dysk systemowy. Po po wejściu w tryb awaryjny - konsola - można go [bezstratnie przerobić na GPT z pomocą `mbr2gpt.exe`](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-uwagi). To samo można zrobić na wczesnym etapie instalacji nowego Windows (np. na etapie wyboru partycji do instalacji) - po naciśnięciu [Shift + F10].
 
 

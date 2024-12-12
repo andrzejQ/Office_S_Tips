@@ -12,7 +12,8 @@ Przegląd kilku systemów backupu. <br/>
 [4.&nbsp;EasyUS]({{site.url}}{{site.baseurl}}{{page.url}}#4-easyus) &nbsp; 
 [5.&nbsp;MS Windows 10]({{site.url}}{{site.baseurl}}{{page.url}}#5-ms-windows-10) &nbsp; 
 [6.&nbsp;Robocopy (Robust File Copy)]({{site.url}}{{site.baseurl}}{{page.url}}#6-robocopy-robust-file-copy) &nbsp; 
-[7.&nbsp;Uwagi]({{site.url}}{{site.baseurl}}{{page.url}}#7-uwagi) &nbsp; 
+[7.&nbsp;Bezstratna konwersja dysku z MBR na GPT]({{site.url}}{{site.baseurl}}{{page.url}}#7-bezstratna-konwersja-dysku-z-mbr-na-gpt) &nbsp; 
+[8.&nbsp;Uwagi]({{site.url}}{{site.baseurl}}{{page.url}}#8-uwagi) &nbsp; 
 
 To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i oceniałem pod kątem łatwości odtwarzania i przeglądania historycznych plików. Także istotne jest dla mnie poprawne odtwarzanie plików zaszyfrowanych EFS - tak, że są zakryte dla nie-właściciela, a deszyfrowalne dla właściciela, również w historii plików (uwaga - backup z plikami EFS testowałem tylko dla partycji docelowej NTFS i backupu całych partycji; w innych przypadkach może to działać inaczej). W domowych zastosowaniach backup zaszyfrowanych plików może nie być istotny (a w Windows Home szyfrowanie EFS jest w ogóle niedostępne).
 
@@ -186,21 +187,31 @@ Ciekawostka - opcja `/DCOPY:DAT` powoduje ustawienie dat folderów jak źródło
 
 [Notatki - robocopy_as_backup.txt]({{site.baseurl}}/assets/files/robocopy_as_backup.txt)
 
-### 7. Uwagi
+### 7. Bezstratna konwersja dysku z MBR na GPT
 
-**Konwersja RAID -> AHCI**
+Gdy mamy nowe dyski, to warto je konwertować z formatu MBR na GPT (co daje do 128 partycji zamiast 4, pojemność dysku > 2TB).  
 
-Podobno dla dysków SSD lepsze jest AHCI. W laptopach z jednym dyskiem HDD zdarza się konfiguracja RAID. Po przełożeniu dysku HDD na SSD można zmienić konfigurację z RAID na ACI bez reinstalacji systemu
-* [Switch RAID to AHCI without reinstalling Windows 10](https://superuser.com/questions/1280141/switch-raid-to-ahci-without-reinstalling-windows-10) - porada z wejściem w tryb awaryjny (safe mode). To działa też w Windows 11. Pamiętaj, że po wejściu w tym awaryjny nie zadziała [Win+X] \ Terminal(Administrator). Trzeba zgodnie z instrukcją wywołać "cmd" w trybie administratora.
-* [RAID vs. AHCI, Which One Should I Choose?](https://www.ubackup.com/articles/raid-vs-ahci-jkzbj.html) - rozdział "How to Switch from RAID to AHCI in Windows 10" (taka sama procedura jak powyżej).
-
-**Konwersja dysku z MBR na GPT**
-
-Gdy mamy nowe dyski, to warto je konwertować z formatu MBR na GPT.  
+Jest wiele sposobów na taką konwersję, które wiążą się wyczyszczeniem danych(!)  
 <https://www.dell.com/support/kbdoc/pl-pl/000137854/konwertowanie-dysku-twardego-z-mbr-na-gpt>
 
-Z tym, że przy takiej konwersji na ogół czyścimy swoje dane! Ale można też użyć [`mbr2gpt.exe`](https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt) dostępnego w Win10+. Działa domyślnie w trybie awaryjnym, ale może też działać w pełnym systemie win10+. Na początek należy uruchomić `diskpart`,  >`list disk`, żeby odczytać numer dysku.  
-<small>Pamiętaj: Upewnij się, że BIOS obsługuje UEFI. Po przekonwertowaniu dysku na GPT, przestaw BIOS na tryb UEFI zamiast Legacy BIOS.</small>
+**Ale można też skorzystać z bezstratnego konwertera [`mbr2gpt.exe`](https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt) dostępnego w Win10+**. Działa domyślnie w trybie awaryjnym, ale może też działać w pełnym systemie win10+. Na początek należy uruchomić `diskpart`,  >`list disk`, żeby odczytać numer dysku, a przy okazji sprawdzić partycjonowanie GPT.  
+<small>Pamiętaj: Upewnij się, że BIOS obsługuje UEFI. Po przekonwertowaniu dysku na GPT, przestaw BIOS na tryb UEFI zamiast Legacy BIOS.</small>  
+`diskpart`  
+DISKPART> `list disk`
+
+    Disk ###  Status   Size     Free     Dyn  Gpt
+    --------  -------  -------  -------  ---  ---
+    Disk 0    Online   1863 GB  9024 KB
+    Disk 1    Online    465 GB  2048 KB        *
+
+DISKPART> `exit`
+
+Weryfikacja dysku np. dysku 0: `mbr2gpt /validate /disk:0`
+
+Konwersja, gdy nie ma błędów: `mbr2gpt /convert /disk:0`
+
+Uwaga: Jeśli instalujemy Windows na nowo to wybierając nośnik instalacyjny bieżemy ten z `UEFI:`.
+
 
 **Odzyskanie partycji skasowanej podczas zmiany z MBR na GPT**
 
@@ -208,9 +219,13 @@ Jeśli podczas montowania dysku MBR Windows10 zmusi nas do zainicjowania go jako
 Może się udać odzyskanie takiej partycji z pomocą TestDisk:  
 <https://www.cgsecurity.org/wiki/TestDisk_Krok_po_kroku>
 
+
+### 8. Uwagi
+
+
 **Uwaga: Wiersz polecenia, tryb awaryjny**
 
-W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fizyczne do innych liter. Jeśli w tym trybie w wierszu polecenia używasz `robocopy` lub `mklink /j` żeby utworzyć dowiązanie symboliczne do folderu to mogą się przydać instrukcje:
+W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fizyczne do innych liter. Jeśli w tym trybie w wierszu polecenia używasz `robocopy` (lub `mklink /j` żeby utworzyć dowiązanie symboliczne do folderu) to mogą się przydać instrukcje:
 `diskpart`  
 `list volume`
 `select volume <nr>`
@@ -218,11 +233,22 @@ W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fi
 `assign letter=L`
 .
 
+
+
+**Konwersja RAID -> AHCI**
+
+Podobno dla dysków SSD lepsze jest AHCI. W laptopach z jednym dyskiem HDD zdarza się konfiguracja RAID. Po przełożeniu dysku HDD na SSD można zmienić konfigurację z RAID na ACI bez reinstalacji systemu
+* [Switch RAID to AHCI without reinstalling Windows 10](https://superuser.com/questions/1280141/switch-raid-to-ahci-without-reinstalling-windows-10) - porada z wejściem w tryb awaryjny (safe mode). To działa też w Windows 11. Pamiętaj, że po wejściu w tym awaryjny nie zadziała [Win+X] \ Terminal(Administrator). Trzeba zgodnie z instrukcją wywołać "cmd" w trybie administratora.
+* [RAID vs. AHCI, Which One Should I Choose?](https://www.ubackup.com/articles/raid-vs-ahci-jkzbj.html) - rozdział "How to Switch from RAID to AHCI in Windows 10" (taka sama procedura jak powyżej, na końcu artykułu są polecenia i zrzuty ekranu).
+
+.
+
 **Właściciel plików i folderów**
 
 Podczas zamontowania dysku z innego systemu można dla całego dysku i wszystkich podfolderów zmienić właściciela na siebie (ale nie jest to konieczne):
 
 Ten komputer \ <dysk> - właściości \ Zabezpieczenia \ [Zaawansowane] \ Właściciel - Zmień.
+
 
 <!-- {% unless jekyll.environment %} -->
 <script>
