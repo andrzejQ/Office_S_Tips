@@ -26,19 +26,26 @@ Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurowa
 
 #### Firefox
 
-Po zmianie domyślnej konfiguracji działa to całkiem sprawnie:
+Po zmianie domyślnej konfiguracji całkiem sprawnie przeskakuje się do Adobe Reader:
+![Firefox_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Firefox_PDF_Acrobat.png "Firefox_PDF_Acrobat.png"){: style="float:right;width:65%;"}
 
-Firefox \ `Opcje` \ (sekcja) `Aplikacje` \ (typ) `Dokument PDF` \ Otwórz w... zmieniamy na `"Użyj aplikacji Adobe Acrobat Reader"`.
+Firefox `Ξ` (z prawej) \ `Ustawienia` \ `Ogólne` -  
+przewijam w dół do sekcji \ `Aplikacje` \  
+(typ) `Dokument PDF` \ `Użyj domyślnej aplikacji systemu Windows`  
+albo wybieramy `Adobe Reader`  
+w `Użyj innej aplikacji...`
 
 #### Google Chrome
 
-Google Chrome \ (po kliknięciu na plik PDF) `Pobierz` \ (w pasku pobranych na dole klikamy strzałkę w górę) `Otwórz w przeglądarce systemowej` albo `Zawsze otwieraj w przeglądarce systemowej`
+![Chrome_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Chrome_PDF_Acrobat.png "Chrome_PDF_Acrobat.png"){: style="float:right;width:40%;"}
+Google Chrome \ (po kliknięciu na plik PDF) 1. `Pobierz` \ 2. `Pobrane pliki` (powyżej) - otwiera się historia pobierania \ (prawy klawisz myszy na nazwie pliku PDF) `Otwórz w przeglądarce systemowej` albo  
+`Zawsze otwieraj w przeglądarce systemowej`
 
-Oczywiście jako przeglądarkę PDF należy ustawić Adobe Acrobat Reader
+Oczywiście jako przeglądarkę PDF należy ustawić Adobe Reader.
 
 #### Microsoft Edge
 
-Nowy Microsoft Edge - weryfikacja e-podpisów od razu w przeglądarce:
+Nowy Microsoft Edge - weryfikacja e-podpisów od razu w przeglądarce, ale bez raportu poprawności weryfikacji:
 
 **Konfiguracja Microsoft Edge** (*jednorazowa*)  
 <small>Na razie jest to wersja eksperymentalna usługi.</small>  
