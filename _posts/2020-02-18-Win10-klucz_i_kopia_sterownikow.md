@@ -56,7 +56,7 @@ Po wejściu w ten link zdarza się, że pojawia się błąd o niedostępności s
     * pojawia się lista zarejestrowanych na to konto komputerów
     * na wybranej pozycji zaznaczam **[x] Używam teraz tego urządzenia**. [Aktywuj]
 
-Uwaga! Gdy poprzedni sprzęt był dość stary, to być może dysk systemowy miał partycjonowanie MBR. Na nowym sprzęcie taki dysk nie będzie w ogóle widziany jako dysk systemowy. Po po wejściu w tryb awaryjny - konsola - można go [bezstratnie przerobić na GPT z pomocą `mbr2gpt.exe`](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-uwagi). To samo można zrobić na wczesnym etapie instalacji nowego Windows (np. na etapie wyboru partycji do instalacji) - po naciśnięciu [Shift + F10], [więcej » ](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-bezstratna-konwersja-dysku-z-mbr-na-gpt)
+Uwaga! Gdy poprzedni sprzęt był dość stary, to być może dysk systemowy miał partycjonowanie MBR. Na nowym sprzęcie taki dysk nie będzie w ogóle widziany jako dysk systemowy. Po po wejściu w tryb awaryjny - konsola - można go [bezstratnie przerobić na GPT z pomocą `mbr2gpt.exe`](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-bezstratna-konwersja-dysku-z-mbr-na-gpt). To samo można zrobić na wczesnym etapie instalacji nowego Windows (np. na etapie wyboru partycji do instalacji) - po naciśnięciu [Shift + F10], [więcej » ](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-bezstratna-konwersja-dysku-z-mbr-na-gpt)
 
 
 **To chyba dotyczy starszych wersji Windows, np. 7 czy 8**
