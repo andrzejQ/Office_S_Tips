@@ -94,7 +94,7 @@ weryfikacja przebiega bez problemów.
  [![Adobe_eDo_zaufany.png]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png")]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany_i_dalej.png "Adobe_eDo_zaufany_i_dalej.png"){: style="float:right;width:73%;"} 
   W programie **Adobe Reader** wyświetlane są informacje o osobie podpisującej, ale jest ostrzeżenie "Wystąpiły problemy z ..." i opis "Poprawność podpisu jest nieznana". Problem znika, gdy dodamy certyfikat `pl.ID Root CA` do zaufanych:   →
     1. **[ Panel podpis ]** \ Wersja ... \ Szczegóły podpisu \ Szczegóły zatwierdzenia ...
-    2. `pl.ID Root CA` \ [ Zaufanie ] \ **[ Dodaj do zaudanych certyfikatów... ]**
+    2. `pl.ID Root CA` \ [ Zaufanie ] \ **[ Dodaj do zaufanych certyfikatów... ]**
     3. Zabezpieczenia Adobe: "... Czy na pewno ..." \ [ OK ]
     4. Ustawienia importu... \ [ OK ]
     5. [ OK ] (na odsłoniętym oknie "Przegląd cetyfikatów"!)
