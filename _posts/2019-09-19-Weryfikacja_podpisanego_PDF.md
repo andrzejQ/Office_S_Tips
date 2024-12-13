@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Weryfikacja podpisu cyfrowego PDF w przeglądarce internetowej, weryfikacja podpisu osobistego"
+title:  "Weryfikacja podpisu cyfrowego"
 date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
 _+ 25.09.2024_{: .date}  
-Poprawność podpisu można zweryfikować w aplikacji do składania podpisu. W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader. (Choć na razie weryfikacja podpisu osobistego ma pewne niedogodności). 
+Poprawność podpisu można zweryfikować w aplikacji do składania podpisu.  
+W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader.  
+(Choć na razie weryfikacja podpisu osobistego ma pewne niedogodności).  
 [Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#adobe-acrobat-reader) *
 [Firefox]({{site.url}}{{site.baseurl}}{{page.url}}#firefox) *
 [Google Chrome]({{site.url}}{{site.baseurl}}{{page.url}}#google-chrome) *
@@ -22,55 +24,55 @@ blockquote{font-style: normal;letter-spacing: 0px;}</style>
 ![AdobeR-PanelPodpis.png]({{site.baseurl}}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){: style="float:right;width:65%;"}
 Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
 
-Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować sobie przeglądarkę internetową:
+Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować swoją przeglądarkę internetową, żeby pliki PDF otwierały się w Adobe Reader, a nie w przeglądarce:
 
 #### Firefox
 
-Po zmianie domyślnej konfiguracji działa to całkiem sprawnie:
+<details markdown=1><summary markdown="span"> . . . </summary>
+![Firefox_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Firefox_PDF_Acrobat.png "Firefox_PDF_Acrobat.png"){: style="float:right;width:65%;"}
 
-Firefox \ `Opcje` \ (sekcja) `Aplikacje` \ (typ) `Dokument PDF` \ Otwórz w... zmieniamy na `"Użyj aplikacji Adobe Acrobat Reader"`.
+Firefox `Ξ` (z prawej) \ `Ustawienia` \ `Ogólne` -  
+przewijam w dół do sekcji \ `Aplikacje` \  
+(typ) `Dokument PDF` \ `Użyj domyślnej aplikacji systemu Windows`  
+albo wybieramy `Adobe Reader`  
+w `Użyj innej aplikacji...`
+</details>
+.
 
 #### Google Chrome
 
-Google Chrome \ (po kliknięciu na plik PDF) `Pobierz` \ (w pasku pobranych na dole klikamy strzałkę w górę) `Otwórz w przeglądarce systemowej` albo `Zawsze otwieraj w przeglądarce systemowej`
+<details markdown=1><summary markdown="span"> . . . </summary>
+![Chrome_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Chrome_PDF_Acrobat.png "Chrome_PDF_Acrobat.png"){: style="float:right;width:40%;"}
+Google Chrome \ (po kliknięciu na plik PDF) 1. `Pobierz` \ 2. `Pobrane pliki` (powyżej) - otwiera się historia pobierania \ (prawy klawisz myszy na nazwie pliku PDF) `Otwórz w przeglądarce systemowej` albo  
+`Zawsze otwieraj w przeglądarce systemowej`
 
-Oczywiście jako przeglądarkę PDF należy ustawić Adobe Acrobat Reader
+Oczywiście jako przeglądarkę PDF należy ustawić Adobe Reader.
+</details>
+.
 
 #### Microsoft Edge
 
-Nowy Microsoft Edge - weryfikacja e-podpisów od razu w przeglądarce:
+Nowy Microsoft Edge - Chyba widać e-podpisy od razu w przeglądarce, ale bez raportu poprawności weryfikacji. Choć można odczytać istotne dane podpisu - kto, kiedy.
 
-**Konfiguracja Microsoft Edge** (*jednorazowa*)  
-<small>Na razie jest to wersja eksperymentalna usługi.</small>  
-W pasku adresu wpisujemy:  
-`edge://flags/#edge-digsig-enabled-pdf` albo  
-`edge://flags` i przechodzimy do sekcji: `Enable Digital Signature for PDF`  
-Wybieramy `[Enabled]`.
-
-Po kliknięciu PDF \ "Podgląd" pojawia się w przeglądarce nad dokumentem pasek: 
-* Ten dokument jest podpisany cyfrowo. (Niektórych podpisów nie można zweryfikować.)  
-[Wyświetl podpisy]
-
-Wybieramy `[Wyświetl podpisy]` \ `Właściwości` \ `Sprawdź poprawność`
-
-Pomimo, że "Niektórych podpisów nie można zweryfikować" (np. dla podpisów pz.gov.pl czy tych z pieczęcią kwalifikowaną), to jednak można odczytać istotne dane podpisu - kto, kiedy.
+Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą..." - "Adobe Reader".
 
 ------
 .
 
 #### Weryfikacja podpisu osobistego
 
-Podpisując dokument należy wybierać podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA" - jeśli aplikacja jak. np. Adobe Reader podpowiada nam 2 możliwości.
+<small>Uwaga - do podpisywania dokumentów służy podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA". </small>
 
 * **Weryfikacja na serwerze zdalnym przez przeglądarkę** <small>_(m.in. przeglądarkę internetową w telefonie)_</small>:
 
     * [![puesc.gov.pl_wer_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png"){: style="float:right;width:45%;"}
 
-      <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów  
+      <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów dla klientów Krajowej Administracji Skarbowej lub Ministerstwa Finansów.  
       <small>Warto zbierać informacje o tego rodzaju weryfikatorach, które nie wymagają instalacji. Z drugiej strony trzeba zaufać deklaracji 
       jak w powyższym serwisie "§3.5 Dane z dokumentów przekazywanych w celu weryfikacji podpisu są przetwarzane przez okres niezbędny do 
       prawidłowego wykonania usługi. Dane te nie są gromadzone ani przechowywane, z wyjątkiem sytuacji, gdy jest to niezbędne dla 
       zdiagnozowania błędów, ...".</small>
+    * <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany> - Weryfikacja różnego rodzaju podpisów nie tylko podpisu zaufanego.
 
 .
 
@@ -94,7 +96,7 @@ weryfikacja przebiega bez problemów.
  [![Adobe_eDo_zaufany.png]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany.png "Adobe_eDo_zaufany.png")]({{site.baseurl}}/assets/img/Adobe_eDo_zaufany_i_dalej.png "Adobe_eDo_zaufany_i_dalej.png"){: style="float:right;width:73%;"} 
   W programie **Adobe Reader** wyświetlane są informacje o osobie podpisującej, ale jest ostrzeżenie "Wystąpiły problemy z ..." i opis "Poprawność podpisu jest nieznana". Problem znika, gdy dodamy certyfikat `pl.ID Root CA` do zaufanych:   →
     1. **[ Panel podpis ]** \ Wersja ... \ Szczegóły podpisu \ Szczegóły zatwierdzenia ...
-    2. `pl.ID Root CA` \ [ Zaufanie ] \ **[ Dodaj do zaudanych certyfikatów... ]**
+    2. `pl.ID Root CA` \ [ Zaufanie ] \ **[ Dodaj do zaufanych certyfikatów... ]**
     3. Zabezpieczenia Adobe: "... Czy na pewno ..." \ [ OK ]
     4. Ustawienia importu... \ [ OK ]
     5. [ OK ] (na odsłoniętym oknie "Przegląd cetyfikatów"!)
