@@ -5,19 +5,17 @@ date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
-_+ 25.09.2024_{: .date}  
-Poprawność podpisu można zweryfikować w aplikacji do składania podpisu.  
+_+ 25.09.2024, + 16.12.2024_{: .date}  
+Poprawność podpisu można zweryfikować w tej samej aplikacji, która służy do składania podpisu.  
 W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader.  
-(Choć na razie weryfikacja podpisu osobistego ma pewne niedogodności).  
 [Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#adobe-acrobat-reader) *
-[Firefox]({{site.url}}{{site.baseurl}}{{page.url}}#firefox) *
-[Google Chrome]({{site.url}}{{site.baseurl}}{{page.url}}#google-chrome) *
-[Microsoft Edge]({{site.url}}{{site.baseurl}}{{page.url}}#microsoft-edge) *
 [Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) *
 [pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe) 
 
 <style>.smaller{font-size:smaller;} .date{font-size:smaller;color:#828282;} .answ{font-size:smaller;color:DarkSlateBlue;}
 blockquote{font-style: normal;letter-spacing: 0px;}</style>
+
+Należy pamiętać, że **podpis elektroniczny** wywołuje skutki prawne, jeżeli **został złożony w okresie ważności tego certyfikatu** <small>(z art. 18 ustawy o usługach zaufania... Dz.U.2024.1725 t.j.) Dla ważności podpisu nie jest istotny moment jego weryfikacji, ale moment jego złożenia. Czyli w warunkach, gdy raport z programu weryfikującego stwierdza, że okres ważności podpisu minął należy sprawdzać okres jego ważności i czas złożenia podpisu</small>.
 
 #### Adobe Acrobat Reader
 
@@ -26,7 +24,7 @@ Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek z przyciskiem [Panel
 
 Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować swoją przeglądarkę internetową, żeby pliki PDF otwierały się w Adobe Reader, a nie w przeglądarce:
 
-#### Firefox
+##### Firefox
 
 <details markdown=1><summary markdown="span"> . . . </summary>
 ![Firefox_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Firefox_PDF_Acrobat.png "Firefox_PDF_Acrobat.png"){: style="float:right;width:65%;"}
@@ -39,7 +37,7 @@ w `Użyj innej aplikacji...`
 </details>
 .
 
-#### Google Chrome
+##### Google Chrome
 
 <details markdown=1><summary markdown="span"> . . . </summary>
 ![Chrome_PDF_Acrobat.png]({{site.baseurl}}/assets/img/Chrome_PDF_Acrobat.png "Chrome_PDF_Acrobat.png"){: style="float:right;width:40%;"}
@@ -50,31 +48,35 @@ Oczywiście jako przeglądarkę PDF należy ustawić Adobe Reader.
 </details>
 .
 
-#### Microsoft Edge
-
-Nowy Microsoft Edge - Chyba widać e-podpisy od razu w przeglądarce, ale bez raportu poprawności weryfikacji. Choć można odczytać istotne dane podpisu - kto, kiedy.
+##### Microsoft Edge
 
 Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą..." - "Adobe Reader".
 
 ------
 .
 
+
+### Weryfikacja na serwerze zdalnym przez przeglądarkę
+
+<small>_(m.in. przeglądarkę internetową w telefonie)_</small>
+
+* [![puesc.gov.pl_wer_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png"){: style="float:right;width:39%;"}
+
+  <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów dla klientów Krajowej Administracji Skarbowej lub Ministerstwa Finansów.  
+  <small>Warto zbierać informacje o tego rodzaju weryfikatorach, które nie wymagają instalacji. Z drugiej strony trzeba zaufać deklaracji 
+  jak w powyższym serwisie "§3.5 Dane z dokumentów przekazywanych w celu weryfikacji podpisu są przetwarzane przez okres niezbędny do 
+  prawidłowego wykonania usługi. Dane te nie są gromadzone ani przechowywane, z wyjątkiem sytuacji, gdy jest to niezbędne dla 
+  zdiagnozowania błędów, ...".</small>
+* [![mObywatel_weryfikacja.png]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png")]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png"){: style="float:right;width:35%;"}
+[mObywatel](https://moj.gov.pl/nforms/signer/upload?xFormsAppName=SIGNER). Podpisz i sprawdź dokumenty elektroniczne. Weryfikacja różnego rodzaju podpisów nie tylko podpisu zaufanego.
+
+
 #### Weryfikacja podpisu osobistego
 
 <small>Uwaga - do podpisywania dokumentów służy podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA". </small>
 
-* **Weryfikacja na serwerze zdalnym przez przeglądarkę** <small>_(m.in. przeglądarkę internetową w telefonie)_</small>:
-
-    * [![puesc.gov.pl_wer_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png"){: style="float:right;width:45%;"}
-
-      <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów dla klientów Krajowej Administracji Skarbowej lub Ministerstwa Finansów.  
-      <small>Warto zbierać informacje o tego rodzaju weryfikatorach, które nie wymagają instalacji. Z drugiej strony trzeba zaufać deklaracji 
-      jak w powyższym serwisie "§3.5 Dane z dokumentów przekazywanych w celu weryfikacji podpisu są przetwarzane przez okres niezbędny do 
-      prawidłowego wykonania usługi. Dane te nie są gromadzone ani przechowywane, z wyjątkiem sytuacji, gdy jest to niezbędne dla 
-      zdiagnozowania błędów, ...".</small>
-    * <https://www.gov.pl/web/gov/podpisz-dokument-elektronicznie-wykorzystaj-podpis-zaufany> - Weryfikacja różnego rodzaju podpisów nie tylko podpisu zaufanego.
-
-.
+* <https://puesc.gov.pl/wer/> - w przeglądarce (także w telefonie)
+. 
 
 * **Weryfikacja na komputerze**:
 
