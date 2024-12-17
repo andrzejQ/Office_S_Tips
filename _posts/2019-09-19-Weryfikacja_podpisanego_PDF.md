@@ -9,6 +9,8 @@ _+ 25.09.2024, + 16.12.2024_{: .date}
 Poprawność podpisu można zweryfikować w tej samej aplikacji, która służy do składania podpisu.  
 W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader.  
 [Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#adobe-acrobat-reader) *
+[Weryfikacja w aplikacji komputerowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-w-aplikacji-komputerowej) *
+[Weryfikacja w przeglądarce internetowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-na-serwerze-zdalnym-przez-przeglądarkę) *
 [Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) *
 [pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe) 
 
@@ -17,10 +19,24 @@ blockquote{font-style: normal;letter-spacing: 0px;}</style>
 
 Należy pamiętać, że **podpis elektroniczny** wywołuje skutki prawne, jeżeli **został złożony w okresie ważności tego certyfikatu** <small>(z art. 18 ustawy o usługach zaufania... Dz.U.2024.1725 t.j.) Dla ważności podpisu nie jest istotny moment jego weryfikacji, ale moment jego złożenia. Czyli w warunkach, gdy raport z programu weryfikującego stwierdza, że okres ważności podpisu minął należy sprawdzać okres jego ważności i czas złożenia podpisu</small>.
 
-#### Adobe Acrobat Reader
+Program AdobeReader pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)). Polskie rozwiązania do składania i/albo weryfikacji podpisu na ogół wykazują problemy, gdy weryfikacja następuje po okresie ważności certyfikatu podpisującego. Ale to się może zmienić, bo te komunikaty o błędach czy ostrzeżeniach nie uwzględniają art. 18 powyższej ustawy, pomimo, że można odczytać informację o okresie ważności certyfikatu i o czasie podpisywania. 
+
+<small>
+Dodatkowo te komunikaty nie spełniają wymogów dostępności, choćby w zakresie prostego języka, komunikując się żargonem z użyciem nieznanych powszechnie skrótów.
+Takie ostrzeżenia dotyczące niemożności weryfikacji poza okresem ważności certyfikatu podważają ustawową zasadę równoważności e-podpisu z podpisem własnoręcznym.
+</small>
+
+### Adobe Acrobat Reader
 
 ![AdobeR-PanelPodpis.png]({{site.baseurl}}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){: style="float:right;width:65%;"}
 Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
+
+Program **AdobeReader** można zapamiętać jako **domyślny** do otwierania plików PDF: 
+1. Kliknij prawym klawiszem myszy na dowolnym pliku PDF;
+2. Otwórz za pomocą >
+   ![Adobe_domyslny.png]({{site.baseurl}}/assets/img/Adobe_domyslny.png "Adobe_domyslny.png"){: style="float:right;width:41%;"}
+3. (!) Wybierz inną aplikację (na dole menu)
+4. AdobeReader [Zawsze]
 
 Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować swoją przeglądarkę internetową, żeby pliki PDF otwierały się w Adobe Reader, a nie w przeglądarce:
 
@@ -56,6 +72,12 @@ Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą...
 .
 
 
+### Weryfikacja w aplikacji komputerowej
+
+![Szafir_weryfikujaca_1.0.png]({{site.baseurl}}/assets/img/Szafir_weryfikujaca_1.0.png "Szafir_weryfikujaca_1.0.png"){: style="float:right;width:40%;"}
+Programy do składania e-podpisów pozwalają też zwykle na weryfikację. Są też programy przeznaczony wyłącznie do weryfikacji, jak np. darmowa "Aplikacja Szafir do weryfikacji" Krajowej Izby Rozliczeniowej:
+* <https://www.elektronicznypodpis.pl/aplikacje-i-sterowniki> (przewiń stronę w dół)
+
 ### Weryfikacja na serwerze zdalnym przez przeglądarkę
 
 <small>_(m.in. przeglądarkę internetową w telefonie)_</small>
@@ -75,7 +97,12 @@ Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą...
 
 <small>Uwaga - do podpisywania dokumentów służy podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA". </small>
 
-* <https://puesc.gov.pl/wer/> - w przeglądarce (także w telefonie)
+Weryfikacja podpisu osobistego może zakończyć się ostrzeżeniem o niezaufaniu na liście TSL (takie komunikaty są oczywiście w sprzeczności z zasadą prostego języka). Choć są niektóre weryfikatory które akceptują certyfikaty organizacji pl.ID, np. internetowy:
+
+* **Weryfikacja w przeglądarce**
+
+*    * <https://puesc.gov.pl/wer/> - działa także w telefonie, zob. wyżej.
+
 . 
 
 * **Weryfikacja na komputerze**:
