@@ -17,7 +17,7 @@ W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Rea
 <style>.smaller{font-size:smaller;} .date{font-size:smaller;color:#828282;} .answ{font-size:smaller;color:DarkSlateBlue;}
 blockquote{font-style: normal;letter-spacing: 0px;}</style>
 
-Należy pamiętać, że **podpis elektroniczny** wywołuje skutki prawne, jeżeli **został złożony w okresie ważności tego certyfikatu** <small>(z art. 18 ustawy o usługach zaufania... Dz.U.2024.1725 t.j.) Dla ważności podpisu nie jest istotny moment jego weryfikacji, ale moment jego złożenia. Czyli w warunkach, gdy raport z programu weryfikującego stwierdza, że okres ważności podpisu minął należy sprawdzać okres jego ważności i czas złożenia podpisu</small>.
+Należy pamiętać, że **podpis elektroniczny** wywołuje skutki prawne, jeżeli **został złożony w okresie ważności tego certyfikatu** (z art. 18 ustawy o usługach zaufania... Dz.U.2024.1725 t.j.). Dla ważności podpisu nie jest istotny moment jego weryfikacji, ale moment jego złożenia. Czyli w warunkach, gdy raport z programu weryfikującego stwierdza, że okres ważności podpisu minął należy sprawdzać okres jego ważności i czas złożenia podpisu.
 
 Program AdobeReader pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)). Polskie rozwiązania do składania i/albo weryfikacji podpisu na ogół wykazują problemy, gdy weryfikacja następuje po okresie ważności certyfikatu podpisującego. Ale to się może zmienić, bo te komunikaty o błędach czy ostrzeżeniach nie uwzględniają art. 18 powyższej ustawy, pomimo, że można odczytać informację o okresie ważności certyfikatu i o czasie podpisywania. 
 
@@ -75,7 +75,7 @@ Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą...
 ### Weryfikacja w aplikacji komputerowej
 
 ![Szafir_weryfikujaca_1.0.png]({{site.baseurl}}/assets/img/Szafir_weryfikujaca_1.0.png "Szafir_weryfikujaca_1.0.png"){: style="float:right;width:40%;"}
-Programy do składania e-podpisów pozwalają też zwykle na weryfikację. Są też programy przeznaczony wyłącznie do weryfikacji, jak np. darmowa "Aplikacja Szafir do weryfikacji" Krajowej Izby Rozliczeniowej:
+Programy do składania e-podpisów pozwalają także na ich weryfikację. Są też programy przeznaczony wyłącznie do weryfikacji, jak np. darmowa "Aplikacja Szafir do weryfikacji" Krajowej Izby Rozliczeniowej:
 * <https://www.elektronicznypodpis.pl/aplikacje-i-sterowniki> (przewiń stronę w dół)
 
 ### Weryfikacja na serwerze zdalnym przez przeglądarkę
@@ -97,7 +97,7 @@ Programy do składania e-podpisów pozwalają też zwykle na weryfikację. Są t
 
 <small>Uwaga - do podpisywania dokumentów służy podpis osobisty z "pl.ID Authorization CA" a nie "pl.ID Presence CA". </small>
 
-Weryfikacja podpisu osobistego może zakończyć się ostrzeżeniem o niezaufaniu na liście TSL (takie komunikaty są oczywiście w sprzeczności z zasadą prostego języka). Choć są niektóre weryfikatory które akceptują certyfikaty organizacji pl.ID, np. internetowy:
+Weryfikacja podpisu osobistego może zakończyć się ostrzeżeniem o niezaufaniu na liście TSL (takie komunikaty są oczywiście w sprzeczności z zasadą prostego języka). Choć są niektóre weryfikatory które akceptują certyfikaty organizacji pl.ID:
 
 * **Weryfikacja w przeglądarce**
 
