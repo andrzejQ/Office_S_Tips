@@ -20,7 +20,7 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 ![VeeamBackupJob.png]({{site.baseurl}}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){: style="float:right;width:60%;"}
 ### 1. Veeam Agent FRE
 
-* [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/pl/windows-backup-free-download.html) (trzeba się najpierw zarejestrować)
+* [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/products/free/microsoft-windows-download.html) (trzeba się najpierw zarejestrować / zalogować)
 * Edycja Free nie wymaga kupowania licencji (gdy jest pytanie czy instalowć licencję, to odpowiadamy "Nie").
 ![veeamAgLicNo.png]({{site.baseurl}}/assets/img/veeamAgLicNo.png "veeamAgLicNo.png"){: style="float:right;width:37%;"} 
 * Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. Do kopii wybranych danych można użyć [Historii plików MS Windows - zob. niżej](#5-ms-windows-10). (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
