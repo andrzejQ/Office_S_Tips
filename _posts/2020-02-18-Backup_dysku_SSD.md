@@ -20,12 +20,14 @@ To nie jest profesjonalne porównanie. Raczej jest to coś co wypróbowałem i o
 ![VeeamBackupJob.png]({{site.baseurl}}/assets/img/VeeamBackupJob.png "VeeamBackupJob.png"){: style="float:right;width:60%;"}
 ### 1. Veeam Agent FRE
 
-* [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/products/free/microsoft-windows-download.html) (trzeba się najpierw zarejestrować / zalogować)
+* [Autonomiczne narzędzie **Veeam Agent for Microsoft Windows FREE** - download](https://www.veeam.com/products/free/microsoft-windows-download.html) (trzeba się najpierw zarejestrować / zalogować; dostępne także w <https://www.veeam.com/products/downloads.html> \ Downloads (na górze) \  
+Free/Community (w środku) \  
+Veeam Agent for Microsoft Windows Free (na dole) )
 * Edycja Free nie wymaga kupowania licencji (gdy jest pytanie czy instalowć licencję, to odpowiadamy "Nie").
 ![veeamAgLicNo.png]({{site.baseurl}}/assets/img/veeamAgLicNo.png "veeamAgLicNo.png"){: style="float:right;width:37%;"} 
 * Można robić kopię zapasową całych partycji i/albo wybranych folderów - "albo" dotyczy edycji Free, bo można w tej wersji mieć tylko 1 zadanie. Korzystnie jest od razu robić kopię dysku systemowego + partycja z danymi, jeśli jest na innym dysku. Do kopii wybranych danych można użyć [Historii plików MS Windows - zob. niżej](#5-ms-windows-10). (Można też użyć Acronis True Image OEM do kopii całego dysku SSD, a Veeam Agent Free do wybranych folderów na innym dysku)
 * Podczas kopiowania całych partycji działa bardzo szybko (np. 5 minut dla dysku SSD 240GB), nie wymaga przerywania pracy na komputerze (VSS-Volume Snapshot Service/[Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)), tworzy kopie przyrostowe (w czasie pojedynczych minut).
-* Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS).
+* Pozwala na wygodne przeglądanie folderów/plików w kopii zapasowej całej partycji (także tej przyrostowej) i wyciąganie pojedynczych plików, w tym zaszyfrowanych plików EFS różnych użytkowników (każdy widzi zawartość tylko swoich plików EFS). <small>(Uwaga - backup plików EFS działa tylko w opcji "Volume level backup").</small>
 * Tworzy dysk ratunkowy z dołączonymi sterownikami (co najmniej warto sobie zrobić plik ISO na zewnętrznym dysku, żeby się było jak ratować, gdy komputer nie startuje)
 * Chyba nie ma wersji językowej polskiej.
 * Co jakiś czas warto wykonać "Active Full Backup", względem którego będą wykonywane kolejne kopie przyrostowe. <small>"Standalone Full Backup" to pełna kopia zapasowa, która nie ma związku z łańcuchem kopii przyrostowych. Można ją zapamiętać w osobnym miejscu.</small>
