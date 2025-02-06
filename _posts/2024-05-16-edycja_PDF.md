@@ -18,7 +18,8 @@ Tutaj kilka wskazówek dotyczących edycji PDF za pomocą darmowych narzędzi
 style="float:left;width:248px;margin-right:10px;"}
 
 
-Można wybrać rysowanie linii (tu dziwna nazwa "wiersz"), a dla niej kolor biały i jak największą grubość (12 pkt). Zakreślamy fragmenty do usunięcia tak jakby korektorem tasiemkowym. 2x większą powierzchnię może pokryć prostokąt z taką białą grubą linią.  
+Można wybrać rysowanie linii (tu dziwna nazwa "wiersz"), a dla niej kolor biały i jak największą grubość (12 pkt). Zakreślamy fragmenty do usunięcia tak jakby korektorem tasiemkowym.  
+Jeszcze wygodniejsze jest wybranie prostokąta - z cienką, białą linią obramowania i białym wypełnieniem, co powala zasłaniać precyzyjnie dowolny fragment dokumentu.  
 <small>UWAGA: to świetnie działa na wydruki, ale gdy wyślemy komuś taki PDF to być może będzie on w stanie odkryć zawartość pod białą linią. No chyba, że po zmianach zrobimy ponownie wydruk do PDF (nie testowałem).</small>
 
 #### 1.2. Dopisywanie tekstu
