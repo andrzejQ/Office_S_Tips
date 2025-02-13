@@ -6,7 +6,7 @@ categories: System
 ---
 
 
-_+ 10.04.2024_{: .date} 
+_+ 12.12.2024_{: .date} 
 [1.Opcja "Nie mam klucza MS Windows"]({{site.url}}{{site.baseurl}}{{page.url}}#1-opcja-nie-mam-klucza-ms-windows) * 
 [2.Odczyt klucza lic. Windows 10/11, aktywacja]({{site.url}}{{site.baseurl}}{{page.url}}#2-odczyt-klucza-lic-windows-1011-aktywacja) * 
 [3.Gdy wolimy konto lokalne]({{site.url}}{{site.baseurl}}{{page.url}}#3-gdy-wolimy-konto-lokalne) * 
@@ -46,7 +46,9 @@ Jeśli przenosimy system na sprzęt z nową płyta główną, to [Microsoft pole
 
 **Czyli** (testowałem dla przypadku licencji cyfrowej Win 10 z darmowej aktualizacji Win 8):
 
-1. **Przed zmianą sprzętu**, na którym konto administratora jest kontem lokalnym dodaję do niego konto Microsoft (istniejące lub zakładam całkiem nowe), aby "System Windows został aktywowany przy użyciu licencji cyfrowej **połączonej z Twoim kontem Microsoft**." - zob. Ustawienia  > Aktualizacje i zabezpieczenia > Aktywacja. Warto też zadbać, żeby nazwa komputera była konkretna.
+![Aktywacja_z_kontem.png]({{site.baseurl}}/assets/img/Aktywacja_z_kontem.png "Aktywacja_z_kontem.png"){: style="float:right;width:47%;margin:0px 0px 10px 10px;border:1px grey solid"} 
+
+1. **Przed zmianą sprzętu**, na którym konto administratora jest kontem lokalnym dodaję do niego konto Microsoft (istniejące lub zakładam całkiem nowe), aby "System Windows został aktywowany <span style="color:darkmagenta">przy użyciu licencji cyfrowej **połączonej z Twoim kontem Microsoft**.</span>" - zob. Ustawienia  > Aktualizacje i zabezpieczenia > Aktywacja. Warto też zadbać, żeby nazwa komputera była konkretna.
 2. ![Aktywacja-rozwiazywanie_problemow.png]({{site.baseurl}}/assets/img/Aktywacja-rozwiazywanie_problemow.png "Aktywacja-rozwiazywanie_problemow.png"){: style="float:right;width:67%;margin:0px 0px 10px 10px"} 
 Po zmianie sprzętu (i tym samym dysku - tak testowałem, ale może to nieważne) loguję się na to samo konto administratora (e-mail Microsoft). Systemu "nie można aktywować...".  
 Wybieram **Rozwiązywanie problemów** - jest propozycja zakupu, 
