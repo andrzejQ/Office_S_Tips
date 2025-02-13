@@ -61,17 +61,23 @@ Po wejściu w ten link zdarza się, że pojawia się błąd o niedostępności s
 Uwaga! Gdy poprzedni sprzęt był dość stary, to być może dysk systemowy miał partycjonowanie MBR. Na nowym sprzęcie taki dysk nie będzie w ogóle widziany jako dysk systemowy. Po po wejściu w tryb awaryjny - konsola - można go [bezstratnie przerobić na GPT z pomocą `mbr2gpt.exe`](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-bezstratna-konwersja-dysku-z-mbr-na-gpt). To samo można zrobić na wczesnym etapie instalacji nowego Windows (np. na etapie wyboru partycji do instalacji) - po naciśnięciu [Shift + F10], [więcej » ](https://andrzejq.github.io/Office_S_Tips/system/2020/02/20/Backup_dysku_SSD.html#7-bezstratna-konwersja-dysku-z-mbr-na-gpt)
 
 
-**To chyba dotyczy starszych wersji Windows, np. 7 czy 8**
+**To chyba dotyczy starszych wersji Windows, np. 7, 8 lub Windows 10 - poniżej 1607**
+
 Jeśli klucz na starszym działającym sprzęcie mamy przenieść na nowszy (np. gdy zmieniamy płytę gł.) to można (być może) przeprowadzić **deaktywację klucza**:
 {: style="font-size: smaller;"}
 
 1. [Win+X] wiersz poleceń jako administrator.
+   
 2. Odinstalowanie bieżącego klucza produktu z systemu Windows i wprowadzenie go w stan nielicencjonowany:  
-`slmgr /upk`
+   `slmgr /upk`
+   (być może potrzebny jest reset)
+   
 3. Usunięcie klucza produktu z rejestru, jeśli nadal tam jest:  
-`slmgr /cpky`
-4. Zresetowanie liczników aktywacji systemu Windows, dzięki czemu nowi użytkownicy zostaną poproszeni o aktywację systemu Windows po włożeniu klucza:  
-`slmgr /rearm`
+   `slmgr /cpky`
+   (a może teraz reset)
+   
+4. Zresetowanie liczników aktywacji systemu Windows, dzięki czemu nowi użytkownicy zostaną poproszeni o aktywację systemu Windows po podaniu klucza:  
+   `slmgr /rearm`
 {: style="font-size: smaller;"}
 
 * Może się też udać aktualizacja systemu do wyższej wersji np. win 11:  
