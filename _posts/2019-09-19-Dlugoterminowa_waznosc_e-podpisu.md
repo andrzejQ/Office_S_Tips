@@ -38,7 +38,6 @@ Z instr. Sigillum Sign:
 
 Odnośniki:
 
-* [Długoterminowa walidacja (LTV) podpisów cyfrowych PDF w Adobe Acrobat](https://www.ssl.com/pl/jak/d%C5%82ugoterminowa-weryfikacja-LTV-podpis%C3%B3w-cyfrowych-pdf-w-programie-Adobe-Acrobat/)
 * ["Kwalifikowane podpisy elektroniczne - praktyczne aspekty", Tomasz Zalewski](https://www.twobirds.com/pl/insights/2021/poland/210712-kwalifikowane-podpisy-elektroniczne) <small>(m.in. eliminacja wad podpisu własnoręcznego, długoterminowa konserwacja podpisów, zbędne postanowienie o miejscu zawarcia umowy, zbędne postanowienie o dacie zawarcia umowy i liczbie „jednobrzmiących” egzemplarzy)</small>
 
 * [Podpis elektroniczny - kilka cytatów z aktów prawnych]({% if jekyll.environment == "production" %}{{site.baseurl}}{% endif %}{% post_url 2019-09-19-e-podpis_kilka_cytatow_z_aktow_prawnych %})
