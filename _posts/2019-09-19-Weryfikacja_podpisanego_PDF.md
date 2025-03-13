@@ -84,13 +84,24 @@ Programy do składania e-podpisów pozwalają także na ich weryfikację. Są te
 
 * [![puesc.gov.pl_wer_weryfikacja_eDo.png]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png")]({{site.baseurl}}/assets/img/puesc.gov.pl_wer_weryfikacja_eDo.png "puesc.gov.pl_wer_weryfikacja_eDo.png"){: style="float:right;width:39%;"}
 
-  <https://puesc.gov.pl/wer/> - serwis Ministerstwa Finansów dla klientów Krajowej Administracji Skarbowej lub Ministerstwa Finansów.  
+  [**puesc.gov.pl/wer**](https://puesc.gov.pl/wer/) - serwis Ministerstwa Finansów dla klientów Krajowej Administracji Skarbowej lub Ministerstwa Finansów.  
   <small>Warto zbierać informacje o tego rodzaju weryfikatorach, które nie wymagają instalacji. Z drugiej strony trzeba zaufać deklaracji 
   jak w powyższym serwisie "§3.5 Dane z dokumentów przekazywanych w celu weryfikacji podpisu są przetwarzane przez okres niezbędny do 
   prawidłowego wykonania usługi. Dane te nie są gromadzone ani przechowywane, z wyjątkiem sytuacji, gdy jest to niezbędne dla 
-  zdiagnozowania błędów, ...".</small>
-* [![mObywatel_weryfikacja.png]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png")]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png"){: style="float:right;width:35%;"}
-[mObywatel](https://moj.gov.pl/nforms/signer/upload?xFormsAppName=SIGNER). Podpisz i sprawdź dokumenty elektroniczne. Weryfikacja różnego rodzaju podpisów nie tylko podpisu zaufanego.
+  zdiagnozowania błędów, ...".</small>  
+  .
+* [![mObywatel_weryfikacja.png]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png")]({{site.baseurl}}/assets/img/mObywatel_weryfikacja.png "mObywatel_weryfikacja.png"){: style="float:left;width:33%;margin-right:10px;"}
+  [**mObywatel**](https://moj.gov.pl/nforms/signer/upload?xFormsAppName=SIGNER) - podpisz i sprawdź dokumenty elektroniczne. Weryfikacja różnego rodzaju podpisów nie tylko podpisu zaufanego.  
+  .  
+  .[![weryfikacjapodpisu-pl.png]({{site.baseurl}}/assets/img/weryfikacjapodpisu-pl.png "weryfikacjapodpisu-pl.png")]({{site.baseurl}}/assets/img/weryfikacjapodpisu-pl.png "weryfikacjapodpisu-pl.png"){: style="float:right;width:40%;"}  
+  .  
+  
+* [**weryfikacjapodpisu.pl**](https://weryfikacjapodpisu.pl/weryfikacja/)
+  to komercyjny serwis, który umożliwia uzyskanie wyczerpującej informacji dotyczącej weryfikacji podpisu. 
+  Deklaruje, że dokumenty po weryfikacji są od razu zapominane. 
+  W darmowej wersji pozwala na weryfikację do 2 plików dziennie. 
+  Oczywiście przy przekazywaniu dokumentów, które zawierają wrażliwe dane należy zachować ostrożność.  
+  .
 
 
 #### Weryfikacja podpisu osobistego
