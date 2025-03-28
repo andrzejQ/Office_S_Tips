@@ -29,7 +29,9 @@ Takie ostrzeżenia dotyczące niemożności weryfikacji poza okresem ważności 
 ### Adobe Acrobat Reader
 
 ![AdobeR-PanelPodpis.png]({{site.baseurl}}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){: style="float:right;width:65%;"}
-Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
+Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek 
+z informacją o poprawności podpisów oraz
+z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
 
 Program **AdobeReader** można zapamiętać jako **domyślny** do otwierania plików PDF: 
 1. Kliknij prawym klawiszem myszy na dowolnym pliku PDF;
