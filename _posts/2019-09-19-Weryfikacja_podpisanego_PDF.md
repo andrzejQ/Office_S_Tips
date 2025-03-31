@@ -5,30 +5,61 @@ date:   2019-09-19 10:21:56 +0100
 categories: PKI
 ---
 
-_+ 25.09.2024, + 16.12.2024_{: .date}  
+_+ 25.09.2024, + 16.12.2024, + 31.03.2025_{: .date}  
 Poprawność podpisu można zweryfikować w tej samej aplikacji, która służy do składania podpisu.  
 W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader.  
-[Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#adobe-acrobat-reader) *
-[Weryfikacja w aplikacji komputerowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-w-aplikacji-komputerowej) *
-[Weryfikacja w przeglądarce internetowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-na-serwerze-zdalnym-przez-przeglądarkę) *
-[Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) *
-[pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe) 
+[Weryfikacja w aplikacji komputerowej z możliwością pobrania raportu]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-e-podpisu-w-aplikacji-komputerowej)  
+[Weryfikacja w Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-w-adobe-acrobat-reader)  
+[Weryfikacja w przeglądarce internetowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-na-serwerze-zdalnym-przez-przeglądarkę)  
+[Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) * [pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)  
 
 <style>.smaller{font-size:smaller;} .date{font-size:smaller;color:#828282;} .answ{font-size:smaller;color:DarkSlateBlue;}
 blockquote{font-style: normal;letter-spacing: 0px;}</style>
 
 Należy pamiętać, że **podpis elektroniczny** wywołuje skutki prawne, jeżeli **został złożony w okresie ważności tego certyfikatu** (z art. 18 ustawy o usługach zaufania... Dz.U.2024.1725 t.j.). Dla ważności podpisu nie jest istotny moment jego weryfikacji, ale moment jego złożenia. Czyli w warunkach, gdy raport z programu weryfikującego stwierdza, że okres ważności podpisu minął należy sprawdzać okres jego ważności i czas złożenia podpisu.
 
-Program AdobeReader pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)). Polskie rozwiązania do składania i/albo weryfikacji podpisu na ogół wykazują problemy, gdy weryfikacja następuje po okresie ważności certyfikatu podpisującego. Ale to się może zmienić, bo te komunikaty o błędach czy ostrzeżeniach nie uwzględniają art. 18 powyższej ustawy, pomimo, że można odczytać informację o okresie ważności certyfikatu i o czasie podpisywania. 
+Aplikacje do składania i/albo weryfikacji podpisu na ogół wykazują problemy, gdy weryfikacja następuje po okresie ważności certyfikatu podpisującego. Ale to się może zmienić, bo te komunikaty o błędach czy ostrzeżeniach nie uwzględniają art. 18 powyższej ustawy, pomimo, że można odczytać informację o okresie ważności certyfikatu i o czasie podpisywania. 
 
 <small>
 Dodatkowo te komunikaty nie spełniają wymogów dostępności, choćby w zakresie prostego języka, komunikując się żargonem z użyciem nieznanych powszechnie skrótów.
 Takie ostrzeżenia dotyczące niemożności weryfikacji poza okresem ważności certyfikatu podważają ustawową zasadę równoważności e-podpisu z podpisem własnoręcznym.
 </small>
 
-### Adobe Acrobat Reader
+
+### Weryfikacja e-podpisu w aplikacji komputerowej
+
+**... z możliwością pobrania i wydrukowania raportu**.
+
+Aplikacje do składania e-podpisów pozwalają także na ich weryfikację - i to zarówno podpisanych plików PDF jak i plików w innych formatach.
+Dobrym przykładem jest aplikacja "Szafir" działająca w różnych systemach operacyjnych -
+[**www.elektronicznypodpis.pl/aplikacje-i-sterowniki**](https://www.elektronicznypodpis.pl/aplikacje-i-sterowniki)
+[![aplikacja_SZAFIR-pobieranie.png]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-pobieranie.png "aplikacja_SZAFIR-pobieranie.png")]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-pobieranie.png "aplikacja_SZAFIR-pobieranie.png"){: style="float:right;width:69%;border: 1px solid; margin:4px;"}  
+(instalator Szafir wersja MSI dla Windows 11 64-bit ma pojemność około 86MB).
+
+**Aplikacja Szafir** pozwala zarówno na składanie podpisów jak i na weryfikację podpisanych plików z możliwością pobrania i wydruku raportu, w przeciwieństwie do aplikacji "Szafir do weryfikacji", która raportu nie daje. Podczas korzystania z aplikacji warto sobie utworzyć specjalny folder na podpisane pliki np. na pulpicie, aby łatwiej wybierać pliki do weryfikacji. Zaletą tej aplikacji jest duża szybkość działania, a także poprawna weryfikacja podpisów kwalifikowanych, zaufanych oraz osobistych.
+
+Aby uzyskać wynik weryfikacji z raportem:
+
+1. W aplikacji wybieramy kafelek "weryfikuj", wybieramy plik, a nawet kilka plików [Ctrl + klik].
+2. (Wielokrotnie) klikamy w prawym dolnym rogu **[Weryfikuj] - [Dalej]**, aż do pojawienia się okna "**Podsumowanie zadania**" z przyciskiem **[Wydrukuj potwierdzenie]** (w prawym dolnym rogu)
+    ![aplikacja_SZAFIR-podsumowanie_zadania.png]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-podsumowanie_zadania.png "aplikacja_SZAFIR-podsumowanie_zadania.png"){: style="float:right;width:41%;"}
+   
+   Podczas takiej weryfikacji w prawym górnym rogu 
+   ![aplikacja_SZAFIR-postep.png]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-postep.png "aplikacja_SZAFIR-postep.png"){: style="float:left;width:19%;margin:4px;"}
+   widać licznik kolejnych plików i kolejnych weryfikowanych podpisów.
+
+
+.
+
+
+
+### Weryfikacja w Adobe Acrobat Reader
 
 ![AdobeR-PanelPodpis.png]({{site.baseurl}}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){: style="float:right;width:65%;"}
+
+Program AdobeReader pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)).
+
+
 Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek 
 z informacją o poprawności podpisów oraz
 z przyciskiem [Panel Podpis], którego kliknięcie powoduje wyświetlenie szczegółów podpisu.
@@ -39,6 +70,9 @@ Program **AdobeReader** można zapamiętać jako **domyślny** do otwierania pli
    ![Adobe_domyslny.png]({{site.baseurl}}/assets/img/Adobe_domyslny.png "Adobe_domyslny.png"){: style="float:right;width:41%;"}
 3. (!) Wybierz inną aplikację (na dole menu)
 4. AdobeReader [Zawsze]
+
+Uwaga! Pliki PDF można wyświetlać także w **przeglądarce internetowej**, ale wtedy **nie ma możliwości weryfikacji e-podpisu!**
+
 
 Jeśli często korzystamy z PDF z e-podpisami, to warto odpowiednio skonfigurować swoją przeglądarkę internetową, żeby pliki PDF otwierały się w Adobe Reader, a nie w przeglądarce:
 
@@ -74,11 +108,6 @@ Można zapisać plik PDF na dysku i wybrać (pr.kl.myszy) "Otwórz za pomocą...
 .
 
 
-### Weryfikacja w aplikacji komputerowej
-
-![Szafir_weryfikujaca_1.0.png]({{site.baseurl}}/assets/img/Szafir_weryfikujaca_1.0.png "Szafir_weryfikujaca_1.0.png"){: style="float:right;width:40%;"}
-Programy do składania e-podpisów pozwalają także na ich weryfikację. Są też programy przeznaczony wyłącznie do weryfikacji, jak np. darmowa "Aplikacja Szafir do weryfikacji" Krajowej Izby Rozliczeniowej:
-* <https://www.elektronicznypodpis.pl/aplikacje-i-sterowniki> (przewiń stronę w dół)
 
 ### Weryfikacja na serwerze zdalnym przez przeglądarkę
 
