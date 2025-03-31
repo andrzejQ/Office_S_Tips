@@ -6,9 +6,7 @@ categories: PKI
 ---
 
 _+ 25.09.2024, + 16.12.2024, + 31.03.2025_{: .date}  
-Poprawność podpisu można zweryfikować w tej samej aplikacji, która służy do składania podpisu.  
-W przypadku PDF można to też sprawdzić w darmowej aplikacji Adobe Acrobat Reader.  
-[Weryfikacja w aplikacji komputerowej z możliwością pobrania raportu]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-e-podpisu-w-aplikacji-komputerowej)  
+[**Weryfikacja e-podpisu w aplikacji komputerowej z możliwością pobrania raportu**]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-e-podpisu-w-aplikacji-komputerowej)  
 [Weryfikacja w Adobe Acrobat Reader]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-w-adobe-acrobat-reader)  
 [Weryfikacja w przeglądarce internetowej]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-na-serwerze-zdalnym-przez-przeglądarkę)  
 [Weryfikacja podpisu osobistego]({{site.url}}{{site.baseurl}}{{page.url}}#weryfikacja-podpisu-osobistego) * [pl.ID jako zaufany w Adobe Reader]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)  
@@ -36,7 +34,10 @@ Dobrym przykładem jest aplikacja "Szafir" działająca w różnych systemach op
 [![aplikacja_SZAFIR-pobieranie.png]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-pobieranie.png "aplikacja_SZAFIR-pobieranie.png")]({{site.baseurl}}/assets/img/aplikacja_SZAFIR-pobieranie.png "aplikacja_SZAFIR-pobieranie.png"){: style="float:right;width:69%;border: 1px solid; margin:4px;"}  
 (instalator Szafir wersja MSI dla Windows 11 64-bit ma pojemność około 86MB).
 
-**Aplikacja Szafir** pozwala zarówno na składanie podpisów jak i na weryfikację podpisanych plików z możliwością pobrania i wydruku raportu, w przeciwieństwie do aplikacji "Szafir do weryfikacji", która raportu nie daje. Podczas korzystania z aplikacji warto sobie utworzyć specjalny folder na podpisane pliki np. na pulpicie, aby łatwiej wybierać pliki do weryfikacji. Zaletą tej aplikacji jest duża szybkość działania, a także poprawna weryfikacja podpisów kwalifikowanych, zaufanych oraz osobistych.
+**Aplikacja Szafir** pozwala zarówno na składanie podpisów jak i na weryfikację podpisanych plików z możliwością pobrania i wydrukowania raportu <small>w przeciwieństwie do aplikacji  
+"Szafir do weryfikacji",  
+która raportu nie daje</small>.  
+Warto sobie utworzyć specjalny folder na podpisane pliki np. na pulpicie, aby łatwiej wybierać pliki do weryfikacji. Zaletą tej aplikacji jest duża szybkość działania, a także poprawna weryfikacja podpisów kwalifikowanych, zaufanych oraz osobistych.
 
 Aby uzyskać wynik weryfikacji z raportem:
 
@@ -57,7 +58,7 @@ Aby uzyskać wynik weryfikacji z raportem:
 
 ![AdobeR-PanelPodpis.png]({{site.baseurl}}/assets/img/AdobeR-PanelPodpis.png "AdobeR-PanelPodpis.png"){: style="float:right;width:65%;"}
 
-Program AdobeReader pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)).
+Program Adobe Acrobat Reader (wersja darmowa) pozwala zarówno na podpisywanie jak i weryfikowanie poprawności podpisu (na razie z wyjątkiem podpisu osobistego pl.ID, [zob. niżej]({{site.url}}{{site.baseurl}}{{page.url}}#pl_ID_zaufany_w_Adobe)).
 
 
 Po otwarciu pliku w Adobe Acrobat Reader pojawia się pasek 
