@@ -171,6 +171,10 @@ Wiersz polecenia jako administrator
 dism /online /export-driver /destination:"D:\Drivers Backup"
 ````
 
+#### Po zainstalowaniu wyższej wersji Windows
+
+... np. Windows 11 na bazie Windows 10, powstaje folder `c:\windows.old`. Jeśli w nowo zainstalowanym systemie brakuje sterowników, to w Menedżerze urządzeń można wybrać opcję: **Aktualizuj sterownik \ Przeglądaj mój komputer...** i jako folder do przeszukania podać `c:\windows.old` oraz [x] Uwzględnij podfoldery. Po dość długiej chwili oczekiwania poprawny sterownik jest automatycznie zainstalowany.
+
 <style> pre code {font-size: smaller;} </style>
 
 <!-- {% unless jekyll.environment %} -->
