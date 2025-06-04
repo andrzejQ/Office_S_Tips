@@ -140,6 +140,7 @@ Polska (48) (22) 594 19 99 (lub bezpłatne 00 800 121 1654) - czyli powyższe nu
 
 Najnowsze wersje systemu Windows 10/11 bezwzględnie domagają się użycia konta Microsoft do zalogowania do systemu. Jeśli wolimy używać konta lokalnego, to można: 
 1. Zalogować się / zarejestrować na jakieś konto Microsoft, a potem dodać kolejnego użytkownika z kontem lokalnym (zwykle jest to opcja "nie znam danych logowania użytkownika).
+   
 2. Dawniej można było  
     a) podać jakiś bezsensowny e-mail lub bezsensowne hasło (nieprawdziwe) - ale to już raczej nie działa;  
     b) można było też nie dołączyć się od Internetu (nie podłączać kabla, nie dołączać się do WiFi) - co skutkowało pojawieniem się opcji do wybrania: "Nie mam Internetu".  
@@ -148,6 +149,17 @@ Najnowsze wersje systemu Windows 10/11 bezwzględnie domagają się użycia kont
     * Najpóźniej tu wyłączamy sieć (np. tryb samolotowy z pomocą klawiszy funkcyjnych).
     * W oknie terminala: `oobe\BypassNRO` `↵ Enter` - system zresetuje się i powróci z oknem konfiguracji sieci, ale z dodatkową możliwością "Nie mam Internetu"
     * Dalej "Kontynuuj z ograniczoną konfiguracją" i w "Wprowadź swoje imię" wpisujemy nazwę użytkownika lokalnego (niekoniecznie imię).
+    * Można też alternatywnie na tym etapie tj. `⇧ Shift + F10` utworzyć konto lokalne:
+      ````bat
+      net user NAZWA * /add
+      net localgroup Administratorzy NAZWA /add
+      cd OOBE
+      msoobe && shutdown -r 
+      ````
+      <small>Następuje teraz restart systemu, po czym pojawia się komunikat "Nazwa użytkownika lub hasło są niepoprawne".  
+      Pojawia się na tu możliwość wyboru użytkownika - wybieramy konto wcześniej utworzone konta `NAZWA`.  
+      W innej wersji językowej trzeba użyć nazwy grupy jak odczytana z `net localgroup` </small>
+      
 3. W przypadku Win 11 czy Win 10 - 1607+ może jednak lepiej używać konta Microsoft, a ewentualnie dodać potem konto lokalne. Jak wspomniałem wyżej - pozwala to też na przenoszenie licencji po dużej zmianie konfiguracji sprzętowej (np. po zmianie płyty głównej na akceptowaną przez Windows 11; sama zmiana dysku systemowego nie jest chyba traktowana jako duża i licencja nie wymaga przenoszenia).
 
 ### 4. Kopia sterowników
