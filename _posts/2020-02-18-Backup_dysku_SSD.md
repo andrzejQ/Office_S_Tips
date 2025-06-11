@@ -241,8 +241,20 @@ W trybie awaryjnym system startuje na dysku wirtualnym `[X:\]` i mapuje dyski fi
 
 Podobno dla dysków SSD lepsze jest AHCI. W laptopach z jednym dyskiem HDD zdarza się konfiguracja RAID. Po przełożeniu dysku HDD na SSD można zmienić konfigurację z RAID na ACI bez reinstalacji systemu
 * [Switch RAID to AHCI without reinstalling Windows 10](https://superuser.com/questions/1280141/switch-raid-to-ahci-without-reinstalling-windows-10) - porada z wejściem w tryb awaryjny (safe mode). To działa też w Windows 11. Pamiętaj, że po wejściu w tym awaryjny nie zadziała [Win+X] \ Terminal(Administrator). Trzeba zgodnie z instrukcją wywołać "cmd" w trybie administratora.
+  <details markdown=1 style="color: navy; font-size: small;"><summary markdown="span"> . . . </summary>
+  Type cmd in the taskbar search box, find and select Run as administrator in the right window. Type:  
+  `bcdedit /set {current} safeboot minimal`  
+  Restart your computer, and enter the BIOS. In the BIOS settings, change the SATA operating mode to AHCI, save and exit. 
+  And Windows will automatically enter the Safe Mode.
+  
+  Right-click on the Windows logo and select Command Prompt (Admin) from the menu. Type:  
+  `bcdedit /deletevalue {current} safeboot`  
+  
+  Restart your computer again, at this time, your SATA operating mode will be changed to AHCI.
+  </details>
+  
 * [RAID vs. AHCI, Which One Should I Choose?](https://www.ubackup.com/articles/raid-vs-ahci-jkzbj.html) - rozdział "How to Switch from RAID to AHCI in Windows 10" (taka sama procedura jak powyżej, na końcu artykułu są polecenia i zrzuty ekranu).
-
+  
 .
 
 **Właściciel plików i folderów**
