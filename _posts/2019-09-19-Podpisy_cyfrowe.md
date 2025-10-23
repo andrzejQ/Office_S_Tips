@@ -5,7 +5,7 @@ date:   2019-09-19 10:21:59 +0100
 categories: PKI
 ---
 
-_+ 24.09.2024_{: .date}  
+_+ 24.09.2024 + 23.10.2025_{: .date}    
 Kilka informacji o podpisie cyfrowym i dokumencie elektronicznym.
 
 <style>.date{font-size: smaller;color:#828282;}</style>
@@ -16,6 +16,9 @@ Kilka informacji o podpisie cyfrowym i dokumencie elektronicznym.
 1. Z pomocą klucza prywatnego użytkownika i klucza publicznego adresata danych cyfrowych można podpisać i **zaszyfrować** dane tak, że odbiorca odszyfruje je z pomocą swojego klucza prywatnego i klucza publicznego nadawcy. Jest to odpowiednik korespondencji typu list polecony. 
 1. **Podpis kwalifikowany** to elektroniczny podpis zaawansowany, który jest składany za pomocą kwalifikowanego urządzenia i który opiera się na kwalifikowanym certyfikacie podpisu elektronicznego. Klucz prywatny tego certyfikatu jest tworzony automatycznie w karcie z procesorem (tzw. karcie inteligentnej) i nie jest dostępny na zewnątrz niej. Nie można go skopiować, wyeksportować, nigdy nie opuszcza karty procesorowej. Kryptografia realizowana jest z użyciem procesora kraty.  
 Podpis ten jest równoważny prawnie podpisowi osobistemu na dokumencie papierowym. Procedura wydawania tego podpisu ma mocne podstawy prawne i wymaga udziału zaufanej instytucji potwierdzającej tożsamość użytkownika. Dokumenty tak podpisane można wysyłać jako załącznik e-maila. Roczny koszt podpisu jest równy kosztowi kilku wysyłek kurierskich. 
+   
+   Od 23.10.2025 w aplikacji **mObywatel** można skorzystać z [**darmowych podpisów kwalifikowanych** (5 na miesiąc)](https://www.gov.pl/web/cyfryzacja/podpisz-sie-z-mobywatelem-podpis-kwalifikowany-teraz-bezplatnie-w-aplikacji).
+   
 1. **Podpis zaawansowany** to podpis, gdzie przestrzegane są procedury zapewniające wiarygodny związek użytkownika z jego kluczem publicznym i prywatnym. 
 1. Ważnym przypadkiem podpisu zaawansowanego jest **podpis osobisty** w nowym  
 	[**e-dowodzie osobistym** z warstwą elektroniczną »](https://obywatel.gov.pl/dokumenty-i-dane-osobowe/dowod-osobisty-informacja-o-dokumencie)  
