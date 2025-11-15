@@ -187,6 +187,13 @@ dism /online /export-driver /destination:"D:\Drivers Backup"
 
 ... np. Windows 11 na bazie Windows 10, powstaje folder `c:\windows.old`. Jeśli w nowo zainstalowanym systemie brakuje sterowników, to w Menedżerze urządzeń można wybrać opcję: **Aktualizuj sterownik \ Przeglądaj mój komputer...** i jako folder do przeszukania podać `c:\windows.old` oraz [x] Uwzględnij podfoldery. Po dość długiej chwili oczekiwania poprawny sterownik jest automatycznie zainstalowany.
 
+<small>
+Tu na marginesie można wspomnieć o możliwości instalacji Windows 11 na niewspieranym sprzęcie
+poprzez instalację z opcją:     <code style="font-size: small;">setup.exe /product server</code>  
+czy też z pomocą skryptu - zob. np.   [SkipCheckWin11_CpuTpmRam.7z]({{site.baseurl}}/assets/files/SkipCheckWin11_CpuTpmRam.7z).  
+Trzeba jednak pamiętać, że z kolejnymi aktualizacjami funkcji, np. w wersji 25H2 te możliwości są coraz bardziej ograniczone.
+</small>
+
 <style> pre code {font-size: smaller;} </style>
 
 <!-- {% unless jekyll.environment %} -->
